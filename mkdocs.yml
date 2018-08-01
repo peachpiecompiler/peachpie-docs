@@ -15,6 +15,7 @@ copyright: 'Copyright &copy; 2016 - 2018 iolevel s.r.o.'
 # Configuration
 theme:
   name: 'material'
+  custom_dir: 'custom_theme'
   language: 'en'
   palette:
     primary: 'deep orange'
@@ -41,9 +42,6 @@ extra:
   search:
     language: 'en'
 
-extra_css:
-  - css/custom.css
-
 # Google Analytics
 google_analytics:
   - 'UA-73282519-1'
@@ -58,8 +56,6 @@ markdown_extensions:
       guess_lang: false
   - toc:
       permalink: true
-
-pages:
 
 # plugins
 plugins:
