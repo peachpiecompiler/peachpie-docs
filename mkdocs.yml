@@ -22,10 +22,6 @@ theme:
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
-
-  # 404 page
-  static_templates:
-    - 404.html
     
   # Don't include MkDocs' JavaScript
   include_search_page: false
@@ -55,3 +51,4 @@ markdown_extensions:
       guess_lang: false
   - toc:
       permalink: true
+  - meta

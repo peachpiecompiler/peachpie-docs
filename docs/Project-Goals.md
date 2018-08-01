@@ -1,8 +1,0 @@
-### Migrating PHP applications to a modern platform
-We believe it is important to mention what we are trying to achieve with this project. Firstly, we know from experience that there is a plethora of **legacy PHP applications** out there that would benefit from being compiled to .NET. Some of the largest companies in the world still rely heavily on their apps written many years ago. This legacy code is **slowing down their performance** and costing the companies scarce financial resources by using unnecessary CPU power on the cloud.
-
-### Both-way interoperability of C# and PHP 
-Secondly, we strive to improve the **collaboration between PHP and .NET developers** within a single project. There is currently a deep cliff between the two camps and the resulting output is difficult to coordinate. Peachpie compiler’s both-way **interoperability** allows PHP and .NET developers to collaborate seamlessly within projects, thereby reducing the unnecessary administrative overhead of gluing the two together at the end.
-
-### Harnessing the value of PHP 
-We firmly believe that there is an immense **value in the world of PHP**. It is our conviction that, if given the chance, PHP developers would come up with creative and efficient solutions. Peachpie opens up previously untouched markets for PHP programmers to explore, such as **games**, **cross-platform apps** or **IoT**. We are excited to see what products will spring forth when they will be able to use Peachpie for this purpose.
