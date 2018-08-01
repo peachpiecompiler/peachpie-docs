@@ -39,6 +39,16 @@ extra:
   search:
     language: 'en'
 
+# Page tree
+nav:
+  - Welcome: index.md
+  - About: about.md
+  - Getting Started: getting-started.md
+  - PHP Guide: php-guide/
+  - .NET Reference: dotnet-reference/
+  - API Reference: api-reference/
+  - Scenarios: scenarios/
+
 # Google Analytics
 google_analytics:
   - 'UA-73282519-1'
@@ -51,4 +61,3 @@ markdown_extensions:
       guess_lang: false
   - toc:
       permalink: true
-  - meta
