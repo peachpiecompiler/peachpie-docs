@@ -23,6 +23,14 @@ theme:
     text: 'Roboto'
     code: 'Roboto Mono'
 
+  # 404 page
+  static_templates:
+    - 404.html
+    
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
 # Customization
 extra:
   social:
@@ -32,6 +40,8 @@ extra:
       link: 'https://twitter.com/pchpcompiler'
     - type: 'home'
       link: 'https://www.peachpie.io/'
+  search:
+    language: 'en'
 
 # Google Analytics
 google_analytics:
