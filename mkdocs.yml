@@ -30,12 +30,12 @@ extra:
       link: 'https://github.com/peachpiecompiler/peachpie'
     - type: 'twitter'
       link: 'https://twitter.com/pchpcompiler'
-    - type: 'web'
+    - type: 'home'
       link: 'https://www.peachpie.io/'
 
 # Google Analytics
 google_analytics:
-  - 'UA-XXXXXXXX-X'
+  - 'UA-73282519-1'
   - 'auto'
 
 # Extensions
