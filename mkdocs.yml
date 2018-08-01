@@ -22,6 +22,8 @@ theme:
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
+  feature:
+    tabs: true
     
   # Don't include MkDocs' JavaScript
   include_search_page: false
