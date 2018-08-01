@@ -7,6 +7,7 @@ site_url: 'https://docs.peachpie.io'
 # Repository
 repo_name: 'peachpiecompiler/peachpie'
 repo_url: 'https://github.com/peachpiecompiler/peachpie'
+edit_uri: 'https://github.com/peachpiecompiler/peachpie-docs/edit/master/docs/'
 
 # Copyright
 copyright: 'Copyright &copy; 2016 - 2018 iolevel s.r.o.'
@@ -29,7 +30,7 @@ extra:
       link: 'https://github.com/peachpiecompiler/peachpie'
     - type: 'twitter'
       link: 'https://twitter.com/pchpcompiler'
-    - type: 'blog'
+    - type: 'web'
       link: 'https://www.peachpie.io/'
 
 # Google Analytics
