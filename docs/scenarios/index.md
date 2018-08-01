@@ -1,5 +1,2 @@
-title: Scenarios
-description:
-
 # Scenarios
 
