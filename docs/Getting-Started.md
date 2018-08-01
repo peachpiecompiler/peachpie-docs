@@ -5,7 +5,7 @@ Peachpie consists of three components:
 - The runtime (**Peachpie.Runtime.dll**) containing the functionality that is required by the compiled assembly while running.
 - The libraries (**Peachpie.Library.dll** and others) containing the implementation of PHP functions, classes, constants etc.
 
-![Peachpie Compiler](https://github.com/iolevel/peachpie/wiki/img/peach-process.png)
+![Peachpie Compiler](img/peach-process.png)
 
 The compiler targets both major platforms - **.NET Core** 1.1+ and **Full .NET Framework** 4.6 - which makes Peachpie compiled programs available on Windows, Windows Core, Windows Phone, Linux, MacOS and platforms supported by Xamarin (Android, iOS).
 
