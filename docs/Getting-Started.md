@@ -1,4 +1,4 @@
-## How Does It Work
+# Getting Started
 
 Peachpie consists of three components:
 - The compiler (**peach.exe** for .NET Framework 4.6 or **Peachpie.NET.Sdk** when using [[msbuild]]) builds regular .NET assemblies with PDB information from the given PHP files.
@@ -14,17 +14,17 @@ For a brief overview of how to build Peachpie on the command line or how to use 
 - [Command line building](https://www.youtube.com/watch?v=GVWVInYiYLY)
 - [Visual Studio Code](https://youtu.be/hBiixbockK4)
 
-# A. MSBuild
+## A. MSBuild
 
 Using the [[MSBuild]] project is the recommended approach of compiling source files. See the sections below for getting started with various project types.
 
-## Before you start
+### Before you start
 
 - Install [.NET Core 2.0 SDK](https://www.microsoft.com/net/core) for your platform.
 - Optionally - Visual Studio Code ([VSCode](https://code.visualstudio.com/) + [C# Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) + [Peachpie Extension](https://marketplace.visualstudio.com/items?itemName=iolevel.peachpie-vscode)) or Visual Studio 2017 ([VS2017](https://www.visualstudio.com/downloads/)).
 - Create an [[msbuild project file|msbuild]] within the project directory containing PHP files.
 
-## (a) CommandLine .NET Core Application
+### (a) CommandLine .NET Core Application
 
 1. Update the [[msbuild project file|msbuild]] with the following properties
 ```xml
@@ -43,7 +43,7 @@ Using the [[MSBuild]] project is the recommended approach of compiling source fi
 
 `dotnet build` or `msbuild /t:build project.msbuildproj`
 
-## (b) Class Library
+### (b) Class Library
 
 1. Update the [[msbuild project file|msbuild]] with the following properties
 ```xml
@@ -61,15 +61,15 @@ Using the [[MSBuild]] project is the recommended approach of compiling source fi
 
 `dotnet build` or `msbuild /t:build project.msbuildproj`
 
-## (c) Android/iOS App
+### (c) Android/iOS App
 
 *In progress*
 
-## (d) ASP.NET Core WebSite
+### (d) ASP.NET Core WebSite
 
 See the [ASP.NET Core & Kestrel](https://github.com/iolevel/peachpie-samples/tree/master/web-application) sample project for more details.
 
-## (e) ASP.NET WebSite
+### (e) ASP.NET WebSite
 
 This type of project requires you to compile Peachpie from the sources to get `Peachpie.RequestHandler.dll`. Then follow the steps below:
 
@@ -97,10 +97,10 @@ This type of project requires you to compile Peachpie from the sources to get `P
 </configuration>
 ```
 
-# B. In-Memory Compilation
+## B. In-Memory Compilation
 
 See [Scripting Test](https://github.com/iolevel/peachpie/blob/master/src/Tests/Peachpie.Test/Program.cs) for a sample utilization of the Peachpie API.
 
-# C. CommandLine Compiler
+## C. CommandLine Compiler
 
 See [[peach.exe]] for the standalone compiler tool. The tool targets the full .NET Framework only.

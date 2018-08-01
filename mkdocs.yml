@@ -1,6 +1,6 @@
 # Project information
 site_name: 'PeachPie Documentation'
-site_description: 'PeachPie project Documentation'
+site_description: 'PeachPie - PHP Compiler for .NET - Documentation'
 site_author: 'peachpie'
 site_url: 'https://docs.peachpie.io'
 
@@ -41,6 +41,9 @@ extra:
   search:
     language: 'en'
 
+extra_css:
+  - css/custom.css
+
 # Google Analytics
 google_analytics:
   - 'UA-73282519-1'
@@ -49,7 +52,16 @@ google_analytics:
 # Extensions
 markdown_extensions:
   - admonition
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - codehilite:
       guess_lang: false
   - toc:
       permalink: true
+
+pages:
+
+# plugins
+plugins:
+    - search
+    - awesome-pages
