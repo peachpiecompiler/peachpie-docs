@@ -1,0 +1,46 @@
+# Project information
+site_name: 'PeachPie Documentation'
+site_description: 'PeachPie project Documentation'
+site_author: 'peachpie'
+site_url: 'https://docs.peachpie.io'
+
+# Repository
+repo_name: 'peachpiecompiler/peachpie'
+repo_url: 'https://github.com/peachpiecompiler/peachpie'
+
+# Copyright
+copyright: 'Copyright &copy; 2016 - 2018 iolevel s.r.o.'
+
+# Configuration
+theme:
+  name: 'material'
+  language: 'en'
+  palette:
+    primary: 'deep orange'
+    accent: 'orange'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+
+# Customization
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/peachpiecompiler/peachpie'
+    - type: 'twitter'
+      link: 'https://twitter.com/pchpcompiler'
+    - type: 'blog'
+      link: 'https://www.peachpie.io/'
+
+# Google Analytics
+google_analytics:
+  - 'UA-XXXXXXXX-X'
+  - 'auto'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
