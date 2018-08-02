@@ -1,4 +1,4 @@
-PeachPie is compatible with .NET standard 1.5 or higher, .NET Framework 4.6, .NET Core 1.1+, Mono.
+PeachPie is compatible with .NET standard 2.0 or higher, .NET Framework 4.7.1, .NET Core 2.0+, Mono.
 
 ## Prerequisites
 

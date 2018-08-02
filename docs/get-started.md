@@ -1,4 +1,4 @@
-# Getting Started
+# Get Started
 
 Peachpie consists of three components:
 - The compiler (**peach.exe** for .NET Framework 4.6 or **Peachpie.NET.Sdk** when using [[msbuild]]) builds regular .NET assemblies with PDB information from the given PHP files.
