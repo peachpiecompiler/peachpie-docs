@@ -52,6 +52,11 @@ markdown_extensions:
   - admonition
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tilde
   - codehilite:
       guess_lang: false
   - toc:
