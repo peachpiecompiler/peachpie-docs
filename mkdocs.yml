@@ -57,6 +57,7 @@ markdown_extensions:
   - pymdownx.smartsymbols
   - pymdownx.superfences
   - pymdownx.tilde
+  - pymdownx.details
   - codehilite:
       guess_lang: false
   - toc:

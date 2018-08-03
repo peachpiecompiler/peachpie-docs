@@ -10,9 +10,10 @@ The purpose of this page is to get you started with PeachPie quickly. Following 
 
 Open a command prompt and run the following command:
 
-```bash
-dotnet new -i Peachpie.Templates::*
-```
+!!! example "install dotnet templates"
+    ```bash
+    dotnet new -i Peachpie.Templates::*
+    ```
 
 The `dotnet` command downloads latest project template to be used to create a new PeachPie projects for you.
 
@@ -22,12 +23,13 @@ Following steps create a new project in the current directory. They come with a 
 
 ### Console Application
 
-The easiest way is to create a console application with a PHP code. Open command prompt and run the following command
+The easiest way is to create a console application with a PHP code. Open command prompt and run the following commands:
 
-```bash
-dotnet new console -lang PHP
-dotnet run
-```
+!!! example "create and run console project"
+    ```bash
+    dotnet new console -lang PHP
+    dotnet run
+    ```
 
 The first run takes a few seconds since it downloads all the dependencies for the first time and compiles the project.
 
@@ -35,10 +37,11 @@ The first run takes a few seconds since it downloads all the dependencies for th
 
 Now let's create an ASP.NET Core application that runs PHP compiled web site. Open a command prompt in a new directory and run following commands:
 
-```bash
-dotnet new web -lang PHP
-dotnet run -p Server
-```
+!!! example "create and run web project"
+    ```bash
+    dotnet new web -lang PHP
+    dotnet run -p Server
+    ```
 
 The `dotnet new` command creates a new project. Then it downloads all the necessary dependencies, the application compiles and runs a built-in web server on http://localhost:5004. You can access the page in the browser and see the result of `index.php`.
 
@@ -48,10 +51,11 @@ The newly created web application actually consists of two projects - `Server` a
 
 Third project type is a class library. Following command creates a project that builds `.dll` file out of your PHP files to be used as a library referenced by other projects - either C# projects or other PHP projects.
 
-```bash
-dotnet new classlib -lang PHP
-dotnet build
-```
+!!! example "create and build class library project"
+    ```bash
+    dotnet new classlib -lang PHP
+    dotnet build
+    ```
 
 This kind of project can be used purely as a dependency to other projects. Containing classes and interfaces are exposed as regular .NET types. Containing script files and globals functions are also accessible, either by (PeachPie API)[api-reference] or seamlessly within another PHP project that references this library.
 
@@ -61,7 +65,7 @@ Projects created by steps above can be opened by .NET development environments l
 
 ### Visual Studio Code
 
-- Install [PeachPie for VS Code extension](https://marketplace.visualstudio.com/items?itemName=iolevel.peachpie-vscode)
+- Install [PeachPie for VS Code](https://marketplace.visualstudio.com/items?itemName=iolevel.peachpie-vscode) extension
 - Open folder with your PHP project
 - Start the project by pressing `F5` and let the VSCode to create initial `tasks.json` and `launch.json` files
 - Edit `launch.json` to point to actual build result

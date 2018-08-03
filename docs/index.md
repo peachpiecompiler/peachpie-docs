@@ -15,5 +15,4 @@ Welcome to **docs.peachpie.io**, the home of the PeachPie documentation for deve
 !!! tip "Samples, Tutorials, Scenarios"
     See our **[scenarios](scenarios)** for real world use cases, specific code samples and hints on how you can benefit from the project.
 
-!!! info "Learn more about the project"
-    If you want to understand the objectives and benefits of PeachPie, browse the **[about](about)** section, where you can find the motivation behind this project.
+If you want to understand the objectives and benefits of PeachPie, browse the **[about](about)** section, where you can find the motivation behind this project.
