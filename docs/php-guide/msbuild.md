@@ -22,13 +22,13 @@ MSBuild is the build system for .NET and Visual Studio. The MSBuild project file
 </Project>
 ```
 
-The sample project file above is supposed to be saved as `your-project-name.msbuildproj`. This particular example targets class library projects, see the sections below on how to target different project types. The project can be opened in Visual Studio 2017, Visual Studio Code, other IDEs or used from your favorite shell to build or run the project.
+The sample project file above is supposed to be saved as `your-project-name.msbuildproj`. This particular example includes all the `.php` files into the compilation, uses the PeachPie compiler and targets class library projects. See section [Output Type](#outputtype) below on how to target different project types. The project can be opened in Visual Studio 2017, Visual Studio Code, other IDEs or used from your favorite shell to build or run the project.
 
 ```bash
 dotnet build
 ```
 
-!!! note "before opening in Visual Studio 2017"
+!!!warning "before opening in Visual Studio 2017"
     In case you are opening the project in Visual Studio 2017, run once the restore command:
     ```bash
     dotnet restore
@@ -36,9 +36,18 @@ dotnet build
 
 ## Additional Properties
 
-### `LangVersion`
+### OutputType
 
-The `LangVersion` property specifies the version of PHP semantic. This allows to treat built-in types with respect to PHP version or to allow language constructs (like `&new`) that has been removed from latest versions of PHP already.
+The `OutputType` property specifies whether to output an executable (`.exe`) or a library (`.dll`). Possible values are:
+
+- library
+- exe - in combination with `<TargetFramework>netcoreapp2.0</TargetFramework>` or higher.
+- winexe
+- module
+
+### LangVersion
+
+The `LangVersion` property specifies the version of PHP semantic. This allows to treat built-in types with respect to PHP version or to allow language constructs (like `&new`) that has been removed from latest versions of PHP.
 
 ```xml
 <LangVersion>5.4</LangVersion>
@@ -56,7 +65,7 @@ function foo(int $i, object $o, callable $c)
 }
 ```
 
-### `ShortOpenTag`
+### ShortOpenTag
 
 Short open tag syntax (`<?`) is disabled by default. To enable it set `ShortOpenTag` property to `true`.
 
@@ -64,7 +73,7 @@ Short open tag syntax (`<?`) is disabled by default. To enable it set `ShortOpen
 <ShortOpenTag>true</ShortOpenTag>
 ```
 
-### `NoWarn`
+### NoWarn
 
 Disables specific warning messages. The warnings are identified by their ID (e.g. `PHP3006`) and can be separated by comma or space.
 
@@ -73,7 +82,7 @@ Disables specific warning messages. The warnings are identified by their ID (e.g
 ```
 The sample above disables reporting of call of an undefined function and declaring a mandatory parameter behind optional parameter.
 
-### `GenerateDocumentation`
+### GenerateDocumentation
 
 Enables or disables creation of `.xml` file with `XMLDoc` generated from source files `PHPDoc`. Default is `false` to not generate the XML documentation file.
 
@@ -81,7 +90,7 @@ Enables or disables creation of `.xml` file with `XMLDoc` generated from source 
 <GenerateDocumentation>true</GenerateDocumentation>
 ```
 
-### `PhpDocTypes`
+### PhpDocTypes
 
 Allows to strongly type PHP properties, functions or function parameters using regular PHP Doc comment. This is useful for keeping backward compatibility with PHP 5 and to strongly type PHP properties.
 
