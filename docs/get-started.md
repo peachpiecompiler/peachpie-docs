@@ -40,13 +40,13 @@ dotnet new web -lang PHP
 dotnet run -p Server
 ```
 
-The `dotnet new` command create a new project. Then it downloads all the necessary dependencies, the application compiles and runs a built-in web server on http://localhost:5004. You can access the page in the browser and see the result of `index.php`.
+The `dotnet new` command creates a new project. Then it downloads all the necessary dependencies, the application compiles and runs a built-in web server on http://localhost:5004. You can access the page in the browser and see the result of `index.php`.
 
 The newly created web application actually consists of two projects - `Server` and `Website`. The first one is a C# .NET Core app that initializes web server and passes requests to scripts in the second project. You can integrate this solution with a regular .NET Core MVC application with your additional configuration.
 
 ### Class Library
 
-Third project type is a class library. Following command creates a project that builds '.dll' file out of your PHP files to be used as a library referenced by other projects - either C# projects or other PHP projects.
+Third project type is a class library. Following command creates a project that builds `.dll` file out of your PHP files to be used as a library referenced by other projects - either C# projects or other PHP projects.
 
 ```bash
 dotnet new classlib -lang PHP
