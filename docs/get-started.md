@@ -4,7 +4,7 @@ The purpose of this page is to get you started with PeachPie quickly. Following 
 
 ## Prerequisites
 
-- .NET Core SDK 2.1 or newer: (microsoft.com)[https://www.microsoft.com/net/download]
+- .NET Core SDK 2.1 or newer: [microsoft.com/net/download](https://www.microsoft.com/net/download)
 
 ## Install dotnet templates
 

@@ -7,46 +7,6 @@
 - [ ] **0.9.9**: interpreted mode, producing clean IL
 - [ ] **1.0.0-alpha**: TBD
 
-## Feature Status
-
-- [x] PHP 5.4, 5.5, 5.6 Syntax
-- [x] PHP 7.0, 7.1, 7.2 Syntax
-- [x] Control Flow Graph & Code analysis
-- [x] Compiler on top of Roslyn, semantics
-- [x] Referencing .NET assemblies
-- [x] Referencing script libraries
-- [x] Code generation
-  * [x] Routine declaration
-  * [x] Types declaration
-  * [x] Statements compiler
-  * [x] Method overrides, Ghost stubs
-  * [ ] Destructors
-- [x] Expressions (missing few operators and expressions)
-- [x] Type Hierarchy and Conversions
-- [x] Value copying
-- [x] Value aliasing
-- [x] Array access for strings
-- [x] Indirect variable access
-- [x] Indirect function call
-- [x] Indirect class access
-- [x] Variable arguments (params)
-- [x] Inclusions (include, require, once)
-- [x] Autoload (__autoload, spl)
-- [x] Late static binding
-- [x] varargs ("...")
-- [x] unpacking ("...")
-- [x] Anonymous classes
-- [x] Traits
-- [x] Closures
-  * [x] C# Lambda functions
-- [x] Eval
-- [x] PHP Generators
-- [x] PHP Stack Trace
-- [x] Console Application
-- [x] Web Application
-- [x] Class Library
-- [ ] PHAR support
-
 ### Test Environments
 
 - [x] Travis CI
@@ -66,42 +26,6 @@
   * [x] Dynamic compilation
 - [x] Peachpie NuGet packages
 - [x] Error handling
-
-## Implemented PHP Extensions
-
-- [x] Math
-- [x] Output Buffering
-- [x] Variables
-- [x] Strings
-- [x] Arrays
-- [x] Streams
-- [x] Mail
-- [x] Hash
-- [x] File System
-- [x] FileInfo
-- [ ] ftp
-- [ ] intl
-- [x] Serialization
-- [ ] Sockets
-- [x] PDO
-- [x] mssql
-- [x] MySql
-- [x] MySqli (most of the functionality)
-- [x] GD2
-- [x] cURL
-- [x] XML
-- [x] Dom
-- [x] Misc
-- [x] PCRE
-  * [x] PCRE syntax parser
-  * [x] Modification of .NET Regex
-- [ ] pthreads
-- [x] Sessions
-- [ ] Soap
-- [x] SPL
-- [x] Reflection
-- [x] zlib
-- [ ] Zip
 
 ## Optimization Tasks
 
