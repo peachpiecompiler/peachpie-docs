@@ -105,6 +105,29 @@ Default is `None`.
 !!!warning
     Be careful when enabling this option. Typed values won't persist a PHP reference.
 
+## Create NuGet package
+
+Build system can automatically create the NuGet package. To create the NuGet package (`.nupkg`) insert the following snippet into the project file:
+```xml
+<PropertyGroup>
+  <VersionPrefix>1.2.3</VersionPrefix>
+  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+</PropertyGroup>
+```
+
+## Sign with a Strong Name
+
+To provide a unique identity of the compiled assembly, sign the assembly with a strong name using a private key. Signing the assembly during the build process using your private key can be achieved using the following snippet:
+```xml
+<PropertyGroup>
+  <!-- signing -->
+  <AssemblyOriginatorKeyFile>my-key.snk</AssemblyOriginatorKeyFile>
+  <SignAssembly>true</SignAssembly>
+  <PublicSign Condition="'$(OS)' != 'Windows_NT'">true</PublicSign>
+</PropertyGroup>
+```
+
 ## Related links
-- [MSBuild reference](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-reference) (docs.microsoft.com)
+- [MSBuild reference](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-reference) *(docs.microsoft.com)*
+- [Sign an Assembly with a Strong Name](https://docs.microsoft.com/en-us/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name) *(docs.microsoft.com)*
 - [Goodbye project.json, Hello MSBuild](http://www.peachpie.io/2017/04/msbuild-netcoreapp1-1.html)
