@@ -1,106 +1,76 @@
 # Get started
 
-Peachpie consists of three components:
-- The compiler (**peach.exe** for .NET Framework 4.6 or **Peachpie.NET.Sdk** when using [[msbuild]]) builds regular .NET assemblies with PDB information from the given PHP files.
-- The runtime (**Peachpie.Runtime.dll**) containing the functionality that is required by the compiled assembly while running.
-- The libraries (**Peachpie.Library.dll** and others) containing the implementation of PHP functions, classes, constants etc.
+The purpose of this page is to get you started with PeachPie quickly. Following steps lets you to create a minimal project containing PHP files that compiles and runs on top of .NET Core. 
 
-![Peachpie Compiler](img/peach-process.png)
+## Prerequisites
 
-The compiler targets both major platforms - **.NET Core** 1.1+ and **Full .NET Framework** 4.6 - which makes Peachpie compiled programs available on Windows, Windows Core, Windows Phone, Linux, MacOS and platforms supported by Xamarin (Android, iOS).
+- .NET Core SDK 2.1 or newer: (microsoft.com)[https://www.microsoft.com/net/download]
 
-For a brief overview of how to build Peachpie on the command line or how to use it in Visual Studio Code, please refer to the following videos:
+## Install dotnet templates
 
-- [Command line building](https://www.youtube.com/watch?v=GVWVInYiYLY)
-- [Visual Studio Code](https://youtu.be/hBiixbockK4)
+Open a command prompt and run the following command:
 
-## A. MSBuild
-
-Using the [[MSBuild]] project is the recommended approach of compiling source files. See the sections below for getting started with various project types.
-
-### Before you start
-
-- Install [.NET Core 2.0 SDK](https://www.microsoft.com/net/core) for your platform.
-- Optionally - Visual Studio Code ([VSCode](https://code.visualstudio.com/) + [C# Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) + [Peachpie Extension](https://marketplace.visualstudio.com/items?itemName=iolevel.peachpie-vscode)) or Visual Studio 2017 ([VS2017](https://www.visualstudio.com/downloads/)).
-- Create an [[msbuild project file|msbuild]] within the project directory containing PHP files.
-
-### (a) CommandLine .NET Core Application
-
-1. Update the [[msbuild project file|msbuild]] with the following properties
-```xml
-<PropertyGroup>
-    <OutputType>exe</OutputType>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
-    <StartupObject>main.php</StartupObject>
-</PropertyGroup>
+```bash
+dotnet new -i Peachpie.Templates::*
 ```
 
-2. Restore the project dependencies, either in the IDE or using the following command:
+The `dotnet` command downloads latest project template to be used to create a new PeachPie projects for you.
 
-`dotnet restore`
+## Create your app
 
-3. Build the project:
+Following steps create a new project in the current directory. They come with a simple *hello world* code.
 
-`dotnet build` or `msbuild /t:build project.msbuildproj`
+### Console Application
 
-### (b) Class Library
+The easiest way is to create a console application with a PHP code. Open command prompt and run the following command
 
-1. Update the [[msbuild project file|msbuild]] with the following properties
-```xml
-<PropertyGroup>
-    <OutputType>library</OutputType>
-    <TargetFrameworks>net46;netstandard1.5</TargetFrameworks>
-</PropertyGroup>
+```bash
+dotnet new console -lang PHP
+dotnet run
 ```
 
-2. Restore the project dependencies, either in the IDE or using the following command:
+The first run takes a few seconds since it downloads all the dependencies for the first time and compiles the project.
 
-`dotnet restore`
+### Web Application
 
-3. Build the project:
+Now let's create an ASP.NET Core application that runs PHP compiled web site. Open a command prompt in a new directory and run following commands:
 
-`dotnet build` or `msbuild /t:build project.msbuildproj`
-
-### (c) Android/iOS App
-
-*In progress*
-
-### (d) ASP.NET Core WebSite
-
-See the [ASP.NET Core & Kestrel](https://github.com/iolevel/peachpie-samples/tree/master/web-application) sample project for more details.
-
-### (e) ASP.NET WebSite
-
-This type of project requires you to compile Peachpie from the sources to get `Peachpie.RequestHandler.dll`. Then follow the steps below:
-
-1. Compile the PHP project as a class library targeting `net46`
-```xml
-<PropertyGroup>
-    <OutputType>library</OutputType>
-    <TargetFrameworks>net46</TargetFrameworks>
-</PropertyGroup>
+```bash
+dotnet new web -lang PHP
+dotnet run -p Server
 ```
 
-2. Copy the resulting `dll`, `Peachpie.RequestHandler.dll` and other dependent assemblies (`Peachpie.Runtime.dll`, `Peachpie.Library.dll`) to the `/bin/` directory.
+The `dotnet new` command create a new project. Then it downloads all the necessary dependencies, the application compiles and runs a built-in web server on http://localhost:5004. You can access the page in the browser and see the result of `index.php`.
 
-![Deploying Files on Azure](https://github.com/iolevel/peachpie/wiki/img/webserver-files.png)
+The newly created web application actually consists of two projects - `Server` and `Website`. The first one is a C# .NET Core app that initializes web server and passes requests to scripts in the second project. You can integrate this solution with a regular .NET Core MVC application with your additional configuration.
 
-3.  Configure the `web.config` file in the Web Application root with the following code:
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<configuration>
-  <system.webServer>
-    <handlers>
-      <add name="PhpHandler" path="*.php" verb="*" type="Peachpie.RequestHandler.RequestHandler, Peachpie.RequestHandler" preCondition="integratedMode" />
-    </handlers>
-  </system.webServer>
-</configuration>
+### Class Library
+
+Third project type is a class library. Following command creates a project that builds '.dll' file out of your PHP files to be used as a library referenced by other projects - either C# projects or other PHP projects.
+
+```bash
+dotnet new classlib -lang PHP
+dotnet build
 ```
 
-## B. In-Memory Compilation
+This kind of project can be used purely as a dependency to other projects. Containing classes and interfaces are exposed as regular .NET types. Containing script files and globals functions are also accessible, either by (PeachPie API)[api-reference] or seamlessly within another PHP project that references this library.
 
-See [Scripting Test](https://github.com/iolevel/peachpie/blob/master/src/Tests/Peachpie.Test/Program.cs) for a sample utilization of the Peachpie API.
+## Development Environment
 
-## C. CommandLine Compiler
+Projects created by steps above can be opened by .NET development environments like `Visual Studio 2017` or newer or `Visual Studio Code`. There few additional steps that are necessary.
 
-See [[peach.exe]] for the standalone compiler tool. The tool targets the full .NET Framework only.
+### Visual Studio Code
+
+- Install [PeachPie for VS Code extension](https://marketplace.visualstudio.com/items?itemName=iolevel.peachpie-vscode)
+- Open folder with your PHP project
+- Start the project by pressing `F5` and let the VSCode to create initial `tasks.json` and `launch.json` files
+- Edit `launch.json` to point to actual build result
+
+The steps above adds support for PeachPie diagnostics and breakpoints in PHP code within a PHP project. Building and debugging of the application is handled by .NET runtime and debugger.
+
+### Visual Studio
+
+- Run `dotnet restore` within the project directory before opening the project in Visual Studio.
+- Open the project, build, debug and edit as needed.
+
+The `dotnet restore` command is necessary for Visual Studio 2017 since it downloads the PeachPie SDK for the first time and lets Visual Studio to 'understand' the project when opening.
