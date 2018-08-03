@@ -2,8 +2,8 @@ PeachPie is compatible with .NET standard 2.0 or higher, .NET Framework 4.7.1, .
 
 ## Prerequisites
 
-1. .NET Framework 4.6 (Windows)
-2. .NET Core 1.1+ [(Windows, Mac OS, Linux)](https://www.microsoft.com/net/core)
+1. .NET Framework 4.7.1 (Windows)
+2. .NET Core 2.0+ [(Windows, Mac OS, Linux)](https://www.microsoft.com/net/core)
 
 ## Optional: Web Server
 

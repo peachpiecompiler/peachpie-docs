@@ -33,12 +33,12 @@ theme:
 # Customization
 extra:
   social:
+    - type: 'home'
+      link: 'https://www.peachpie.io/'
     - type: 'github'
       link: 'https://github.com/peachpiecompiler/peachpie'
     - type: 'twitter'
       link: 'https://twitter.com/pchpcompiler'
-    - type: 'home'
-      link: 'https://www.peachpie.io/'
   search:
     language: 'en'
 
