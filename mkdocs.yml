@@ -58,6 +58,7 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tilde
   - pymdownx.details
+  - pymdownx.keys
   - codehilite:
       guess_lang: false
   - toc:

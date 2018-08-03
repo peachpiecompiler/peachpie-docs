@@ -1,14 +1,14 @@
-MSBuild support allows to integrate Peachpie projects with build servers, Visual Studio, Visual Studio Code, Xamarin Studio and other industry standard development tools. The core functionality defines how the source files are compiled into a DLL using the cross-platform open-source `msbuild.exe` 15.0 or newer.
+# MSBuild reference
 
-Read the blog post about the msbuild introduction on [[http://www.peachpie.io/2017/04/msbuild-netcoreapp1-1.html]].
+MSBuild is the build system for .NET and Visual Studio. The MSBuild project file is an XML file describing the build process and more.
 
 ## Sample Project File
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <OutputType>exe</OutputType>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <OutputType>library</OutputType>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
  
   <ItemGroup>
@@ -22,25 +22,19 @@ Read the blog post about the msbuild introduction on [[http://www.peachpie.io/20
 </Project>
 ```
 
-The sample project file above should be saved as `project.msbuildproj`. It can be opened in Visual Studio 2017, Visual Studio Code, other IDEs or used from your favorite shell to build or run the project.
+The sample project file above is supposed to be saved as `your-project-name.msbuildproj`. This particular example targets class library projects, see the sections below on how to target different project types. The project can be opened in Visual Studio 2017, Visual Studio Code, other IDEs or used from your favorite shell to build or run the project.
 
-1. `dotnet build`
+```bash
+dotnet build
+```
 
-In case you are going to open the project in Visual Studio 2017, do not forget to run the `restore` task before opening: `dotnet restore`
+!!! note "before opening in Visual Studio 2017"
+    In case you are opening the project in Visual Studio 2017, run once the restore command:
+    ```bash
+    dotnet restore
+    ```
 
-## Imports
-
-The support for compiling PHP files is added through targets defined in the referenced package `Peachpie.NET.Sdk`. The package contains the necessary targets defining the `CoreCompile` task invoking the compiler distributed in and automatically downloaded from the `Peachpie.Compiler.Tools` package. The SDK also propagates the dependencies to Peachpie Runtime packages seamlessly.
-
-The necessary packages are downloaded by restoring the project dependencies.
-
-`dotnet restore` or `msbuild /t:restore project.msbuildproj`
-
-## Supported frameworks
-
-The `TargetFramework` property can target any framework compatible Peachpie-supported frameworks - `netstandard2.0`, `net46` and higher (`netcoreapp2.0`, `netcoreapp2.1`, `netstandard2.0` etc.).
-
-## Properties
+## Additional Properties
 
 ### `LangVersion`
 
@@ -52,14 +46,17 @@ The `LangVersion` property specifies the version of PHP semantic. This allows to
 
 The options are `5.4`, `5.5`, `5.6`, `7.0`, `7.1`, `7.2` etc.
 
-Mainly this option has effect to built-in types used in type hints, following code has a different semantic using different values of `LangVersion`:
+This option has effect to source code syntax and types used in type hints. Following code has a different semantic according to the `LangVersion` value:
 ```php
-function foo(int $i, object $o, callable $c){} // $i is either long or class 'int', etc.
+<?php
+function foo(int $i, object $o, callable $c)
+{
+  // $i is either long or class `int`
+  // $o is either an object or class `object`
+}
 ```
 
 ### `ShortOpenTag`
-
-> Available since `0.7.0-CI00200`
 
 Short open tag syntax (`<?`) is disabled by default. To enable it set `ShortOpenTag` property to `true`.
 
@@ -68,8 +65,6 @@ Short open tag syntax (`<?`) is disabled by default. To enable it set `ShortOpen
 ```
 
 ### `NoWarn`
-
-> Available since `0.9.0-CI00743`
 
 Disables specific warning messages. The warnings are identified by their ID (e.g. `PHP3006`) and can be separated by comma or space.
 
@@ -80,15 +75,13 @@ The sample above disables reporting of call of an undefined function and declari
 
 ### `GenerateDocumentation`
 
-Enables or disables creation of `.xml` file with `XMLDoc` generated from source files `PHPDoc`.
+Enables or disables creation of `.xml` file with `XMLDoc` generated from source files `PHPDoc`. Default is `false` to not generate the XML documentation file.
 
 ```xml
 <GenerateDocumentation>true</GenerateDocumentation>
 ```
 
 ### `PhpDocTypes`
-
-> Available since `0.7.0-CI00299`
 
 Allows to strongly type PHP properties, functions or function parameters using regular PHP Doc comment. This is useful for keeping backward compatibility with PHP 5 and to strongly type PHP properties.
 
@@ -100,12 +93,9 @@ Possible values are `None`, `FieldTypes`, `ParameterTypes`, `ReturnTypes` or `Al
 
 Default is `None`.
 
-> Be careful when enabling this option. Typed values cannot hold a reference.
+!!!warning
+    Be careful when enabling this option. Typed values won't persist a PHP reference.
 
-## Multitargeting
-
-Specifying `TargetFrameworks` property is supported. The construct allows to set more than one target framework for the project to be built.
-
-```xml
-<TargetFrameworks>netcoreapp2.0;net46</TargetFrameworks>
-```
+## Related links
+- [MSBuild reference](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-reference) (docs.microsoft.com)
+- [Goodbye project.json, Hello MSBuild](http://www.peachpie.io/2017/04/msbuild-netcoreapp1-1.html)
