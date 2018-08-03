@@ -3,7 +3,7 @@
 Welcome to **docs.peachpie.io**, the home of the PeachPie documentation for developers. Check out the [get started](get-started) section to jump straight to using PeachPie, or dive into the more advanced topics, such as the [.NET reference](net-reference) and [API reference](api-reference).
 
 !!! info "Learn more about the project"
-    If you want to understand the objectives and benefits of PeachPie, browse our [about](about) section, where we explain our motivation behind this project.
+    If you want to understand the objectives and benefits of PeachPie, browse our **[about](about)** section, where we explain our motivation behind this project.
 
 !!! tip "Migrate PHP code to .NET Core"
     The very first step is to get your PHP code running on .NET.
