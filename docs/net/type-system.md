@@ -1,10 +1,12 @@
-This article provides an overview of the features that allow passing objects between .NET (assuming C#) and PHP code, and the expected behavior of such scenarios.
+# CLR vs. PHP types
+
+This article provides information on how the runtime treats .NET types. In result, with respect to this specification, it is possible to pass values between .NET (assuming `C#`) and `PHP` code implicitly, without a need of marshalling or an additional conversions.
 
 ## Type System
 
-Following table shows compatible C# types and corresponding PHP type. Types from the left column should are consumed by PHP runtime transparently.
+Following table shows compatible .NET types and corresponding PHP type:
 
-CLR | PHP | PHP Features
+.NET | PHP | PHP Features
 --- | --- | ---
 PhpValue\* | mixed | 
 bool | boolean | 
@@ -17,9 +19,10 @@ PhpResource\* | resource | `is_resource`
 PhpNumber\* | integer\|double | 
 PhpArray\*, ArrayAccess\*, IList | array, ArrayAccess | `[]`
 Iterator\*, IteratorAggregate\*, IEnumerable | iterable | `foreach`, `is_iterable`
-delegate, IPhpCallable\*, string, PhpArray(2)\* | callable | `call_user_func`, `$var()`, `is_callable`
+delegate, IPhpCallable\*, string, PhpArray(2)\* | callable | `call_user_func`, `is_callable`, etc.
 
-> `*` CLR types declared in Peachpie.Runtime.dll library.
+!!! info
+    `*` .NET types declared in `Peachpie.Runtime.dll` module.
 
 ## (CLR) `IEnumerable`
 
