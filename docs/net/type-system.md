@@ -23,7 +23,7 @@ delegate, IPhpCallable\*, string, PhpArray(2)\* | callable | `call_user_func`, `
 
 > `*` .NET types defined in `Peachpie.Runtime.dll` module.
 
-## (CLR) `IEnumerable`
+## System.Collections.IEnumerable
 
 The sample PHP code below is able to consume a variety of CLR objects in addition to PHP's `array` and `Traversable`.
 
@@ -50,7 +50,7 @@ foreach ($enumerable as $key => &$value) { $value = 0; }
 ```
 In order to support iteration by reference, the enumerable object must return value of type `PhpAlias` from the enumerator. Otherwise an exception of type `InvalidOperationException` is thrown.
 
-## (CLR) `delegate`
+## System.Delegate
 
 PHP's concept of callables works with `string` pointing to a function name, `array` of two dimensions referring to a class and its method, classes with `__invoke` magic method or `Closure`s.
 
@@ -66,7 +66,7 @@ Sample C# code that passes a delegate to a PHP global variable:
 Context.Globals["delegate"] = PhpValue.FromClr( new Func<string, bool>( str => str.IsNormalized() ) );
 ```
 
-## (CLR) `IList`
+## System.Collections.IList
 
 PHP allows you to access an `array` and objects implementing `ArrayAccess` with square brackets as shown in the example below.
 

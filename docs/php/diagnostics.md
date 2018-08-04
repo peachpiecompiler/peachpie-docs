@@ -27,6 +27,7 @@ PHP3011 | Ambiguous declaration | The base of the type declaration is ambiguous;
 PHP3012 | Unreachable code | The code is unreachable. This is based on code analysis and dead code elimination analysis.
 PHP3017 | Assert always fail | The condition of assertion is evaluated to be always `false` and the `assert` will never fail.
 PHP3021 | Assignment made to same variable | The expression does not have any effect, it is usually a typo in source code.
+PHPX0125 | Mandatory parameter behind optional | A default value of the optional parameter will never be used because a mandatory parameter follows.
 
 ## Informational
 
