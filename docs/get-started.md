@@ -57,7 +57,7 @@ Third project type is a class library. Following command creates a project that 
     dotnet build
     ```
 
-This kind of project can be used purely as a dependency to other projects. Containing classes and interfaces are exposed as regular .NET types. Containing script files and globals functions are also accessible, either by (PeachPie API)[api-reference] or seamlessly within another PHP project that references this library.
+This kind of project can be used purely as a dependency to other projects. Containing classes and interfaces are exposed as regular .NET types. Containing script files and globals functions are also accessible, either by [PeachPie API](api) or seamlessly within another PHP project that references this library.
 
 ## Development Environment
 

@@ -63,8 +63,6 @@ markdown_extensions:
   - toc:
       permalink: true
 
-pages:
-
 # plugins
 plugins:
     - search
