@@ -3,7 +3,7 @@
 The compiler performs several passes of code analysis during the build process. In result it may endup in a list of diagnostics each corresponding to a location in the source code. Following list describes the error codes and possible solutions on how to fix them.
 
 !!! tip
-    The warning diagnostics can be turned off by setting a build property. See [msbuild#NoWarn](NoWarn Property) for more information.
+    The warning diagnostics can be turned off by setting a build property. See [NoWarn Property](msbuild#NoWarn) for more information.
 
 ## Errors
 
