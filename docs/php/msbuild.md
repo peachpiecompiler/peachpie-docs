@@ -1,4 +1,4 @@
-# MSBuild reference
+# Project file reference
 
 MSBuild is the build system for .NET and Visual Studio. The MSBuild project file is an XML file describing the build process and more.
 
