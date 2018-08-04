@@ -21,14 +21,14 @@ PhpArray\*, ArrayAccess\*, IList | array, ArrayAccess | `[]`
 Iterator\*, IteratorAggregate\*, IEnumerable | iterable | `foreach`, `is_iterable`
 delegate, IPhpCallable\*, string, PhpArray(2)\* | callable | `call_user_func`, `is_callable`, etc.
 
-!!! info
-    `*` .NET types declared in `Peachpie.Runtime.dll` module.
+> `*` .NET types defined in `Peachpie.Runtime.dll` module.
 
 ## (CLR) `IEnumerable`
 
 The sample PHP code below is able to consume a variety of CLR objects in addition to PHP's `array` and `Traversable`.
 
 ```php
+<?php
 foreach ($enumerable as $key => $value) { }
 ```
 
@@ -45,6 +45,7 @@ As a result, standard .NET classes such as .NET arrays, `ArrayList`, `List<>`, `
 ### `foreach` by reference
 
 ```php
+<?php
 foreach ($enumerable as $key => &$value) { $value = 0; }
 ```
 In order to support iteration by reference, the enumerable object must return value of type `PhpAlias` from the enumerator. Otherwise an exception of type `InvalidOperationException` is thrown.
@@ -54,10 +55,11 @@ In order to support iteration by reference, the enumerable object must return va
 PHP's concept of callables works with `string` pointing to a function name, `array` of two dimensions referring to a class and its method, classes with `__invoke` magic method or `Closure`s.
 
 ```php
+<?php
 print_r( $delegate($arg1, $arg2) );
 ```
 
-Peachpie extends the list of callable types with any CLR `delegate` or objects implementing `IPhpCallable` interface (Peachpie.Runtime.dll).
+PeachPie extends the list of callable types with any CLR `delegate` or objects implementing `IPhpCallable` interface (Peachpie.Runtime.dll).
 
 Sample C# code that passes a delegate to a PHP global variable:
 ```csharp
@@ -69,7 +71,8 @@ Context.Globals["delegate"] = PhpValue.FromClr( new Func<string, bool>( str => s
 PHP allows you to access an `array` and objects implementing `ArrayAccess` with square brackets as shown in the example below.
 
 ```php
+<?php
 echo $list[10];
 ```
 
-Peachpie provides the feature for `System.Collections.IList` which allows consuming of .NET arrays, `List`s and other classes in PHP.
+PeachPie provides the feature for `System.Collections.IList` which allows consuming of .NET arrays, `List`s and other classes in PHP.
