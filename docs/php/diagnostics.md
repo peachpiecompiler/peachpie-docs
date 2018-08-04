@@ -25,7 +25,7 @@ PHP3008 | Undefined type | There is no such class declaration in the project or 
 PHP3010 | Eval discouraged | Use of `eval()` is not recommended; it allows for suspicious and dangerous code injections and causes significant overhead to the .NET runtime.
 PHP3011 | Ambiguous declaration | The base of the type declaration is ambiguous; this results in multiple definitions to be emitted, significant run time overhead and unnecessarily bigger resulting assembly file.
 PHP3012 | Unreachable code | The code is unreachable. This is based on code analysis and dead code elimination analysis.
-PHP3017 | Assert always fail | The condition of assertion is evaluated to be always `false` and the `assert` will never fail.
+PHP3017 | Assert always fails | The condition of assertion is evaluated to be always `false` hence the `assert` will always fail.
 PHP3021 | Assignment made to same variable | The expression does not have any effect, it is usually a typo in source code.
 PHPX0125 | Mandatory parameter behind optional | A default value of the optional parameter will never be used because a mandatory parameter follows.
 
