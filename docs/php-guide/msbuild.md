@@ -22,17 +22,18 @@ MSBuild is the build system for .NET and Visual Studio. The MSBuild project file
 </Project>
 ```
 
-The sample project file above is supposed to be saved as `your-project-name.msbuildproj`. This particular example includes all the `.php` files into the compilation, uses the PeachPie compiler and targets class library projects. See section [Output Type](#outputtype) below on how to target different project types. The project can be opened in Visual Studio 2017, Visual Studio Code, other IDEs or used from your favorite shell to build or run the project.
-
-```bash
-dotnet build
-```
+The sample project file above is supposed to be saved as **`your-project-name.msbuildproj`**. This particular example includes all the `.php` files into the compilation, uses the PeachPie compiler and targets class library projects. See the section [Output Type](#outputtype) below on how to target different project types. The project can be opened in Visual Studio 2017, Visual Studio Code, other IDEs or used from your favorite shell to build or run the project.
 
 !!!warning "before opening in Visual Studio 2017"
     In case you are opening the project in Visual Studio 2017, run once the restore command:
     ```bash
     dotnet restore
     ```
+
+The project is build using an IDE or the command below:
+```bash
+dotnet build
+```
 
 ## Additional Properties
 
@@ -41,7 +42,7 @@ dotnet build
 The `OutputType` property specifies whether to output an executable (`.exe`) or a library (`.dll`). Possible values are:
 
 - library
-- exe - in combination with `<TargetFramework>netcoreapp2.0</TargetFramework>` or higher.
+- exe - in combination with `#!xml <TargetFramework>netcoreapp2.0</TargetFramework>` or higher.
 - winexe
 - module
 
@@ -90,22 +91,45 @@ Enables or disables creation of `.xml` file with `XMLDoc` generated from source 
 <GenerateDocumentation>true</GenerateDocumentation>
 ```
 
+!!! success "enabling this option is recommended"
+    In case the projects containing the XML documentation is referenced by a C# project, IDE' IntelliSense will display an additional text information collected from the `XMLDoc` file.
+
 ### PhpDocTypes
 
-Allows to strongly type PHP properties, functions or function parameters using regular PHP Doc comment. This is useful for keeping backward compatibility with PHP 5 and to strongly type PHP properties.
-
-Possible values are `None`, `FieldTypes`, `ParameterTypes`, `ReturnTypes` or `All` or their combination using vertical bar `|`. In case there is a PHP type hint, the PHPDoc type is ignored.
+This property allows to strongly type PHP properties, functions or function parameters using regular PHPDoc comment. This is useful for keeping backward compatibility with PHP 5 and to strongly type PHP properties.
 
 ```xml
 <PhpDocTypes>FieldTypes</PhpDocTypes>
 ```
 
-Default is `None`.
+Possible values are `None`, `FieldTypes`, `ParameterTypes`, `ReturnTypes` or `All` or their combination using vertical bar `|`. Default is `None`. In case there is a PHP type hint, then the PHPDoc type is ignored. 
+
+!!! example
+    The result of setting **`PhpDocTypes`** to **`FieldTypes`** and compilation of following source PHP code
+    ```php
+    <?php
+    class A {
+      /** @var array */
+      var $a_property;
+      /** @var int */
+      var $integer_property;
+    }
+    ```
+    is a .NET assembly containing an equivalent to following C# code:
+    ```C#
+    public class A {
+      public PhpArray a_property;
+      public long integer_property;
+    }
+    ```
+
 
 !!!warning
     Be careful when enabling this option. Typed values won't persist a PHP reference.
 
-## Create NuGet package
+## Common snippets
+
+### Create NuGet package
 
 Build system can automatically create the NuGet package. To create the NuGet package (`.nupkg`) insert the following snippet into the project file:
 ```xml
@@ -115,7 +139,7 @@ Build system can automatically create the NuGet package. To create the NuGet pac
 </PropertyGroup>
 ```
 
-## Sign with a Strong Name
+### Sign with a Strong Name
 
 To provide a unique identity of the compiled assembly, sign the assembly with a strong name using a private key. Signing the assembly during the build process using your private key can be achieved using the following snippet:
 ```xml
