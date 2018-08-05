@@ -9,7 +9,7 @@ The compiler performs several passes of code analysis during the build process. 
 
 Code | Description | Reason
 ---- | ----------- | ------
-PHP2041 | Too many user strings | .NET assembly limits how much text can be contained. This error might happen when compiling a large PHP project; split the project to work around this issue.
+PHP4041 | Too many user strings | .NET assembly limits how much text can be contained. This error might happen when compiling a large PHP project; split the project to work around this issue.
 PHP4042 | Not yet implemented | The feature is not yet supported by PeachPie.
 PHP4043 | Circular base class dependency | The class or interface inherits itself.
 PHP4044 | Type name cannot be resolved | The base type of a class or an interface needs to be known in compile time. Otherwise the module cannot be compiled.
