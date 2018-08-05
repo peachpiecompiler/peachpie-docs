@@ -30,7 +30,7 @@ PHP5010 | Eval discouraged | Use of `eval()` is not recommended; it allows for s
 PHP5011 | Ambiguous declaration | The base of the type declaration is ambiguous; this results in multiple definitions to be emitted, significant run time overhead and unnecessarily bigger resulting assembly file.
 PHP5012 | Unreachable code | The code is unreachable. This is based on code analysis and dead code elimination analysis.
 PHP5017 | Assert always fails | The condition of assertion is evaluated to be always `false` hence the `assert` will always fail.
-PHP5019 | The function has been deprecated | Calling a function that has been marked as deprecated; either it is annotated with a .NET `[ObsoleteAttribute]` metadata or is it a known deprecation by the compiler.
+PHP5019 | The function has been deprecated | Calling a function that has been marked as deprecated; either it is annotated with a `[ObsoleteAttribute]` metadata or it is a known deprecation by the compiler.
 PHP5021 | Assignment made to same variable | The expression does not have any effect, it is usually a typo in source code.
 
 ## Informational
