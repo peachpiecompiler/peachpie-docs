@@ -79,7 +79,7 @@ Short open tag syntax (`<?`) is disabled by default. To enable it set `ShortOpen
 Disables specific warning messages. The warnings are identified by their ID (e.g. `PHP3006`) and can be separated by comma or space.
 
 ```xml
-<NoWarn>PHP3006,PHPX0125</NoWarn>
+<NoWarn>PHP5006,PHP0125</NoWarn>
 ```
 The sample above disables reporting of call of an undefined function and declaring a mandatory parameter behind optional parameter.
 
