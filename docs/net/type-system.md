@@ -8,7 +8,7 @@ Following table shows compatible .NET types and corresponding PHP type:
 
 .NET | PHP | PHP Features
 --- | --- | ---
-PhpValue\* | mixed | 
+[PhpValue](../api/PhpValue)\* | mixed | 
 bool | boolean | 
 int, uint, long | integer | 
 double, float | double | 
