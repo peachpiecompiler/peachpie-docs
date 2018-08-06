@@ -1,4 +1,4 @@
-# PhpValue (mixed)
+# PhpValue
 
 PHP language specifies a value of a variable to not be restricted to a single type. This is refered to as a type ambiguity, a type dynamicity, aka `mixed`.
 

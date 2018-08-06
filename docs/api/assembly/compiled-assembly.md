@@ -1,10 +1,4 @@
-## Peachpie Components
-
-* **[[The compiler|compiler-architecture]]** - processes source code, performs analysis steps and generates .NET assemblies (.dll or .exe).
-* **[[The runtime|runtime-architecture]]** is supporting class library providing functionality needed for running generated assemblies and providing runtime context.
-* **[[Libraries|libraries-architecture]]** contain definitions of functions, constants and classes available to runtime.
-
-### Structure of generated assembly
+## Structure of generated assembly
 
 The compiler outputs portable class libraries or executables compatible with .NET 4.5, Mono and .NET Core.
 
