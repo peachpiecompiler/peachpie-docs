@@ -52,27 +52,28 @@ In order to support iteration by reference, the enumerable object must return va
 
 ## System.Delegate
 
-PHP's concept of callables works with `string` pointing to a function name, `array` of two dimensions referring to a class and its method, classes with `__invoke` magic method or `Closure`s.
+PHP's concept of callables works with `string` pointing to a function name, `array` of two dimensions referring to a class and its method, classes with `__invoke` method or instances of `Closure` class. Variables of these types, denoted as `callable`, can be used for indirect calls like as depicted in the sample below:
 
 ```php
 <?php
-print_r( $delegate($arg1, $arg2) );
+assert( is_callable($delegate) );
+print_r( $delegate($arg1, $arg2) ); // $delegate is `callable`
 ```
 
-PeachPie extends the list of callable types with any CLR `delegate` or objects implementing `IPhpCallable` interface (Peachpie.Runtime.dll).
+PeachPie extends the set of `callable` types with any CLR `delegate` or objects implementing `IPhpCallable` interface (Peachpie.Runtime.dll).
 
 Sample C# code that passes a delegate to a PHP global variable:
-```csharp
-Context.Globals["delegate"] = PhpValue.FromClr( new Func<string, bool>( str => str.IsNormalized() ) );
+```c#
+mycontext.Globals["delegate"] = new Func<string, bool>( str => str.IsNormalized() );
 ```
 
 ## System.Collections.IList
 
-PHP allows you to access an `array` and objects implementing `ArrayAccess` with square brackets as shown in the example below.
+PHP allows accessing of an `array` and objects implementing `ArrayAccess` with square brackets `[]` as shown in the example below:
 
 ```php
 <?php
 echo $list[10];
 ```
 
-PeachPie provides the feature for `System.Collections.IList` which allows consuming of .NET arrays, `List`s and other classes in PHP.
+PeachPie provides the feature for `System.Collections.IList` which allows consuming .NET arrays, `List`s and other classes in PHP.
