@@ -35,10 +35,10 @@ uint | explicit cast | `#!c# (uint)value` | `OverflowException`, `PHP notice`
 long | explicit cast | `#!c# (long)value` | `PHP notice`
 double | explicit cast | `#!c# (double)value` | `PHP notice`
 string | explicit cast | `#!c# value.ToString()` | byte[] is encoded using UTF-8
-PhpNumber | explicit cast | `#!c# (PhpNumber)value` | `PHP notice`
-PhpArray | explicit cast | `#!c# (PhpArray)value` | can result in `null`
+PhpNumber | explicit cast | `#!c# (PhpNumber)value` | `InvalidCastException`
+PhpArray | explicit cast | `#!c# (PhpArray)value` | `InvalidCastException`
 PhpAlias | EnsureAlias() | `#!c# value.EnsureAlias()` | -
-Object | AsObject() | `#!c# value.AsObject()` | gets underlaying object, dereferenced
+Object | AsObject() | `#!c# value.AsObject()` | gets underlaying object, dereferenced, can be `null`
 
 ## Operators
 
