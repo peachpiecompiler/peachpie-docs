@@ -59,4 +59,4 @@ Operator | Sample | Remarks
 `StrictEquals` | `#!c# val1.StrictEquals(val2)` | strict equality, PHP' `===`
 `ToArray` | `#!c# val.ToArray()` | conversion to array according to PHP semantic
 `AsArray` | `#!c# val.AsArray()` | gets underlaying `PhpArray` or `null`
-`AsCallable` | `#!c# val.AsACallable()` | gets `IPhpCallable` from PHP' `callable` which can be invoked
+`AsCallable` | `#!c# val.AsCallable()` | gets `IPhpCallable` from PHP' `callable` which can be invoked, can be `null`
