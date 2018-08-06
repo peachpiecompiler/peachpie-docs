@@ -1,15 +1,21 @@
 PeachPie is a modern PHP compiler based on [Roslyn](https://github.com/dotnet/roslyn) by Microsoft and drawing from our popular [Phalanger](https://github.com/DEVSENSE/Phalanger) project. It allows PHP to be executed within the .NET framework, thereby opening the door for PHP developers into the world of .NET – and vice versa.
 
+!!! note ""
+    There can still be inconsistencies or incompatibilities with standard PHP code when running apps on PeachPie. Refer to our [roadmap]     (roadmap) to find out what libraries, constructs and functions are supported.
+    
 ## Project purpose
 
 ### Migrating PHP applications to a modern platform
-We believe it is important to mention what we are trying to achieve with this project. Firstly, we know from experience that there is a plethora of **legacy PHP applications** out there that would benefit from being compiled to .NET. Some of the largest companies in the world still rely heavily on their apps written many years ago. This legacy code is **slowing down their performance** and costing the companies scarce financial resources by using unnecessary CPU power on the cloud.
+There is a plethora of **legacy PHP applications** out there that would benefit from being compiled to .NET. Some of the largest companies in the world still rely heavily on their apps written many years ago. This legacy code is **slowing down their performance** and costing the companies scarce financial resources by using unnecessary CPU power on the cloud.
+
+!!! Tip
+    PeachPie allows large codebases to be migrated in parts rather than all at once.
 
 ### Both-way interoperability of C# and PHP 
-Secondly, we strive to improve the **collaboration between PHP and .NET developers** within a single project. There is currently a deep cliff between the two camps and the resulting output is difficult to coordinate. Peachpie compiler’s both-way **interoperability** allows PHP and .NET developers to collaborate seamlessly within projects, thereby reducing the unnecessary administrative overhead of gluing the two together at the end.
+We strive to improve the **collaboration between PHP and .NET developers** within a single project. There is currently a deep cliff between the two worlds and the work can be difficult to coordinate. PeachPie compiler’s both-way **interoperability** allows PHP and .NET developers to collaborate seamlessly within projects, thereby reducing the unnecessary administrative overhead of gluing the two together at the end.
 
 ### Harnessing the value of PHP 
-We firmly believe that there is an immense **value in the world of PHP**. It is our conviction that, if given the chance, PHP developers would come up with creative and efficient solutions. Peachpie opens up previously untouched markets for PHP programmers to explore, such as **games**, **cross-platform apps** or **IoT**. We are excited to see what products will spring forth when they will be able to use Peachpie for this purpose.
+We firmly believe that there is an immense **value in the world of PHP**. PeachPie opens up previously untouched markets for PHP programmers to explore, such as **games**, **cross-platform apps** or **IoT** and with the vast array of existing libraries and technologies, we are convinced PHP developers can come up with valuable use cases.
 
 ## Project goals
 - **Increased performance**: PeachPie's extensive type analysis and the influence of Microsoft Roslyn should provide an improved performance of PHP applications and components. 
