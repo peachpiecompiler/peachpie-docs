@@ -36,7 +36,7 @@ long | explicit cast | `#!c# (long)value` | `PHP notice`
 double | explicit cast | `#!c# (double)value` | `PHP notice`
 string | explicit cast | `#!c# value.ToString()` | byte[] is encoded using UTF-8
 PhpNumber | explicit cast | `#!c# (PhpNumber)value` | `InvalidCastException`
-PhpArray | explicit cast | `#!c# (PhpArray)value` | `InvalidCastException`
+PhpArray | explicit cast | `#!c# (PhpArray)value` | conversion to array according to PHP semantic
 PhpAlias | EnsureAlias() | `#!c# value.EnsureAlias()` | -
 Object | AsObject() | `#!c# value.AsObject()` | gets underlaying object, dereferenced, can be `null`
 
@@ -58,4 +58,5 @@ Operator | Sample | Remarks
 `[]` | `#!c# val[1]` | accessing value item as array according to PHP semantic
 `StrictEquals` | `#!c# val1.StrictEquals(val2)` | strict equality, PHP' `===`
 `ToArray` | `#!c# val.ToArray()` | conversion to array according to PHP semantic
+`AsArray` | `#!c# val.AsArray()` | gets underlaying `PhpArray` or `null`
 `AsCallable` | `#!c# val.AsACallable()` | gets `IPhpCallable` from PHP' `callable` which can be invoked
