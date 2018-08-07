@@ -18,20 +18,19 @@ A new instance of the object is created in two ways:
 
 Method | Summary
 ---    | ---
-AddScriptReference(Assembly) (static) | 
-DeclareFunction(name, Delegate) | 
-DeclareType<T> | 
-DeclareScript(relpath, MainDelegate) (static) | 
-DefineConstant(name, value) | 
-TryGetConstant(name, out value) : bool | 
-GetDeclaredType(name) : PhpTypeInfo | 
-GetDeclaredTypes() : IEnumerable<PhpTypeInfo> | 
-GetDeclaredFunctions() : IEnumerable<RoutineInfo> | 
-GetLoadedExtensions() : ICollection<string> | 
-GetIncludedScripts() : IEnumerable<ScriptInfo> | 
-Call(functionname, PhpValue[] args) : PhpValue | 
-Create(classname, PhpValue[] args) : object | 
-Dispose() | 
+AddScriptReference(Assembly) | Loads declarations from given [compiled assembly](../assembly/compiled-assembly). *(app static)*
+Call(string, [PhpValue](phpvalue)[] args) : [PhpValue](phpvalue) | Dynamically invokes a function declared within the current context.
+Create(string, [PhpValue](phpvalue)[] args) : object | Dynamically instantiates a class declared within the current context.
+DeclareFunction(string, Delegate) | Dynamically declares a global function within the current context.
+DeclareScript(string, MainDelegate) | Adds or overwrites a script descriptor by its relative file path. *(app static)*
+DeclareType&lt;T&gt;() | Dynamically declares a CLR type into the current context.
+DefineConstant(string, [PhpValue](phpvalue)) | Defines a global constant within the current context.
+GetDeclaredFunctions() : IEnumerable&lt;RoutineInfo&gt; | Enumerates global functions declared within the current context.
+GetDeclaredType(string) : PhpTypeInfo | Gets type descriptor representing a type declared within the current context. Optionally performs autoload process if necessary.
+GetDeclaredTypes() : IEnumerable&lt;PhpTypeInfo&gt; | Enumerates types declared within the current context.
+GetIncludedScripts() : IEnumerable&lt;ScriptInfo&gt; | Enumerates script descriptors representing script files that were included within the current context.
+TryGetConstant(string, out [PhpValue](phpvalue)) : bool | Gets a global constant value defined within the current context.
+Dispose() | Ends the life cycle of the context and disposes associated resources.
 
 ## Helper methods
 
@@ -41,15 +40,17 @@ In case of an ASP.NET Core application, the instance can be obtained using a hel
 
 Property | Summary
 ---      | ---
-RootPath : string | 
-StringEncoding : Encoding | 
-HttpPhpContext : IHttpPhpContext | 
-Output : TextWriter | 
-Globals : PhpArray | 
-Server : PhpArray | 
-Session : PhpArray | 
-Cookie : PhpArray | 
-Post : PhpArray | 
+RootPath : string | An absolute directory path representing the root of all the scripts. Full script paths are resolved as a combination of this path and relative script path.
+StringEncoding : Encoding | The encoding used to perform encoding and decoding between byte[] and string. Used for scripts output (echo), and internal string encoding. Default and recommended value is `UTF-8`.
+HttpPhpContext : IHttpPhpContext | Gets instance of an interface providing web application APIs. Gets `null` reference for non-web applications.
+Output : TextWriter | Gets the output stream used for `echo` and other output routines.
+Globals : PhpArray | Gets or sets an array representing PHP' `$GLOBALS`.
+Server : PhpArray | Gets or sets an array representing PHP' `$_SERVER`.
+Session : PhpArray | Gets or sets an array representing PHP' `$_SESSION`.
+Cookie : PhpArray | Gets or sets an array representing PHP' `$_COOKIE`.
+Get : PhpArray | Gets or sets an array representing PHP' `$_GET`.
+Post : PhpArray | Gets or sets an array representing PHP' `$_POST`.
+Request : PhpArray | Gets or sets an array representing PHP' `$_REQUEST`.
 
 ## Notes
 
