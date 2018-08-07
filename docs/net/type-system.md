@@ -21,7 +21,7 @@ PhpArray\*, ArrayAccess\*, IList | array, ArrayAccess | `[]`
 Iterator\*, IteratorAggregate\*, IEnumerable | iterable | `foreach`, `is_iterable`
 delegate, IPhpCallable\*, string, PhpArray(2)\* | callable | `call_user_func`, `is_callable`, etc.
 
-> `*` .NET types defined in `Peachpie.Runtime.dll` module.
+> `*` .NET types defined in `Peachpie.Runtime.dll` assembly.
 
 ## System.Collections.IEnumerable
 

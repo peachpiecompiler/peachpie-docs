@@ -1,6 +1,8 @@
 # PhpValue
 
-PHP language specifies a value of a variable to not be restricted to a single type. This is refered to as a type ambiguity, a type dynamicity, aka `mixed`.
+<small>assembly: Peachpie.Runtime.dll</small>
+
+PHP language is loosely typed language. It specifies a value of a variable to not be restricted to a single type. This is refered to as a type ambiguity, a type dynamicity, aka `mixed`.
 
 PeachPie defines struct `PhpValue` as the abstraction of the PHP' `mixed`. This .NET type is used in case a type of a value cannot be resolved in compile time. It applies to global variables in general, function parameters without a type hint, function return type without a type hint, class' properties and local variables.
 
