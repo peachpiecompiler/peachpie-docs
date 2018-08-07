@@ -76,7 +76,7 @@ The short open tag syntax (`<?`) is disabled by default. To enable it, set the `
 
 ### NoWarn
 
-Disables specific warning messages. The warnings are identified by their ID (e.g. `PHP3006`) and can be separated by a comma or space.
+Disables specific warning messages. The warnings are identified by their ID (e.g. `PHP5006`) and can be separated by a comma or a space.
 
 ```xml
 <NoWarn>PHP5006,PHP0125</NoWarn>

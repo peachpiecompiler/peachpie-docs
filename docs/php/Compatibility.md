@@ -1,6 +1,6 @@
 # Compatibility
 
-The following page shows current status of the project features.
+The following section lists status of the project features.
 
 ## Suported Language Features
 
