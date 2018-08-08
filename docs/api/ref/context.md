@@ -2,16 +2,16 @@
 
 <small>**assembly:** Peachpie.Runtime.dll</small>
 
-`Context` maintains the PHP application' state. It is usually associated with a single web request, a thread or a console application. In short, the context remembers declared types and functions, global variables, 'static' locals and properties and included scripts. The context also provides information about the environment, services and local configuration.
+`Context` maintains the PHP application's state. It is usually associated with a single web request, a thread or a console application. In short, the context remembers the declared types and functions, global variables, 'static' locals, properties and included scripts. The context also provides information about the environment, services and local configuration.
 
-It is important to note, the context instance is required by compiled PHP routines and by class constructors. Additionally library functions may require the context instance in order to work properly.
+It is important to note that the context instance is required by the compiled PHP routines and by class constructors. Additionally library functions may require the context instance in order to work properly.
 
 ## Construction
 
 A new instance of the object is created in two ways:
 
 - **Implicitly by the framework:** The appropriate context is created for a web application during its request handling routine. Its instance is then passed to PHP routines and to handlers during the request life cycle implicitly.
-- **Explicitly by instantiating it:** It is possible to create an instance of a default context and use it in order to drive a custom PHP application' state. A new instance of the default context can be created by the static method below:
+- **Explicitly by instantiating it:** It is possible to create an instance of a default context and use it in order to drive a custom PHP application's state. A new instance of the default context can be created by the static method below:
     * `#!c# Context.CreateEmpty()`
 
 ## Methods
@@ -44,13 +44,13 @@ RootPath : string | An absolute directory path representing the root of all the 
 StringEncoding : Encoding | The encoding used to perform encoding and decoding between byte[] and string. Used for scripts output (echo), and internal string encoding. Default and recommended value is `UTF-8`.
 HttpPhpContext : IHttpPhpContext | Gets instance of an interface providing web application APIs. Gets `null` reference for non-web applications.
 Output : TextWriter | Gets the output stream used for `echo` and other output routines.
-Globals : PhpArray | Gets or sets an array representing PHP' `$GLOBALS`.
-Server : PhpArray | Gets or sets an array representing PHP' `$_SERVER`.
-Session : PhpArray | Gets or sets an array representing PHP' `$_SESSION`.
-Cookie : PhpArray | Gets or sets an array representing PHP' `$_COOKIE`.
-Get : PhpArray | Gets or sets an array representing PHP' `$_GET`.
-Post : PhpArray | Gets or sets an array representing PHP' `$_POST`.
-Request : PhpArray | Gets or sets an array representing PHP' `$_REQUEST`.
+Globals : PhpArray | Gets or sets an array representing PHP's `$GLOBALS`.
+Server : PhpArray | Gets or sets an array representing PHP's `$_SERVER`.
+Session : PhpArray | Gets or sets an array representing PHP's `$_SESSION`.
+Cookie : PhpArray | Gets or sets an array representing PHP's `$_COOKIE`.
+Get : PhpArray | Gets or sets an array representing PHP's `$_GET`.
+Post : PhpArray | Gets or sets an array representing PHP's `$_POST`.
+Request : PhpArray | Gets or sets an array representing PHP's `$_REQUEST`.
 
 ## Notes
 
