@@ -3,7 +3,7 @@
 <small>**assembly:** Peachpie.Runtime.dll</small><br/>
 <small>**inherits:** System.Exception</small>
 
-`ScriptDiedException` is thrown to simulate PHP' `die` and `exit` constructs. This is a well known exception that can be ignored.
+`ScriptDiedException` is thrown to simulate PHP's `die` and `exit` constructs. This is a well-known exception that is thrown by design and can thus be ignored.
 
 ## Properties
 
@@ -15,8 +15,8 @@ Message | `Status` converted to a string.
 
 ## Remarks
 
-The exception is thrown as a response to `die` and `exit` constructs. The reason is this is the only way how to terminate the program at the current location without an unnnecesary overhead. 
+The exception is thrown as a response to the `die` and `exit` constructs. The reason is that this is the only way how to terminate the program at the current location without any unnnecesary overhead. 
 
-Since it is a CLR exception, it is always handled by the .NET debugger and eventual `catch` constructs. This can be used in C# application to handle `die` of a PHP code without terminating the request.
+Since it is a CLR exception, it is always handled by the .NET debugger and by the eventual `catch` constructs. This can be used in a C# application to handle `die` in PHP code without terminating the request.
 
-PHP' `try`/`catch` constructs are translated into corresponding CLR code respecting `ScriptDiedException` and re-throwing it away. By default the request handler catches the exception in order to simulate PHP' `die` behavior outputing the status message.
+PHP's `try`/`catch` constructs are translated into corresponding CLR code respecting `ScriptDiedException` and re-throwing it away. By default, the request handler catches the exception in order to simulate PHP's `die` behavior of outputing the status message.
