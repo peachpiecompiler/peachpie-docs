@@ -8,14 +8,14 @@ Following table shows compatible .NET types and corresponding PHP type:
 
 .NET | PHP | PHP Features
 --- | --- | ---
-[PhpValue](../api/ref/PhpValue)\* | mixed | 
+[PhpValue](../api/ref/phpvalue)\* | mixed | 
 bool | boolean | 
 int, uint, long | integer | 
 double, float | double | 
 string, PhpString\*, byte[] | string | 
 object | object | `->`
 null | NULL | 
-PhpResource\* | resource | `is_resource`
+[PhpResource](../api/ref/phpresource)\* | resource | `is_resource`
 PhpNumber\* | integer\|double | 
 PhpArray\*, ArrayAccess\*, IList | array, ArrayAccess | `[]`
 Iterator\*, IteratorAggregate\*, IEnumerable | iterable | `foreach`, `is_iterable`

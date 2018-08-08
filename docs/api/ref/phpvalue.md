@@ -1,6 +1,6 @@
 # PhpValue
 
-<small>assembly: Peachpie.Runtime.dll</small>
+<small>**assembly:** Peachpie.Runtime.dll</small>
 
 PHP is a loosely typed language. It specifies a value of a variable to not be restricted to a single type. This is refered to as a type ambiguity, a type dynamicity, aka `mixed`.
 

@@ -1,4 +1,4 @@
 # PhpAlias
 
-<small>assembly: Peachpie.Runtime.dll</small>
+<small>**assembly:** Peachpie.Runtime.dll</small>
 

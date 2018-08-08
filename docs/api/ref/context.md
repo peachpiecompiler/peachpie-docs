@@ -1,6 +1,6 @@
 # Context
 
-<small>assembly: Peachpie.Runtime.dll</small>
+<small>**assembly:** Peachpie.Runtime.dll</small>
 
 `Context` maintains the PHP application' state. It is usually associated with a single web request, a thread or a console application. In short, the context remembers declared types and functions, global variables, 'static' locals and properties and included scripts. The context also provides information about the environment, services and local configuration.
 
