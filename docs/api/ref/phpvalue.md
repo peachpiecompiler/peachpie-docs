@@ -2,15 +2,15 @@
 
 <small>**assembly:** Peachpie.Runtime.dll</small>
 
-PHP is a loosely typed language. It specifies a value of a variable to not be restricted to a single type. This is refered to as a type ambiguity, a type dynamicity, aka `mixed`.
+PHP is a loosely typed language. It specifies the value of a variable not to be restricted to a single type. This is referred to as type ambiguity, type dynamicity, or is also known as `mixed`.
 
-PeachPie defines struct `PhpValue` as the abstraction of the PHP' `mixed`. This .NET type is used in case a type of a value cannot be resolved in compile time. It applies to global variables in general, function parameters without a type hint, function return type without a type hint, class' properties and local variables.
+PeachPie defines struct `PhpValue` as the abstraction of PHP's `mixed`. This .NET type is used in case a type of value cannot be resolved in compile time. It applies to global variables in general, function parameters without a type hint, function return types without a type hint, class properties and local variables.
 
 ## Conversions
 
 ### To PhpValue
 
-Any .NET type can be converted to PhpValue. Following table lists the types and corresponding conversion function.
+Any .NET type can be converted to PhpValue. The following table lists the types and the corresponding conversion function.
 
 .NET type | Conversion routine | Sample
 ---       | ---                | ---
@@ -26,7 +26,7 @@ object | FromClass() | `#!c# PhpValue.FromClass(new System.Object())`
 
 ### From PhpValue
 
-Value can be converted to a standard .NET type using following conversion routines. When applicable, the conversion respects the PHP semantic of casting values.
+A value can be converted to a standard .NET type using the following conversion routines. When applicable, the conversion respects the PHP semantic of the casting values.
 
 .NET type | Conversion routine | Sample | Remarks
 ---       | ---                | ---    | ---
@@ -44,7 +44,7 @@ Object | AsObject() | `#!c# value.AsObject()` | gets underlaying object, derefer
 
 ## Operators
 
-The type defines arithmetic and comparison operators according PHP semantic.
+The type defines arithmetic and comparison operators according to PHP semantic.
 
 Operator | Sample | Remarks
 ---      | ---    | ---
