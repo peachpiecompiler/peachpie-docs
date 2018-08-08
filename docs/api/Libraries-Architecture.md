@@ -1,7 +1,7 @@
-The library is represented by a common .NET class library (.dll file). Once the library is referenced within the compilation process, containing symbols (types, functions and constants) become accessible to the compiled program. Once the library is referenced, it has to be distributed together with the compiled program. There are two types of libraries:
+The library is represented by a common .NET class library (.dll file). Once the library is referenced within the compilation process, the contained symbols (types, functions and constants) become accessible to the compiled program. Once the library is referenced, it has to be distributed together with the compiled program. There are two types of libraries:
 
 1. **Standard .NET class library** - its public types become available to the runtime and can be used as PHP classes.
-2. **Extension library** is a .NET class library containing an assembly attribute `[assembly: Pchp.Core.PhpExtension]`. This tells the compiler to treat containing declarations differently.
+2. **Extension library** is a .NET class library containing an assembly attribute `[assembly: Pchp.Core.PhpExtension]`. This tells the compiler to treat the contained declarations differently.
 
 ### Extension Library
 
@@ -12,7 +12,7 @@ The library is represented by a common .NET class library (.dll file). Once the 
 
 * `internal` and `private` symbols won't be visible to the compiled script.
 
-* `public class` or `public interface` with `[PhpType]` attribute become available to the compiled script as a compatible PHP class or interface even within the same namespace.
+* `public class` or `public interface` with `[PhpType]` attribute becomes available to the compiled script as a compatible PHP class or interface even within the same namespace.
 ```CSharp
 // Example:
 [PhpType]
@@ -44,7 +44,7 @@ echo ArrayIterator::A_CLASS_CONSTANT;
 echo ArrayIterator::ContextConstant;
 ```
 
-* `public static class` represents a container containing declaration of global PHP functions and constants
+* `public static class` represents a container containing the declaration of global PHP functions and constants
 ```CSharp
 // Example:
 public static class MyFunctions {
@@ -75,18 +75,18 @@ echo MYCONST2;
 
 ### Special Parameters
 
-In order to access special Peachpie objects like current `Context`, follow the rules below:
+In order to access special PeachPie objects, such as the current `Context`, follow the rules below:
 
 #### Accessing current Context
 
-Add `Context ctx` as the first parameter of the method. The runtime will implicitly fill this parameter with instance of current `Pchp.Core.Context` object.
+Add `Context ctx` as the first parameter of the method. The runtime will implicitly fill this parameter with an instance of the current `Pchp.Core.Context` object.
 ```CSharp
 public static void myecho(Context ctx){ ctx.Echo("Hello from library!"); }
 ```
 
 #### Accessing array of local variables
 
-Add `[ImportLocals] PhpArray locals` parameter before regular parameters. The runtime will implicitly pass current local variables to this parameter.
+Add the `[ImportLocals] PhpArray locals` parameter before regular parameters. The runtime will implicitly pass the current local variables to this parameter.
 ```CSharp
 public static void getlocals([ImportLocals] PhpArray locals){ /* locals contain set of caller routine local variables*/ }
 ```
