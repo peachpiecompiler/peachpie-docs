@@ -1,10 +1,10 @@
 # CLR vs. PHP types
 
-This article provides information on how the runtime treats .NET types. In result, with respect to this specification, it is possible to pass values between .NET (assuming `C#`) and `PHP` code implicitly, without a need of marshalling or an additional conversions.
+This article provides information on how the runtime treats .NET types. As a result, with respect to this specification, it is possible to pass values between .NET (assuming `C#`) and `PHP` code implicitly, without the need of marshalling or additional conversions.
 
 ## Type System
 
-Following table shows compatible .NET types and corresponding PHP type:
+The following table shows compatible .NET types and the corresponding PHP type:
 
 .NET | PHP | PHP Features
 --- | --- | ---
@@ -32,9 +32,9 @@ The sample PHP code below is able to consume a variety of CLR objects in additio
 foreach ($enumerable as $key => $value) { }
 ```
 
-`$enumerable` may implement following CLR interfaces:
+`$enumerable` may implement the following CLR interfaces:
 
-- `IPhpEnumerable` (Peachpie.Runtime.dll) is the extended version of `IEnumerable`. Objects implementing this interface are capable of being enumerated in PHP `foreach`.
+- `IPhpEnumerable` (Peachpie.Runtime.dll) is the extended version of `IEnumerable`. Objects implementing this interface are capable of being enumerated in PHP's `foreach`.
 - `IDictionary`; objects implementing this interface.
 - `IEnumerable<(Key, Value)>`; objects implementing `IEnumerable<>` of `ValueTuple` with two items.
 - `IEnumerable<KeyValuePair<Key, Value>>`; objects implementing `IEnumerable<>` of `KeyValuePair<,>`.
@@ -48,11 +48,11 @@ As a result, standard .NET classes such as .NET arrays, `ArrayList`, `List<>`, `
 <?php
 foreach ($enumerable as $key => &$value) { $value = 0; }
 ```
-In order to support iteration by reference, the enumerable object must return value of type `PhpAlias` from the enumerator. Otherwise an exception of type `InvalidOperationException` is thrown.
+In order to support an iteration by reference, the enumerable object must return value of type `PhpAlias` from the enumerator. Otherwise an exception of type `InvalidOperationException` is thrown.
 
 ## System.Delegate
 
-PHP's concept of callables works with `string` pointing to a function name, `array` of two dimensions referring to a class and its method, classes with `__invoke` method or instances of `Closure` class. Variables of these types, denoted as `callable`, can be used for indirect calls like as depicted in the sample below:
+PHP's concept of callables works with `string` pointing to a function name, `array` of two dimensions referring to a class and its method, classes with the `__invoke` method or instances of the `Closure` class. Variables of these types, denoted as `callable`, can be used for indirect calls as depicted in the sample below:
 
 ```php
 <?php
@@ -60,7 +60,7 @@ assert( is_callable($delegate) );
 print_r( $delegate($arg1, $arg2) ); // $delegate is `callable`
 ```
 
-PeachPie extends the set of `callable` types with any CLR `delegate` or objects implementing `IPhpCallable` interface (Peachpie.Runtime.dll).
+PeachPie extends the set of `callable` types with any CLR `delegate` or objects implementing the `IPhpCallable` interface (Peachpie.Runtime.dll).
 
 Sample C# code that passes a delegate to a PHP global variable:
 ```c#
@@ -69,11 +69,11 @@ mycontext.Globals["delegate"] = new Func<string, bool>( str => str.IsNormalized(
 
 ## System.Collections.IList
 
-PHP allows accessing of an `array` and objects implementing `ArrayAccess` with square brackets `[]` as shown in the example below:
+PHP allows the accessing of an `array` and objects implementing `ArrayAccess` with square brackets `[]` as shown in the example below:
 
 ```php
 <?php
 echo $list[10];
 ```
 
-PeachPie provides the feature for `System.Collections.IList` which allows consuming .NET arrays, `List`s and other classes in PHP.
+PeachPie provides the feature for `System.Collections.IList`, which allows consuming .NET arrays, `List`s and other classes in PHP.
