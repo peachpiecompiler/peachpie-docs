@@ -1,8 +1,8 @@
-The .NET languages support enums natively and the compiler provides an easy way of making use of them. However it is not possible to define `enum` in PHP code yet nor perform `Enum.ToString()` conversion.
+The .NET languages support enums natively and the compiler provides an easy way of making use of them. However, it is neither possible to define `enum` in PHP code yet nor to perform an `Enum.ToString()` conversion.
 
 ## Using `enum` in PHP code
 
-Within the context of PHP code `enum` looks like a final class with class constats. Thereby its usage from PHP code is accordant.
+Within the context of PHP code, `enum` looks like a final class with class constats. Its usage from PHP code is thus analogous.
 
 *C# code:*
 ``` csharp
