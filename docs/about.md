@@ -26,4 +26,10 @@ We firmly believe that there is an immense **value in the world of PHP**. PeachP
 
 - **Full .NET compatibility**: compiled programs run on the reimplemented PeachPie runtime, fully compatibly with the PHP runtime.
 
-- **Both-way interoperability**: the project allows for hybrid applications, where parts are written in C# and others in PHP. The parts will be entirely compatible and can communicate seamlessly, all within the .NET framework.  
+- **Both-way interoperability**: the project allows for hybrid applications, where parts are written in C# and others in PHP. The parts will be entirely compatible and can communicate seamlessly, all within the .NET framework.
+
+## Related Links
+* [Official repository](https://github.com/peachpiecompiler/peachpie)
+* [Website](https://www.peachpie.io/)
+* [Blog](https://www.peachpie.io/blog)
+* [Twitter](https://twitter.com/pchpcompiler)
