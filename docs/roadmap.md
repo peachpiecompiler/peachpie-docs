@@ -51,8 +51,8 @@
 - [x] Calling .NET objects from PHP
 - [ ] .NET generics
 - [x] Generate XML documentation
-- [x] MSBuild SDK (Peachpie.NET.Sdk)
-- [x] [[CLR/PHP Interoperability Overview]]
+- [x] [MSBuild SDK (Peachpie.NET.Sdk)](php/msbuild)
+- [x] [CLR/PHP Interoperability](net/type-system)
 - [ ] DynamicMetaObjectProvider
 - [x] Signing assemblies
 - [ ] [Custom Attributes](https://github.com/peachpiecompiler/peachpie/issues/106)
