@@ -8,3 +8,6 @@ C# code using PHP
 - extend PHP class or interface
 - delegates
 - objects
+
+!!! Further reading
+    You can also refer to [all our articles in our blog](https://www.peachpie.io/tag/interoperability) on the topic of interoperability       for more information
