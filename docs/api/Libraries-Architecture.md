@@ -6,14 +6,14 @@ The library is represented by a common .NET class library (.dll file). Once the 
 ### Extension Library
 
 * Assembly attribute that tells the compiler to treat the assembly as an extension library.
-```CSharp
+```c#
 [assembly: Pchp.Core.PhpExtension] 
 ```
 
 * `internal` and `private` symbols won't be visible to the compiled script.
 
 * `public class` or `public interface` with `[PhpType]` attribute becomes available to the compiled script as a compatible PHP class or interface even within the same namespace.
-```CSharp
+```c#
 // Example:
 [PhpType]
 public class ArrayIterator : IEnumerable, ArrayAccess, Countable  {
@@ -45,7 +45,7 @@ echo ArrayIterator::ContextConstant;
 ```
 
 * `public static class` represents a container containing the declaration of global PHP functions and constants
-```CSharp
+```c#
 // Example:
 public static class MyFunctions {
     // declaration of a global PHP function 'mystrlen()'
@@ -80,13 +80,13 @@ In order to access special PeachPie objects, such as the current `Context`, foll
 #### Accessing current Context
 
 Add `Context ctx` as the first parameter of the method. The runtime will implicitly fill this parameter with an instance of the current `Pchp.Core.Context` object.
-```CSharp
+```c#
 public static void myecho(Context ctx){ ctx.Echo("Hello from library!"); }
 ```
 
 #### Accessing array of local variables
 
 Add the `[ImportLocals] PhpArray locals` parameter before regular parameters. The runtime will implicitly pass the current local variables to this parameter.
-```CSharp
+```c#
 public static void getlocals([ImportLocals] PhpArray locals){ /* locals contain set of caller routine local variables*/ }
 ```
