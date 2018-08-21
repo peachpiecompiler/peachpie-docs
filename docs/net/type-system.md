@@ -16,7 +16,7 @@ string, PhpString\*, byte[] | string |
 object | object | `->`
 null | NULL | 
 [PhpResource](../api/ref/phpresource)\* | resource | `is_resource`
-PhpNumber\* | integer\|double | 
+[PhpNumber](../api/ref/phpnumber])\* | integer\|double | 
 PhpArray\*, ArrayAccess\*, IList | array, ArrayAccess | `[]`
 Iterator\*, IteratorAggregate\*, IEnumerable | iterable | `foreach`, `is_iterable`
 delegate, IPhpCallable\*, string, PhpArray(2)\* | callable | `call_user_func`, `is_callable`, etc.

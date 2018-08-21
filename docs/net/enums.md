@@ -2,7 +2,7 @@ The .NET languages support enums natively and the compiler provides an easy way 
 
 ## Using `enum` in PHP code
 
-Within the context of PHP code, `enum` looks like a final class with class constats. Its usage from PHP code is thus analogous.
+Within the context of PHP code, `enum` is treated as a final class with class constats. Its usage from PHP code is thus analogous.
 
 *C# code:*
 ``` csharp
