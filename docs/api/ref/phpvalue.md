@@ -20,9 +20,9 @@ long | implicit cast | `#!c# (PhpValue)9876543210L`
 double | implicit cast | `#!c# (PhpValue)123.456`
 string | implicit cast | `#!c# (PhpValue)"Hello"`
 byte[] | implicit cast | `#!c# (PhpValue)Encoding.UTF8.GetBytes("Hello")`
-PhpArray | implicit cast | `#!c# (PhpValue)new PhpArray()`
-Delegate | implicit cast | `#!c# (PhpValue)new Func<int>(() => 123)`
-object | FromClass() | `#!c# PhpValue.FromClass(new System.Object())`
+PhpArray | implicit cast | `#!c# (PhpValue)new PhpArray()`<br/>`PhpArray` represents PHP's `array` object.
+delegate | implicit cast | `#!c# (PhpValue)new Func<int>(() => 123)`<br/>In PHP, the delegate is treated as an instance of a `callable` class.
+object | `#!c# FromClass()` | `#!c# PhpValue.FromClass(new System.Object())`
 
 ### From PhpValue
 
@@ -41,6 +41,7 @@ PhpNumber | explicit cast | `#!c# (PhpNumber)value` | `InvalidCastException`
 PhpArray | explicit cast | `#!c# (PhpArray)value` | conversion to array according to PHP semantic
 PhpAlias | EnsureAlias() | `#!c# value.EnsureAlias()` | -
 Object | AsObject() | `#!c# value.AsObject()` | gets underlaying object, dereferenced, can be `null`
+Object | ToClr() | `#c# value.ToClr()` | boxes contained value into `System.Object`, can be `null`.
 
 ## Operators
 
