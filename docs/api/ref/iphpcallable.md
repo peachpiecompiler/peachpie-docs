@@ -23,6 +23,6 @@ Method | Description
 
 The list of declared functions is managed as a set of **IPhpCallable** instances by [Context](context).
 
-Library functions may accept an argument of type **IPhpCallable**. It is a well known argumen type and the compiler and the runtime will convert passed value to **IPhpCallable** implicitly using [construction](#construction).
+Library functions may accept an argument of type **IPhpCallable**. It is a well known argument type and the compiler and the runtime will convert passed value to **IPhpCallable** implicitly using [construction](#construction).
 
 The compiler implicitly implements **IPhpCallable** interface on PHP classes defining magic `__invoke` method.
