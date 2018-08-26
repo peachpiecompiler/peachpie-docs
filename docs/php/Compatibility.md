@@ -1,6 +1,6 @@
 # Compatibility
 
-The following section lists the status of the project features.
+The following section lists the compatibility status of the compiler and runtime.
 
 ## Suported Language Features
 
