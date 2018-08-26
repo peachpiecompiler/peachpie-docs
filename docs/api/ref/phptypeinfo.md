@@ -4,7 +4,7 @@
 
 Represents reflection information for types: class types, interface types or trait types.
 
-## Obtaining PhpTypeInfo
+## Retrieving a PhpTypeInfo object
 
 The type information is populated lazily when it is needed by the runtime. Get or create the instance of **PhpTypeInfo** using one of the following extension methods:
 
@@ -12,7 +12,7 @@ The type information is populated lazily when it is needed by the runtime. Get o
 - `#!c# PhpTypeInfoExtension.GetPhpTypeInfo(this Type type)`
 - `#!c# PhpTypeInfoExtension.GetPhpTypeInfo(this RuntimeTypeHandle handle)`
 - `#!c# PhpTypeInfoExtension.GetPhpTypeInfo(this object instance)`
-
+- `#!c# Context.GetDeclaredTypes()` retrieves a list of all available types declared within [Context](context).
 
 ## Properties
 
@@ -28,3 +28,8 @@ BaseType | Gets reference to the base type.
 RuntimeMethods | Gets table of type's methods and accessor to magic methods.
 DeclaredFields | Gets table of type's fields, properties and constants.
 RuntimeFieldsHolder | Gets reference to type's [special field](../assembly/compiled-class#additional-class-members) holding dynamic class properties. The field is of type `PhpArray`.
+
+## Related links
+
+- [Compiled assembly](../assembly/compiled-assembly)
+- [Compiled class](../assembly/compiled-class)
