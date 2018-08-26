@@ -16,10 +16,10 @@ string, PhpString\*, byte[] | string |
 object | object | `->`
 null | NULL | 
 [PhpResource](../api/ref/phpresource)\* | resource | `is_resource`
-[PhpNumber](../api/ref/phpnumber])\* | integer\|double | 
-PhpArray\*, ArrayAccess\*, IList | array, ArrayAccess | `[]`
+[PhpNumber](../api/ref/phpnumber)\* | integer\|double | 
+[PhpArray](../api/ref/phparray)\*, ArrayAccess\*, IList | array, ArrayAccess | `[]`
 Iterator\*, IteratorAggregate\*, IEnumerable | iterable | `foreach`, `is_iterable`
-delegate, IPhpCallable\*, string, PhpArray(2)\* | callable | `call_user_func`, `is_callable`, etc.
+delegate, [IPhpCallable](../api/ref/iphpcallable)\*, string, [PhpArray](../api/ref/phparray)(2)\* | callable | `call_user_func`, `is_callable`, etc.
 
 > `*` .NET types defined in `Peachpie.Runtime.dll` assembly.
 

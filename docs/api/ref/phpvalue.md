@@ -20,7 +20,7 @@ long | implicit cast | `#!c# (PhpValue)9876543210L`
 double | implicit cast | `#!c# (PhpValue)123.456`
 string | implicit cast | `#!c# (PhpValue)"Hello"`
 byte[] | implicit cast | `#!c# (PhpValue)Encoding.UTF8.GetBytes("Hello")`
-PhpArray | implicit cast | `#!c# (PhpValue)new PhpArray()`<br/>`PhpArray` represents PHP's `array` object.
+[PhpArray](phparray) | implicit cast | `#!c# (PhpValue)new PhpArray()`<br/>`PhpArray` represents PHP's `array` object.
 delegate | implicit cast | `#!c# (PhpValue)new Func<int>(() => 123)`<br/>In PHP, the delegate is treated as an instance of a `callable` class.
 object | `#!c# FromClass()` | `#!c# PhpValue.FromClass(new System.Object())`
 
@@ -37,8 +37,8 @@ uint | explicit cast | `#!c# (uint)value` | `OverflowException`, `PHP notice`
 long | explicit cast | `#!c# (long)value` | `PHP notice`
 double | explicit cast | `#!c# (double)value` | `PHP notice`
 string | explicit cast | `#!c# value.ToString()` | byte[] is encoded using UTF-8
-PhpNumber | explicit cast | `#!c# (PhpNumber)value` | `InvalidCastException`
-PhpArray | explicit cast | `#!c# (PhpArray)value` | conversion to array according to PHP semantic
+[PhpNumber](phpnumber) | explicit cast | `#!c# (PhpNumber)value` | `InvalidCastException`
+[PhpArray](phparray) | explicit cast | `#!c# (PhpArray)value` | conversion to array according to PHP semantic
 PhpAlias | EnsureAlias() | `#!c# value.EnsureAlias()` | -
 Object | AsObject() | `#!c# value.AsObject()` | gets underlaying object, dereferenced, can be `null`
 Object | ToClr() | `#c# value.ToClr()` | boxes contained value into `System.Object`, can be `null`.
@@ -61,5 +61,5 @@ Operator | Sample | Remarks
 `[]` | `#!c# val[1]` | accessing value item as array according to PHP semantic
 `StrictEquals` | `#!c# val1.StrictEquals(val2)` | strict equality, PHP' `===`
 `ToArray` | `#!c# val.ToArray()` | conversion to array according to PHP semantic
-`AsArray` | `#!c# val.AsArray()` | gets underlaying `PhpArray` or `null`
+`AsArray` | `#!c# val.AsArray()` | gets underlaying [PhpArray](phparray) or `null`
 `AsCallable` | `#!c# val.AsCallable()` | gets `IPhpCallable` from PHP' `callable` which can be invoked, can be `null`

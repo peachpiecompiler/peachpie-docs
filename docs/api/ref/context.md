@@ -44,13 +44,13 @@ RootPath : string | An absolute directory path representing the root of all the 
 StringEncoding : Encoding | The encoding used to perform encoding and decoding between byte[] and string. Used for scripts output (echo), and internal string encoding. Default and recommended value is `UTF-8`.
 HttpPhpContext : IHttpPhpContext | Gets instance of an interface providing web application APIs. Gets `null` reference for non-web applications.
 Output : TextWriter | Gets the output stream used for `echo` and other output routines.
-Globals : PhpArray | Gets or sets an array representing PHP's `$GLOBALS`.
-Server : PhpArray | Gets or sets an array representing PHP's `$_SERVER`.
-Session : PhpArray | Gets or sets an array representing PHP's `$_SESSION`.
-Cookie : PhpArray | Gets or sets an array representing PHP's `$_COOKIE`.
-Get : PhpArray | Gets or sets an array representing PHP's `$_GET`.
-Post : PhpArray | Gets or sets an array representing PHP's `$_POST`.
-Request : PhpArray | Gets or sets an array representing PHP's `$_REQUEST`.
+Globals : [PhpArray](phparray) | Gets or sets an array representing PHP's `$GLOBALS`.
+Server : [PhpArray](phparray) | Gets or sets an array representing PHP's `$_SERVER`.
+Session : [PhpArray](phparray) | Gets or sets an array representing PHP's `$_SESSION`.
+Cookie : [PhpArray](phparray) | Gets or sets an array representing PHP's `$_COOKIE`.
+Get : [PhpArray](phparray) | Gets or sets an array representing PHP's `$_GET`.
+Post : [PhpArray](phparray) | Gets or sets an array representing PHP's `$_POST`.
+Request : [PhpArray](phparray) | Gets or sets an array representing PHP's `$_REQUEST`.
 
 ## Notes
 

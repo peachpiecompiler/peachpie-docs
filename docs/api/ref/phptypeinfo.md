@@ -27,7 +27,7 @@ Type | Gets the underlaying `#!c# System.Type`.
 BaseType | Gets reference to the base type.
 RuntimeMethods | Gets table of type's methods and accessor to magic methods.
 DeclaredFields | Gets table of type's fields, properties and constants.
-RuntimeFieldsHolder | Gets reference to type's [special field](../assembly/compiled-class#additional-class-members) holding dynamic class properties. The field is of type `PhpArray`.
+RuntimeFieldsHolder | Gets reference to type's [special field](../assembly/compiled-class#additional-class-members) holding dynamic class properties. The field is of type [PhpArray](phparray).
 
 ## Related links
 
