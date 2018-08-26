@@ -47,6 +47,7 @@ Method | Summary
 ---    | ---
 GetValues() : [PhpValue](phpvalue)[] | Most efficient way of copying contained values (without keys) into a new array. Order of values is preserved.
 Add(key, value) | Adds an entry to the end of the array. If the given `key` already exists, the existing entry is overwritten.
+RemoveKey(key) | Removes an entry from the array by its key.
 [key] : [PhpValue](phpvalue) | Gets or sets a value at specified `key`.
 GetFastEnumerator() | Gets lightweight enumerator object (as *struct*) to be used for allocation-less enumeration of the array.
 
