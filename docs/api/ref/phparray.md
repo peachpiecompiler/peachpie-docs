@@ -15,7 +15,7 @@ var phparray = new PhpArray(5) {
     {"name", "John Smith"},
     {"weight", 168.5},
     {"dob", "10/12/1991"},
-}
+};
 ```
 
 ```c#
