@@ -37,6 +37,8 @@ class Test {
 ```php
 <?php
 $t = new Test;
+$t->Number = 123; // assigns `new Nullable<int>(123)`
+$t->Number = null; // assigns `default(Nullable<int>)`
 isset( $t->Number ); // gets Number.HasValue
 print_r( $t->Foo() ); // gets NULL or double
 $t->Bar( NULL ); // passes `default(Nullable<bool>)` to the method
