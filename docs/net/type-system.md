@@ -8,20 +8,19 @@ The following table shows compatible .NET types and the corresponding PHP type:
 
 .NET | PHP | PHP Features
 --- | --- | ---
-[PhpValue](../api/ref/phpvalue)\* | mixed | 
+[PhpValue](../api/ref/phpvalue) | mixed | 
 bool | boolean | 
 int, uint, long | integer | 
 double, float | double | 
-string, PhpString\*, byte[] | string | 
+string, PhpString, byte[] | string | 
 object | object | `->`
 null | NULL | 
-[PhpResource](../api/ref/phpresource)\* | resource | `is_resource`
-[PhpNumber](../api/ref/phpnumber)\* | integer\|double | 
-[PhpArray](../api/ref/phparray)\*, ArrayAccess\*, IList | array, ArrayAccess | `[]`
-Iterator\*, IteratorAggregate\*, IEnumerable | iterable | `foreach`, `is_iterable`
-delegate, [IPhpCallable](../api/ref/iphpcallable)\*, string, [PhpArray](../api/ref/phparray)(2)\* | callable | `call_user_func`, `is_callable`, etc.
-
-> `*` .NET types defined in `Peachpie.Runtime.dll` assembly.
+[PhpResource](../api/ref/phpresource) | resource | `is_resource`
+[PhpNumber](../api/ref/phpnumber) | integer\|double | 
+[PhpArray](../api/ref/phparray), ArrayAccess, IList | array, ArrayAccess | `[]`
+Iterator, IteratorAggregate, IEnumerable | iterable | `foreach`, `is_iterable`
+delegate, [IPhpCallable](../api/ref/iphpcallable), string, [PhpArray](../api/ref/phparray)(2) | callable | `call_user_func`, `is_callable`, etc.
+Nullable&lt;T&gt; | value\|NULL | `isset`, `unset`
 
 ## System.Collections.IEnumerable
 
@@ -77,3 +76,24 @@ echo $list[10];
 ```
 
 PeachPie provides the feature for `System.Collections.IList`, which allows consuming .NET arrays, `List`s and other classes in PHP.
+
+## System.Nullable&lt;T&gt;
+
+Values can be read from and assigned to `Nullable<T>` type. Any value of type `Nullable<T>` is treated as its contained value or `NULL`. Automatic conversion is performed. Operator `isset` is using `Nullable.HasValue` property implicitly.
+
+```c#
+class Test {
+    public int? Number;           // nullable field
+    public double? Foo() { ... }; // return nullable from method
+    public void Bar(bool? b) { }  // gets nullable parameter
+}
+```
+
+```php
+<?php
+$t = new Test;
+isset( $t->Number ); // gets Number.HasValue
+print_r( $t->Foo() ); // gets NULL or double
+$t->Bar( NULL ); // passes `default(Nullable<bool>)` to the method
+$t->Bar( true ); // passes `new Nullable<bool>(true)` to the method
+```
