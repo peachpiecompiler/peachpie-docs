@@ -43,8 +43,8 @@ public class X {
     this.<>trait_T = new T<X>(<ctx>, this);
   }
 
-  public virtual PhpValue foo() {
-    return (PhpValue)this.<>trait_T.foo();
+  public virtual long foo() {
+    return this.<>trait_T.foo();
   }
 }
 ```
