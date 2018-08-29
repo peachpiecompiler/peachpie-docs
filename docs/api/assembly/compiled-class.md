@@ -1,6 +1,13 @@
 ## Structure of the generated class
 
-PHP classes are compiled into corresponding CLR classes.
+PHP classes are compiled into corresponding CLR types. The sample below depicts a PHP class and resulting CLR type decompiled into C# language.
+
+```php
+<?php
+class X {
+  // ...
+}
+```
 
 ```c#
 [PhpType("X", "index.php")]
@@ -33,3 +40,7 @@ The class also contains the following fields used by both the compiler and runti
 Declared class methods are compiled as corresponding CLR methods. Provided PHP type hints are respected and translated to corresponding .NET type. Whenever PHP type hint is missing, [PhpValue](../ref/phpvalue) type is used instead.
 
 Optional parameters (having initial value) are translated as .NET initial value for types than are allowed. In case the initial value is an expression or anything not allowed as .NET `[Optional]`, a function overload is automatically created.
+
+## Attributes
+
+The type is annotated with `#!c# [PhpTypeAttribute]`. The attribute contains fully qualified PHP class name and relative file path where it was declared.
