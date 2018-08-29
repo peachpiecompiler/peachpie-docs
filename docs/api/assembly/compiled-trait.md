@@ -15,6 +15,8 @@ trait T {
 [PhpType("T", "index.php")]
 public sealed class T<TSelf> where TSelf : class {
 
+  // 'TSelf' is type of class that uses this trait.
+
   public T(Context ctx, TSelf @this) { ... }
 
   public long foo() { return 1L; }
