@@ -24,7 +24,7 @@ Nullable&lt;T&gt; | value\|NULL | `isset`, `unset`
 
 ## System.Nullable&lt;T&gt;
 
-Values can be read from and assigned to `Nullable<T>` type. Any value of type `Nullable<T>` is treated as its contained value or `NULL`. Automatic conversion is performed. Operator `isset` is using `Nullable.HasValue` property implicitly.
+Values can be read from and assigned to the `Nullable<T>` type. Any value of type `Nullable<T>` is treated as its contained value or `NULL`. An automatic conversion is performed. The operator `isset` is using the `Nullable.HasValue` property implicitly.
 
 ```c#
 class Test {
@@ -87,7 +87,7 @@ As a result, standard .NET classes such as .NET arrays, `ArrayList`, `List<>`, `
 <?php
 foreach ($enumerable as $key => &$value) { $value = 0; }
 ```
-In order to support an iteration by reference, the enumerable object must return value of type `PhpAlias` from the enumerator. Otherwise an exception of type `InvalidOperationException` is thrown.
+In order to support an iteration by reference, the enumerable object must return the value of type `PhpAlias` from the enumerator. Otherwise an exception of type `InvalidOperationException` is thrown.
 
 ## System.Collections.IList
 
