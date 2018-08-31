@@ -39,7 +39,7 @@ Most PHP projects contain a decent amout of content that has to be published tog
 </ItemGroup>
 ```
 
-Note, PHP files are compiled and their content is not copied to the package by default. Some functionality may require the PHP file physically present within the target project. Include such source files that are required the same way as other content files.
+Note, PHP files are compiled and their content is not copied to the package by default. Some functionality may require the PHP file to be physically present within the target project. Include such source files that are required the same way as other content files.
 
 ```xml
 <ItemGroup>
