@@ -31,7 +31,7 @@ Creates XMLDoc from contained PHPDoc and packs it into the NuGet package:
 
 ### Copy content into NuGet
 
-Most of PHP project contain a decent amout of content that has to be published together with its compiled functionality. This mostly includes images, scripts and styles.
+Most PHP projects contain a decent amout of content that has to be published together with its compiled functionality. This usualy includes images, scripts and styles.
 
 ```xml
 <ItemGroup>
