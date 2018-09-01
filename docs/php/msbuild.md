@@ -83,20 +83,21 @@ Disables specific warning messages. The warnings are identified by their ID (e.g
 ```
 The sample above disables the reporting of a call of an undefined function and declaring a mandatory parameter behind an optional parameter.
 
-### DocumentationFile
+### GenerateDocumentationFile
 
-Enables or disables the build of an `.xml` file with the `XMLDoc` generated from the source files' `PHPDoc`. The default value is empty string ('') in order not to generate the XML documentation file. Note, the value includes only the file name and has no path information.
+Enables or disables the build of an `.xml` file with the `XMLDoc` generated from the source files' `PHPDoc`. The default value is `false` in order not to generate the XML documentation file.
 
 ```xml
-<DocumentationFile>$(AssemblyName).xml</DocumentationFile>
+<GenerateDocumentationFile>true</GenerateDocumentationFile>
 ```
 
 !!! success "enabling this option is recommended"
     In case the project containing the XML documentation is referenced by a C# project, the IDE's IntelliSense will display additional text information collected from the `XMLDoc` file.
 
-Setting this property also enables following properties if not specified else:
-- `GenerateDocumentationFile = true`; 
-- `PublishDocumentationFile = true`; enabled implicitly by `Microsoft.NET.Sdk.BeforeCommon.targets` 
+Enaling this property also sets following properties if not specified else:
+
+- `DocumentationFile`
+- `PublishDocumentationFile = true`
 
 ### PhpDocTypes
 

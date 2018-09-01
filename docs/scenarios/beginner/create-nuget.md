@@ -24,7 +24,7 @@ Usually it is necessary to alter [the project file](/php/msbuild) with following
 
 Creates XMLDoc from contained PHPDoc and packs it into the NuGet package:
 ```xml
-<DocumentationFile>$(AssemblyName).xml</DocumentationFile>
+<GenerateDocumentationFile>true</GenerateDocumentationFile>
 ```
 
 ### Copy content into NuGet
