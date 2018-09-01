@@ -1,12 +1,12 @@
-# Create NuGet package
+# Create a NuGet package
 
-NuGet package provides a standardized way of sharing a library functionality across .NET projects. In general it contains the compiled code (assembly) and other files you want to deliver as a package. Packages are usually pushed to NuGet feeds (public or private) so they can be referenced by other projects.
+NuGet packages provide a standardized way of sharing a library functionality across .NET projects. In general, they contain the compiled code (assembly) and other files you want to deliver as a package. Packages are usually pushed to NuGet feeds (public or private), so that they can be referenced by other projects.
 
-Process of creating packages is separated from the compilation itself and is fully managed by build system. That means projects containing PHP code can be packaged using standard way which does not differ from packing of other project types. This article summarizes usual approaches and options.
+The process of creating packages is separated from the compilation itself and is fully managed by the build system. This means that projects containing PHP code can be packaged using a standard way, no different from packing other project types. This article summarizes the usual approaches and options.
 
-## Packing on command line
+## Packing on the command line
 
-Following command creates a default NuGet package (`.nupkg`) containing just the compiled assembly. Run the command wihtin [your project](/php/msbuild) directory.
+The following command creates a default NuGet package (`.nupkg`) containing just the compiled assembly. Run the command within [your project](/php/msbuild) directory.
 
 ```shell
 dotnet pack
@@ -14,7 +14,7 @@ dotnet pack
 
 ## Packing within build
 
-Usually it is necessary to alter [the project file](/php/msbuild) with following properties in order to pack the compiled project after successful build. Insert following properties to the project file:
+Usually it is necessary to alter [the project file](/php/msbuild) with the following properties in order to pack the compiled project after a successful build. Insert the following properties into the project file:
 
 ```xml
 <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -22,12 +22,12 @@ Usually it is necessary to alter [the project file](/php/msbuild) with following
 
 ### Pack PHPDoc
 
-Creates XMLDoc from contained PHPDoc and packs it into the NuGet package:
+Creates XMLDoc from the contained PHPDoc and packs it into the NuGet package:
 ```xml
 <GenerateDocumentationFile>true</GenerateDocumentationFile>
 ```
 
-### Copy content into NuGet
+### Copy content into the NuGet
 
 Most PHP projects contain a decent amout of content that has to be published together with its compiled functionality. This usualy includes images, scripts and styles.
 
@@ -36,8 +36,8 @@ Most PHP projects contain a decent amout of content that has to be published tog
   <Content Include="**/*.jpg;**/*.png" />
 </ItemGroup>
 ```
-
-Note, PHP files are compiled and their content is not copied to the package by default. Some functionality may require the PHP file to be physically present within the target project. Include such source files that are required the same way as other content files.
+!!! Note
+    PHP files are compiled and their content is not copied to the package by default. Some functionalities may require the PHP file to be physically present within the target project. Include those required source files in the same way as you would any other content files. 
 
 ```xml
 <ItemGroup>
