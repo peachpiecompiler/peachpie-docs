@@ -128,9 +128,26 @@ Possible values are `None`, `FieldTypes`, `ParameterTypes`, `ReturnTypes` or `Al
     }
     ```
 
-
 !!!warning
     Be careful when enabling this option. Typed values won't persist a PHP reference.
+
+### StartupObject
+
+Specifies the function, method or file representing the application's main routine.
+
+```xml
+<OutputType>exe</OutputType>
+<StartupObject>main.php</StartupObject>
+```
+
+The value can be set in one of the following formats:
+
+- `filename.php` - startup object as a file.
+- `function_name` - startup object as a global function.
+- `class_name` - lookups for a static method `Main` on given class as the startup object.
+- `class_name::method_name` - lookups for a method.
+
+If the property is not specified, a script file that happens to be compiled first is used as the application's startup object.
 
 ## Common snippets
 
@@ -159,4 +176,4 @@ To provide a unique identity of the compiled assembly, sign the assembly with a 
 ## Related links
 - [MSBuild reference](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-reference) *(docs.microsoft.com)*
 - [Sign an Assembly with a Strong Name](https://docs.microsoft.com/en-us/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name) *(docs.microsoft.com)*
-- [Goodbye project.json, Hello MSBuild](http://www.peachpie.io/2017/04/msbuild-netcoreapp1-1.html)
+- [Goodbye project.json, Hello MSBuild](http://www.peachpie.io/2017/04/msbuild-netcoreapp1-1.html) *(www.peachpie.io)*
