@@ -42,7 +42,7 @@ Most PHP projects contain a decent amout of content that has to be published tog
 
 ```xml
 <ItemGroup>
-  <Content Include="**/meta.php" />
+  <Content Include="**/*.php" />
 </ItemGroup>
 ```
 
