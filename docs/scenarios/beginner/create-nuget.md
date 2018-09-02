@@ -36,6 +36,7 @@ Most PHP projects contain a decent amout of content that has to be published tog
   <Content Include="**/*.jpg;**/*.png" />
 </ItemGroup>
 ```
+
 !!! Note
     PHP files are compiled and their content is not copied to the package by default. Some functionalities may require the PHP file to be physically present within the target project. Include those required source files in the same way as you would any other content files. 
 
