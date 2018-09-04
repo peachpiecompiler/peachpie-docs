@@ -28,6 +28,8 @@ PHP5006 | Undefined function | There is no such function declaration in the proj
 PHP5008 | Undefined type | There is no such class declaration in the project or in the referenced libraries.
 PHP5010 | Ambiguous declaration | The base of the type declaration is ambiguous; this results in the emission of multiple definitions, a significant run time overhead and an unnecessarily larger resulting assembly file.
 PHP5011 | Unreachable code | The code is unreachable. This is based on code analysis and dead code elimination analysis.
+PHP5014 | Too many arguments | Function expects less arguments than provided. Not used arguments will be evaluated and ignored.
+PHP5015 | Missing mandatory arguments | Function expects more arguments than provided. Missing arguments will be filled with a default value.
 PHP5016 | Assert always fails | The condition of `assert()` is evaluated to always be `false`, hence `assert()` will always throw an exception.
 PHP5018 | The function has been deprecated | Calling a function that has been marked as deprecated; either it is annotated with `[ObsoleteAttribute]` metadata or it is a known deprecation by the compiler.
 PHP5020 | Assignment made to same variable | The expression does not have any effect, it is usually a typo in the source code.
