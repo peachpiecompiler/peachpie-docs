@@ -42,7 +42,7 @@
 - [ ] Lowering/simplifying expressions
 - [ ] Avoiding unnecessary value copying
 - [ ] Typed array optimizations
-- [ ] Compile on multi-core CPU in parallel
+- [x] Compile on multi-core CPU in parallel
 - [ ] do not declare unreachable declarations
 
 ## .NET Both-Way Interoperability
