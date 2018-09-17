@@ -7,4 +7,4 @@ PHP code using .NET
 - extending .NET class or interface in PHP
 
 !!! Info "Related links"
-    You can also refer to [all our articles in our blog](https://www.peachpie.io/tag/interoperability) on the topic of interoperability       for more information
+    You can also refer to [all our articles in our blog](https://www.peachpie.io/tag/interoperability) on the topic of interoperability for more information.

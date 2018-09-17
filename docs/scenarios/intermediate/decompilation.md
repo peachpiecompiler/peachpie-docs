@@ -6,7 +6,7 @@ For the purposes of development and optimization, it is sometimes necessary to c
 
 **Second**, decompilation reveals how the compiler treats some PHP constructs and declarations, so it can be used from C# or other .NET languages. It also allows for detecting errors in or improving the compiler.
 
-**Third**, performance critical pieces of code should be reviewed and, if possible, type information or a better decomoposition should be added to the source code to improve the type analysis and thus the compilation result. See [performance](../php/performance) for more information.
+**Third**, performance critical pieces of code should be reviewed and, if possible, type information or a better decomposition should be added to the source code to improve the type analysis and thus the compilation result. See [performance](/php/performance) for more information.
 
 ## Try PeachPie
 
@@ -16,7 +16,7 @@ The community project [try.peachpie.io](https://try.peachpie.io) allows for an i
 
 A handy tool for decompiling entire assemblies. In case there is a large PHP project or a project consisting of more script files in general, ILSpy provides all the functionality needed for both checking the assembly and performance fine-tuning.
 
-The tool gets error messages in case the compiled assembly is not valid (e.g. the compiler missbehavior) and gets nice view of the [compiled assembly structure](../api/assembly/compiled-assembly).
+The tool gets error messages in case the compiled assembly is not valid (e.g. the compiler missbehavior) and gets nice view of the [compiled assembly structure](/api/assembly/compiled-assembly).
 
 ## disasm
 
