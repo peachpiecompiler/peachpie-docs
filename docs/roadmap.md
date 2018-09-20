@@ -4,7 +4,7 @@
 
 - [x] **0.8.0**: related work, open GitHub issues
 - [x] **0.9.0**: all the PHP 5.4 - PHP 7.2 language features support, one serious big CMS working out of the box (WordPress), most of the commonly used PHP extensions implemented, compilation technical demo ([try.peachpie.io](https://try.peachpie.io))
-- [ ] **0.9.3**: more PHP frameworks working, signing assemblies, PHAR support, more PHP extensions and core functions
+- [ ] **0.9.3**: more PHP frameworks working, signing assemblies, PHAR support, more PHP extensions and core functions, migrate to latest Roslyn CodeAnalysis
 - [ ] **0.9.6**: compile-time optimizations, initial runtime optimizations, `dynamic` support in C#, more C# interoperability features, Composer support
 - [ ] **0.9.9**: interpreted mode, producing clean IL
 - [ ] **1.0.0-alpha**: TBD
