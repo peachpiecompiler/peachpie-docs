@@ -74,6 +74,7 @@ The following section lists the compatibility status of the compiler and runtime
 - [x] Sessions
 - [ ] Soap
 - [x] SPL
+- [x] Tokenizer
 - [x] Reflection
 - [x] zlib
 - [x] Zip
