@@ -4,7 +4,8 @@
 
 - [x] **0.8**: related work, open GitHub issues
 - [x] **0.9**: all the PHP 5.4 - PHP 7.2 language features support, one serious big CMS working out of the box (WordPress), most of the commonly used PHP extensions implemented, compilation technical demo ([try.peachpie.io](https://try.peachpie.io))
-- [ ] **1.0**: signing assemblies, PHAR support, more PHP extensions and core functions, migrate to latest Roslyn CodeAnalysis, MsBuild 15.0 SDK, VS Code Extension
+- [ ] **0.9.9**: pre-alpha. Signing assemblies, Phar support, more PHP extensions and core functions, migrate to latest Roslyn CodeAnalysis, MsBuild 15.0 Sdk `Peachpie.NET.Sdk`, opening in Visual Studio 2017/2019
+- [ ] **1.0**: Visual Studio Code Extension, Visual Studio 2017 Extension, user friendly error messages
 - [ ] **1.1**: compile-time optimizations, runtime optimizations, `dynamic` support in C#, more C# interoperability features, Composer support
 
 ## General Tasks
