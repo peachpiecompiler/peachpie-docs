@@ -5,30 +5,23 @@ MSBuild is the build system for .NET and Visual Studio. The MSBuild project file
 ## Sample Project File
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Peachpie.NET.Sdk/0.9.9">
   <PropertyGroup>
     <OutputType>library</OutputType>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
- 
+
   <ItemGroup>
     <Compile Include="**/*.php" />
   </ItemGroup>
- 
-  <ItemGroup>
-    <DotNetCliToolReference Include="Peachpie.Compiler.Tools" Version="0.9.0-*" />
-    <PackageReference Include="Peachpie.NET.Sdk" Version="0.9.0-*" PrivateAssets="Build" />
-  </ItemGroup>
+
 </Project>
 ```
 
 The sample project file above is supposed to be saved as **`your-project-name.msbuildproj`**. This particular example includes all the `.php` files into the compilation, uses the PeachPie compiler and targets class library projects. See the section [Output Type](#outputtype) below on how to target different project types. The project can be opened in Visual Studio 2017, Visual Studio Code, other IDEs or used from your favorite shell to build or run the project.
 
-!!!warning "before opening in Visual Studio 2017"
-    In case you are opening the project in Visual Studio 2017, run the restore command once:
-    ```bash
-    dotnet restore
-    ```
+!!!note
+    `Peachpie.NET.Sdk` is downloaded from a NuGet feed. Visual Studio resolves the Sdk automatically since 15.6.
 
 Build the project using an IDE or the command below:
 ```bash
@@ -98,6 +91,10 @@ Enaling this property also sets following properties if not specified else:
 
 - `DocumentationFile`
 - `PublishDocumentationFile = true`
+
+### PeachpieVersion
+
+The property is set by Sdk to the current version of Peachpie. It can be used in project files to refer to the Peachpie version being used. The value of the property can be changed in order to use a different Peachpie runtime and compiler for the project.
 
 ### PhpDocTypes
 
