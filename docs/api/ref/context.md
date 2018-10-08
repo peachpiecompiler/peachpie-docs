@@ -18,7 +18,7 @@ A new instance of the object is created in two ways:
 
 Method | Summary
 ---    | ---
-AddScriptReference(Assembly) | Loads declarations from given [compiled assembly](../assembly/compiled-assembly). *(app static)*
+AddScriptReference(Assembly) | Loads declarations from given [compiled assembly](/api/assembly/compiled-assembly). *(app static)*
 Call(string, [PhpValue](phpvalue)[] args) : [PhpValue](phpvalue) | Dynamically invokes a function declared within the current context.
 Create(string, [PhpValue](phpvalue)[] args) : object | Dynamically instantiates a class declared within the current context.
 DeclareFunction(string, Delegate) | Dynamically declares a global function within the current context.
