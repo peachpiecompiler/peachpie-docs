@@ -67,14 +67,11 @@ Projects created by the steps above can be opened by .NET development environmen
 
 - Install [PeachPie for VS Code](https://marketplace.visualstudio.com/items?itemName=iolevel.peachpie-vscode) extension.
 - Open the folder with your PHP project.
-- Start the project by pressing ++f5++ and let VSCode create the initial `tasks.json` and `launch.json` files.
+- Start the project by pressing ++f5++ and let VSCode create the initial `tasks.json` and `launch.json` files for .NET Core.
 - Edit `launch.json` to point to the actual build result.
 
 The steps above add support for PeachPie diagnostics and breakpoints in PHP code within a PHP project. The building and debugging of the application is handled by the .NET runtime and debugger.
 
 ### Visual Studio
 
-- Run `dotnet restore` within the project directory before opening the project in Visual Studio.
-- Open the project, build, debug and edit as needed.
-
-The `dotnet restore` command is necessary for Visual Studio 2017 since it downloads the PeachPie SDK for the first time and lets Visual Studio 'understand' the project when opening.
+*no additional steps needed*
