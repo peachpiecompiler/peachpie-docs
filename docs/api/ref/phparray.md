@@ -5,6 +5,9 @@
 
 Represents an ordered dictionary used as PHP's `array` type.
 
+!!!note
+    `PhpArray` implementation is a subject of change. Version 1.0.0 is expected to contain a different implementation of `PhpArray` and array handling in general.
+
 ## Examples
 
 ```c#
