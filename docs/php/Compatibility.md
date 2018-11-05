@@ -39,7 +39,7 @@ The following section lists the compatibility status of the compiler and runtime
 - [x] Implicit casting
 - [x] PHP Generators
 - [x] PHP Stack Trace
-- [x] [PHAR support](https://github.com/peachpiecompiler/peachpie/issues/83)
+- [x] [PHAR support](/php/phar)
 - [x] Reflection
 
 ## Implemented Extensions
