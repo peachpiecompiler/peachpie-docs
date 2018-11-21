@@ -57,7 +57,7 @@
 - [x] [CLR/PHP Interoperability](net/type-system)
 - [ ] DynamicMetaObjectProvider
 - [x] Signing assemblies
-- [ ] [Custom Attributes](https://github.com/peachpiecompiler/peachpie/issues/106)
+- [x] [Custom Attributes](https://github.com/peachpiecompiler/peachpie/issues/106)
 - [x] Console Application
 - [x] Web Application
 - [x] Class Library
