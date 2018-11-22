@@ -51,7 +51,7 @@
 
 - [x] Generating portable assemblies
 - [x] Calling .NET objects from PHP
-- [ ] .NET generics
+- [x] .NET generics
 - [x] Generate XML documentation
 - [x] [MSBuild SDK (Peachpie.NET.Sdk)](php/msbuild)
 - [x] [CLR/PHP Interoperability](net/type-system)
