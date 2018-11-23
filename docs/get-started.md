@@ -63,6 +63,11 @@ This kind of project can be used purely as a dependency to other projects. The c
 
 Projects created by the steps above can be opened by .NET development environments, such as `Visual Studio 2017` or newer or `Visual Studio Code`. There are a few additional steps necessary to do so, however.
 
+### Visual Studio
+- Install our [PeachPie Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=iolevel.peachpie-vs).
+- Go to `File | New | Project`, locate the `PHP (PeachPie)` template group and create a new project.
+- Hit ++f5++.
+
 ### Visual Studio Code
 
 - Install [PeachPie for VS Code](https://marketplace.visualstudio.com/items?itemName=iolevel.peachpie-vscode) extension.
@@ -70,8 +75,4 @@ Projects created by the steps above can be opened by .NET development environmen
 - Start the project by pressing ++f5++ and let VSCode create the initial `tasks.json` and `launch.json` files for .NET Core.
 - Edit `launch.json` to point to the actual build result.
 
-The steps above add support for PeachPie diagnostics and breakpoints in PHP code within a PHP project. The building and debugging of the application is handled by the .NET runtime and debugger.
-
-### Visual Studio
-
-*no additional steps needed*
+The steps above add support for PeachPie diagnostics and breakpoints in PHP code within a PHP project in VS Code. The building and debugging of the application is handled by the .NET runtime and debugger.
