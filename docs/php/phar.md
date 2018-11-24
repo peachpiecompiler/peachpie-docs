@@ -18,7 +18,7 @@ Non-script entries, content files, are stored within the resulting assembly as r
 
 ## StartupObject
 
-Phar's stub code can be specified as the application's [startup object](msbuild#startupobject). In case a `.phar` file is specified as the first source file being compiled, it is automatically used as the application's entry point.
+Phar's stub code can be specified as the application's [startup object](msbuild#startupobject). In case a `.phar` file is specified as the first source file being compiled, it is automatically used as the application's entry point. Phar entries (files contained in the archive except for the phar stub) cannot be used as the application's startup object.
 
 ## Phar content files
 
@@ -28,7 +28,7 @@ Any Phar entry that is not recognized as a source file is compiled as a resource
 - entry has no extension and starts with `#!php# <?php` openinig tag.
 - entry has a well known extension (`.inc`, `.php5`, `.module`) and contains the openinig tag `#!php# <?php`.
 
-Note, this behaviour is may change.
+Note, this behaviour may change.
 
 ## Runtime API
 
