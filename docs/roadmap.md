@@ -45,7 +45,8 @@
 - [ ] Avoiding unnecessary value copying
 - [ ] Typed array optimizations
 - [x] Compile on multi-core CPU in parallel
-- [ ] Do not declare unreachable declarations
+- [x] Do not declare unreachable declarations
+- [ ] Span<T> instead of substring (and similar) (streams)
 
 ## .NET Both-Way Interoperability
 
