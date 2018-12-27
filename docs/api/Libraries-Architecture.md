@@ -44,7 +44,7 @@ echo ArrayIterator::A_CLASS_CONSTANT;
 echo ArrayIterator::ContextConstant;
 ```
 
-* `public static class` represents a container containing the declaration of global PHP functions and constants
+* `public static class` represents a container containing the declaration of global PHP functions and constants. The container is ignored if it is annotated with the `[PhpHidden]` attribute.
 ```c#
 // Example:
 public static class MyFunctions {
