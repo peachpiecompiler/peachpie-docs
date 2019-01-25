@@ -38,7 +38,7 @@
 - [x] Unnecessary branching elimination
 - [ ] Compile Regex tree in PHP code compile time
 - [x] Array literals one time construction
-- [ ] Optimized array implementation
+- [x] Optimized array implementation
 - [x] Compile-time expression evaluation
 - [ ] Lowering/simplifying expressions
 - [ ] Resolving more inclusion in compile time
