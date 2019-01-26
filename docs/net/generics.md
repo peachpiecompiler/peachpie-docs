@@ -18,4 +18,4 @@ print_r( System\Collections\Generic\Comparer<int>::$Default );
 
 Type arguments must be resolved in compile time. It is not possible to specify type arguments as variables or expressions.
 
-There are no additional options or settings for the syntax extension. It is always available and it does not vreak the existing PHP code.
+There are no additional options or settings for the syntax extension. It is always available and it does not break the existing PHP code. Note, some PHP IDE might report the extended syntax as syntax error.
