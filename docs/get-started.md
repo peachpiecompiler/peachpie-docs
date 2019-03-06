@@ -61,7 +61,7 @@ This kind of project can be used purely as a dependency to other projects. The c
 
 ## Development Environment
 
-Projects created by the steps above can be opened by .NET development environments, such as `Visual Studio 2017` or newer or `Visual Studio Code`. There are a few additional steps necessary to do so, however.
+Projects can be created and opened by .NET development environments, such as `Visual Studio 2017` or newer or `Visual Studio Code`.
 
 ### Visual Studio
 - Install our [PeachPie Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=iolevel.peachpie-vs).
