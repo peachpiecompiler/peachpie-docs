@@ -5,10 +5,6 @@ The compiler outputs portable class libraries or executables compatible with .NE
 * ![](/img/icon_ns.png) *namespace* -
     * ![](/img/icon_class.png) *class* &lt;Script&gt;
         * ![](/img/icon_method.png) Main(string[] *args*) : int
-        * ![](/img/icon_method.png) EnumerateConstants(Action&lt;string, PhpValue, bool&gt; *callback*)
-        * ![](/img/icon_method.png) EnumerateReferencedFunctions(Action&lt;string, RuntimeMethodHandle&gt; *callback*)
-        * ![](/img/icon_method.png) EnumerateReferencedTypes(Action&lt;string, RuntimeTypeHandle&gt; *callback*)
-        * ![](/img/icon_method.png) EnumerateScripts(Action&lt;string, RuntimeMethodHandle&gt; *callback*)
 * ![](/img/icon_ns.png) *namespace* **NS1**
     * ![](/img/icon_class.png) *class* **Class1**
 * ![](/img/icon_ns.png) *namespace* &lt;Root&gt;
