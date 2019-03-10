@@ -34,6 +34,8 @@ The runtime supports a simulation of autoloading. This means that every time the
 
 The autoload mechanism complies with autoloading in the PHP language, taking into account both the `__autoload` function and SPL autoloading. The mechanism itself is provided by the service `IPhpAutoloadService`, which is maintained by the instance of `Context`.
 
+For seamless usability of PHP libraries within .NET programs, the autoload may implicitly perform `include_once` of containing script file when needed. This "implicit autoload" is enabled by default and is disabled if SPL autoload gets enabled.
+
 ## Related links
 
 - [PhpTypeInfo](ref/PhpTypeInfo)
