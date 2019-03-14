@@ -19,7 +19,7 @@ PHP4046 | Call to a member function on a non-object | The expression before the 
 PHP4048 | Cannot instantiate specified type. | A type is an interface, abstract class, trait or a static class and cannot be instantiated. Using `new` operator would fail.
 PHP4049 | Not a trait. | Only trait types can be used within class's `use` statement.
 PHP4052 | Method __toString() must return a string value | Value returned from `__tostring()` method is not a string value. This would result in a fatal error in run time.
-PHP4053 | Cannot declare a return type | The specified function must not have return type hint. It is not allowed. `__construct`, `__destruct` always return `void`. `__clone` always returns the class itself.
+PHP4053 | Cannot declare a return type | The specified function must not have return type hint. It is not allowed. `__construct`, `__destruct`, `__clone` always return `void`.
 PHP4054 | A void function must not return a value. | The function with `void` return type cannot return a value.
 PHP4061 | not in the 'loop' or 'switch' | Use of `break` or `continue` does not make any sense outside of for, foreach, while or switch blocks.
 
