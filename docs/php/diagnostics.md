@@ -3,7 +3,7 @@
 The compiler performs several passes of code analysis during the build process. As a result, it may end up with a list of diagnostics each corresponding to a location in the source code. The following list describes the error codes and possible solutions on how to fix them.
 
 !!! tip
-    The warning diagnostics can be turned off by setting a build property. See [NoWarn Property](msbuild#nowarn) for more information.
+    The warning diagnostics can be turned off by setting a build property. See [NoWarn Property](/php/msbuild#nowarn) for more information.
 
 ## Errors
 
