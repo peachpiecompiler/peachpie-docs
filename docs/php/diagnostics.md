@@ -18,6 +18,7 @@ PHP4044 | Type name cannot be resolved | The base type of a class or an interfac
 PHP4046 | Call to a member function on a non-object | The expression before the `->` operator results in a non-object value. Such a call is not allowed.
 PHP4048 | Cannot instantiate specified type. | A type is an interface, abstract class, trait or a static class and cannot be instantiated. Using `new` operator would fail.
 PHP4049 | Not a trait. | Only trait types can be used within class's `use` statement.
+PHP4052 | Cannot re-assign $this | `$this` variable cannot be modified.
 PHP4053 | Cannot declare a return type | The specified function must not have a return type hint. This is not allowed. `__construct`, `__destruct`, `__clone` always return `void`.
 PHP4054 | A void function must not return a value. | A function with the `void` return type cannot return a value.
 PHP4061 | not in the 'loop' or 'switch' | Use of `break` or `continue` does not make any sense outside of for, foreach, while or switch blocks.
