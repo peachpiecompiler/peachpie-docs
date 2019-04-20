@@ -146,6 +146,14 @@ The value can be set in one of the following formats:
 
 If the property is not specified, a script file that happens to be compiled first is used as the application's startup object.
 
+### PhpRelativePath
+
+Sets the compiled script files placement within the application's root directory.
+
+```xml
+<PhpRelativePath>vendor/author/package</PhpRelativePath>
+```
+
 ## Common snippets
 
 ### Create NuGet package
