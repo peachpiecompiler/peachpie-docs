@@ -154,6 +154,8 @@ Sets the compiled script files placement within the application's root directory
 <PhpRelativePath>vendor/author/package</PhpRelativePath>
 ```
 
+> Available since `0.9.41`
+
 ## Common snippets
 
 ### Create NuGet package
