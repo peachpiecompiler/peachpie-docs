@@ -36,7 +36,7 @@ A few tips on how to minimize the size of the resulting application:
     Rename the project file so that it has the `.csproj` extension, it will work just fine.
 
 ## Resources
-* [Blog post on self-executable PHP apps](https://www.peachpie.io/2019/06/self-contained-php-app.html)
+* [Blog post on self-contained executable PHP apps](https://www.peachpie.io/2019/06/self-contained-php-app.html)
 * [Runtime Identifier (RID) catalog](docs.microsoft.com/en-us/dotnet/core/rid-catalog)
 * [dotnet-warp](hanselman.com/blog/BrainstormingCreatingASmallSingleSelfcontainedExecutableOutOfANETCoreApplication.aspx)
 * [PeachPie getting started](peachpie.io/getstarted)
