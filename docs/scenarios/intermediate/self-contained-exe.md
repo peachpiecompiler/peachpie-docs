@@ -1,4 +1,4 @@
-# Self-contained executable application in PHP
+# Self-contained executable
 To create a self-contained PHP executable, start with a console application, e.g.:
 ```
 <?php
