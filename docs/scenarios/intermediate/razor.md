@@ -2,11 +2,11 @@ This tutorial explains how to work with Razor partials together with PHP, in bot
 
 ## Rendering Razor partial views in PHP
 In order to handle requests to .php files compiled into a project (e.g. php-library in this case) in your C# MVC app, you must first configure the ASP.NET Core pipeline in `Startup.cs` as follows:
-```
+```csharp
 app.UsePhp(new PhpRequestOptions(scriptAssemblyName: "php-library"));
 ```
 Now start the project and a request to ‘index.php’ will be served. The sample C# MVC app already contains a shared partial view called “_User.cshtml”. In our sample, you can see the php-library project, where a Razor partial view is being rendered within the `index.php` file:
-```
+```php
 <?php
 use Peachpie\AspNetCore\Mvc\HttpContextExtension as Html;
 class User
@@ -20,7 +20,7 @@ class User
 `Peachpie\AspNetCore\Mvc\HttpContextExtension::Partial(string $viewName, object $model)` is a helper function that finds the partial view “_User”, renders it and retrieves its output. It is then “echoed” using PHP’s <?= syntax.
 
 Add a reference to your php-library project file, which implements the helper function above:
-```
+```xml
 <PackageReference Include="Peachpie.AspNetCore.Mvc" Version="0.9.0-CI01034" />
 ```
 
@@ -31,16 +31,16 @@ Start by compiling your PHP project into a `DLL` file.
     ` OutputType`  must be library and ` TargetFramework`  is netstandard2.0, because we are building a library that will be referenced by your C# MVC app.
 
 Next, add a reference to the MVC project:
-```
+```xml
 <PackageReference Include="Peachpie.AspNetCore.Mvc" Version="1.0.0-*" />
 <ProjectReference Include="../myPhpApp/myPhpApp.msbuildproj" />
 ```
 And finally, provide the PHP scripts to the runtime. This must be done once when the application is running, and can be achieved by inserting the code into the Startup object, specifically into the `ConfigureServices` method in the ASP.NET Core configuration:
-```
+```csharp
 Context.AddScriptReference( Assembly.Load("myPhpApp") );
 ```
 Now you can display the output of your PHP script inside a Razor or Partial View (.cshtml), e.g.:
-```
+```html
 @using Peachpie.AspNetCore.Mvc;
  
 <h1>Razor View</h1>
@@ -50,7 +50,7 @@ Now you can display the output of your PHP script inside a Razor or Partial View
 
 ## MVC Model objects
 If you want to pass data to your PHP script, you can do so by specifying the second parameter of the `Php("test.php", model)` method. You can pass the current .NET Model or any other object. To use it, simply refer to `$this` variable in the PHP code. If you are not comfortable with using `$this`, you can take advantage of the PeachPie API and pass any C# variable into a global PHP variable by calling something like:
-```
+```csharp
 HttpContext.GetOrCreateContext().Globals["mydata"] = (PhpValue)"Hi from C#!";
 ```
 This code will create a PHP global variable `$mydata`. `GetOrCreateContext()` is an extension method that gets you the PHP Context out of the ASP.NET Core HttpContext.
