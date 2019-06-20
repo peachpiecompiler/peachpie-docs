@@ -51,8 +51,6 @@ Get : [PhpArray](phparray) | Gets or sets an array representing PHP's `$_GET`.
 Post : [PhpArray](phparray) | Gets or sets an array representing PHP's `$_POST`.
 Request : [PhpArray](phparray) | Gets or sets an array representing PHP's `$_REQUEST`.
 
-## Notes
+## Remarks
 
-## Samples
-
-## Related links
+The `Context` class is not thread safe. It is intended to be used within `ExecutionContext`.
