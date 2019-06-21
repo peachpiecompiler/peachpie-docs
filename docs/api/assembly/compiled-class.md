@@ -17,32 +17,28 @@ public class X {
   
   // Reference to Context associated with the current instance.
   // Context is needed for most of PHP functions and PHP program lifecycle.
-  protected readonly Context <ctx>;
-
+  protected readonly Context <ctx>;  
   // Lazily instantiated array with dynamically added fields.
   internal PhpArray <runtime_fields>;
   
   // Constructor used internally to initialize the class without calling the `__construct` function.
   [EditorBrowsable(EditorBrowsableState.Never), PhpFieldsOnlyCtor]
-	protected internal X(Context <ctx>) : base() {
-		this.<ctx> = <ctx>;
-	}
-
+  protected internal X(Context <ctx>) : base() {
+    this.<ctx> = <ctx>;
+  }  
   // Regular class constructor.
-	public X(Context <ctx>) : this(<ctx>) {
-		__construct();
-	}
-
+  public X(Context <ctx>) : this(<ctx>) {
+    __construct();
+  }  
   // Context-less constructor to be used from other .NET languages.
   // Context is obtained or created for the current `ExecutionContext`.
-	[CompilerGenerated, PhpHidden]
-	public X() : this(ContextExtensions.CurrentContext) {
-	}
-
+  [CompilerGenerated, PhpHidden]
+  public X() : this(ContextExtensions.CurrentContext) {
+  }  
   // Compiled `__construct` function.
-	public PhpValue __construct() {
-		// ...
-	}
+  public PhpValue __construct() {
+    // ...
+  }
 }
 ```
 
