@@ -62,6 +62,7 @@
 - [x] Console Application
 - [x] Web Application
 - [x] Class Library
+- [ ] Using value types (structs)
 
 ### Cross Platform Demos
 
