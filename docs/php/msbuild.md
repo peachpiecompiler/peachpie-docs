@@ -176,7 +176,6 @@ To provide a unique identity of the compiled assembly, sign the assembly with a 
   <!-- signing -->
   <AssemblyOriginatorKeyFile>my-key.snk</AssemblyOriginatorKeyFile>
   <SignAssembly>true</SignAssembly>
-  <PublicSign Condition="'$(OS)' != 'Windows_NT'">true</PublicSign>
 </PropertyGroup>
 ```
 
