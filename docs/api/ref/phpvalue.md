@@ -40,8 +40,9 @@ string | explicit cast | `#!c# value.ToString()` | byte[] is encoded using UTF-8
 [PhpNumber](phpnumber) | explicit cast | `#!c# (PhpNumber)value` | `InvalidCastException`
 [PhpArray](phparray) | explicit cast | `#!c# (PhpArray)value` | conversion to array according to PHP semantic
 PhpAlias | EnsureAlias() | `#!c# value.EnsureAlias()` | -
-Object | AsObject() | `#!c# value.AsObject()` | gets underlaying object, dereferenced, can be `null`
-Object | ToClr() | `#c# value.ToClr()` | boxes contained value into `System.Object`, can be `null`.
+Object | AsObject() | `#!c# value.AsObject()` | gets underlaying class instance, can be `null`.
+Object | ToClr() | `#c# value.ToClr()` | boxes any underlaying value into `System.Object`, can be `null`.
+T | Cast<T>() | `#c# value.Cast<MyClass>()` | performs appropriate conversion of underlaying value into CLR type `T`.
 
 ## Operators
 
