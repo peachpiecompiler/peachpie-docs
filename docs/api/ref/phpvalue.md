@@ -63,3 +63,19 @@ Operator | Sample | Remarks
 `ToArray` | `#!c# val.ToArray()` | conversion to array according to PHP semantic
 `AsArray` | `#!c# val.AsArray()` | gets underlaying [PhpArray](phparray) or `null`
 `AsCallable` | `#!c# val.AsCallable()` | gets `IPhpCallable` from PHP' `callable` which can be invoked, can be `null`
+
+## Visitor pattern
+
+`PhpValue` type implements a visitor pattern so you can traverse through the underlaying value structure. This is useful in case of arrays or objects, in case of implementing a value serializer, but also in order to quickly call a method depending on the value's type.
+
+Method: `#!c# PhpValue.Accept( PhpVariableVisitor visitor)`
+
+Sample:
+
+```c#
+
+class MyVisitor : PhpVariableVisitor {
+    public override void AcceptNull() { } // PhpValue contains NULL!
+}
+value.Accept( new MyVisitor() ); // traverses through the value, arrays and objects
+```
