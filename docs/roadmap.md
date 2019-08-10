@@ -40,10 +40,11 @@
 - [x] Array literals one time construction
 - [x] Optimized array implementation
 - [x] Compile-time expression evaluation
-- [ ] Lowering/simplifying expressions
-- [ ] Resolving more inclusion in compile time
+- [x] Lowering/simplifying expressions
+- [x] Resolving more inclusion in compile time
 - [ ] Avoiding unnecessary value copying
 - [ ] Typed array optimizations
+- [ ] Echo and DB query asynchronously
 - [x] Compile on multi-core CPU in parallel
 - [x] Do not declare unreachable declarations
 - [ ] Span<T> instead of substring (and similar) (streams)
