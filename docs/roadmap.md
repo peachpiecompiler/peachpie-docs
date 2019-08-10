@@ -67,7 +67,7 @@
 
 ### Cross Platform Demos
 
-- [x] .NETCore, Mono, .NET 4.5 compatibility
+- [x] .NETCore, Mono, .NET 4.6.1 compatibility
 - [x] Sample Apps
 - [x] Sample GitHub projects
 - [x] Mobile app sample
