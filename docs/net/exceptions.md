@@ -3,7 +3,7 @@ All the exceptions in .NET have to be derived from the `System.Exception` class,
 
 In summary, a PHP exception looks as follows:
 
-```
+``` csharp
 public class Exception : System.Exception, Throwable { ... }
 ```
 
@@ -18,7 +18,7 @@ The entire exception mechanism then works out of the box and allows for:
 
 In PHP, exceptions are commonly caught using the `Throwable` type (which is not implemented by regular C# exceptions). Additionally, the PHP code might expect that an exception is of the PHP type `Exception`, which doesn't have to be true, e.g.:
 
-```
+``` php
 try { ... } // make a call to .NET
 catch (Throwable $t) { ... } // this might not be caught, C# exceptions don't implement Throwable
 ```
