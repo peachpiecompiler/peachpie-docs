@@ -8,19 +8,19 @@ public class Exception : System.Exception, Throwable { ... }
 ```
 
 !!! note
-    All PHP exception classes are implemented in regular C# - e.g. https://github.com/peachpiecompiler/peachpie/blob/master/src/Peachpie.Library/Exceptions/Exception.cs#L11)
+    All PHP exception classes are implemented in regular C# - e.g. https://github.com/peachpiecompiler/peachpie/blob/master/src/Peachpie.Library/Exceptions/Exception.cs#L11
 
-The entire exception mechanism then works out of the box:
+The entire exception mechanism then works out of the box and allows for:
 
 * Custom PHP exceptions (always derived from the `Exception` class) are a .NET `System.Exception` as well
-* PHP exceptions can be caught in C#
-* C# exceptions can be also caught in PHP
+* PHP exceptions to be caught in C#
+* C# exceptions to be caught in PHP as well
 
-It is common practice in PHP to catch exceptions using the `Throwable` type (which is not implemented by regular C# exceptions). Also the PHP code might expect that exception is of type PHP Exception which does not have to be true.
+In PHP, exceptions are commonly caught using the `Throwable` type (which is not implemented by regular C# exceptions). Additionally, the PHP code might expect that an exception is of the PHP type `Exception`, which doesn't have to be true, e.g.:
 
 ```
-try { ... } // do some call to .NET
-catch (Throwable $t) { ... } // this might not be caught, C# exceptions don't impl Throwable
+try { ... } // make a call to .NET
+catch (Throwable $t) { ... } // this might not be caught, C# exceptions don't implement Throwable
 ```
 
 To achieve full interoperability and to avoid any unexpected behavior of the PHP code, the exception thrown from C# and caught by the PHP code should inherit PHP's `Exception` (`Pchp.Library.Spl.Exception` class).
