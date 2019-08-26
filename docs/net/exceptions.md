@@ -31,6 +31,7 @@ catch (Exception ex) { ... }
 When catching standard .NET exceptions in PHP code, keep in mind they are not inherited from PHP's `\Exception`, `\Throwable` or `\Error` types. In order to catch a standard `System.Exception` or a derived type, the type must be specified in the `catch` block as follows.
 
 ```php
+<?php
 try { /* call a .NET method that throws */}
 // C# exceptions don't implement Throwable, won't catch
 catch (\Throwable $t) { ... }
