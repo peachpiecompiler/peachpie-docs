@@ -14,7 +14,7 @@ public class Exception : System.Exception, Throwable { ... }
 
 The entire exception mechanism between .NET languages and PHP works out of the box.
 
-## Catch a PHP Exception in C#
+## Catch a PHP Exception in C\#
 
 Since all the PHP exception classes and user PHP exception classes are derived from `System.Exception`, thay can be caught in .NET using standard `#!c# try/catch/finally` blocks.
 
