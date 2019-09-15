@@ -193,6 +193,8 @@ In order to generate the embedded files manifest and to embed content files as a
 </ItemGroup>
 ```
 
+> Available since `0.9.46`
+
 ## Related links
 
 - [MSBuild reference](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-reference) *(docs.microsoft.com)*
