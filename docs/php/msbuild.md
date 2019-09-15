@@ -179,7 +179,22 @@ To provide a unique identity of the compiled assembly, sign the assembly with a 
 </PropertyGroup>
 ```
 
+### EmbeddedResource
+
+In order to generate the embedded files manifest and to embed content files as an embedded resource, add following:
+
+```xml
+<PropertyGroup>
+  <GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+</PropertyGroup>
+<ItemGroup>
+  <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="2.*" PrivateAssets="All" />
+  <EmbeddedResource Include="**/*.png;**/*.css" />
+</ItemGroup>
+```
+
 ## Related links
+
 - [MSBuild reference](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-reference) *(docs.microsoft.com)*
 - [Sign an Assembly with a Strong Name](https://docs.microsoft.com/en-us/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name) *(docs.microsoft.com)*
 - [Goodbye project.json, Hello MSBuild](http://www.peachpie.io/2017/04/msbuild-netcoreapp1-1.html) *(www.peachpie.io)*
