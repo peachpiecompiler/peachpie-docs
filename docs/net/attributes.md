@@ -1,7 +1,7 @@
 It is possible to annotate class or interface declaration or a function declaration with the CLR attribute. Use the extended syntax to specify the attribute type name, its parameters and properties.
 
 ```php
-
+<?php
 [System\Obsolete("An attribute parameter")]
 class X {
 
@@ -17,7 +17,7 @@ The sample above depicts the use of attributes on a PHP type and PHP function. T
 
 Following syntaxes are possible:
 
-```
+```csharp
 [AttributeTypeName]
 [AttributeTypeName()]
 [AttributeTypeName(Value)]
