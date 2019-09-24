@@ -71,6 +71,7 @@ The following section lists the compatibility status of the compiler and runtime
   * [x] PCRE syntax parser
   * [x] Modification of .NET Regex
 - [ ] pthreads
+- [ ] gettext
 - [x] Sessions
 - [ ] Soap
 - [x] SPL
