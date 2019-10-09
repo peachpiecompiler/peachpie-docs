@@ -1,6 +1,7 @@
 It is possible to use generic types and generic methods in the PHP code. Use the extended syntax for specifying the type arguments. The syntax is very similar to the C# syntax:
 
 ```php
+<?php
 
 // instantiating new generic type
 new System\Collections\Generic\Dictionary<int, string>;
