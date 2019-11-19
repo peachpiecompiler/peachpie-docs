@@ -14,7 +14,8 @@
 ### Test Environments
 
 - [x] Travis CI
-- [x] MyGet CI
+- [x] AppVeyor CI
+- [x] DevOps CI
 - [x] Unit tests
 - [x] Comparison to PHP runtime tests
 
@@ -44,10 +45,9 @@
 - [x] Resolving more inclusion in compile time
 - [ ] Avoiding unnecessary value copying
 - [ ] Typed array optimizations
-- [ ] Echo and DB query asynchronously
+- [ ] Asynchronous I/O (awaitable include, db and global code)
 - [x] Compile on multi-core CPU in parallel
 - [x] Do not declare unreachable declarations
-- [ ] Span<T> instead of substring (and similar) (streams)
 
 ## .NET Both-Way Interoperability
 
