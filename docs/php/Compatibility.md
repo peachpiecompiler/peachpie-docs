@@ -54,7 +54,7 @@ The following section lists the compatibility status of the compiler and runtime
 - [x] Hash
 - [x] File System
 - [x] FileInfo
-- [ ] ftp
+- [x] ftp
 - [ ] intl
 - [x] Serialization
 - [ ] Sockets
