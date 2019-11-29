@@ -14,7 +14,7 @@ File with the extension `.phar` can be included into the compilation, like any o
 
 In compile time, `.phar` files are opened and containing scripts compiled separatelly.
 
-Non-script entries, content files, are stored within the resulting assembly as resources. Such resources are accessed in runtime from within PHP code using `phar://` scheme prefix, or using .NET method `#!c# System.Reflection.Assembly.GetManifestResourceStream(name)` where name is in form of *"phar://{relative_phar_path}/{phar_entry_name}"*.
+Non-script entries, content files, are stored within the resulting assembly as an embedded resource. In result, the original phar file is not needed for the purpose of running the compiled application.
 
 ## StartupObject
 
