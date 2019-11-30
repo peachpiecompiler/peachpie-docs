@@ -76,6 +76,14 @@ Disables specific warning messages. The warnings are identified by their ID (e.g
 ```
 The sample above disables the reporting of a call of an undefined function and declaring a mandatory parameter behind an optional parameter.
 
+### CodePage
+
+Specifies an encoding to be used to parse source files. By default, the code page is `UTF-8`.
+
+```xml
+<CodePage>iso-8859-1</CodePage>
+```
+
 ### GenerateDocumentationFile
 
 Enables or disables the build of an `.xml` file with the `XMLDoc` generated from the source files' `PHPDoc`. The default value is `false` in order not to generate the XML documentation file.
