@@ -4,8 +4,8 @@ The following section lists the compatibility status of the compiler and runtime
 
 ## Suported Language Features
 
-- [x] PHP 5.4, 5.5, 5.6 Syntax
-- [x] PHP 7.0, 7.1, 7.2, 7.3 Syntax
+- [x] PHP 5.4 .. 5.6 Syntax
+- [x] PHP 7.0 .. 7.4 Syntax
 - [x] Referencing .NET assemblies
 - [x] Referencing PHP script libraries
 - [x] Code generation
