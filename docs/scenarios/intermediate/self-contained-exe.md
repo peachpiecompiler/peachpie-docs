@@ -1,15 +1,18 @@
 # Self-contained executable
+
 To create a self-contained PHP executable, start with a console application, e.g.:
+
 ```php
 <?php
 echo "Hello world!";
 ```
 and a corresponding project file indicating that the output should be exe:
+
 ```xml
-<Project Sdk="Peachpie.NET.Sdk/0.9.42">
+<Project Sdk="Peachpie.NET.Sdk/0.9.600">
   <PropertyGroup>
     <OutputType>exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
     <StartupObject>main.php</StartupObject>
   </PropertyGroup>
   <ItemGroup>
@@ -20,7 +23,7 @@ and a corresponding project file indicating that the output should be exe:
 Now compile your project into binaries using the following command:
 `dotnet publish -c release`
 
-This will publish the resulting binaries into the `/bin/release/netcoreapp2.1/publish` folder. 
+This will publish the resulting binaries into the `/bin/release/netcoreapp3.0/publish` folder. 
 
 As the final step, select an operating system to target, e.g. 
 
@@ -31,6 +34,7 @@ As the final step, select an operating system to target, e.g.
 This creates a self-contained executable PHP application targeting the operating system of your choice.
 
 ## Size considerations
+
 A few tips on how to minimize the size of the resulting application:
 
 * On Linux, you can get rid of culture-specific functionalities and keep just the “Invariant” culture features (cuts about 26MB of data). More detail [here](github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
@@ -40,6 +44,7 @@ A few tips on how to minimize the size of the resulting application:
     Rename the project file so that it has the `.csproj` extension, it will work just fine.
   
 ## Resources
+
 * [Blog post on self-contained executable PHP apps](https://www.peachpie.io/2019/06/self-contained-php-app.html)
 * [Runtime Identifier (RID) catalog](docs.microsoft.com/en-us/dotnet/core/rid-catalog)
 * [dotnet-warp](hanselman.com/blog/BrainstormingCreatingASmallSingleSelfcontainedExecutableOutOfANETCoreApplication.aspx)
