@@ -38,17 +38,17 @@ You can handle the requests to `*.php` pages on your ASP.NET (Integrated Pipelin
 
 ### Option 1: Web.Config
 
-Alter the web application's `web.config` file with the following configuration:
+Alter the web application's `web.config` file with the following configuration within `<configuration>` root element:
 
 ```xml
 <system.webServer>
     <handlers>
-      <add name="PeachpieHandler" path="*.php" verb="*" type="Peachpie.RequestHandler.RequestHandler, Peachpie.RequestHandler, Version=0.9.0.0, Culture=neutral, PublicKeyToken=5b4bee2bf1f98593" resourceType="Unspecified" preCondition="integratedMode" />
+      <add name="PeachpieHandler" path="*.php" verb="*" type="Peachpie.RequestHandler.RequestHandler, Peachpie.RequestHandler" resourceType="Unspecified" preCondition="integratedMode" />
     </handlers>
-<system.webServer>
+</system.webServer>
 ```
 
-Ensure the `/bin` folder of your ASP.NET application contains all the necessary assemblies including `MyWebsite.dll`, `Peachpie.RequestHandler.dll` and other Peachpie runtime assemblies.
+Ensure the `/bin` folder of your ASP.NET application contains all the necessary assemblies including `MyWebsite.dll`, `Peachpie.RequestHandler.dll` and other Peachpie runtime assemblies. 
 
 ### Option 2: Programatically
 
