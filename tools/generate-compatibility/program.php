@@ -5,7 +5,7 @@
  * 
  * ```json
  * {
- *  "phpversion": "7.4.0-rc",
+ *  "version": "7.4.0-rc",
  *  "extensions": ["Core", "Spl"],
  *  "ext-core": ["strlen", "Error", "PHP_VERSION"]
  * }
@@ -16,7 +16,7 @@ function collect() {
     $extensions = array_diff(get_loaded_extensions(), ["xdebug", "apc"]);
 
     $result = [
-        "phpversion" => PHP_VERSION,
+        "version" => defined("PEACHPIE_VERSION") ? PEACHPIE_VERSION : PHP_VERSION,
         "extensions" => $extensions,
     ];
 

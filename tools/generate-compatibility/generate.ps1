@@ -1,5 +1,4 @@
 param (
-    [string]$output = "../../docs/compatibility.md"
 )
 
 # do not show dotnet welcome text
@@ -8,5 +7,12 @@ param (
 $output_php = & invoke-Expression "php -f program.php" | Out-String
 $output_peachpie = & invoke-Expression "dotnet run --no-logo" | Out-String
 
-$set_php = $output_php | ConvertFrom-Json
-$set_peachpie = $output_peachpie | ConvertFrom-Json
+$php = $output_php | ConvertFrom-Json
+$peachpie = $output_peachpie | ConvertFrom-Json
+
+# prolog
+"Following table compares regular ``php`` and ``peachpie``:"
+"> PeachPie $($peachpie.version) vs. PHP $($php.version)"
+
+# extensions
+
