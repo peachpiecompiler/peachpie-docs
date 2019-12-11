@@ -44,7 +44,7 @@ $peachpie = $output_peachpie | ConvertFrom-Json
 
 # prolog
 "!!! tip ""PeachPie $($peachpie.version) vs. PHP $($php.version)"""
-"    Following table compares defined extensions, functions and classes of a regular ``php`` against ``peachpie``.."
+"    Following table compares defined extensions, functions and classes of a regular ``php`` against ``peachpie``. Not implemented entries are listed below each category."
 
 hr
 

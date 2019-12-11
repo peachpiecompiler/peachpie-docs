@@ -22,7 +22,22 @@ function collect() {
 
     foreach ($extensions as $ext) {
         $re = new ReflectionExtension($ext);
-        $result["ext-$ext"] = array_merge(array_keys($re->getFunctions()), $re->getClassNames());
+        $set = [];
+
+        foreach ($re->getFunctions() as $f => $_) {
+            $set[] = "function $f";
+        }
+
+        foreach ($re->getClasses() as $c) {
+            $set[] = "class $c->name";
+            
+            foreach ($c->getMethods() as $m) {
+                $set[] = "function $c->name::$m->name";
+            }
+        }
+
+        //
+        $result["ext-$ext"] = $set;
     }
 
     //
