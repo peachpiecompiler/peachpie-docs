@@ -1,10 +1,12 @@
 <Project Sdk="Peachpie.NET.Sdk">
   <PropertyGroup>
     <OutputType>exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
     <StartupObject>program.php</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="**/*.php" />
+    <PackageReference Include="Peachpie.Library.PDO.MySql" Version="$(PeachpieVersion)" />
+    <PackageReference Include="Peachpie.Library.PDO.Sqlite" Version="$(PeachpieVersion)" />
   </ItemGroup>
 </Project>
