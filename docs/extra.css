@@ -1,9 +1,28 @@
+details.tiny {
+  margin: 0;
+  padding: 0;
+  border:0;
+  border-radius: 0;
+  box-shadow: none;
+  background: none;
+}
+details.tiny summary {
+  padding: 0 1rem 0 0;
+  margin: 0;
+  background: none;
+}
+details.tiny summary:before {
+  content: "";
+}
+details.tiny ul {
+  padding-left: 16px;
+}
+
 p.progress-label {
   position: absolute;
-  text-align: center;
+  text-align: left;
   font-weight: 400;
-  width: 100%;
-  margin: 0;
+  margin: 0 1rem;
   line-height: 1.2rem;
   white-space: nowrap;
   overflow: hidden;
@@ -13,12 +32,13 @@ p.progress-label {
   height: 1.2rem;
   float: left;
   background-color: #2979ff;
+  border-radius:4px;
 }
 
 .progress {
   display: block;
-  width: 100%;
-  margin: 0.5rem 0;
+  margin: 0.5rem 1rem;
+  border-radius:4px;
   height: 1.2rem;
   background-color: #eeeeee;
   position: relative;
