@@ -61,6 +61,7 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tilde
   - pymdownx.keys
+  - pymdownx.mark
   - pymdownx.progressbar
   - codehilite:
       guess_lang: false
