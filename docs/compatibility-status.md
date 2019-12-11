@@ -1,16 +1,14 @@
-!!! tip "PeachPie 1.0.0-dev+ad7ef58ace017a4d894a3e4a4d6f012b693304e8 vs. PHP 7.4.0beta4"
-    Following table compares defined extensions, functions and classes of a regular `php` against `peachpie`. Missing features are listed below each progress bar.
+!!! tip "PeachPie 1.0.0-dev+2db0a95c11c602d113cddc46f394805a135991bf vs. PHP 7.4.0alpha3"
+    Following table compares defined extensions, functions and classes of a regular `php` against `peachpie`. Not implemented entries are listed below each category.
 
 ---
 
-??? tiny "[=70% "**extensions** 28 / 40"]"
+??? tiny "[=74% "**extensions** 29 / 39"]"
     - `bcmath`
     - `calendar`
     - `readline`
     - `mysqlnd`
     - `openssl`
-    - `xmlreader`
-    - `xmlwriter`
     - `gettext`
     - `xmlrpc`
     - `soap`
@@ -18,288 +16,765 @@
     - `tidy`
 
 
-??? tiny "[=100% "**json** 6 / 6"]"
+??? tiny "[=89% "**json** 16 / 18"]"
+    - `function JsonException::__clone`
+    - `function JsonException::__wakeup`
+??? tiny "[=89% "**standard** 500 / 561"]"
+    - `function time_nanosleep`
+    - `function time_sleep_until`
+    - `function phpcredits`
+    - `function vfprintf`
+    - `function getservbyname`
+    - `function getservbyport`
+    - `function getprotobyname`
+    - `function getprotobynumber`
+    - `function getmygid`
+    - `function getmyinode`
+    - `function password_algos`
+    - `function convert_uuencode`
+    - `function convert_uudecode`
+    - `function intdiv`
+    - `function getrusage`
+    - `function hrtime`
+    - `function debug_zval_dump`
+    - `function register_tick_function`
+    - `function unregister_tick_function`
+    - `function highlight_file`
+    - `function show_source`
+    - `function highlight_string`
+    - `function restore_include_path`
+    - `function net_get_interfaces`
+    - `function dns_check_record`
+    - `function checkdnsrr`
+    - `function dns_get_record`
+    - `function stream_context_get_params`
+    - `function stream_context_get_default`
+    - `function stream_context_set_default`
+    - `function stream_filter_remove`
+    - `function stream_socket_enable_crypto`
+    - `function stream_socket_shutdown`
+    - `function stream_socket_pair`
+    - `function stream_supports_lock`
+    - `function stream_isatty`
+    - `function sapi_windows_vt100_support`
+    - `function get_meta_tags`
+    - `function stream_set_read_buffer`
+    - `function stream_set_chunk_size`
+    - `function stream_wrapper_unregister`
+    - `function stream_wrapper_restore`
+    - `function realpath_cache_size`
+    - `function realpath_cache_get`
+    - `function openlog`
+    - `function syslog`
+    - `function closelog`
+    - `function assert`
+    - `function ftok`
+    - `function output_add_rewrite_var`
+    - `function output_reset_rewrite_vars`
+    - `function sapi_windows_cp_set`
+    - `function sapi_windows_cp_get`
+    - `function sapi_windows_cp_is_utf8`
+    - `function sapi_windows_cp_conv`
+    - `function sapi_windows_set_ctrl_handler`
+    - `function sapi_windows_generate_ctrl_event`
+    - `function cli_set_process_title`
+    - `function cli_get_process_title`
+    - `function AssertionError::__clone`
+    - `function AssertionError::__wakeup`
+??? tiny "[=95% "**session** 41 / 43"]"
+    - `class SessionIdInterface`
+??? tiny "[=100% "**zip** 51 / 51"]"
     happy face
-??? tiny "[=89% "**standard** 485 / 544"]"
-    - `time_nanosleep`
-    - `time_sleep_until`
-    - `phpcredits`
-    - `vfprintf`
-    - `getservbyname`
-    - `getservbyport`
-    - `getprotobyname`
-    - `getprotobynumber`
-    - `getmygid`
-    - `getmyinode`
-    - `password_algos`
-    - `convert_uuencode`
-    - `convert_uudecode`
-    - `intdiv`
-    - `getrusage`
-    - `hrtime`
-    - `debug_zval_dump`
-    - `register_tick_function`
-    - `unregister_tick_function`
-    - `highlight_file`
-    - `show_source`
-    - `highlight_string`
-    - `restore_include_path`
-    - `net_get_interfaces`
-    - `dns_check_record`
-    - `checkdnsrr`
-    - `dns_get_record`
-    - `stream_context_get_params`
-    - `stream_context_get_default`
-    - `stream_context_set_default`
-    - `stream_filter_remove`
-    - `stream_socket_enable_crypto`
-    - `stream_socket_shutdown`
-    - `stream_socket_pair`
-    - `stream_supports_lock`
-    - `stream_isatty`
-    - `sapi_windows_vt100_support`
-    - `get_meta_tags`
-    - `stream_set_read_buffer`
-    - `stream_set_chunk_size`
-    - `stream_wrapper_unregister`
-    - `stream_wrapper_restore`
-    - `realpath_cache_size`
-    - `realpath_cache_get`
-    - `openlog`
-    - `syslog`
-    - `closelog`
-    - `assert`
-    - `ftok`
-    - `output_add_rewrite_var`
-    - `output_reset_rewrite_vars`
-    - `sapi_windows_cp_set`
-    - `sapi_windows_cp_get`
-    - `sapi_windows_cp_is_utf8`
-    - `sapi_windows_cp_conv`
-    - `sapi_windows_set_ctrl_handler`
-    - `sapi_windows_generate_ctrl_event`
-    - `cli_set_process_title`
-    - `cli_get_process_title`
-??? tiny "[=96% "**session** 26 / 27"]"
-    - `SessionIdInterface`
-??? tiny "[=100% "**zip** 11 / 11"]"
-    happy face
-??? tiny "[=81% "**date** 44 / 54"]"
-    - `date_parse_from_format`
-    - `date_time_set`
-    - `date_date_set`
-    - `date_isodate_set`
-    - `date_timestamp_get`
-    - `timezone_name_get`
-    - `timezone_name_from_abbr`
-    - `date_interval_format`
-    - `date_sun_info`
-    - `DatePeriod`
-??? tiny "[=100% "**phar** 4 / 4"]"
-    happy face
-??? tiny "[=88% "**Reflection** 15 / 17"]"
-    - `ReflectionClassConstant`
-    - `ReflectionZendExtension`
-??? tiny "[=87% "**Core** 68 / 78"]"
-    - `get_mangled_object_vars`
-    - `get_resources`
-    - `gc_status`
-    - `CompileError`
-    - `ParseError`
-    - `ArgumentCountError`
-    - `ArithmeticError`
-    - `DivisionByZeroError`
-    - `ClosedGeneratorException`
-    - `WeakReference`
-??? tiny "[=100% "**SPL** 70 / 70"]"
-    happy face
+??? tiny "[=81% "**date** 96 / 119"]"
+    - `function date_parse_from_format`
+    - `function date_time_set`
+    - `function date_date_set`
+    - `function date_isodate_set`
+    - `function date_timestamp_get`
+    - `function timezone_name_get`
+    - `function timezone_name_from_abbr`
+    - `function date_interval_format`
+    - `function date_sun_info`
+    - `function DateTime::createFromImmutable`
+    - `function DateTimeImmutable::__construct`
+    - `function DateTimeZone::__wakeup`
+    - `function DateTimeZone::__set_state`
+    - `function DateInterval::__wakeup`
+    - `function DateInterval::__set_state`
+    - `class DatePeriod`
+??? tiny "[=23% "**phar** 58 / 251"]"
+    - `function PharException::__clone`
+    - `function PharException::__wakeup`
+    - `function Phar::__destruct`
+    - `function Phar::addEmptyDir`
+    - `function Phar::addFile`
+    - `function Phar::addFromString`
+    - `function Phar::buildFromDirectory`
+    - `function Phar::buildFromIterator`
+    - `function Phar::compressFiles`
+    - `function Phar::decompressFiles`
+    - `function Phar::compress`
+    - `function Phar::decompress`
+    - `function Phar::convertToExecutable`
+    - `function Phar::convertToData`
+    - `function Phar::copy`
+    - `function Phar::delete`
+    - `function Phar::delMetadata`
+    - `function Phar::extractTo`
+    - `function Phar::getAlias`
+    - `function Phar::getPath`
+    - `function Phar::getMetadata`
+    - `function Phar::getModified`
+    - `function Phar::getSignature`
+    - `function Phar::getStub`
+    - `function Phar::getVersion`
+    - `function Phar::hasMetadata`
+    - `function Phar::isBuffering`
+    - `function Phar::isCompressed`
+    - `function Phar::isFileFormat`
+    - `function Phar::isWritable`
+    - `function Phar::setAlias`
+    - `function Phar::setDefaultStub`
+    - `function Phar::setMetadata`
+    - `function Phar::setSignatureAlgorithm`
+    - `function Phar::setStub`
+    - `function Phar::startBuffering`
+    - `function Phar::stopBuffering`
+    - `function Phar::canCompress`
+    - `function Phar::createDefaultStub`
+    - `function Phar::getSupportedCompression`
+    - `function Phar::getSupportedSignatures`
+    - `function Phar::interceptFileFuncs`
+    - `function Phar::isValidPharFilename`
+    - `function Phar::hasChildren`
+    - `function Phar::getChildren`
+    - `function Phar::getSubPath`
+    - `function Phar::getSubPathname`
+    - `function Phar::rewind`
+    - `function Phar::next`
+    - `function Phar::key`
+    - `function Phar::current`
+    - `function Phar::getFlags`
+    - `function Phar::setFlags`
+    - `function Phar::getFilename`
+    - `function Phar::getExtension`
+    - `function Phar::getBasename`
+    - `function Phar::isDot`
+    - `function Phar::valid`
+    - `function Phar::seek`
+    - `function Phar::__toString`
+    - `function Phar::getPathname`
+    - `function Phar::getPerms`
+    - `function Phar::getInode`
+    - `function Phar::getSize`
+    - `function Phar::getOwner`
+    - `function Phar::getGroup`
+    - `function Phar::getATime`
+    - `function Phar::getMTime`
+    - `function Phar::getCTime`
+    - `function Phar::getType`
+    - `function Phar::isReadable`
+    - `function Phar::isExecutable`
+    - `function Phar::isFile`
+    - `function Phar::isDir`
+    - `function Phar::isLink`
+    - `function Phar::getLinkTarget`
+    - `function Phar::getRealPath`
+    - `function Phar::getFileInfo`
+    - `function Phar::getPathInfo`
+    - `function Phar::openFile`
+    - `function Phar::setFileClass`
+    - `function Phar::setInfoClass`
+    - `function Phar::_bad_state_ex`
+    - `function PharData::__destruct`
+    - `function PharData::addEmptyDir`
+    - `function PharData::addFile`
+    - `function PharData::addFromString`
+    - `function PharData::buildFromDirectory`
+    - `function PharData::buildFromIterator`
+    - `function PharData::compressFiles`
+    - `function PharData::decompressFiles`
+    - `function PharData::compress`
+    - `function PharData::decompress`
+    - `function PharData::convertToExecutable`
+    - `function PharData::convertToData`
+    - `function PharData::copy`
+    - `function PharData::count`
+    - `function PharData::delete`
+    - `function PharData::delMetadata`
+    - `function PharData::extractTo`
+    - `function PharData::getAlias`
+    - `function PharData::getPath`
+    - `function PharData::getMetadata`
+    - `function PharData::getModified`
+    - `function PharData::getSignature`
+    - `function PharData::getStub`
+    - `function PharData::getVersion`
+    - `function PharData::hasMetadata`
+    - `function PharData::isBuffering`
+    - `function PharData::isCompressed`
+    - `function PharData::isFileFormat`
+    - `function PharData::isWritable`
+    - `function PharData::offsetExists`
+    - `function PharData::offsetGet`
+    - `function PharData::offsetSet`
+    - `function PharData::offsetUnset`
+    - `function PharData::setAlias`
+    - `function PharData::setDefaultStub`
+    - `function PharData::setMetadata`
+    - `function PharData::setSignatureAlgorithm`
+    - `function PharData::setStub`
+    - `function PharData::startBuffering`
+    - `function PharData::stopBuffering`
+    - `function PharData::apiVersion`
+    - `function PharData::canCompress`
+    - `function PharData::canWrite`
+    - `function PharData::createDefaultStub`
+    - `function PharData::getSupportedCompression`
+    - `function PharData::getSupportedSignatures`
+    - `function PharData::interceptFileFuncs`
+    - `function PharData::isValidPharFilename`
+    - `function PharData::loadPhar`
+    - `function PharData::mapPhar`
+    - `function PharData::running`
+    - `function PharData::mount`
+    - `function PharData::mungServer`
+    - `function PharData::unlinkArchive`
+    - `function PharData::webPhar`
+    - `function PharData::hasChildren`
+    - `function PharData::getChildren`
+    - `function PharData::getSubPath`
+    - `function PharData::getSubPathname`
+    - `function PharData::rewind`
+    - `function PharData::next`
+    - `function PharData::key`
+    - `function PharData::current`
+    - `function PharData::getFlags`
+    - `function PharData::setFlags`
+    - `function PharData::getFilename`
+    - `function PharData::getExtension`
+    - `function PharData::getBasename`
+    - `function PharData::isDot`
+    - `function PharData::valid`
+    - `function PharData::seek`
+    - `function PharData::__toString`
+    - `function PharData::getPathname`
+    - `function PharData::getPerms`
+    - `function PharData::getInode`
+    - `function PharData::getSize`
+    - `function PharData::getOwner`
+    - `function PharData::getGroup`
+    - `function PharData::getATime`
+    - `function PharData::getMTime`
+    - `function PharData::getCTime`
+    - `function PharData::getType`
+    - `function PharData::isReadable`
+    - `function PharData::isExecutable`
+    - `function PharData::isFile`
+    - `function PharData::isDir`
+    - `function PharData::isLink`
+    - `function PharData::getLinkTarget`
+    - `function PharData::getRealPath`
+    - `function PharData::getFileInfo`
+    - `function PharData::getPathInfo`
+    - `function PharData::openFile`
+    - `function PharData::setFileClass`
+    - `function PharData::setInfoClass`
+    - `function PharData::_bad_state_ex`
+    - `function PharFileInfo::__destruct`
+    - `function PharFileInfo::chmod`
+    - `function PharFileInfo::compress`
+    - `function PharFileInfo::decompress`
+    - `function PharFileInfo::delMetadata`
+    - `function PharFileInfo::getCompressedSize`
+    - `function PharFileInfo::getCRC32`
+    - `function PharFileInfo::getContent`
+    - `function PharFileInfo::getMetadata`
+    - `function PharFileInfo::getPharFlags`
+    - `function PharFileInfo::hasMetadata`
+    - `function PharFileInfo::isCompressed`
+    - `function PharFileInfo::isCRCChecked`
+    - `function PharFileInfo::setMetadata`
+    - `function PharFileInfo::_bad_state_ex`
+??? tiny "[=86% "**Reflection** 295 / 343"]"
+    - `function ReflectionException::__clone`
+    - `function ReflectionException::__wakeup`
+    - `function Reflector::export`
+    - `function ReflectionFunctionAbstract::__clone`
+    - `function ReflectionFunctionAbstract::export`
+    - `function ReflectionFunction::__clone`
+    - `function ReflectionParameter::__clone`
+    - `function ReflectionType::__clone`
+    - `function ReflectionNamedType::__clone`
+    - `function ReflectionMethod::__clone`
+    - `function ReflectionClass::__clone`
+    - `function ReflectionClass::getReflectionConstants`
+    - `function ReflectionClass::getReflectionConstant`
+    - `function ReflectionClass::isIterable`
+    - `function ReflectionObject::__clone`
+    - `function ReflectionObject::getReflectionConstants`
+    - `function ReflectionObject::getReflectionConstant`
+    - `function ReflectionObject::isIterable`
+    - `function ReflectionProperty::__clone`
+    - `function ReflectionProperty::isInitialized`
+    - `function ReflectionProperty::getType`
+    - `function ReflectionProperty::hasType`
+    - `class ReflectionClassConstant`
+    - `class ReflectionZendExtension`
+    - `function ReflectionReference::getRefcount`
+    - `function ReflectionReference::__clone`
+    - `function ReflectionReference::__construct`
+??? tiny "[=61% "**Core** 139 / 227"]"
+    - `function get_mangled_object_vars`
+    - `function get_resources`
+    - `function gc_status`
+    - `function Exception::__clone`
+    - `function Exception::__wakeup`
+    - `function ErrorException::__clone`
+    - `function ErrorException::__wakeup`
+    - `function Error::__clone`
+    - `function Error::__wakeup`
+    - `class CompileError`
+    - `class ParseError`
+    - `function TypeError::__clone`
+    - `function TypeError::__wakeup`
+    - `class ArgumentCountError`
+    - `class ArithmeticError`
+    - `class DivisionByZeroError`
+    - `function Closure::__construct`
+    - `class ClosedGeneratorException`
+    - `class WeakReference`
+??? tiny "[=95% "**SPL** 956 / 1007"]"
+    - `function LogicException::__clone`
+    - `function LogicException::__wakeup`
+    - `function BadFunctionCallException::__clone`
+    - `function BadFunctionCallException::__wakeup`
+    - `function BadMethodCallException::__clone`
+    - `function BadMethodCallException::__wakeup`
+    - `function DomainException::__clone`
+    - `function DomainException::__wakeup`
+    - `function InvalidArgumentException::__clone`
+    - `function InvalidArgumentException::__wakeup`
+    - `function LengthException::__clone`
+    - `function LengthException::__wakeup`
+    - `function OutOfRangeException::__clone`
+    - `function OutOfRangeException::__wakeup`
+    - `function RuntimeException::__clone`
+    - `function RuntimeException::__wakeup`
+    - `function OutOfBoundsException::__clone`
+    - `function OutOfBoundsException::__wakeup`
+    - `function OverflowException::__clone`
+    - `function OverflowException::__wakeup`
+    - `function RangeException::__clone`
+    - `function RangeException::__wakeup`
+    - `function UnderflowException::__clone`
+    - `function UnderflowException::__wakeup`
+    - `function UnexpectedValueException::__clone`
+    - `function UnexpectedValueException::__wakeup`
+    - `function CachingIterator::__toString`
+    - `function RecursiveCachingIterator::__toString`
+    - `function ArrayObject::__unserialize`
+    - `function ArrayObject::__serialize`
+    - `function ArrayIterator::__unserialize`
+    - `function ArrayIterator::__serialize`
+    - `function RecursiveArrayIterator::__unserialize`
+    - `function RecursiveArrayIterator::__serialize`
+    - `function SplFileInfo::_bad_state_ex`
+    - `function DirectoryIterator::_bad_state_ex`
+    - `function FilesystemIterator::_bad_state_ex`
+    - `function RecursiveDirectoryIterator::_bad_state_ex`
+    - `function GlobIterator::_bad_state_ex`
+    - `function SplFileObject::getCurrentLine`
+    - `function SplFileObject::_bad_state_ex`
+    - `function SplTempFileObject::getCurrentLine`
+    - `function SplTempFileObject::_bad_state_ex`
+    - `function SplDoublyLinkedList::__unserialize`
+    - `function SplDoublyLinkedList::__serialize`
+    - `function SplQueue::__unserialize`
+    - `function SplQueue::__serialize`
+    - `function SplStack::__unserialize`
+    - `function SplStack::__serialize`
+    - `function SplObjectStorage::__unserialize`
+    - `function SplObjectStorage::__serialize`
 ??? tiny "[=88% "**libxml** 7 / 8"]"
-    - `libxml_set_external_entity_loader`
-??? tiny "[=50% "**mysqli** 55 / 110"]"
-    - `mysqli_autocommit`
-    - `mysqli_begin_transaction`
-    - `mysqli_change_user`
-    - `mysqli_commit`
-    - `mysqli_dump_debug_info`
-    - `mysqli_debug`
-    - `mysqli_error_list`
-    - `mysqli_execute`
-    - `mysqli_fetch_lengths`
-    - `mysqli_fetch_all`
-    - `mysqli_field_count`
-    - `mysqli_get_connection_stats`
-    - `mysqli_get_client_stats`
-    - `mysqli_get_charset`
-    - `mysqli_get_links_stats`
-    - `mysqli_get_proto_info`
-    - `mysqli_get_warnings`
-    - `mysqli_info`
-    - `mysqli_kill`
-    - `mysqli_multi_query`
-    - `mysqli_poll`
-    - `mysqli_report`
-    - `mysqli_real_query`
-    - `mysqli_reap_async_query`
-    - `mysqli_release_savepoint`
-    - `mysqli_rollback`
-    - `mysqli_savepoint`
-    - `mysqli_stmt_attr_get`
-    - `mysqli_stmt_attr_set`
-    - `mysqli_stmt_bind_result`
-    - `mysqli_stmt_errno`
-    - `mysqli_stmt_error`
-    - `mysqli_stmt_error_list`
-    - `mysqli_stmt_fetch`
-    - `mysqli_stmt_field_count`
-    - `mysqli_stmt_free_result`
-    - `mysqli_stmt_get_warnings`
-    - `mysqli_stmt_init`
-    - `mysqli_stmt_more_results`
-    - `mysqli_stmt_next_result`
-    - `mysqli_stmt_num_rows`
-    - `mysqli_stmt_param_count`
-    - `mysqli_stmt_reset`
-    - `mysqli_stmt_result_metadata`
-    - `mysqli_stmt_store_result`
-    - `mysqli_stmt_sqlstate`
-    - `mysqli_sqlstate`
-    - `mysqli_stat`
-    - `mysqli_store_result`
-    - `mysqli_thread_safe`
-    - `mysqli_use_result`
-    - `mysqli_warning_count`
-    - `mysqli_refresh`
-    - `mysqli_set_opt`
-    - `mysqli_driver`
-??? tiny "[=73% "**curl** 24 / 33"]"
-    - `curl_copy_handle`
-    - `curl_strerror`
-    - `curl_share_strerror`
-    - `curl_reset`
-    - `curl_pause`
-    - `curl_share_init`
-    - `curl_share_close`
-    - `curl_share_setopt`
-    - `curl_share_errno`
-??? tiny "[=80% "**pdo** 4 / 5"]"
-    - `PDORow`
-??? tiny "[=80% "**simplexml** 4 / 5"]"
-    - `SimpleXMLIterator`
+    - `function libxml_set_external_entity_loader`
+??? tiny "[=50% "**mysqli** 100 / 200"]"
+    - `function mysqli_autocommit`
+    - `function mysqli_begin_transaction`
+    - `function mysqli_change_user`
+    - `function mysqli_commit`
+    - `function mysqli_dump_debug_info`
+    - `function mysqli_debug`
+    - `function mysqli_error_list`
+    - `function mysqli_execute`
+    - `function mysqli_fetch_lengths`
+    - `function mysqli_fetch_all`
+    - `function mysqli_field_count`
+    - `function mysqli_get_connection_stats`
+    - `function mysqli_get_client_stats`
+    - `function mysqli_get_charset`
+    - `function mysqli_get_links_stats`
+    - `function mysqli_get_proto_info`
+    - `function mysqli_get_warnings`
+    - `function mysqli_info`
+    - `function mysqli_kill`
+    - `function mysqli_multi_query`
+    - `function mysqli_poll`
+    - `function mysqli_report`
+    - `function mysqli_real_query`
+    - `function mysqli_reap_async_query`
+    - `function mysqli_release_savepoint`
+    - `function mysqli_rollback`
+    - `function mysqli_savepoint`
+    - `function mysqli_stmt_attr_get`
+    - `function mysqli_stmt_attr_set`
+    - `function mysqli_stmt_bind_result`
+    - `function mysqli_stmt_errno`
+    - `function mysqli_stmt_error`
+    - `function mysqli_stmt_error_list`
+    - `function mysqli_stmt_fetch`
+    - `function mysqli_stmt_field_count`
+    - `function mysqli_stmt_free_result`
+    - `function mysqli_stmt_get_warnings`
+    - `function mysqli_stmt_init`
+    - `function mysqli_stmt_more_results`
+    - `function mysqli_stmt_next_result`
+    - `function mysqli_stmt_num_rows`
+    - `function mysqli_stmt_param_count`
+    - `function mysqli_stmt_reset`
+    - `function mysqli_stmt_result_metadata`
+    - `function mysqli_stmt_store_result`
+    - `function mysqli_stmt_sqlstate`
+    - `function mysqli_sqlstate`
+    - `function mysqli_stat`
+    - `function mysqli_store_result`
+    - `function mysqli_thread_safe`
+    - `function mysqli_use_result`
+    - `function mysqli_warning_count`
+    - `function mysqli_refresh`
+    - `function mysqli_set_opt`
+    - `function mysqli_sql_exception::__clone`
+    - `function mysqli_sql_exception::__wakeup`
+    - `class mysqli_driver`
+    - `function mysqli::autocommit`
+    - `function mysqli::begin_transaction`
+    - `function mysqli::change_user`
+    - `function mysqli::commit`
+    - `function mysqli::connect`
+    - `function mysqli::dump_debug_info`
+    - `function mysqli::debug`
+    - `function mysqli::get_charset`
+    - `function mysqli::get_client_info`
+    - `function mysqli::get_connection_stats`
+    - `function mysqli::get_server_info`
+    - `function mysqli::get_warnings`
+    - `function mysqli::kill`
+    - `function mysqli::poll`
+    - `function mysqli::reap_async_query`
+    - `function mysqli::real_query`
+    - `function mysqli::release_savepoint`
+    - `function mysqli::rollback`
+    - `function mysqli::savepoint`
+    - `function mysqli::set_opt`
+    - `function mysqli::stat`
+    - `function mysqli::stmt_init`
+    - `function mysqli::store_result`
+    - `function mysqli::thread_safe`
+    - `function mysqli::use_result`
+    - `function mysqli::refresh`
+    - `function mysqli_warning::__construct`
+    - `function mysqli_warning::next`
+    - `function mysqli_result::__construct`
+    - `function mysqli_result::fetch_all`
+    - `function mysqli_stmt::attr_get`
+    - `function mysqli_stmt::attr_set`
+    - `function mysqli_stmt::bind_result`
+    - `function mysqli_stmt::fetch`
+    - `function mysqli_stmt::get_warnings`
+    - `function mysqli_stmt::result_metadata`
+    - `function mysqli_stmt::more_results`
+    - `function mysqli_stmt::next_result`
+    - `function mysqli_stmt::num_rows`
+    - `function mysqli_stmt::free_result`
+    - `function mysqli_stmt::reset`
+    - `function mysqli_stmt::store_result`
+    - `function mysqli_stmt::get_result`
+??? tiny "[=77% "**curl** 30 / 39"]"
+    - `function curl_copy_handle`
+    - `function curl_strerror`
+    - `function curl_share_strerror`
+    - `function curl_reset`
+    - `function curl_pause`
+    - `function curl_share_init`
+    - `function curl_share_close`
+    - `function curl_share_setopt`
+    - `function curl_share_errno`
+??? tiny "[=94% "**pdo** 47 / 50"]"
+    - `function PDOException::__clone`
+    - `function PDOException::__wakeup`
+    - `class PDORow`
+??? tiny "[=78% "**dom** 368 / 472"]"
+    - `function DOMException::__clone`
+    - `function DOMException::__wakeup`
+    - `class DOMStringList`
+    - `class DOMNameList`
+    - `class DOMImplementationList`
+    - `class DOMImplementationSource`
+    - `function DOMNode::compareDocumentPosition`
+    - `function DOMNode::isEqualNode`
+    - `function DOMNode::getFeature`
+    - `function DOMNode::setUserData`
+    - `function DOMNode::getUserData`
+    - `class DOMNameSpaceNode`
+    - `function DOMDocumentFragment::__construct`
+    - `function DOMDocumentFragment::compareDocumentPosition`
+    - `function DOMDocumentFragment::isEqualNode`
+    - `function DOMDocumentFragment::getFeature`
+    - `function DOMDocumentFragment::setUserData`
+    - `function DOMDocumentFragment::getUserData`
+    - `function DOMDocument::compareDocumentPosition`
+    - `function DOMDocument::isEqualNode`
+    - `function DOMDocument::getFeature`
+    - `function DOMDocument::setUserData`
+    - `function DOMDocument::getUserData`
+    - `function DOMNodeList::count`
+    - `function DOMNamedNodeMap::count`
+    - `function DOMCharacterData::compareDocumentPosition`
+    - `function DOMCharacterData::isEqualNode`
+    - `function DOMCharacterData::getFeature`
+    - `function DOMCharacterData::setUserData`
+    - `function DOMCharacterData::getUserData`
+    - `function DOMAttr::isId`
+    - `function DOMAttr::compareDocumentPosition`
+    - `function DOMAttr::isEqualNode`
+    - `function DOMAttr::getFeature`
+    - `function DOMAttr::setUserData`
+    - `function DOMAttr::getUserData`
+    - `function DOMElement::compareDocumentPosition`
+    - `function DOMElement::isEqualNode`
+    - `function DOMElement::getFeature`
+    - `function DOMElement::setUserData`
+    - `function DOMElement::getUserData`
+    - `function DOMText::isElementContentWhitespace`
+    - `function DOMText::replaceWholeText`
+    - `function DOMText::compareDocumentPosition`
+    - `function DOMText::isEqualNode`
+    - `function DOMText::getFeature`
+    - `function DOMText::setUserData`
+    - `function DOMText::getUserData`
+    - `function DOMComment::compareDocumentPosition`
+    - `function DOMComment::isEqualNode`
+    - `function DOMComment::getFeature`
+    - `function DOMComment::setUserData`
+    - `function DOMComment::getUserData`
+    - `class DOMTypeinfo`
+    - `class DOMUserDataHandler`
+    - `class DOMDomError`
+    - `class DOMErrorHandler`
+    - `class DOMLocator`
+    - `function DOMConfiguration::setParameter`
+    - `function DOMConfiguration::getParameter`
+    - `function DOMConfiguration::canSetParameter`
+    - `function DOMCdataSection::isElementContentWhitespace`
+    - `function DOMCdataSection::replaceWholeText`
+    - `function DOMCdataSection::compareDocumentPosition`
+    - `function DOMCdataSection::isEqualNode`
+    - `function DOMCdataSection::getFeature`
+    - `function DOMCdataSection::setUserData`
+    - `function DOMCdataSection::getUserData`
+    - `function DOMDocumentType::compareDocumentPosition`
+    - `function DOMDocumentType::isEqualNode`
+    - `function DOMDocumentType::getFeature`
+    - `function DOMDocumentType::setUserData`
+    - `function DOMDocumentType::getUserData`
+    - `function DOMNotation::compareDocumentPosition`
+    - `function DOMNotation::isEqualNode`
+    - `function DOMNotation::getFeature`
+    - `function DOMNotation::setUserData`
+    - `function DOMNotation::getUserData`
+    - `function DOMEntity::compareDocumentPosition`
+    - `function DOMEntity::isEqualNode`
+    - `function DOMEntity::getFeature`
+    - `function DOMEntity::setUserData`
+    - `function DOMEntity::getUserData`
+    - `function DOMEntityReference::compareDocumentPosition`
+    - `function DOMEntityReference::isEqualNode`
+    - `function DOMEntityReference::getFeature`
+    - `function DOMEntityReference::setUserData`
+    - `function DOMEntityReference::getUserData`
+    - `function DOMProcessingInstruction::compareDocumentPosition`
+    - `function DOMProcessingInstruction::isEqualNode`
+    - `function DOMProcessingInstruction::getFeature`
+    - `function DOMProcessingInstruction::setUserData`
+    - `function DOMProcessingInstruction::getUserData`
+    - `class DOMStringExtend`
+??? tiny "[=42% "**simplexml** 17 / 40"]"
+    - `function SimpleXMLElement::saveXML`
+    - `class SimpleXMLIterator`
+??? tiny "[=100% "**xmlreader** 26 / 26"]"
+    happy face
+??? tiny "[=51% "**xmlwriter** 43 / 85"]"
+    - `function xmlwriter_open_uri`
+    - `function xmlwriter_open_memory`
+    - `function xmlwriter_set_indent`
+    - `function xmlwriter_set_indent_string`
+    - `function xmlwriter_start_comment`
+    - `function xmlwriter_end_comment`
+    - `function xmlwriter_start_attribute`
+    - `function xmlwriter_end_attribute`
+    - `function xmlwriter_write_attribute`
+    - `function xmlwriter_start_attribute_ns`
+    - `function xmlwriter_write_attribute_ns`
+    - `function xmlwriter_start_element`
+    - `function xmlwriter_end_element`
+    - `function xmlwriter_full_end_element`
+    - `function xmlwriter_start_element_ns`
+    - `function xmlwriter_write_element`
+    - `function xmlwriter_write_element_ns`
+    - `function xmlwriter_start_pi`
+    - `function xmlwriter_end_pi`
+    - `function xmlwriter_write_pi`
+    - `function xmlwriter_start_cdata`
+    - `function xmlwriter_end_cdata`
+    - `function xmlwriter_write_cdata`
+    - `function xmlwriter_text`
+    - `function xmlwriter_write_raw`
+    - `function xmlwriter_start_document`
+    - `function xmlwriter_end_document`
+    - `function xmlwriter_write_comment`
+    - `function xmlwriter_start_dtd`
+    - `function xmlwriter_end_dtd`
+    - `function xmlwriter_write_dtd`
+    - `function xmlwriter_start_dtd_element`
+    - `function xmlwriter_end_dtd_element`
+    - `function xmlwriter_write_dtd_element`
+    - `function xmlwriter_start_dtd_attlist`
+    - `function xmlwriter_end_dtd_attlist`
+    - `function xmlwriter_write_dtd_attlist`
+    - `function xmlwriter_start_dtd_entity`
+    - `function xmlwriter_end_dtd_entity`
+    - `function xmlwriter_write_dtd_entity`
+    - `function xmlwriter_output_memory`
+    - `function xmlwriter_flush`
+??? tiny "[=77% "**xsl** 10 / 13"]"
+    - `function XSLTProcessor::setProfiling`
+    - `function XSLTProcessor::setSecurityPrefs`
+    - `function XSLTProcessor::getSecurityPrefs`
 ??? tiny "[=100% "**ctype** 11 / 11"]"
     happy face
 ??? tiny "[=100% "**tokenizer** 2 / 2"]"
     happy face
 ??? tiny "[=90% "**pcre** 9 / 10"]"
-    - `preg_filter`
-??? tiny "[=62% "**hash** 13 / 21"]"
-    - `hash_hmac_algos`
-    - `hash_hkdf`
-    - `mhash_keygen_s2k`
-    - `mhash_get_block_size`
-    - `mhash_get_hash_name`
-    - `mhash_count`
-    - `mhash`
-    - `HashContext`
+    - `function preg_filter`
+??? tiny "[=59% "**hash** 13 / 22"]"
+    - `function hash_hmac_algos`
+    - `function hash_hkdf`
+    - `function mhash_keygen_s2k`
+    - `function mhash_get_block_size`
+    - `function mhash_get_hash_name`
+    - `function mhash_count`
+    - `function mhash`
+    - `class HashContext`
 ??? tiny "[=100% "**filter** 7 / 7"]"
     happy face
 ??? tiny "[=70% "**iconv** 7 / 10"]"
-    - `iconv_mime_encode`
-    - `iconv_mime_decode`
-    - `iconv_mime_decode_headers`
+    - `function iconv_mime_encode`
+    - `function iconv_mime_decode`
+    - `function iconv_mime_decode_headers`
 ??? tiny "[=45% "**mbstring** 33 / 73"]"
-    - `mb_output_handler`
-    - `mb_strrichr`
-    - `mb_encoding_aliases`
-    - `mb_convert_kana`
-    - `mb_encode_mimeheader`
-    - `mb_decode_mimeheader`
-    - `mb_encode_numericentity`
-    - `mb_decode_numericentity`
-    - `mb_ord`
-    - `mb_chr`
-    - `mb_scrub`
-    - `mb_regex_set_options`
-    - `mb_ereg`
-    - `mb_eregi`
-    - `mb_ereg_replace`
-    - `mb_eregi_replace`
-    - `mb_ereg_replace_callback`
-    - `mb_split`
-    - `mb_ereg_match`
-    - `mb_ereg_search`
-    - `mb_ereg_search_pos`
-    - `mb_ereg_search_regs`
-    - `mb_ereg_search_init`
-    - `mb_ereg_search_getregs`
-    - `mb_ereg_search_getpos`
-    - `mb_ereg_search_setpos`
-    - `mbregex_encoding`
-    - `mbereg`
-    - `mberegi`
-    - `mbereg_replace`
-    - `mberegi_replace`
-    - `mbsplit`
-    - `mbereg_match`
-    - `mbereg_search`
-    - `mbereg_search_pos`
-    - `mbereg_search_regs`
-    - `mbereg_search_init`
-    - `mbereg_search_getregs`
-    - `mbereg_search_getpos`
-    - `mbereg_search_setpos`
+    - `function mb_output_handler`
+    - `function mb_strrichr`
+    - `function mb_encoding_aliases`
+    - `function mb_convert_kana`
+    - `function mb_encode_mimeheader`
+    - `function mb_decode_mimeheader`
+    - `function mb_encode_numericentity`
+    - `function mb_decode_numericentity`
+    - `function mb_ord`
+    - `function mb_chr`
+    - `function mb_scrub`
+    - `function mb_regex_set_options`
+    - `function mb_ereg`
+    - `function mb_eregi`
+    - `function mb_ereg_replace`
+    - `function mb_eregi_replace`
+    - `function mb_ereg_replace_callback`
+    - `function mb_split`
+    - `function mb_ereg_match`
+    - `function mb_ereg_search`
+    - `function mb_ereg_search_pos`
+    - `function mb_ereg_search_regs`
+    - `function mb_ereg_search_init`
+    - `function mb_ereg_search_getregs`
+    - `function mb_ereg_search_getpos`
+    - `function mb_ereg_search_setpos`
+    - `function mbregex_encoding`
+    - `function mbereg`
+    - `function mberegi`
+    - `function mbereg_replace`
+    - `function mberegi_replace`
+    - `function mbsplit`
+    - `function mbereg_match`
+    - `function mbereg_search`
+    - `function mbereg_search_pos`
+    - `function mbereg_search_regs`
+    - `function mbereg_search_init`
+    - `function mbereg_search_getregs`
+    - `function mbereg_search_getpos`
+    - `function mbereg_search_setpos`
 ??? tiny "[=95% "**xml** 21 / 22"]"
-    - `xml_set_unparsed_entity_decl_handler`
+    - `function xml_set_unparsed_entity_decl_handler`
 ??? tiny "[=74% "**zlib** 23 / 31"]"
-    - `zlib_encode`
-    - `zlib_decode`
-    - `deflate_init`
-    - `deflate_add`
-    - `inflate_init`
-    - `inflate_add`
-    - `inflate_get_status`
-    - `inflate_get_read_len`
+    - `function zlib_encode`
+    - `function zlib_decode`
+    - `function deflate_init`
+    - `function deflate_add`
+    - `function inflate_init`
+    - `function inflate_add`
+    - `function inflate_get_status`
+    - `function inflate_get_read_len`
 ??? tiny "[=61% "**gd** 66 / 108"]"
-    - `imagechar`
-    - `imagecharup`
-    - `imagepalettecopy`
-    - `imagecolorclosest`
-    - `imagecolorclosesthwb`
-    - `imagecolordeallocate`
-    - `imagecopymergegray`
-    - `imagepalettetotruecolor`
-    - `imagesetthickness`
-    - `imagecolorclosestalpha`
-    - `imagegrabwindow`
-    - `imagegrabscreen`
-    - `imageflip`
-    - `imagecrop`
-    - `imagecropauto`
-    - `imagescale`
-    - `imageaffine`
-    - `imageaffinematrixconcat`
-    - `imageaffinematrixget`
-    - `imagesetinterpolation`
-    - `imagesetbrush`
-    - `imagesetstyle`
-    - `imagecreatefromwebp`
-    - `imagecreatefrombmp`
-    - `imagecreatefromtga`
-    - `imagewebp`
-    - `imagewbmp`
-    - `imagebmp`
-    - `imagegammacorrect`
-    - `imagefilltoborder`
-    - `imageloadfont`
-    - `imageopenpolygon`
-    - `imagestringup`
-    - `imagesetclip`
-    - `imagegetclip`
-    - `imagedashedline`
-    - `imagefttext`
-    - `jpeg2wbmp`
-    - `png2wbmp`
-    - `imagelayereffect`
-    - `imagexbm`
-    - `imageresolution`
+    - `function imagechar`
+    - `function imagecharup`
+    - `function imagepalettecopy`
+    - `function imagecolorclosest`
+    - `function imagecolorclosesthwb`
+    - `function imagecolordeallocate`
+    - `function imagecopymergegray`
+    - `function imagepalettetotruecolor`
+    - `function imagesetthickness`
+    - `function imagecolorclosestalpha`
+    - `function imagegrabwindow`
+    - `function imagegrabscreen`
+    - `function imageflip`
+    - `function imagecrop`
+    - `function imagecropauto`
+    - `function imagescale`
+    - `function imageaffine`
+    - `function imageaffinematrixconcat`
+    - `function imageaffinematrixget`
+    - `function imagesetinterpolation`
+    - `function imagesetbrush`
+    - `function imagesetstyle`
+    - `function imagecreatefromwebp`
+    - `function imagecreatefrombmp`
+    - `function imagecreatefromtga`
+    - `function imagewebp`
+    - `function imagewbmp`
+    - `function imagebmp`
+    - `function imagegammacorrect`
+    - `function imagefilltoborder`
+    - `function imageloadfont`
+    - `function imageopenpolygon`
+    - `function imagestringup`
+    - `function imagesetclip`
+    - `function imagegetclip`
+    - `function imagedashedline`
+    - `function imagefttext`
+    - `function jpeg2wbmp`
+    - `function png2wbmp`
+    - `function imagelayereffect`
+    - `function imagexbm`
+    - `function imageresolution`
 ??? tiny "[=100% "**exif** 5 / 5"]"
     happy face
