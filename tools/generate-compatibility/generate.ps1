@@ -5,12 +5,6 @@
 param (
 )
 
-function hr {
-    ""
-    "---"
-    ""
-}
-
 function progress {
   param ([string]$title, [array]$php ,[array]$peachpie)
 
@@ -53,12 +47,15 @@ $peachpie = $output_peachpie | ConvertFrom-Json
 "!!! tip ""PeachPie $($peachpie.version) vs. PHP $($php.version)"""
 "    Following table compares defined extensions, functions and classes of a regular ``php`` against ``peachpie``. Not implemented entries are listed below each category."
 
-hr
+""
+"### Extensions"
+""
 
 # extensions
 progress "extensions" $php.extensions $peachpie.extensions
 
 ""
+"### Classes & Functions"
 ""
 
 $peachpie_all = @()

@@ -1,9 +1,9 @@
-!!! tip "PeachPie 1.0.0-dev+cf10bbd04b106ad8150117ad1c4ae810378f029f vs. PHP 7.4.0alpha3"
+!!! tip "PeachPie 1.0.0-dev+3e13998c04d31a77fb97fd183a20cee2468b37e8 vs. PHP 7.4.0beta4"
     Following table compares defined extensions, functions and classes of a regular `php` against `peachpie`. Not implemented entries are listed below each category.
 
----
+### Extensions
 
-??? tiny "[=74% "**extensions** 29 / 39"]"
+??? tiny "[=71% "**extensions** 29 / 41"]"
     - `bcmath`
     - `calendar`
     - `readline`
@@ -14,12 +14,14 @@
     - `soap`
     - `imap`
     - `tidy`
+    - `sockets`
+    - `intl`
 
+### Classes & Functions
 
-??? tiny "[=94% "**json** 16 / 17"]"
-    - `function JsonException::__wakeup`
-??? tiny "[=90% "**standard** 502 / 560"]"
-    - `function time_sleep_until`
+??? tiny "[=100% "**json** 17 / 17"]"
+    happy face
+??? tiny "[=90% "**standard** 505 / 560"]"
     - `function phpcredits`
     - `function vfprintf`
     - `function getservbyname`
@@ -32,7 +34,6 @@
     - `function convert_uuencode`
     - `function convert_uudecode`
     - `function getrusage`
-    - `function hrtime`
     - `function debug_zval_dump`
     - `function register_tick_function`
     - `function unregister_tick_function`
@@ -76,7 +77,6 @@
     - `function sapi_windows_generate_ctrl_event`
     - `function cli_set_process_title`
     - `function cli_get_process_title`
-    - `function AssertionError::__wakeup`
 ??? tiny "[=95% "**session** 41 / 43"]"
     - `class SessionIdInterface`
 ??? tiny "[=100% "**zip** 51 / 51"]"
@@ -98,8 +98,7 @@
     - `function DateInterval::__wakeup`
     - `function DateInterval::__set_state`
     - `class DatePeriod`
-??? tiny "[=23% "**phar** 58 / 250"]"
-    - `function PharException::__wakeup`
+??? tiny "[=24% "**phar** 59 / 250"]"
     - `function Phar::__destruct`
     - `function Phar::addEmptyDir`
     - `function Phar::addFile`
@@ -291,10 +290,7 @@
     - `function PharFileInfo::isCRCChecked`
     - `function PharFileInfo::setMetadata`
     - `function PharFileInfo::_bad_state_ex`
-??? tiny "[=90% "**Reflection** 294 / 328"]"
-    - `function ReflectionException::__wakeup`
-    - `function Reflector::export`
-    - `function ReflectionFunctionAbstract::export`
+??? tiny "[=91% "**Reflection** 295 / 325"]"
     - `function ReflectionClass::getReflectionConstants`
     - `function ReflectionClass::getReflectionConstant`
     - `function ReflectionClass::isIterable`
@@ -306,36 +302,18 @@
     - `function ReflectionProperty::hasType`
     - `class ReflectionClassConstant`
     - `class ReflectionZendExtension`
-    - `function ReflectionReference::getRefcount`
-??? tiny "[=64% "**Core** 139 / 216"]"
+??? tiny "[=66% "**Core** 143 / 216"]"
     - `function get_mangled_object_vars`
     - `function get_resources`
     - `function gc_status`
-    - `function Exception::__wakeup`
-    - `function ErrorException::__wakeup`
-    - `function Error::__wakeup`
     - `class CompileError`
     - `class ParseError`
-    - `function TypeError::__wakeup`
     - `class ArgumentCountError`
     - `class ArithmeticError`
     - `class DivisionByZeroError`
     - `class ClosedGeneratorException`
     - `class WeakReference`
-??? tiny "[=96% "**SPL** 953 / 991"]"
-    - `function LogicException::__wakeup`
-    - `function BadFunctionCallException::__wakeup`
-    - `function BadMethodCallException::__wakeup`
-    - `function DomainException::__wakeup`
-    - `function InvalidArgumentException::__wakeup`
-    - `function LengthException::__wakeup`
-    - `function OutOfRangeException::__wakeup`
-    - `function RuntimeException::__wakeup`
-    - `function OutOfBoundsException::__wakeup`
-    - `function OverflowException::__wakeup`
-    - `function RangeException::__wakeup`
-    - `function UnderflowException::__wakeup`
-    - `function UnexpectedValueException::__wakeup`
+??? tiny "[=97% "**SPL** 966 / 991"]"
     - `function CachingIterator::__toString`
     - `function RecursiveCachingIterator::__toString`
     - `function ArrayObject::__unserialize`
@@ -363,7 +341,7 @@
     - `function SplObjectStorage::__serialize`
 ??? tiny "[=88% "**libxml** 7 / 8"]"
     - `function libxml_set_external_entity_loader`
-??? tiny "[=51% "**mysqli** 100 / 198"]"
+??? tiny "[=51% "**mysqli** 101 / 198"]"
     - `function mysqli_autocommit`
     - `function mysqli_begin_transaction`
     - `function mysqli_change_user`
@@ -418,7 +396,6 @@
     - `function mysqli_warning_count`
     - `function mysqli_refresh`
     - `function mysqli_set_opt`
-    - `function mysqli_sql_exception::__wakeup`
     - `class mysqli_driver`
     - `function mysqli::autocommit`
     - `function mysqli::begin_transaction`
@@ -472,11 +449,9 @@
     - `function curl_share_close`
     - `function curl_share_setopt`
     - `function curl_share_errno`
-??? tiny "[=96% "**pdo** 47 / 49"]"
-    - `function PDOException::__wakeup`
+??? tiny "[=98% "**pdo** 48 / 49"]"
     - `class PDORow`
-??? tiny "[=78% "**dom** 368 / 471"]"
-    - `function DOMException::__wakeup`
+??? tiny "[=78% "**dom** 369 / 471"]"
     - `class DOMStringList`
     - `class DOMNameList`
     - `class DOMImplementationList`

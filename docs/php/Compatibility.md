@@ -1,8 +1,12 @@
 # Compatibility
 
-The following section lists the compatibility status of the compiler and runtime.
+The following section lists the known compatibility status of the compiler, runtime and BCL.
 
-## Suported Language Features
+## BCL and Extensions
+
+- See **[Compatibility status](/compatibility-status)** for the information about implemented and missing functions.
+
+## Language Features Status
 
 - [x] PHP 5.4 .. 5.6 Syntax
 - [x] PHP 7.0 .. 7.4 Syntax
@@ -42,43 +46,4 @@ The following section lists the compatibility status of the compiler and runtime
 - [x] [PHAR support](/php/phar)
 - [x] Reflection
 
-## Implemented Extensions
 
-- [x] Math
-- [x] Output Buffering
-- [x] Variables
-- [x] Strings
-- [x] Arrays
-- [x] Streams
-- [x] Mail
-- [x] Hash
-- [x] File System
-- [x] FileInfo
-- [x] ftp
-- [ ] intl
-- [x] Serialization
-- [ ] Sockets
-- [x] PDO
-- [x] mssql
-- [x] MySql
-- [x] MySqli (most of the functionality)
-- [x] GD2
-- [x] cURL
-- [x] XML
-- [x] Dom
-- [x] Misc
-- [x] PCRE
-  * [x] PCRE syntax parser
-  * [x] Modification of .NET Regex
-- [ ] pthreads
-- [ ] gettext
-- [x] Sessions
-- [ ] Soap
-- [x] SPL
-- [x] Tokenizer
-- [x] Reflection
-- [x] zlib
-- [x] Zip
-
-!!! note "Supported Extensions Note"
-    Note, the extensions functionality may be not complete or the behavior may differ in some edge cases.
