@@ -1,4 +1,4 @@
-!!! tip "PeachPie 1.0.0-dev+3e13998c04d31a77fb97fd183a20cee2468b37e8 vs. PHP 7.4.0beta4"
+!!! tip "PeachPie 1.0.0-dev+26fad4be6673cef589cb7372c6a9295fbd789c2e vs. PHP 7.4.0beta4"
     Following table compares defined extensions, functions and classes of a regular `php` against `peachpie`. Not implemented entries are listed below each category.
 
 ### Extensions
@@ -290,17 +290,12 @@
     - `function PharFileInfo::isCRCChecked`
     - `function PharFileInfo::setMetadata`
     - `function PharFileInfo::_bad_state_ex`
-??? tiny "[=91% "**Reflection** 295 / 325"]"
-    - `function ReflectionClass::getReflectionConstants`
-    - `function ReflectionClass::getReflectionConstant`
+??? tiny "[=96% "**Reflection** 311 / 325"]"
     - `function ReflectionClass::isIterable`
-    - `function ReflectionObject::getReflectionConstants`
-    - `function ReflectionObject::getReflectionConstant`
     - `function ReflectionObject::isIterable`
     - `function ReflectionProperty::isInitialized`
     - `function ReflectionProperty::getType`
     - `function ReflectionProperty::hasType`
-    - `class ReflectionClassConstant`
     - `class ReflectionZendExtension`
 ??? tiny "[=66% "**Core** 143 / 216"]"
     - `function get_mangled_object_vars`
