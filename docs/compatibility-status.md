@@ -18,8 +18,7 @@
 
 ??? tiny "[=94% "**json** 16 / 17"]"
     - `function JsonException::__wakeup`
-??? tiny "[=89% "**standard** 500 / 560"]"
-    - `function time_nanosleep`
+??? tiny "[=90% "**standard** 502 / 560"]"
     - `function time_sleep_until`
     - `function phpcredits`
     - `function vfprintf`
@@ -32,7 +31,6 @@
     - `function password_algos`
     - `function convert_uuencode`
     - `function convert_uudecode`
-    - `function intdiv`
     - `function getrusage`
     - `function hrtime`
     - `function debug_zval_dump`
