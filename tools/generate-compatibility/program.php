@@ -29,9 +29,11 @@ function collect() {
         }
 
         foreach ($re->getClasses() as $c) {
+            /** @var ReflectionClass $c */
             $set[] = "class $c->name";
             
-            foreach ($c->getMethods() as $m) {
+            foreach ($c->getMethods(ReflectionMethod::IS_PUBLIC) as $m) {
+                /** @var ReflectionMethod $m */
                 $set[] = "function $c->name::$m->name";
             }
         }

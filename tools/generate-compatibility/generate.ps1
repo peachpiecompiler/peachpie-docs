@@ -68,6 +68,5 @@ foreach ($ext in $peachpie.extensions) {
     progress $ext $php."ext-$ext" $peachpie_all #$peachpie."ext-$ext"
 }
 
-# overall
-
-# todo: missing functions/classes
+# TODO: overall
+# TODO: constants

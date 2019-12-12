@@ -16,10 +16,9 @@
     - `tidy`
 
 
-??? tiny "[=89% "**json** 16 / 18"]"
-    - `function JsonException::__clone`
+??? tiny "[=94% "**json** 16 / 17"]"
     - `function JsonException::__wakeup`
-??? tiny "[=89% "**standard** 500 / 561"]"
+??? tiny "[=89% "**standard** 500 / 560"]"
     - `function time_nanosleep`
     - `function time_sleep_until`
     - `function phpcredits`
@@ -79,7 +78,6 @@
     - `function sapi_windows_generate_ctrl_event`
     - `function cli_set_process_title`
     - `function cli_get_process_title`
-    - `function AssertionError::__clone`
     - `function AssertionError::__wakeup`
 ??? tiny "[=95% "**session** 41 / 43"]"
     - `class SessionIdInterface`
@@ -102,8 +100,7 @@
     - `function DateInterval::__wakeup`
     - `function DateInterval::__set_state`
     - `class DatePeriod`
-??? tiny "[=23% "**phar** 58 / 251"]"
-    - `function PharException::__clone`
+??? tiny "[=23% "**phar** 58 / 250"]"
     - `function PharException::__wakeup`
     - `function Phar::__destruct`
     - `function Phar::addEmptyDir`
@@ -296,80 +293,50 @@
     - `function PharFileInfo::isCRCChecked`
     - `function PharFileInfo::setMetadata`
     - `function PharFileInfo::_bad_state_ex`
-??? tiny "[=86% "**Reflection** 295 / 343"]"
-    - `function ReflectionException::__clone`
+??? tiny "[=90% "**Reflection** 294 / 328"]"
     - `function ReflectionException::__wakeup`
     - `function Reflector::export`
-    - `function ReflectionFunctionAbstract::__clone`
     - `function ReflectionFunctionAbstract::export`
-    - `function ReflectionFunction::__clone`
-    - `function ReflectionParameter::__clone`
-    - `function ReflectionType::__clone`
-    - `function ReflectionNamedType::__clone`
-    - `function ReflectionMethod::__clone`
-    - `function ReflectionClass::__clone`
     - `function ReflectionClass::getReflectionConstants`
     - `function ReflectionClass::getReflectionConstant`
     - `function ReflectionClass::isIterable`
-    - `function ReflectionObject::__clone`
     - `function ReflectionObject::getReflectionConstants`
     - `function ReflectionObject::getReflectionConstant`
     - `function ReflectionObject::isIterable`
-    - `function ReflectionProperty::__clone`
     - `function ReflectionProperty::isInitialized`
     - `function ReflectionProperty::getType`
     - `function ReflectionProperty::hasType`
     - `class ReflectionClassConstant`
     - `class ReflectionZendExtension`
     - `function ReflectionReference::getRefcount`
-    - `function ReflectionReference::__clone`
-    - `function ReflectionReference::__construct`
-??? tiny "[=61% "**Core** 139 / 227"]"
+??? tiny "[=64% "**Core** 139 / 216"]"
     - `function get_mangled_object_vars`
     - `function get_resources`
     - `function gc_status`
-    - `function Exception::__clone`
     - `function Exception::__wakeup`
-    - `function ErrorException::__clone`
     - `function ErrorException::__wakeup`
-    - `function Error::__clone`
     - `function Error::__wakeup`
     - `class CompileError`
     - `class ParseError`
-    - `function TypeError::__clone`
     - `function TypeError::__wakeup`
     - `class ArgumentCountError`
     - `class ArithmeticError`
     - `class DivisionByZeroError`
-    - `function Closure::__construct`
     - `class ClosedGeneratorException`
     - `class WeakReference`
-??? tiny "[=95% "**SPL** 956 / 1007"]"
-    - `function LogicException::__clone`
+??? tiny "[=96% "**SPL** 953 / 991"]"
     - `function LogicException::__wakeup`
-    - `function BadFunctionCallException::__clone`
     - `function BadFunctionCallException::__wakeup`
-    - `function BadMethodCallException::__clone`
     - `function BadMethodCallException::__wakeup`
-    - `function DomainException::__clone`
     - `function DomainException::__wakeup`
-    - `function InvalidArgumentException::__clone`
     - `function InvalidArgumentException::__wakeup`
-    - `function LengthException::__clone`
     - `function LengthException::__wakeup`
-    - `function OutOfRangeException::__clone`
     - `function OutOfRangeException::__wakeup`
-    - `function RuntimeException::__clone`
     - `function RuntimeException::__wakeup`
-    - `function OutOfBoundsException::__clone`
     - `function OutOfBoundsException::__wakeup`
-    - `function OverflowException::__clone`
     - `function OverflowException::__wakeup`
-    - `function RangeException::__clone`
     - `function RangeException::__wakeup`
-    - `function UnderflowException::__clone`
     - `function UnderflowException::__wakeup`
-    - `function UnexpectedValueException::__clone`
     - `function UnexpectedValueException::__wakeup`
     - `function CachingIterator::__toString`
     - `function RecursiveCachingIterator::__toString`
@@ -398,7 +365,7 @@
     - `function SplObjectStorage::__serialize`
 ??? tiny "[=88% "**libxml** 7 / 8"]"
     - `function libxml_set_external_entity_loader`
-??? tiny "[=50% "**mysqli** 100 / 200"]"
+??? tiny "[=51% "**mysqli** 100 / 198"]"
     - `function mysqli_autocommit`
     - `function mysqli_begin_transaction`
     - `function mysqli_change_user`
@@ -453,7 +420,6 @@
     - `function mysqli_warning_count`
     - `function mysqli_refresh`
     - `function mysqli_set_opt`
-    - `function mysqli_sql_exception::__clone`
     - `function mysqli_sql_exception::__wakeup`
     - `class mysqli_driver`
     - `function mysqli::autocommit`
@@ -482,7 +448,6 @@
     - `function mysqli::thread_safe`
     - `function mysqli::use_result`
     - `function mysqli::refresh`
-    - `function mysqli_warning::__construct`
     - `function mysqli_warning::next`
     - `function mysqli_result::__construct`
     - `function mysqli_result::fetch_all`
@@ -509,12 +474,10 @@
     - `function curl_share_close`
     - `function curl_share_setopt`
     - `function curl_share_errno`
-??? tiny "[=94% "**pdo** 47 / 50"]"
-    - `function PDOException::__clone`
+??? tiny "[=96% "**pdo** 47 / 49"]"
     - `function PDOException::__wakeup`
     - `class PDORow`
-??? tiny "[=78% "**dom** 368 / 472"]"
-    - `function DOMException::__clone`
+??? tiny "[=78% "**dom** 368 / 471"]"
     - `function DOMException::__wakeup`
     - `class DOMStringList`
     - `class DOMNameList`
@@ -666,7 +629,7 @@
     happy face
 ??? tiny "[=90% "**pcre** 9 / 10"]"
     - `function preg_filter`
-??? tiny "[=59% "**hash** 13 / 22"]"
+??? tiny "[=62% "**hash** 13 / 21"]"
     - `function hash_hmac_algos`
     - `function hash_hkdf`
     - `function mhash_keygen_s2k`
