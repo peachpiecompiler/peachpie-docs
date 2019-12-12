@@ -1,3 +1,7 @@
+#
+# generates compatibility-status.md markdown page
+#
+
 param (
 )
 
@@ -39,8 +43,8 @@ function progress {
 [System.Environment]::SetEnvironmentVariable('DOTNET_SKIP_FIRST_TIME_EXPERIENCE', '1')
 
 # run collect features from php & peachpie:
-$output_php = & invoke-Expression "php -f program.php" | Out-String
-$output_peachpie = & invoke-Expression "dotnet run --no-logo" | Out-String
+$output_php = & invoke-Expression "php -f ""$PSScriptRoot/program.php""" | Out-String
+$output_peachpie = & invoke-Expression "dotnet run --no-logo -p ""$PSScriptRoot""" | Out-String
 
 $php = $output_php | ConvertFrom-Json
 $peachpie = $output_peachpie | ConvertFrom-Json
