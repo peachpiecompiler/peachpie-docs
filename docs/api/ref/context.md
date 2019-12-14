@@ -2,15 +2,16 @@
 
 <small>**assembly:** Peachpie.Runtime.dll</small>
 
-`Context` maintains the PHP application's state. It is usually associated with a single web request, a thread or a console application. In short, the context remembers the declared types and functions, global variables, 'static' locals, properties and included scripts. The context also provides information about the environment, services and local configuration.
+`Context` maintains the PHP application's state. It is usually associated with a single web request, a thread or a console application. In short, the context remembers the declared types and functions, global variables, 'static' locals, static properties, so-far included scripts and options.
 
 It is important to note that the context instance is required by the compiled PHP routines and by class constructors. Additionally library functions may require the context instance in order to work properly.
 
 ## Construction
 
-A new instance of the object is created in two ways:
+A new instance of `Context` is created in two ways:
 
 - **Implicitly by the framework:** The appropriate context is created for a web application during its request handling routine. Its instance is then passed to PHP routines and to handlers during the request life cycle implicitly.
+
 - **Explicitly by instantiating it:** It is possible to create an instance of a default context and use it in order to drive a custom PHP application's state. A new instance of the default context can be created by the static method below <br/> `#!c# Context.CreateEmpty()` <br/> It is important to set newly created context's `WorkingDirectory` and `RootPath` properties.
 
 ## Methods
@@ -53,4 +54,4 @@ Request : [PhpArray](phparray) | Gets or sets an array representing PHP's `$_REQ
 
 ## Remarks
 
-The `Context` class is not thread safe. It is intended to be used within `ExecutionContext`.
+The `Context` class is not thread safe. It is intended to be used within a single `ExecutionContext`.
