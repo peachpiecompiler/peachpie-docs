@@ -68,7 +68,7 @@ dotnet restore
 
 In order to debug the compilation, you have to attach to the compilation process (msbuild running the Compile task). Use MSBuild property **`DebuggerAttach`** to instruct the compiler to attach a debugger to itself.
 
-Run the build with the property `DebuggerAttach` set tu `true`:
+Run the build with the property `DebuggerAttach` set to `true`:
 
 ```shell
 dotnet build /p:DebuggerAttach=true
