@@ -9,6 +9,7 @@ This article goes further the [creating a NuGet from a PHP project](create-nuget
 The following example demonstrates a PHP library. It contains a single source file declaring a class `Class1` within a namespace `Library`. The class has a single instance method `encode` taking a single argument of any type (`mixed` in PHP), returning value of type `string`.
 
 > *`library.msbuildproj`:*
+
 ```xml
 <Project Sdk="Peachpie.NET.Sdk">
   <PropertyGroup>
@@ -25,6 +26,7 @@ The following example demonstrates a PHP library. It contains a single source fi
 ```
 
 > *`class1.php`:*
+
 ```php
 <?php
 
@@ -42,7 +44,9 @@ Library is compiled and packed into a NuGet package upon building:
 ```shell
 dotnet build
 ```
+
 > *Expected command result:*
+
 ```shell
 Microsoft (R) Build Engine version 16.4.0 for .NET Core
 Copyright (C) Microsoft Corporation. All rights reserved.        
