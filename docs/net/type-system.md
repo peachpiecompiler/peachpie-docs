@@ -99,3 +99,36 @@ echo $list[10];
 ```
 
 PeachPie provides the feature for `System.Collections.IList`, which allows consuming .NET arrays, `List`s and other classes in PHP.
+
+## C# Indexers
+
+PHP array operator `[]` can be used on objects implementing [C# indexers](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/indexers/). 
+
+The following example defines a C# indexer with sample `get` and `set` accessors.
+
+```c#
+using System;
+
+class SampleIndexer
+{
+   string[] arr = new string[100];
+
+   // Define the indexer to allow to use [] operator.
+   public string this[int i]
+   {
+      get { return arr[i]; }
+      set { arr[i] = value; }
+   }
+}
+```
+
+The following PHP code makes use of the C# indexer implicitly.
+
+```php
+<?php
+$sample = new \SampleIndexer;
+$sample[0] = "Hello";
+echo $sample[0]; // prints "Hello"
+```
+
+> The indexer implementation `#c# this[]` is a syntactic sugar that results in compiler generated special `get_Item` and `set_Item` methods. PeachPie translates the array operator into the call to the corresponding `get_Item` or `set_Item`method.
