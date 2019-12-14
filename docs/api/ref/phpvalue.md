@@ -80,3 +80,5 @@ class MyVisitor : PhpVariableVisitor {
 }
 value.Accept( new MyVisitor() ); // traverses through the value, arrays and objects
 ```
+
+> Note, the visitor implementation does not check for cycles in the underlaying structure. Infinite recursion may occur when the underlaying object or array contauns a referenced value to itself.
