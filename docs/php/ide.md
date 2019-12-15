@@ -10,10 +10,16 @@ Standard `dotnet` command and .NET tools are available. Enables `build`, `run`, 
 
 **Features**: Code editor, Diagnostics, Debugging, Build
 
-Support for VS Code is provided through [PeachPie for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=iolevel.peachpie-vscode) extension.
+Additional support in VS Code is provided through [PeachPie for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=iolevel.peachpie-vscode) extension.
 
 ## Microsoft Visual Studio
 
 **Features**: Code editor, Diagnostics, Profiling, Debugging, Build
 
-Visual Studio 2017 (15.6 and later) supports opening the [project files](msbuild). For project templates and more details please continue on [PeachPie Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=iolevel.peachpie-vs).
+Visual Studio 2017 and newer (15.6 and later) supports opening the [project files](msbuild) and editing PHP files so you don't actually need any extension to be able to work with PeachPie.
+
+For additional features, project templates and more install [PeachPie Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=iolevel.peachpie-vs).
+
+## JetBrains Rider
+
+Rider supports for editing of PHP files, and opening project files. You'll be able to build the [project](msbuild), breakpoints and stepping through the code are however not supported for custom languages yet.
