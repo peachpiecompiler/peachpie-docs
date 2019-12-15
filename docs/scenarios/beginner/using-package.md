@@ -1,12 +1,12 @@
-# Use PHP project as reference in C# 
+# Using a PHP project as a reference in C# 
 
-Please see [What is NuGet](https://docs.microsoft.com/en-us/nuget/what-is-nuget) for the introductionary about the .NET's packaging system.
+Please refer to [What is NuGet](https://docs.microsoft.com/en-us/nuget/what-is-nuget) for the introductory article about .NET's packaging system.
 
-This article goes further the [creating a NuGet from a PHP project](create-nuget) and describes how to use NuGet packages and PHP libraries seamlessly in C# with respect to compiled PHP code specifics.
+This article expands on the [creating a NuGet from a PHP project](create-nuget) tutorial and describes how to use NuGet packages and PHP libraries seamlessly in C# with respect to the compiled PHP code specifics.
 
 ## Sample `library.nupkg`
 
-The following example demonstrates a PHP library. It contains a single source file declaring a class `Class1` within a namespace `Library`. The class has a single instance method `encode` taking a single argument of any type (`mixed` in PHP), returning value of type `string`.
+The following example demonstrates a PHP library. It contains a single source file declaring a class `Class1` within a namespace `Library`. The class has a single instance method `encode` taking a single argument of any type (`mixed` in PHP), returning the value of type `string`.
 
 > *`library.msbuildproj`:*
 
@@ -40,7 +40,7 @@ class Class1 {
 }
 ```
 
-Library is compiled and packed into a NuGet package upon building:
+The library is compiled and packed into a NuGet package upon building:
 ```shell
 dotnet build
 ```
@@ -64,13 +64,13 @@ Build succeeded.
 Time Elapsed 00:00:02.45
 ```
 
-## Referencing library
+## Referencing the library
 
 ### A. Referencing a `<ProjectReference>`
 
-In case the library is a part of a .NET solution, it can be referenced as a .NET project.
+In case the library is part of a .NET solution, it can be referenced as a .NET project.
 
-> *Open the `.csproj` file and add following code snippet. Alter the `Include` value to point to your `library.msbuildproj` file.*
+> *Open the `.csproj` file and add the following code snippet. Alter the `Include` value to point to your `library.msbuildproj` file.*
 
 ```xml
 <ItemGroup>
@@ -92,9 +92,9 @@ The library can be provided to users as a standard .NET NuGet package. The creat
 
 > Note: definitely choose a more specific name for your library. A fully namespaced name separated with dots is a common way of naming packages.
 
-## Using library
+## Using the library
 
-Once the library is referenced, either as a ProjectReference or PackgeReference, it's public classes and methods become available to the client's C# code.
+Once the library is referenced, either as a ProjectReference or PackgeReference, its public classes and methods become available to the client's C# code.
 
 ```c#
 static void Main(string[] args)
@@ -110,7 +110,7 @@ static void Main(string[] args)
 
 ### Remarks
 
-There are certain conversion conventions between PHP values and C# types. Please see [type system](/net/type-system) and [PhpValue](/api/ref/phpvalue) for more details and how the values are implicitly converted.
+There are certain conversion conventions between PHP values and C# types. Please see [type system](/net/type-system) and [PhpValue](/api/ref/phpvalue) for more details on how the values are implicitly converted.
 
 PHP objects and functions are liable to the instance of [Context](/net/ref/context) class. If ommited (like in this example) a default instance is provided implicitly. In case of a multithreaded evironment and web applications, make sure you provide an instance of `Context` corresponding to your current thread.
 
