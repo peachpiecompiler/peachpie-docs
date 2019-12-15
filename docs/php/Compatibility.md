@@ -45,5 +45,3 @@ The following section lists the known compatibility status of the compiler, runt
 - [x] PHP Stack Trace
 - [x] [PHAR support](/php/phar)
 - [x] Reflection
-
-
