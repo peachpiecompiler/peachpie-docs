@@ -4,13 +4,14 @@ To create a self-contained PHP executable, start with a console application, e.g
 
 ```php
 <?php
+
 echo "Hello world!";
 ```
 
 and a corresponding project file indicating that the output should be exe:
 
 ```xml
-<Project Sdk="Peachpie.NET.Sdk/0.9.600">
+<Project Sdk="Peachpie.NET.Sdk">
   <PropertyGroup>
     <OutputType>exe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>

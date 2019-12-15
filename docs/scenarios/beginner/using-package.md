@@ -1,4 +1,4 @@
-# Use PHP project as reference in C\#
+# Use PHP project as reference in C# 
 
 Please see [What is NuGet](https://docs.microsoft.com/en-us/nuget/what-is-nuget) for the introductionary about the .NET's packaging system.
 

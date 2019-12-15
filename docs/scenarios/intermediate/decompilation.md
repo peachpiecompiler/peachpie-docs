@@ -1,12 +1,12 @@
 # Decompilation overview
 
-For the purposes of development and optimization, it is sometimes necessary to check the compiled DLL file. It serves for several purposes;
+For the purposes of development and optimization, it is useful to check the compiled DLL file. It serves for several purposes;
 
-**First**, the developer sees the classes and interfaces exposed from the compiled assembly.
+- **First**, the developer sees the classes and interfaces exposed from the compiled assembly.
 
-**Second**, decompilation reveals how the compiler treats some PHP constructs and declarations, so it can be used from C# or other .NET languages. It also allows for detecting errors in or improving the compiler.
+- **Second**, decompilation reveals how the compiler treats some PHP constructs and declarations, so it can be used from C# or other .NET languages. It also allows for detecting errors in or improving the compiler.
 
-**Third**, performance critical pieces of code should be reviewed and, if possible, type information or a better decomposition should be added to the source code to improve the type analysis and thus the compilation result. See [performance](/php/performance) for more information.
+- **Third**, performance critical pieces of code should be reviewed and, if possible, type information or a better decomposition should be added to the source code to improve the type analysis and thus the compilation result. See [performance](/php/performance) for more information.
 
 ## Try PeachPie
 
