@@ -4,7 +4,7 @@ The purpose of this page is to get you started with [PeachPie](https://www.peach
 
 ## Prerequisites
 
-- .NET Core SDK 2.1 or newer: [microsoft.com/net/download](https://www.microsoft.com/net/download)
+- .NET Core SDK 3.0 or newer: [microsoft.com/net/download](https://www.microsoft.com/net/download)
 
 ## Install dotnet templates
 
@@ -61,7 +61,7 @@ This kind of project can be used purely as a dependency to other projects. The c
 
 ## Development Environment
 
-Projects can be created and opened by .NET development environments, such as `Visual Studio 2017` or newer or `Visual Studio Code`.
+Projects can be created and opened by .NET development environments, such as `Visual Studio` or `Visual Studio Code`.
 
 ### Visual Studio
 - Install our [PeachPie Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=iolevel.peachpie-vs).
