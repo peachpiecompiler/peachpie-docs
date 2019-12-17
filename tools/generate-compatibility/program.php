@@ -36,6 +36,16 @@ function collect() {
                 /** @var ReflectionMethod $m */
                 $set[] = "function $c->name::$m->name";
             }
+
+            foreach ($c->getConstants() as $cname => $cvalue) {
+                /** @var string $cname */
+                $set[] = "const $c->name::$cname";
+            }
+        }
+
+        foreach ($re->getConstants() as $cname => $cvalue){
+            /** @var string $cname */
+            $set[] = "const $cname";
         }
 
         //
