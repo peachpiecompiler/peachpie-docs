@@ -70,4 +70,3 @@ foreach ($ext in $peachpie.extensions) {
 }
 
 # TODO: overall
-# TODO: constants

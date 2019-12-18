@@ -1,9 +1,9 @@
-!!! tip "PeachPie 1.0.0-dev+26fad4be6673cef589cb7372c6a9295fbd789c2e vs. PHP 7.4.0beta4"
-    The following table compares defined extensions, functions and classes of regular `php` against `peachpie`. Not implemented entries are listed below each category.
+!!! tip "PeachPie 1.0.0-dev+79594eef7e8b0fb6cec3a2797a40c230d41eb657 vs. PHP 7.4.0"
+    Following table compares defined extensions, functions and classes of a regular `php` against `peachpie`. Not implemented entries are listed below each category.
 
 ### Extensions
 
-??? tiny "[=71% "**extensions** 29 / 41"]"
+??? tiny "[=71% "**extensions** 30 / 42"]"
     - `bcmath`
     - `calendar`
     - `readline`
@@ -19,9 +19,19 @@
 
 ### Classes & Functions
 
-??? tiny "[=100% "**json** 17 / 17"]"
-    happy face
-??? tiny "[=90% "**standard** 505 / 560"]"
+??? tiny "[=76% "**json** 34 / 45"]"
+    - `const JSON_PARTIAL_OUTPUT_ON_ERROR`
+    - `const JSON_PRESERVE_ZERO_FRACTION`
+    - `const JSON_UNESCAPED_LINE_TERMINATORS`
+    - `const JSON_OBJECT_AS_ARRAY`
+    - `const JSON_INVALID_UTF8_IGNORE`
+    - `const JSON_INVALID_UTF8_SUBSTITUTE`
+    - `const JSON_ERROR_RECURSION`
+    - `const JSON_ERROR_INF_OR_NAN`
+    - `const JSON_ERROR_UNSUPPORTED_TYPE`
+    - `const JSON_ERROR_INVALID_PROPERTY_NAME`
+    - `const JSON_ERROR_UTF16`
+??? tiny "[=82% "**standard** 718 / 874"]"
     - `function phpcredits`
     - `function vfprintf`
     - `function getservbyname`
@@ -77,11 +87,147 @@
     - `function sapi_windows_generate_ctrl_event`
     - `function cli_set_process_title`
     - `function cli_get_process_title`
-??? tiny "[=95% "**session** 41 / 43"]"
+    - `const CREDITS_GROUP`
+    - `const CREDITS_GENERAL`
+    - `const CREDITS_SAPI`
+    - `const CREDITS_MODULES`
+    - `const CREDITS_DOCS`
+    - `const CREDITS_FULLPAGE`
+    - `const CREDITS_QA`
+    - `const CREDITS_ALL`
+    - `const STREAM_NOTIFY_CONNECT`
+    - `const STREAM_NOTIFY_AUTH_REQUIRED`
+    - `const STREAM_NOTIFY_AUTH_RESULT`
+    - `const STREAM_NOTIFY_MIME_TYPE_IS`
+    - `const STREAM_NOTIFY_FILE_SIZE_IS`
+    - `const STREAM_NOTIFY_REDIRECTED`
+    - `const STREAM_NOTIFY_PROGRESS`
+    - `const STREAM_NOTIFY_FAILURE`
+    - `const STREAM_NOTIFY_COMPLETED`
+    - `const STREAM_NOTIFY_RESOLVE`
+    - `const STREAM_NOTIFY_SEVERITY_INFO`
+    - `const STREAM_NOTIFY_SEVERITY_WARN`
+    - `const STREAM_NOTIFY_SEVERITY_ERR`
+    - `const STREAM_CRYPTO_METHOD_ANY_CLIENT`
+    - `const STREAM_CRYPTO_METHOD_TLSv1_0_CLIENT`
+    - `const STREAM_CRYPTO_METHOD_TLSv1_1_CLIENT`
+    - `const STREAM_CRYPTO_METHOD_TLSv1_2_CLIENT`
+    - `const STREAM_CRYPTO_METHOD_TLSv1_3_CLIENT`
+    - `const STREAM_CRYPTO_METHOD_ANY_SERVER`
+    - `const STREAM_CRYPTO_METHOD_TLSv1_0_SERVER`
+    - `const STREAM_CRYPTO_METHOD_TLSv1_1_SERVER`
+    - `const STREAM_CRYPTO_METHOD_TLSv1_2_SERVER`
+    - `const STREAM_CRYPTO_METHOD_TLSv1_3_SERVER`
+    - `const STREAM_CRYPTO_PROTO_SSLv3`
+    - `const STREAM_CRYPTO_PROTO_TLSv1_0`
+    - `const STREAM_CRYPTO_PROTO_TLSv1_1`
+    - `const STREAM_CRYPTO_PROTO_TLSv1_2`
+    - `const STREAM_CRYPTO_PROTO_TLSv1_3`
+    - `const STREAM_SHUT_RD`
+    - `const STREAM_SHUT_WR`
+    - `const STREAM_SHUT_RDWR`
+    - `const STREAM_SERVER_BIND`
+    - `const STREAM_SERVER_LISTEN`
+    - `const FILE_NO_DEFAULT_CONTEXT`
+    - `const FILE_TEXT`
+    - `const FILE_BINARY`
+    - `const PASSWORD_BCRYPT_DEFAULT_COST`
+    - `const PASSWORD_ARGON2_DEFAULT_MEMORY_COST`
+    - `const PASSWORD_ARGON2_DEFAULT_TIME_COST`
+    - `const PASSWORD_ARGON2_DEFAULT_THREADS`
+    - `const PASSWORD_ARGON2_PROVIDER`
+    - `const MT_RAND_MT19937`
+    - `const MT_RAND_PHP`
+    - `const SCANDIR_SORT_ASCENDING`
+    - `const SCANDIR_SORT_DESCENDING`
+    - `const SCANDIR_SORT_NONE`
+    - `const GLOB_AVAILABLE_FLAGS`
+    - `const LOG_EMERG`
+    - `const LOG_ALERT`
+    - `const LOG_CRIT`
+    - `const LOG_ERR`
+    - `const LOG_WARNING`
+    - `const LOG_NOTICE`
+    - `const LOG_INFO`
+    - `const LOG_DEBUG`
+    - `const LOG_KERN`
+    - `const LOG_USER`
+    - `const LOG_MAIL`
+    - `const LOG_DAEMON`
+    - `const LOG_AUTH`
+    - `const LOG_SYSLOG`
+    - `const LOG_LPR`
+    - `const LOG_NEWS`
+    - `const LOG_UUCP`
+    - `const LOG_CRON`
+    - `const LOG_AUTHPRIV`
+    - `const LOG_PID`
+    - `const LOG_CONS`
+    - `const LOG_ODELAY`
+    - `const LOG_NDELAY`
+    - `const LOG_NOWAIT`
+    - `const LOG_PERROR`
+    - `const ASSERT_EXCEPTION`
+    - `const STREAM_OPTION_BLOCKING`
+    - `const STREAM_OPTION_READ_TIMEOUT`
+    - `const STREAM_OPTION_READ_BUFFER`
+    - `const STREAM_OPTION_WRITE_BUFFER`
+    - `const STREAM_BUFFER_NONE`
+    - `const STREAM_BUFFER_LINE`
+    - `const STREAM_BUFFER_FULL`
+    - `const STREAM_CAST_AS_STREAM`
+    - `const STREAM_CAST_FOR_SELECT`
+    - `const STREAM_META_TOUCH`
+    - `const STREAM_META_OWNER`
+    - `const STREAM_META_OWNER_NAME`
+    - `const STREAM_META_GROUP`
+    - `const STREAM_META_GROUP_NAME`
+    - `const STREAM_META_ACCESS`
+    - `const IMAGETYPE_WEBP`
+    - `const DNS_CAA`
+    - `const DNS_SRV`
+    - `const DNS_NAPTR`
+    - `const DNS_A6`
+??? tiny "[=96% "**session** 44 / 46"]"
     - `class SessionIdInterface`
-??? tiny "[=100% "**zip** 51 / 51"]"
-    happy face
-??? tiny "[=81% "**date** 96 / 119"]"
+??? tiny "[=73% "**zip** 95 / 131"]"
+    - `const ZipArchive::FL_ENC_GUESS`
+    - `const ZipArchive::FL_ENC_RAW`
+    - `const ZipArchive::FL_ENC_STRICT`
+    - `const ZipArchive::FL_ENC_UTF_8`
+    - `const ZipArchive::FL_ENC_CP437`
+    - `const ZipArchive::CM_LZMA`
+    - `const ZipArchive::CM_TERSE`
+    - `const ZipArchive::CM_LZ77`
+    - `const ZipArchive::CM_WAVPACK`
+    - `const ZipArchive::CM_PPMD`
+    - `const ZipArchive::OPSYS_DOS`
+    - `const ZipArchive::OPSYS_AMIGA`
+    - `const ZipArchive::OPSYS_OPENVMS`
+    - `const ZipArchive::OPSYS_UNIX`
+    - `const ZipArchive::OPSYS_VM_CMS`
+    - `const ZipArchive::OPSYS_ATARI_ST`
+    - `const ZipArchive::OPSYS_OS_2`
+    - `const ZipArchive::OPSYS_MACINTOSH`
+    - `const ZipArchive::OPSYS_Z_SYSTEM`
+    - `const ZipArchive::OPSYS_Z_CPM`
+    - `const ZipArchive::OPSYS_CPM`
+    - `const ZipArchive::OPSYS_WINDOWS_NTFS`
+    - `const ZipArchive::OPSYS_MVS`
+    - `const ZipArchive::OPSYS_VSE`
+    - `const ZipArchive::OPSYS_ACORN_RISC`
+    - `const ZipArchive::OPSYS_VFAT`
+    - `const ZipArchive::OPSYS_ALTERNATE_MVS`
+    - `const ZipArchive::OPSYS_BEOS`
+    - `const ZipArchive::OPSYS_TANDEM`
+    - `const ZipArchive::OPSYS_OS_400`
+    - `const ZipArchive::OPSYS_OS_X`
+    - `const ZipArchive::OPSYS_DEFAULT`
+    - `const ZipArchive::EM_NONE`
+    - `const ZipArchive::EM_AES_128`
+    - `const ZipArchive::EM_AES_192`
+    - `const ZipArchive::EM_AES_256`
+??? tiny "[=71% "**date** 135 / 189"]"
     - `function date_parse_from_format`
     - `function date_time_set`
     - `function date_date_set`
@@ -91,14 +237,44 @@
     - `function timezone_name_from_abbr`
     - `function date_interval_format`
     - `function date_sun_info`
+    - `const DateTimeInterface::ATOM`
+    - `const DateTimeInterface::COOKIE`
+    - `const DateTimeInterface::ISO8601`
+    - `const DateTimeInterface::RFC822`
+    - `const DateTimeInterface::RFC850`
+    - `const DateTimeInterface::RFC1036`
+    - `const DateTimeInterface::RFC1123`
+    - `const DateTimeInterface::RFC7231`
+    - `const DateTimeInterface::RFC2822`
+    - `const DateTimeInterface::RFC3339`
+    - `const DateTimeInterface::RFC3339_EXTENDED`
+    - `const DateTimeInterface::RSS`
+    - `const DateTimeInterface::W3C`
     - `function DateTime::createFromImmutable`
+    - `const DateTime::RFC7231`
+    - `const DateTime::RFC3339_EXTENDED`
     - `function DateTimeImmutable::__construct`
+    - `const DateTimeImmutable::ATOM`
+    - `const DateTimeImmutable::COOKIE`
+    - `const DateTimeImmutable::ISO8601`
+    - `const DateTimeImmutable::RFC822`
+    - `const DateTimeImmutable::RFC850`
+    - `const DateTimeImmutable::RFC1036`
+    - `const DateTimeImmutable::RFC1123`
+    - `const DateTimeImmutable::RFC7231`
+    - `const DateTimeImmutable::RFC2822`
+    - `const DateTimeImmutable::RFC3339`
+    - `const DateTimeImmutable::RFC3339_EXTENDED`
+    - `const DateTimeImmutable::RSS`
+    - `const DateTimeImmutable::W3C`
     - `function DateTimeZone::__wakeup`
     - `function DateTimeZone::__set_state`
     - `function DateInterval::__wakeup`
     - `function DateInterval::__set_state`
     - `class DatePeriod`
-??? tiny "[=24% "**phar** 59 / 250"]"
+    - `const DATE_RFC7231`
+    - `const DATE_RFC3339_EXTENDED`
+??? tiny "[=20% "**phar** 59 / 288"]"
     - `function Phar::__destruct`
     - `function Phar::addEmptyDir`
     - `function Phar::addFile`
@@ -180,6 +356,32 @@
     - `function Phar::setFileClass`
     - `function Phar::setInfoClass`
     - `function Phar::_bad_state_ex`
+    - `const Phar::CURRENT_MODE_MASK`
+    - `const Phar::CURRENT_AS_PATHNAME`
+    - `const Phar::CURRENT_AS_FILEINFO`
+    - `const Phar::CURRENT_AS_SELF`
+    - `const Phar::KEY_MODE_MASK`
+    - `const Phar::KEY_AS_PATHNAME`
+    - `const Phar::FOLLOW_SYMLINKS`
+    - `const Phar::KEY_AS_FILENAME`
+    - `const Phar::NEW_CURRENT_AND_KEY`
+    - `const Phar::OTHER_MODE_MASK`
+    - `const Phar::SKIP_DOTS`
+    - `const Phar::UNIX_PATHS`
+    - `const Phar::BZ2`
+    - `const Phar::GZ`
+    - `const Phar::NONE`
+    - `const Phar::PHAR`
+    - `const Phar::TAR`
+    - `const Phar::ZIP`
+    - `const Phar::COMPRESSED`
+    - `const Phar::PHP`
+    - `const Phar::PHPS`
+    - `const Phar::MD5`
+    - `const Phar::OPENSSL`
+    - `const Phar::SHA1`
+    - `const Phar::SHA256`
+    - `const Phar::SHA512`
     - `function PharData::__destruct`
     - `function PharData::addEmptyDir`
     - `function PharData::addFile`
@@ -275,6 +477,18 @@
     - `function PharData::setFileClass`
     - `function PharData::setInfoClass`
     - `function PharData::_bad_state_ex`
+    - `const PharData::CURRENT_MODE_MASK`
+    - `const PharData::CURRENT_AS_PATHNAME`
+    - `const PharData::CURRENT_AS_FILEINFO`
+    - `const PharData::CURRENT_AS_SELF`
+    - `const PharData::KEY_MODE_MASK`
+    - `const PharData::KEY_AS_PATHNAME`
+    - `const PharData::FOLLOW_SYMLINKS`
+    - `const PharData::KEY_AS_FILENAME`
+    - `const PharData::NEW_CURRENT_AND_KEY`
+    - `const PharData::OTHER_MODE_MASK`
+    - `const PharData::SKIP_DOTS`
+    - `const PharData::UNIX_PATHS`
     - `function PharFileInfo::__destruct`
     - `function PharFileInfo::chmod`
     - `function PharFileInfo::compress`
@@ -290,14 +504,14 @@
     - `function PharFileInfo::isCRCChecked`
     - `function PharFileInfo::setMetadata`
     - `function PharFileInfo::_bad_state_ex`
-??? tiny "[=96% "**Reflection** 311 / 325"]"
+??? tiny "[=96% "**Reflection** 328 / 342"]"
     - `function ReflectionClass::isIterable`
     - `function ReflectionObject::isIterable`
     - `function ReflectionProperty::isInitialized`
     - `function ReflectionProperty::getType`
     - `function ReflectionProperty::hasType`
     - `class ReflectionZendExtension`
-??? tiny "[=66% "**Core** 143 / 216"]"
+??? tiny "[=63% "**Core** 197 / 312"]"
     - `function get_mangled_object_vars`
     - `function get_resources`
     - `function gc_status`
@@ -308,20 +522,72 @@
     - `class DivisionByZeroError`
     - `class ClosedGeneratorException`
     - `class WeakReference`
-??? tiny "[=97% "**SPL** 966 / 991"]"
+    - `const ZEND_THREAD_SAFE`
+    - `const ZEND_DEBUG_BUILD`
+    - `const PHP_WINDOWS_EVENT_CTRL_C`
+    - `const PHP_WINDOWS_EVENT_CTRL_BREAK`
+    - `const PHP_ZTS`
+    - `const DEFAULT_INCLUDE_PATH`
+    - `const PEAR_INSTALL_DIR`
+    - `const PEAR_EXTENSION_DIR`
+    - `const PHP_EXTENSION_DIR`
+    - `const PHP_PREFIX`
+    - `const PHP_BINDIR`
+    - `const PHP_LIBDIR`
+    - `const PHP_DATADIR`
+    - `const PHP_SYSCONFDIR`
+    - `const PHP_LOCALSTATEDIR`
+    - `const PHP_CONFIG_FILE_PATH`
+    - `const PHP_CONFIG_FILE_SCAN_DIR`
+    - `const PHP_SHLIB_SUFFIX`
+    - `const PHP_FD_SETSIZE`
+    - `const PHP_WINDOWS_VERSION_MAJOR`
+    - `const PHP_WINDOWS_VERSION_MINOR`
+    - `const PHP_WINDOWS_VERSION_BUILD`
+    - `const PHP_WINDOWS_VERSION_PLATFORM`
+    - `const PHP_WINDOWS_VERSION_SP_MAJOR`
+    - `const PHP_WINDOWS_VERSION_SP_MINOR`
+    - `const PHP_WINDOWS_VERSION_SUITEMASK`
+    - `const PHP_WINDOWS_VERSION_PRODUCTTYPE`
+    - `const PHP_WINDOWS_NT_DOMAIN_CONTROLLER`
+    - `const PHP_WINDOWS_NT_SERVER`
+    - `const PHP_WINDOWS_NT_WORKSTATION`
+    - `const PHP_BINARY`
+    - `const PHP_OUTPUT_HANDLER_WRITE`
+    - `const PHP_OUTPUT_HANDLER_FLUSH`
+    - `const PHP_OUTPUT_HANDLER_CLEAN`
+    - `const PHP_OUTPUT_HANDLER_FINAL`
+    - `const PHP_OUTPUT_HANDLER_CLEANABLE`
+    - `const PHP_OUTPUT_HANDLER_FLUSHABLE`
+    - `const PHP_OUTPUT_HANDLER_REMOVABLE`
+    - `const PHP_OUTPUT_HANDLER_STDFLAGS`
+    - `const PHP_OUTPUT_HANDLER_STARTED`
+    - `const PHP_OUTPUT_HANDLER_DISABLED`
+    - `const PHP_CLI_PROCESS_TITLE`
+??? tiny "[=97% "**SPL** 1068 / 1103"]"
     - `function CachingIterator::__toString`
     - `function RecursiveCachingIterator::__toString`
+    - `const RegexIterator::INVERT_MATCH`
+    - `const RecursiveRegexIterator::INVERT_MATCH`
     - `function ArrayObject::__unserialize`
     - `function ArrayObject::__serialize`
     - `function ArrayIterator::__unserialize`
     - `function ArrayIterator::__serialize`
+    - `const ArrayIterator::STD_PROP_LIST`
+    - `const ArrayIterator::ARRAY_AS_PROPS`
     - `function RecursiveArrayIterator::__unserialize`
     - `function RecursiveArrayIterator::__serialize`
+    - `const RecursiveArrayIterator::STD_PROP_LIST`
+    - `const RecursiveArrayIterator::ARRAY_AS_PROPS`
+    - `const RecursiveArrayIterator::CHILD_ARRAYS_ONLY`
     - `function SplFileInfo::_bad_state_ex`
     - `function DirectoryIterator::_bad_state_ex`
     - `function FilesystemIterator::_bad_state_ex`
+    - `const FilesystemIterator::OTHER_MODE_MASK`
     - `function RecursiveDirectoryIterator::_bad_state_ex`
+    - `const RecursiveDirectoryIterator::OTHER_MODE_MASK`
     - `function GlobIterator::_bad_state_ex`
+    - `const GlobIterator::OTHER_MODE_MASK`
     - `function SplFileObject::getCurrentLine`
     - `function SplFileObject::_bad_state_ex`
     - `function SplTempFileObject::getCurrentLine`
@@ -334,9 +600,14 @@
     - `function SplStack::__serialize`
     - `function SplObjectStorage::__unserialize`
     - `function SplObjectStorage::__serialize`
-??? tiny "[=88% "**libxml** 7 / 8"]"
+??? tiny "[=83% "**libxml** 29 / 35"]"
     - `function libxml_set_external_entity_loader`
-??? tiny "[=51% "**mysqli** 101 / 198"]"
+    - `const LIBXML_LOADED_VERSION`
+    - `const LIBXML_PEDANTIC`
+    - `const LIBXML_BIGLINES`
+    - `const LIBXML_HTML_NOIMPLIED`
+    - `const LIBXML_HTML_NODEFDTD`
+??? tiny "[=37% "**mysqli** 114 / 309"]"
     - `function mysqli_autocommit`
     - `function mysqli_begin_transaction`
     - `function mysqli_change_user`
@@ -434,7 +705,105 @@
     - `function mysqli_stmt::reset`
     - `function mysqli_stmt::store_result`
     - `function mysqli_stmt::get_result`
-??? tiny "[=77% "**curl** 30 / 39"]"
+    - `const MYSQLI_READ_DEFAULT_GROUP`
+    - `const MYSQLI_READ_DEFAULT_FILE`
+    - `const MYSQLI_OPT_LOCAL_INFILE`
+    - `const MYSQLI_INIT_COMMAND`
+    - `const MYSQLI_OPT_READ_TIMEOUT`
+    - `const MYSQLI_OPT_NET_CMD_BUFFER_SIZE`
+    - `const MYSQLI_OPT_NET_READ_BUFFER_SIZE`
+    - `const MYSQLI_OPT_INT_AND_FLOAT_NATIVE`
+    - `const MYSQLI_CLIENT_NO_SCHEMA`
+    - `const MYSQLI_CLIENT_FOUND_ROWS`
+    - `const MYSQLI_CLIENT_SSL_VERIFY_SERVER_CERT`
+    - `const MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT`
+    - `const MYSQLI_CLIENT_CAN_HANDLE_EXPIRED_PASSWORDS`
+    - `const MYSQLI_OPT_CAN_HANDLE_EXPIRED_PASSWORDS`
+    - `const MYSQLI_ASYNC`
+    - `const MYSQLI_STORE_RESULT_COPY_DATA`
+    - `const MYSQLI_STMT_ATTR_UPDATE_MAX_LENGTH`
+    - `const MYSQLI_STMT_ATTR_CURSOR_TYPE`
+    - `const MYSQLI_CURSOR_TYPE_NO_CURSOR`
+    - `const MYSQLI_CURSOR_TYPE_READ_ONLY`
+    - `const MYSQLI_CURSOR_TYPE_FOR_UPDATE`
+    - `const MYSQLI_CURSOR_TYPE_SCROLLABLE`
+    - `const MYSQLI_STMT_ATTR_PREFETCH_ROWS`
+    - `const MYSQLI_NOT_NULL_FLAG`
+    - `const MYSQLI_PRI_KEY_FLAG`
+    - `const MYSQLI_UNIQUE_KEY_FLAG`
+    - `const MYSQLI_MULTIPLE_KEY_FLAG`
+    - `const MYSQLI_BLOB_FLAG`
+    - `const MYSQLI_UNSIGNED_FLAG`
+    - `const MYSQLI_ZEROFILL_FLAG`
+    - `const MYSQLI_AUTO_INCREMENT_FLAG`
+    - `const MYSQLI_TIMESTAMP_FLAG`
+    - `const MYSQLI_SET_FLAG`
+    - `const MYSQLI_NUM_FLAG`
+    - `const MYSQLI_PART_KEY_FLAG`
+    - `const MYSQLI_GROUP_FLAG`
+    - `const MYSQLI_ENUM_FLAG`
+    - `const MYSQLI_BINARY_FLAG`
+    - `const MYSQLI_NO_DEFAULT_VALUE_FLAG`
+    - `const MYSQLI_ON_UPDATE_NOW_FLAG`
+    - `const MYSQLI_TYPE_DECIMAL`
+    - `const MYSQLI_TYPE_TINY`
+    - `const MYSQLI_TYPE_SHORT`
+    - `const MYSQLI_TYPE_LONG`
+    - `const MYSQLI_TYPE_FLOAT`
+    - `const MYSQLI_TYPE_DOUBLE`
+    - `const MYSQLI_TYPE_NULL`
+    - `const MYSQLI_TYPE_TIMESTAMP`
+    - `const MYSQLI_TYPE_LONGLONG`
+    - `const MYSQLI_TYPE_INT24`
+    - `const MYSQLI_TYPE_DATE`
+    - `const MYSQLI_TYPE_TIME`
+    - `const MYSQLI_TYPE_DATETIME`
+    - `const MYSQLI_TYPE_YEAR`
+    - `const MYSQLI_TYPE_NEWDATE`
+    - `const MYSQLI_TYPE_ENUM`
+    - `const MYSQLI_TYPE_SET`
+    - `const MYSQLI_TYPE_TINY_BLOB`
+    - `const MYSQLI_TYPE_MEDIUM_BLOB`
+    - `const MYSQLI_TYPE_LONG_BLOB`
+    - `const MYSQLI_TYPE_BLOB`
+    - `const MYSQLI_TYPE_VAR_STRING`
+    - `const MYSQLI_TYPE_STRING`
+    - `const MYSQLI_TYPE_CHAR`
+    - `const MYSQLI_TYPE_INTERVAL`
+    - `const MYSQLI_TYPE_GEOMETRY`
+    - `const MYSQLI_TYPE_JSON`
+    - `const MYSQLI_TYPE_NEWDECIMAL`
+    - `const MYSQLI_TYPE_BIT`
+    - `const MYSQLI_SET_CHARSET_DIR`
+    - `const MYSQLI_NO_DATA`
+    - `const MYSQLI_DATA_TRUNCATED`
+    - `const MYSQLI_REPORT_INDEX`
+    - `const MYSQLI_REPORT_ERROR`
+    - `const MYSQLI_REPORT_STRICT`
+    - `const MYSQLI_REPORT_ALL`
+    - `const MYSQLI_REPORT_OFF`
+    - `const MYSQLI_DEBUG_TRACE_ENABLED`
+    - `const MYSQLI_SERVER_QUERY_NO_GOOD_INDEX_USED`
+    - `const MYSQLI_SERVER_QUERY_NO_INDEX_USED`
+    - `const MYSQLI_SERVER_QUERY_WAS_SLOW`
+    - `const MYSQLI_SERVER_PS_OUT_PARAMS`
+    - `const MYSQLI_REFRESH_GRANT`
+    - `const MYSQLI_REFRESH_LOG`
+    - `const MYSQLI_REFRESH_TABLES`
+    - `const MYSQLI_REFRESH_HOSTS`
+    - `const MYSQLI_REFRESH_STATUS`
+    - `const MYSQLI_REFRESH_THREADS`
+    - `const MYSQLI_REFRESH_SLAVE`
+    - `const MYSQLI_REFRESH_MASTER`
+    - `const MYSQLI_REFRESH_BACKUP_LOG`
+    - `const MYSQLI_TRANS_START_WITH_CONSISTENT_SNAPSHOT`
+    - `const MYSQLI_TRANS_START_READ_WRITE`
+    - `const MYSQLI_TRANS_START_READ_ONLY`
+    - `const MYSQLI_TRANS_COR_AND_CHAIN`
+    - `const MYSQLI_TRANS_COR_AND_NO_CHAIN`
+    - `const MYSQLI_TRANS_COR_RELEASE`
+    - `const MYSQLI_TRANS_COR_NO_RELEASE`
+??? tiny "[=85% "**curl** 508 / 601"]"
     - `function curl_copy_handle`
     - `function curl_strerror`
     - `function curl_share_strerror`
@@ -444,9 +813,104 @@
     - `function curl_share_close`
     - `function curl_share_setopt`
     - `function curl_share_errno`
-??? tiny "[=98% "**pdo** 48 / 49"]"
+    - `const CURL_VERSION_ASYNCHDNS`
+    - `const CURL_VERSION_CONV`
+    - `const CURL_VERSION_DEBUG`
+    - `const CURL_VERSION_GSSNEGOTIATE`
+    - `const CURL_VERSION_IDN`
+    - `const CURL_VERSION_LARGEFILE`
+    - `const CURL_VERSION_NTLM`
+    - `const CURL_VERSION_SPNEGO`
+    - `const CURL_VERSION_SSPI`
+    - `const CURL_VERSION_CURLDEBUG`
+    - `const CURL_VERSION_TLSAUTH_SRP`
+    - `const CURL_VERSION_NTLM_WB`
+    - `const CURL_VERSION_GSSAPI`
+    - `const CURL_VERSION_KERBEROS5`
+    - `const CURL_VERSION_UNIX_SOCKETS`
+    - `const CURL_VERSION_PSL`
+    - `const CURLINFO_HTTP_VERSION`
+    - `const CURLE_WEIRD_SERVER_REPLY`
+    - `const CURLOPT_KEEP_SENDING_ON_ERROR`
+    - `const CURL_SSLVERSION_TLSv1_3`
+    - `const CURL_VERSION_HTTPS_PROXY`
+    - `const CURLINFO_PROTOCOL`
+    - `const CURLINFO_PROXY_SSL_VERIFYRESULT`
+    - `const CURLINFO_SCHEME`
+    - `const CURLOPT_PRE_PROXY`
+    - `const CURLOPT_PROXY_CAINFO`
+    - `const CURLOPT_PROXY_CAPATH`
+    - `const CURLOPT_PROXY_CRLFILE`
+    - `const CURLOPT_PROXY_KEYPASSWD`
+    - `const CURLOPT_PROXY_PINNEDPUBLICKEY`
+    - `const CURLOPT_PROXY_SSL_CIPHER_LIST`
+    - `const CURLOPT_PROXY_SSL_OPTIONS`
+    - `const CURLOPT_PROXY_SSL_VERIFYHOST`
+    - `const CURLOPT_PROXY_SSL_VERIFYPEER`
+    - `const CURLOPT_PROXY_SSLCERT`
+    - `const CURLOPT_PROXY_SSLCERTTYPE`
+    - `const CURLOPT_PROXY_SSLKEY`
+    - `const CURLOPT_PROXY_SSLKEYTYPE`
+    - `const CURLOPT_PROXY_SSLVERSION`
+    - `const CURLOPT_PROXY_TLSAUTH_PASSWORD`
+    - `const CURLOPT_PROXY_TLSAUTH_TYPE`
+    - `const CURLOPT_PROXY_TLSAUTH_USERNAME`
+    - `const CURLPROXY_HTTPS`
+    - `const CURL_MAX_READ_SIZE`
+    - `const CURLOPT_ABSTRACT_UNIX_SOCKET`
+    - `const CURL_SSLVERSION_MAX_DEFAULT`
+    - `const CURL_SSLVERSION_MAX_NONE`
+    - `const CURL_SSLVERSION_MAX_TLSv1_0`
+    - `const CURL_SSLVERSION_MAX_TLSv1_1`
+    - `const CURL_SSLVERSION_MAX_TLSv1_2`
+    - `const CURL_SSLVERSION_MAX_TLSv1_3`
+    - `const CURLOPT_SUPPRESS_CONNECT_HEADERS`
+    - `const CURLAUTH_GSSAPI`
+    - `const CURLINFO_CONTENT_LENGTH_DOWNLOAD_T`
+    - `const CURLINFO_CONTENT_LENGTH_UPLOAD_T`
+    - `const CURLINFO_SIZE_DOWNLOAD_T`
+    - `const CURLINFO_SIZE_UPLOAD_T`
+    - `const CURLINFO_SPEED_DOWNLOAD_T`
+    - `const CURLINFO_SPEED_UPLOAD_T`
+    - `const CURLOPT_REQUEST_TARGET`
+    - `const CURLOPT_SOCKS5_AUTH`
+    - `const CURLOPT_SSH_COMPRESSION`
+    - `const CURL_VERSION_MULTI_SSL`
+    - `const CURL_VERSION_BROTLI`
+    - `const CURL_LOCK_DATA_CONNECT`
+    - `const CURLSSH_AUTH_GSSAPI`
+    - `const CURLINFO_FILETIME_T`
+    - `const CURLOPT_HAPPY_EYEBALLS_TIMEOUT_MS`
+    - `const CURLOPT_TIMEVALUE_LARGE`
+    - `const CURLOPT_DNS_SHUFFLE_ADDRESSES`
+    - `const CURLOPT_HAPROXYPROTOCOL`
+    - `const CURL_LOCK_DATA_PSL`
+    - `const CURLAUTH_BEARER`
+    - `const CURLINFO_APPCONNECT_TIME_T`
+    - `const CURLINFO_CONNECT_TIME_T`
+    - `const CURLINFO_NAMELOOKUP_TIME_T`
+    - `const CURLINFO_PRETRANSFER_TIME_T`
+    - `const CURLINFO_REDIRECT_TIME_T`
+    - `const CURLINFO_STARTTRANSFER_TIME_T`
+    - `const CURLINFO_TOTAL_TIME_T`
+    - `const CURLOPT_DISALLOW_USERNAME_IN_URL`
+    - `const CURLOPT_PROXY_TLS13_CIPHERS`
+    - `const CURLOPT_TLS13_CIPHERS`
+    - `const CURL_VERSION_ALTSVC`
+??? tiny "[=90% "**pdo** 110 / 122"]"
+    - `const PDO::PARAM_STR_NATL`
+    - `const PDO::PARAM_STR_CHAR`
+    - `const PDO::PARAM_EVT_ALLOC`
+    - `const PDO::PARAM_EVT_FREE`
+    - `const PDO::PARAM_EVT_EXEC_PRE`
+    - `const PDO::PARAM_EVT_EXEC_POST`
+    - `const PDO::PARAM_EVT_FETCH_PRE`
+    - `const PDO::PARAM_EVT_FETCH_POST`
+    - `const PDO::PARAM_EVT_NORMALIZE`
+    - `const PDO::ATTR_DEFAULT_STR_PARAM`
+    - `const PDO::ERR_NONE`
     - `class PDORow`
-??? tiny "[=78% "**dom** 369 / 471"]"
+??? tiny "[=80% "**dom** 413 / 516"]"
     - `class DOMStringList`
     - `class DOMNameList`
     - `class DOMImplementationList`
@@ -539,10 +1003,11 @@
     - `function DOMProcessingInstruction::setUserData`
     - `function DOMProcessingInstruction::getUserData`
     - `class DOMStringExtend`
+    - `const DOM_PHP_ERR`
 ??? tiny "[=42% "**simplexml** 17 / 40"]"
     - `function SimpleXMLElement::saveXML`
     - `class SimpleXMLIterator`
-??? tiny "[=100% "**xmlreader** 26 / 26"]"
+??? tiny "[=100% "**xmlreader** 48 / 48"]"
     happy face
 ??? tiny "[=51% "**xmlwriter** 43 / 85"]"
     - `function xmlwriter_open_uri`
@@ -587,17 +1052,31 @@
     - `function xmlwriter_write_dtd_entity`
     - `function xmlwriter_output_memory`
     - `function xmlwriter_flush`
-??? tiny "[=77% "**xsl** 10 / 13"]"
+??? tiny "[=48% "**xsl** 13 / 27"]"
     - `function XSLTProcessor::setProfiling`
     - `function XSLTProcessor::setSecurityPrefs`
     - `function XSLTProcessor::getSecurityPrefs`
+    - `const XSL_SECPREF_NONE`
+    - `const XSL_SECPREF_READ_FILE`
+    - `const XSL_SECPREF_WRITE_FILE`
+    - `const XSL_SECPREF_CREATE_DIRECTORY`
+    - `const XSL_SECPREF_READ_NETWORK`
+    - `const XSL_SECPREF_WRITE_NETWORK`
+    - `const XSL_SECPREF_DEFAULT`
+    - `const LIBXSLT_VERSION`
+    - `const LIBXSLT_DOTTED_VERSION`
+    - `const LIBEXSLT_VERSION`
+    - `const LIBEXSLT_DOTTED_VERSION`
 ??? tiny "[=100% "**ctype** 11 / 11"]"
     happy face
-??? tiny "[=100% "**tokenizer** 2 / 2"]"
-    happy face
-??? tiny "[=90% "**pcre** 9 / 10"]"
+??? tiny "[=99% "**tokenizer** 139 / 140"]"
+    - `const T_BAD_CHARACTER`
+??? tiny "[=86% "**pcre** 25 / 29"]"
     - `function preg_filter`
-??? tiny "[=62% "**hash** 13 / 21"]"
+    - `const PCRE_VERSION_MAJOR`
+    - `const PCRE_VERSION_MINOR`
+    - `const PCRE_JIT_SUPPORT`
+??? tiny "[=26% "**hash** 14 / 54"]"
     - `function hash_hmac_algos`
     - `function hash_hkdf`
     - `function mhash_keygen_s2k`
@@ -606,13 +1085,52 @@
     - `function mhash_count`
     - `function mhash`
     - `class HashContext`
-??? tiny "[=100% "**filter** 7 / 7"]"
-    happy face
-??? tiny "[=70% "**iconv** 7 / 10"]"
+    - `const MHASH_CRC32`
+    - `const MHASH_MD5`
+    - `const MHASH_SHA1`
+    - `const MHASH_HAVAL256`
+    - `const MHASH_RIPEMD160`
+    - `const MHASH_TIGER`
+    - `const MHASH_GOST`
+    - `const MHASH_CRC32B`
+    - `const MHASH_HAVAL224`
+    - `const MHASH_HAVAL192`
+    - `const MHASH_HAVAL160`
+    - `const MHASH_HAVAL128`
+    - `const MHASH_TIGER128`
+    - `const MHASH_TIGER160`
+    - `const MHASH_MD4`
+    - `const MHASH_SHA256`
+    - `const MHASH_ADLER32`
+    - `const MHASH_SHA224`
+    - `const MHASH_SHA512`
+    - `const MHASH_SHA384`
+    - `const MHASH_WHIRLPOOL`
+    - `const MHASH_RIPEMD128`
+    - `const MHASH_RIPEMD256`
+    - `const MHASH_RIPEMD320`
+    - `const MHASH_SNEFRU256`
+    - `const MHASH_MD2`
+    - `const MHASH_FNV132`
+    - `const MHASH_FNV1A32`
+    - `const MHASH_FNV164`
+    - `const MHASH_FNV1A64`
+    - `const MHASH_JOAAT`
+    - `const MHASH_CRC32C`
+??? tiny "[=91% "**filter** 59 / 65"]"
+    - `const FILTER_VALIDATE_DOMAIN`
+    - `const FILTER_VALIDATE_MAC`
+    - `const FILTER_SANITIZE_FULL_SPECIAL_CHARS`
+    - `const FILTER_SANITIZE_ADD_SLASHES`
+    - `const FILTER_FLAG_STRIP_BACKTICK`
+    - `const FILTER_FLAG_EMAIL_UNICODE`
+??? tiny "[=98% "**ftp** 46 / 47"]"
+    - `function ftp_exec`
+??? tiny "[=79% "**iconv** 11 / 14"]"
     - `function iconv_mime_encode`
     - `function iconv_mime_decode`
     - `function iconv_mime_decode_headers`
-??? tiny "[=45% "**mbstring** 33 / 73"]"
+??? tiny "[=47% "**mbstring** 40 / 85"]"
     - `function mb_output_handler`
     - `function mb_strrichr`
     - `function mb_encoding_aliases`
@@ -653,9 +1171,15 @@
     - `function mbereg_search_getregs`
     - `function mbereg_search_getpos`
     - `function mbereg_search_setpos`
-??? tiny "[=95% "**xml** 21 / 22"]"
+    - `const MB_CASE_UPPER_SIMPLE`
+    - `const MB_CASE_LOWER_SIMPLE`
+    - `const MB_CASE_TITLE_SIMPLE`
+    - `const MB_CASE_FOLD_SIMPLE`
+    - `const MB_ONIGURUMA_VERSION`
+??? tiny "[=96% "**xml** 47 / 49"]"
     - `function xml_set_unparsed_entity_decl_handler`
-??? tiny "[=74% "**zlib** 23 / 31"]"
+    - `const XML_SAX_IMPL`
+??? tiny "[=43% "**zlib** 25 / 58"]"
     - `function zlib_encode`
     - `function zlib_decode`
     - `function deflate_init`
@@ -664,7 +1188,32 @@
     - `function inflate_add`
     - `function inflate_get_status`
     - `function inflate_get_read_len`
-??? tiny "[=61% "**gd** 66 / 108"]"
+    - `const ZLIB_ENCODING_RAW`
+    - `const ZLIB_ENCODING_GZIP`
+    - `const ZLIB_ENCODING_DEFLATE`
+    - `const ZLIB_NO_FLUSH`
+    - `const ZLIB_PARTIAL_FLUSH`
+    - `const ZLIB_SYNC_FLUSH`
+    - `const ZLIB_FULL_FLUSH`
+    - `const ZLIB_BLOCK`
+    - `const ZLIB_FINISH`
+    - `const ZLIB_FILTERED`
+    - `const ZLIB_HUFFMAN_ONLY`
+    - `const ZLIB_RLE`
+    - `const ZLIB_FIXED`
+    - `const ZLIB_DEFAULT_STRATEGY`
+    - `const ZLIB_VERSION`
+    - `const ZLIB_VERNUM`
+    - `const ZLIB_OK`
+    - `const ZLIB_STREAM_END`
+    - `const ZLIB_NEED_DICT`
+    - `const ZLIB_ERRNO`
+    - `const ZLIB_STREAM_ERROR`
+    - `const ZLIB_DATA_ERROR`
+    - `const ZLIB_MEM_ERROR`
+    - `const ZLIB_BUF_ERROR`
+    - `const ZLIB_VERSION_ERROR`
+??? tiny "[=52% "**gd** 102 / 195"]"
     - `function imagechar`
     - `function imagecharup`
     - `function imagepalettecopy`
@@ -707,5 +1256,56 @@
     - `function imagelayereffect`
     - `function imagexbm`
     - `function imageresolution`
-??? tiny "[=100% "**exif** 5 / 5"]"
-    happy face
+    - `const IMG_WEBP`
+    - `const IMG_BMP`
+    - `const IMG_TGA`
+    - `const IMG_FLIP_HORIZONTAL`
+    - `const IMG_FLIP_VERTICAL`
+    - `const IMG_FLIP_BOTH`
+    - `const IMG_EFFECT_REPLACE`
+    - `const IMG_EFFECT_ALPHABLEND`
+    - `const IMG_EFFECT_NORMAL`
+    - `const IMG_EFFECT_OVERLAY`
+    - `const IMG_EFFECT_MULTIPLY`
+    - `const IMG_CROP_DEFAULT`
+    - `const IMG_CROP_TRANSPARENT`
+    - `const IMG_CROP_BLACK`
+    - `const IMG_CROP_WHITE`
+    - `const IMG_CROP_SIDES`
+    - `const IMG_CROP_THRESHOLD`
+    - `const IMG_BELL`
+    - `const IMG_BESSEL`
+    - `const IMG_BILINEAR_FIXED`
+    - `const IMG_BICUBIC`
+    - `const IMG_BICUBIC_FIXED`
+    - `const IMG_BLACKMAN`
+    - `const IMG_BOX`
+    - `const IMG_BSPLINE`
+    - `const IMG_CATMULLROM`
+    - `const IMG_GAUSSIAN`
+    - `const IMG_GENERALIZED_CUBIC`
+    - `const IMG_HERMITE`
+    - `const IMG_HAMMING`
+    - `const IMG_HANNING`
+    - `const IMG_MITCHELL`
+    - `const IMG_POWER`
+    - `const IMG_QUADRATIC`
+    - `const IMG_SINC`
+    - `const IMG_NEAREST_NEIGHBOUR`
+    - `const IMG_WEIGHTED4`
+    - `const IMG_TRIANGLE`
+    - `const IMG_AFFINE_TRANSLATE`
+    - `const IMG_AFFINE_SCALE`
+    - `const IMG_AFFINE_ROTATE`
+    - `const IMG_AFFINE_SHEAR_HORIZONTAL`
+    - `const IMG_AFFINE_SHEAR_VERTICAL`
+    - `const IMG_FILTER_SCATTER`
+    - `const PNG_NO_FILTER`
+    - `const PNG_FILTER_NONE`
+    - `const PNG_FILTER_SUB`
+    - `const PNG_FILTER_UP`
+    - `const PNG_FILTER_AVG`
+    - `const PNG_FILTER_PAETH`
+    - `const PNG_ALL_FILTERS`
+??? tiny "[=83% "**exif** 5 / 6"]"
+    - `const EXIF_USE_MBSTRING`
