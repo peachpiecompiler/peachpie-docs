@@ -1,9 +1,9 @@
-!!! tip "PeachPie 1.0.0-dev+79594eef7e8b0fb6cec3a2797a40c230d41eb657 vs. PHP 7.4.0"
+﻿!!! tip "PeachPie 1.0.0-dev+078e7d3b70c7e4856fa2051606a66ebda006d05f vs. PHP 7.4.0"
     Following table compares defined extensions, functions and classes of a regular `php` against `peachpie`. Not implemented entries are listed below each category.
 
 ### Extensions
 
-??? tiny "[=71% "**extensions** 30 / 42"]"
+??? tiny "[=72% "**extensions** 31 / 43"]"
     - `bcmath`
     - `calendar`
     - `readline`
@@ -19,11 +19,9 @@
 
 ### Classes & Functions
 
-??? tiny "[=76% "**json** 34 / 45"]"
+??? tiny "[=80% "**json** 36 / 45"]"
     - `const JSON_PARTIAL_OUTPUT_ON_ERROR`
-    - `const JSON_PRESERVE_ZERO_FRACTION`
     - `const JSON_UNESCAPED_LINE_TERMINATORS`
-    - `const JSON_OBJECT_AS_ARRAY`
     - `const JSON_INVALID_UTF8_IGNORE`
     - `const JSON_INVALID_UTF8_SUBSTITUTE`
     - `const JSON_ERROR_RECURSION`
@@ -31,7 +29,9 @@
     - `const JSON_ERROR_UNSUPPORTED_TYPE`
     - `const JSON_ERROR_INVALID_PROPERTY_NAME`
     - `const JSON_ERROR_UTF16`
-??? tiny "[=82% "**standard** 718 / 874"]"
+??? tiny "[=95% "**fileinfo** 20 / 21"]"
+    - `function finfo::finfo`
+??? tiny "[=82% "**standard** 719 / 874"]"
     - `function phpcredits`
     - `function vfprintf`
     - `function getservbyname`
@@ -75,7 +75,6 @@
     - `function openlog`
     - `function syslog`
     - `function closelog`
-    - `function assert`
     - `function ftok`
     - `function output_add_rewrite_var`
     - `function output_reset_rewrite_vars`
@@ -227,12 +226,10 @@
     - `const ZipArchive::EM_AES_128`
     - `const ZipArchive::EM_AES_192`
     - `const ZipArchive::EM_AES_256`
-??? tiny "[=71% "**date** 135 / 189"]"
-    - `function date_parse_from_format`
+??? tiny "[=74% "**date** 139 / 189"]"
     - `function date_time_set`
     - `function date_date_set`
     - `function date_isodate_set`
-    - `function date_timestamp_get`
     - `function timezone_name_get`
     - `function timezone_name_from_abbr`
     - `function date_interval_format`
@@ -250,10 +247,8 @@
     - `const DateTimeInterface::RFC3339_EXTENDED`
     - `const DateTimeInterface::RSS`
     - `const DateTimeInterface::W3C`
-    - `function DateTime::createFromImmutable`
     - `const DateTime::RFC7231`
     - `const DateTime::RFC3339_EXTENDED`
-    - `function DateTimeImmutable::__construct`
     - `const DateTimeImmutable::ATOM`
     - `const DateTimeImmutable::COOKIE`
     - `const DateTimeImmutable::ISO8601`
@@ -504,10 +499,7 @@
     - `function PharFileInfo::isCRCChecked`
     - `function PharFileInfo::setMetadata`
     - `function PharFileInfo::_bad_state_ex`
-??? tiny "[=96% "**Reflection** 328 / 342"]"
-    - `function ReflectionClass::isIterable`
-    - `function ReflectionObject::isIterable`
-    - `function ReflectionProperty::isInitialized`
+??? tiny "[=97% "**Reflection** 331 / 342"]"
     - `function ReflectionProperty::getType`
     - `function ReflectionProperty::hasType`
     - `class ReflectionZendExtension`
