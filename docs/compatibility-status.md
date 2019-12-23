@@ -1,4 +1,4 @@
-﻿!!! tip "PeachPie 1.0.0-dev+078e7d3b70c7e4856fa2051606a66ebda006d05f vs. PHP 7.4.0"
+﻿!!! tip "PeachPie 0.9.800 vs. PHP 7.4.0"
     Following table compares defined extensions, functions and classes of a regular `php` against `peachpie`. Not implemented entries are listed below each category.
 
 ### Extensions
