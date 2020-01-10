@@ -56,7 +56,7 @@ If element at given position is a UTF16 character, the result of the operation i
 
 The string value can be outputted using standard functions (e.g. `echo`, `print_r`, etc.).
 
-Unicode characters are encoded using current [output encoding](#Output-Encoding). Single-byte elements are outputted as they are.
+Unicode characters are encoded using current [output encoding](#output-encoding). Single-byte elements are outputted as they are.
 
 ### Regular expressions
 
@@ -92,7 +92,7 @@ Console applications are outputting the text using `UTF-8` always.
 
 ### StringEncoding
 
-Internal encoding used for implicit conversion between Unicode characters and byte sequences. It is identical to [Output Encoding](#Output-Encoding). See [Context](/api/ref/context) for more details.
+Internal encoding used for implicit conversion between Unicode characters and byte sequences. It is identical to [Output Encoding](#output-encoding). See [Context](/api/ref/context) for more details.
 
 ## Limitations
 
