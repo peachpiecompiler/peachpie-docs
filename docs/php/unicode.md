@@ -10,7 +10,7 @@ String values are not zero-terminated, hence they can contain `\0` characters wi
 
 ## Source Files
 
-String literals contained in the source code are parsed with respect to the [CodePage](msbuild#codepage) property and transformed into UTF-16 textual values. The encoding used to decode source files is `UTF-8` by default.
+String literals contained in the source code are parsed with respect to the [CodePage](/php/msbuild#codepage) property and transformed into UTF-16 textual values. The encoding used to decode source files is `UTF-8` by default.
 
 ```php
 <?php
@@ -23,7 +23,7 @@ echo "Ahoj světe!";
 $value = "Привет мир!";
 ```
 
-It is recommended to save the source files using UTF-8 encoding, eventually including the UTF Signature (BOM). The BOM is automatically ignored from the source files. If a file are saved using a different encoding, specify the encoding using the [CodePage](msbuild#codepage) property in order to decode the textual values correctly. An incorrect encoding may result in compile-time error (Invalid source file, or [Source file not found](https://github.com/peachpiecompiler/peachpie/issues/601)).
+It is recommended to save the source files using UTF-8 encoding, eventually including the UTF Signature (BOM). The BOM is automatically ignored from the source files. If a file are saved using a different encoding, specify the encoding using the [CodePage](/php/msbuild#codepage) property in order to decode the textual values correctly. An incorrect encoding may result in compile-time error (Invalid source file, or [Source file not found](https://github.com/peachpiecompiler/peachpie/issues/601)).
 
 In this way, string values within the source files are always valid Unicode strings independent on the web server configuration.
 
@@ -32,13 +32,13 @@ In case the string literal contains a byte sequence (denoted with `\x[0-9A-Fa-f]
 ```php
 <?php
 // assigns a string represented as a sequence of bytes
-// When CodePage is default (UTF-8): [48 65 6c 6c 6f 20 0F]
+// [48 65 6c 6c 6f 20 0F]
 $binaryvalue = "Hello \017";
 ```
 
 ## String Operations
 
-Operations respect the Unicode. All the library functions and operators are Unicode-safe by default so they don't break a Unicode string. Operations working with bytes of the given string (e.g. `base64_encode`) will convert given Unicode string to a byte sequence implicitly, using current [StringEncoding](#stringencoding).
+Operations respect the Unicode semantic. All the library functions and operators are Unicode-safe by default so they don't break a Unicode string. Operations working with bytes of the given string (e.g. `base64_encode`) will convert given Unicode string to a byte sequence implicitly, using the current [StringEncoding](#stringencoding).
 
 ### Concatenation
 
@@ -84,7 +84,7 @@ In short, all the encodings are UTF-8 by default. UTF-8 is a recommended encodin
 
 ### CodePage
 
-Property [CodePage](msbuild#codepage) tells the compiler how to decode source files.
+Property [CodePage](/php/msbuild#codepage) tells the compiler how to decode source files.
 
 ### Output Encoding
 
