@@ -25,6 +25,8 @@ $value = "Привет мир!";
 
 It is recommended to save the source files using UTF-8 encoding, eventually including the UTF Signature (BOM). The BOM is automatically ignored from the source files. If a file are saved using a different encoding, specify the encoding using the [CodePage](msbuild#codepage) property in order to decode the textual values correctly. An incorrect encoding may result in compile-time error (Invalid source file, or [Source file not found](https://github.com/peachpiecompiler/peachpie/issues/601)).
 
+In this way, string values within the source files are always valid Unicode strings independent on the web server configuration.
+
 In case the string literal contains a byte sequence (denoted with `\x[0-9A-Fa-f]{1,2}` or `\[0-7]{1,3}`), the string value is represented with byte array.
 
 ```php
@@ -62,7 +64,7 @@ Unicode characters are encoded using current [output encoding](#output-encoding)
 
 PCRE functions always convert input string values to Unicode text if they are not in Unicode yet.
 
-## Database
+### Database
 
 Database drivers are Unicode-safe as well. Any text value passed into or read from the database is a Unicode string. BLOB values remain as byte sequences.
 
