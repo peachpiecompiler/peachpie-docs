@@ -13,6 +13,7 @@ String values are not zero-terminated, hence they can contain `\0` characters wi
 String literals contained in the source code are parsed with respect to the [CodePage](msbuild#codepage) property and transformed into UTF-16 textual values. The encoding used to decode source files is `UTF-8` by default.
 
 ```php
+<?php
 // outputs the Unicode string
 // the text is safely encoded using current output encoding
 echo "Ahoj světe!";
@@ -27,6 +28,7 @@ It is recommended to save the source files using UTF-8 encoding, eventually incl
 In case the string literal contains a byte sequence (denoted with `\x[0-9A-Fa-f]{1,2}` or `\[0-7]{1,3}`), the string value is represented with byte array.
 
 ```php
+<?php
 // assigns a string represented as a sequence of bytes
 // When CodePage is default (UTF-8): [48 65 6c 6c 6f 20 0F]
 $binaryvalue = "Hello \017";
