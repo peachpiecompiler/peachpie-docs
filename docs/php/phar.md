@@ -4,10 +4,12 @@ Phar is PHP's unique way of packing libraries or applications into a single file
 
 ## Phar compilation
 
-File with the extension `.phar` can be included into the compilation, like any other source file.
+File with the extension `.phar` can be included into the compilation within [the project file](msbuild), like any other source file.
 
 ```xml
-<Compile Include="**/*.phar" />
+<ItemGroup>
+  <Compile Include="**/*.phar" />
+</ItemGroup>
 ```
 
 ### Remarks
