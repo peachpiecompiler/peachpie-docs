@@ -42,7 +42,7 @@ Operations respect the Unicode semantic. All the library functions and operators
 
 ### Concatenation
 
-The operator for the string concatenation (`.`) concatenates the given string values. It doesn't change their internal representation nor does it perform any implicit conversion. If one of the operands is a Unicode string and the other is a byte sequence, the operation is concatenated as it is, resulting in a string value consisting of both - Unicode text followed by a single byte sequence.
+The operator for the string concatenation (`.`) concatenates the given string values. If one of the operands is a Unicode string and the other is a byte sequence, the operands are concatenated as they are, resulting in a string value consisting of both - Unicode text followed by a byte sequence.
 
 ### String length
 
