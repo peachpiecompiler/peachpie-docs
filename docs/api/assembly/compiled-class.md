@@ -62,7 +62,7 @@ The class also contains the following fields used by both the compiler and runti
 * `#!c# protected Context <ctx>`<br/>holds the reference to the owning [Context](/api/ref/context) instance.
 * `#!c# internal PhpArray <runtimeFields>`<br/>holds dynamic class fields; is `null` by default.
 * `#!c# IPhpCallable.Invoke(Context, PhpValue[])`<br/>implementation of the [IPhpCallable](/api/ref/iphpcallable) interface in case the class implements the magic `__invoke` function.
-* `#!c# class __statics` { ... }<br/>nested container for actual instances of PHP static fields. This is used by the runtime to manage different values of static fields for each [Context](/api/ref/context) (typically an HTTP Request).
+* `#!c# class _statics` { ... }<br/>nested container for actual instances of PHP static fields. This is used by the runtime to manage different values of static fields for each [Context](/api/ref/context) (typically an HTTP Request).
 
 ## Methods
 
