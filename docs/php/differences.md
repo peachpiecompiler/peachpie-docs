@@ -1,4 +1,4 @@
-# Well-Known Differentces
+# Well-Known Differences
 
 ## PEACHPIE_VERSION
 
