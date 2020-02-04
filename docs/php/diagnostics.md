@@ -48,3 +48,4 @@ Code | Description | Reason
 ---- | ----------- | ------
 PHP6001 | Eval discouraged | Use of `eval()` is not recommended; it allows for suspicious and dangerous code injections and causes significant overhead to the .NET runtime.
 PHP6003 | Wrong letter case in class name | Specified class name does not match exactly the declared class name.
+PHP6005 | Wrong letter case in function override | Overriden function name does not match it's parent name. This causes an unnecessary emitted stub and override in CLI metadata.
