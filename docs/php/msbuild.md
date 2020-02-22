@@ -76,6 +76,18 @@ Disables specific warning messages. The warnings are identified by their ID (e.g
 ```
 The sample above disables the reporting of a call of an undefined function and declaring a mandatory parameter behind an optional parameter.
 
+### DefineConstants
+
+Defines constants in compile-time. The value of the property is a semicolon-separated list of name=value pairs. If the value is not specified, the constant is assumed to have a boolean value `TRUE`. Constant names cannot be namespaced, only simple names are allowed.
+
+```xml
+<DefineConstants>DEBUG;TRACE;INC_PATH="inc";FUNC_PATH="inc/functions"</DefineConstants>
+```
+
+Provided constants get defined in the compiled program. Defining constants is equivalent to calling `define(name, value);` before the script execution. Defining constants using the `$(DefineConstants)` property has performance advantages since the values may be evaluated in compile time.
+
+> Available since `0.9.900`
+
 ### CodePage
 
 Specifies an encoding to be used to parse source files. By default, the code page is `UTF-8`.
