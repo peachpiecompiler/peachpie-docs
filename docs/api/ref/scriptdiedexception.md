@@ -18,6 +18,7 @@ Message | `Status` converted to a string.
 When `exit` or `die` commands are being debugged, they might result in the debugger to break on `Pchp.Core.ScriptDiedException`.
 
 ![](../../img/vs-scriptdiedexception.png)
+
 *Exception handled in Visual Studio.*
 
 It is recommended to ignore the exception (Untick `Break when this exception type is thrown` in Visual Studio, or similarly in other development environments).
