@@ -38,7 +38,11 @@ In the project menu, choose `Build`. In case of any issue, see the `Output` pane
 
 ### Debug the app
 
-Choose the green `Start` button or press `F5` to build and debug the application. In case of console application and no error, you'll see a console window with "Hello World!" text:
+Choose the green `Start` button or press `F5` to build and debug the application.
+
+![](/img/vs-program-debug-button.png)
+
+In case of console application and no error, you'll see a console window with the "Hello World!" text:
 
 ```shell
 Hello World!
