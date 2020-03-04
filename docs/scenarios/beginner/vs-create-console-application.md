@@ -92,7 +92,7 @@ Find the line with
 
 and change it to following
 
- ```xml
+```xml
 <StartupObject>main</StartupObject>
 ```
 
