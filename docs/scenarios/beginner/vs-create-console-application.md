@@ -1,4 +1,4 @@
-# Create an Executable Console Application
+# Console App in Visual Studio
 
 This tutorial describes how to create, run and debug a console application in Visual Studio. Assuming you have installed following:
 
