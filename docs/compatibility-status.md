@@ -1,9 +1,10 @@
-﻿!!! tip "PeachPie 0.9.900 vs. PHP 7.4.1"
+﻿!!! tip "PeachPie 0.9.920 vs. PHP 7.4.1"
     Following table compares defined extensions, functions and classes of a regular `php` against `peachpie`. Not implemented entries are listed below each category.
 
 ### Extensions
 
 ??? tiny "[=80% "**extensions** 34 / 43"]"
+    missing:
     - `bcmath`
     - `calendar`
     - `readline`
@@ -17,6 +18,7 @@
 ### Classes & Functions
 
 ??? tiny "[=80% "**json** 36 / 45"]"
+    missing:
     - `const JSON_PARTIAL_OUTPUT_ON_ERROR`
     - `const JSON_UNESCAPED_LINE_TERMINATORS`
     - `const JSON_INVALID_UTF8_IGNORE`
@@ -27,8 +29,10 @@
     - `const JSON_ERROR_INVALID_PROPERTY_NAME`
     - `const JSON_ERROR_UTF16`
 ??? tiny "[=95% "**fileinfo** 20 / 21"]"
+    missing:
     - `function finfo::finfo`
 ??? tiny "[=83% "**standard** 724 / 874"]"
+    missing:
     - `function phpcredits`
     - `function vfprintf`
     - `function getservbyname`
@@ -180,6 +184,7 @@
     - `const DNS_NAPTR`
     - `const DNS_A6`
 ??? tiny "[=28% "**hash** 15 / 54"]"
+    missing:
     - `function hash_hmac_algos`
     - `function hash_hkdf`
     - `function mhash_keygen_s2k`
@@ -222,6 +227,7 @@
 ??? tiny "[=100% "**session** 46 / 46"]"
     happy face
 ??? tiny "[=73% "**zip** 95 / 131"]"
+    missing:
     - `const ZipArchive::FL_ENC_GUESS`
     - `const ZipArchive::FL_ENC_RAW`
     - `const ZipArchive::FL_ENC_STRICT`
@@ -258,11 +264,11 @@
     - `const ZipArchive::EM_AES_128`
     - `const ZipArchive::EM_AES_192`
     - `const ZipArchive::EM_AES_256`
-??? tiny "[=87% "**date** 164 / 189"]"
+??? tiny "[=87% "**date** 165 / 189"]"
+    missing:
     - `function date_time_set`
     - `function date_date_set`
     - `function date_isodate_set`
-    - `function timezone_name_from_abbr`
     - `function date_interval_format`
     - `function date_sun_info`
     - `const DateTimeInterface::RFC7231`
@@ -277,6 +283,7 @@
     - `function DateInterval::__set_state`
     - `class DatePeriod`
 ??? tiny "[=20% "**phar** 59 / 288"]"
+    missing:
     - `function Phar::__destruct`
     - `function Phar::addEmptyDir`
     - `function Phar::addFile`
@@ -507,10 +514,12 @@
     - `function PharFileInfo::setMetadata`
     - `function PharFileInfo::_bad_state_ex`
 ??? tiny "[=97% "**Reflection** 331 / 342"]"
+    missing:
     - `function ReflectionProperty::getType`
     - `function ReflectionProperty::hasType`
     - `class ReflectionZendExtension`
 ??? tiny "[=70% "**Core** 219 / 312"]"
+    missing:
     - `function get_mangled_object_vars`
     - `function get_resources`
     - `function gc_status`
@@ -562,6 +571,7 @@
     - `const PHP_OUTPUT_HANDLER_DISABLED`
     - `const PHP_CLI_PROCESS_TITLE`
 ??? tiny "[=99% "**SPL** 1096 / 1103"]"
+    missing:
     - `function SplFileInfo::_bad_state_ex`
     - `function DirectoryIterator::_bad_state_ex`
     - `function FilesystemIterator::_bad_state_ex`
@@ -570,6 +580,7 @@
     - `function SplFileObject::_bad_state_ex`
     - `function SplTempFileObject::_bad_state_ex`
 ??? tiny "[=83% "**libxml** 29 / 35"]"
+    missing:
     - `function libxml_set_external_entity_loader`
     - `const LIBXML_LOADED_VERSION`
     - `const LIBXML_PEDANTIC`
@@ -577,6 +588,7 @@
     - `const LIBXML_HTML_NOIMPLIED`
     - `const LIBXML_HTML_NODEFDTD`
 ??? tiny "[=37% "**mysqli** 114 / 309"]"
+    missing:
     - `function mysqli_autocommit`
     - `function mysqli_begin_transaction`
     - `function mysqli_change_user`
@@ -773,6 +785,7 @@
     - `const MYSQLI_TRANS_COR_RELEASE`
     - `const MYSQLI_TRANS_COR_NO_RELEASE`
 ??? tiny "[=85% "**curl** 508 / 601"]"
+    missing:
     - `function curl_copy_handle`
     - `function curl_strerror`
     - `function curl_share_strerror`
@@ -867,6 +880,7 @@
     - `const CURLOPT_TLS13_CIPHERS`
     - `const CURL_VERSION_ALTSVC`
 ??? tiny "[=76% "**pdo** 110 / 144"]"
+    missing:
     - `const PDO::PARAM_STR_NATL`
     - `const PDO::PARAM_STR_CHAR`
     - `const PDO::PARAM_EVT_ALLOC`
@@ -902,6 +916,7 @@
     - `const PDO::SQLITE_ATTR_EXTENDED_RESULT_CODES`
     - `class PDORow`
 ??? tiny "[=80% "**dom** 413 / 516"]"
+    missing:
     - `class DOMStringList`
     - `class DOMNameList`
     - `class DOMImplementationList`
@@ -996,11 +1011,13 @@
     - `class DOMStringExtend`
     - `const DOM_PHP_ERR`
 ??? tiny "[=42% "**simplexml** 17 / 40"]"
+    missing:
     - `function SimpleXMLElement::saveXML`
     - `class SimpleXMLIterator`
 ??? tiny "[=100% "**xmlreader** 48 / 48"]"
     happy face
 ??? tiny "[=51% "**xmlwriter** 43 / 85"]"
+    missing:
     - `function xmlwriter_open_uri`
     - `function xmlwriter_open_memory`
     - `function xmlwriter_set_indent`
@@ -1044,6 +1061,7 @@
     - `function xmlwriter_output_memory`
     - `function xmlwriter_flush`
 ??? tiny "[=48% "**xsl** 13 / 27"]"
+    missing:
     - `function XSLTProcessor::setProfiling`
     - `function XSLTProcessor::setSecurityPrefs`
     - `function XSLTProcessor::getSecurityPrefs`
@@ -1061,26 +1079,34 @@
 ??? tiny "[=100% "**ctype** 11 / 11"]"
     happy face
 ??? tiny "[=99% "**tokenizer** 139 / 140"]"
+    missing:
     - `const T_BAD_CHARACTER`
 ??? tiny "[=86% "**pcre** 25 / 29"]"
+    missing:
     - `function preg_filter`
     - `const PCRE_VERSION_MAJOR`
     - `const PCRE_VERSION_MINOR`
     - `const PCRE_JIT_SUPPORT`
 ??? tiny "[=91% "**filter** 59 / 65"]"
+    missing:
     - `const FILTER_VALIDATE_DOMAIN`
     - `const FILTER_VALIDATE_MAC`
     - `const FILTER_SANITIZE_FULL_SPECIAL_CHARS`
     - `const FILTER_SANITIZE_ADD_SLASHES`
     - `const FILTER_FLAG_STRIP_BACKTICK`
     - `const FILTER_FLAG_EMAIL_UNICODE`
+??? tiny "[=98% "**ftp** 46 / 47"]"
+    missing:
+    - `function ftp_exec`
 ??? tiny "[=100% "**gettext** 10 / 10"]"
     happy face
 ??? tiny "[=79% "**iconv** 11 / 14"]"
+    missing:
     - `function iconv_mime_encode`
     - `function iconv_mime_decode`
     - `function iconv_mime_decode_headers`
 ??? tiny "[=55% "**mbstring** 47 / 85"]"
+    missing:
     - `function mb_output_handler`
     - `function mb_encoding_aliases`
     - `function mb_convert_kana`
@@ -1119,7 +1145,8 @@
     - `function mbereg_search_getpos`
     - `function mbereg_search_setpos`
     - `const MB_ONIGURUMA_VERSION`
-??? tiny "[=25% "**openssl** 26 / 105"]"
+??? tiny "[=26% "**openssl** 27 / 105"]"
+    missing:
     - `function openssl_get_cert_locations`
     - `function openssl_spki_new`
     - `function openssl_spki_verify`
@@ -1197,12 +1224,13 @@
     - `const OPENSSL_CIPHER_AES_128_CBC`
     - `const OPENSSL_CIPHER_AES_192_CBC`
     - `const OPENSSL_CIPHER_AES_256_CBC`
-    - `const OPENSSL_DONT_ZERO_PAD_KEY`
     - `const OPENSSL_TLSEXT_SERVER_NAME`
 ??? tiny "[=96% "**xml** 47 / 49"]"
+    missing:
     - `function xml_set_unparsed_entity_decl_handler`
     - `const XML_SAX_IMPL`
 ??? tiny "[=43% "**zlib** 25 / 58"]"
+    missing:
     - `function zlib_encode`
     - `function zlib_decode`
     - `function deflate_init`
@@ -1237,6 +1265,7 @@
     - `const ZLIB_BUF_ERROR`
     - `const ZLIB_VERSION_ERROR`
 ??? tiny "[=52% "**gd** 102 / 195"]"
+    missing:
     - `function imagechar`
     - `function imagecharup`
     - `function imagepalettecopy`
