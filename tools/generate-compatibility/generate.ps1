@@ -22,15 +22,13 @@ function progress {
   "??? tiny ""[=$( [int](100 * $progress / $php.count) )% ""**$title** $progress / $($php.count)""]"""
 
   if ($missing.count -eq 0) {
-    "    happy face"
+    "    	happy face‬"
   } else {
-    "    missing |"
-    "    --- |"
     foreach ($item in $missing) {
       if ($item -match "\w+\s+(\w+)::" -and $missing.contains("class $($Matches.1)")) {
         continue; # containing class was already reported, do not report its member functions
       }
-      "    ``$item`` |"
+      "    - ``$item``"
     }
   }
 }
