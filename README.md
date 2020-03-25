@@ -1,2 +1,9 @@
 # peachpie-docs
-Documentation of the PeachPie project.
+
+Documentation for the PeachPie platform.
+
+## run locally:
+
+```shell
+mkdocs serve
+```
