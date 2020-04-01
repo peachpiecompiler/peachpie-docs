@@ -56,6 +56,6 @@ dotnet build
 
 ## Related links
 
-- [Using compiled project in C#](using-package.md)
+- [Using compiled project in C#](reference-php-project.md)
 - [NuGet pack and restore as MSBuild targets](https://docs.microsoft.com/en-us/nuget/reference/msbuild-targets) *(docs.microsoft.com)*
 - [Signing NuGet Packages](https://docs.microsoft.com/en-us/nuget/create-packages/sign-a-package) *(docs.microsoft.com)*
