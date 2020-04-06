@@ -1,18 +1,18 @@
-﻿!!! tip "PeachPie 0.9.930 vs. PHP 7.4.1"
+﻿!!! tip "PeachPie 0.9.950 vs. PHP 7.4.1"
     Following table compares defined extensions, functions and classes of a regular `php` against `peachpie`. Not implemented entries are listed below each category.
 
 ### Extensions
 
-??? tiny "[=80% "**extensions** 34 / 43"]"
-    - `bcmath`
-    - `calendar`
-    - `readline`
-    - `mysqlnd`
-    - `xmlrpc`
-    - `soap`
-    - `imap`
-    - `tidy`
-    - `sockets`
+??? tiny "[=80% "**extensions** 34 / 43"]" 
+    - `bcmath` 
+    - `calendar` 
+    - `readline` 
+    - `mysqlnd` 
+    - `xmlrpc` 
+    - `soap` 
+    - `imap` 
+    - `tidy` 
+    - `sockets` 
 
 ### Classes & Functions
 
@@ -28,7 +28,7 @@
     - `const JSON_ERROR_UTF16`
 ??? tiny "[=95% "**fileinfo** 20 / 21"]"
     - `function finfo::finfo`
-??? tiny "[=83% "**standard** 724 / 874"]"
+??? tiny "[=83% "**standard** 729 / 874"]"
     - `function phpcredits`
     - `function vfprintf`
     - `function getservbyname`
@@ -44,20 +44,15 @@
     - `function debug_zval_dump`
     - `function register_tick_function`
     - `function unregister_tick_function`
-    - `function highlight_file`
-    - `function show_source`
-    - `function highlight_string`
     - `function restore_include_path`
     - `function net_get_interfaces`
     - `function stream_context_get_params`
     - `function stream_context_get_default`
     - `function stream_context_set_default`
-    - `function stream_filter_remove`
     - `function stream_socket_enable_crypto`
     - `function stream_socket_shutdown`
     - `function stream_socket_pair`
     - `function stream_supports_lock`
-    - `function stream_isatty`
     - `function sapi_windows_vt100_support`
     - `function get_meta_tags`
     - `function stream_set_read_buffer`
@@ -258,18 +253,12 @@
     - `const ZipArchive::EM_AES_128`
     - `const ZipArchive::EM_AES_192`
     - `const ZipArchive::EM_AES_256`
-??? tiny "[=87% "**date** 165 / 189"]"
+??? tiny "[=90% "**date** 171 / 189"]"
     - `function date_time_set`
     - `function date_date_set`
     - `function date_isodate_set`
     - `function date_interval_format`
     - `function date_sun_info`
-    - `const DateTimeInterface::RFC7231`
-    - `const DateTimeInterface::RFC3339_EXTENDED`
-    - `const DateTime::RFC7231`
-    - `const DateTime::RFC3339_EXTENDED`
-    - `const DateTimeImmutable::RFC7231`
-    - `const DateTimeImmutable::RFC3339_EXTENDED`
     - `function DateTimeZone::__wakeup`
     - `function DateTimeZone::__set_state`
     - `function DateInterval::__wakeup`
@@ -509,20 +498,17 @@
     - `function ReflectionProperty::getType`
     - `function ReflectionProperty::hasType`
     - `class ReflectionZendExtension`
-??? tiny "[=70% "**Core** 219 / 312"]"
+??? tiny "[=79% "**Core** 245 / 312"]"
     - `function get_mangled_object_vars`
     - `function get_resources`
     - `function gc_status`
     - `class ArgumentCountError`
-    - `class ArithmeticError`
-    - `class DivisionByZeroError`
     - `class ClosedGeneratorException`
-    - `class WeakReference`
+    - `function WeakReference::__construct`
     - `const ZEND_THREAD_SAFE`
     - `const ZEND_DEBUG_BUILD`
     - `const PHP_WINDOWS_EVENT_CTRL_C`
     - `const PHP_WINDOWS_EVENT_CTRL_BREAK`
-    - `const PHP_ZTS`
     - `const DEFAULT_INCLUDE_PATH`
     - `const PEAR_INSTALL_DIR`
     - `const PEAR_EXTENSION_DIR`
@@ -900,7 +886,7 @@
     - `const PDO::SQLITE_ATTR_READONLY_STATEMENT`
     - `const PDO::SQLITE_ATTR_EXTENDED_RESULT_CODES`
     - `class PDORow`
-??? tiny "[=80% "**dom** 413 / 516"]"
+??? tiny "[=81% "**dom** 416 / 516"]"
     - `class DOMStringList`
     - `class DOMNameList`
     - `class DOMImplementationList`
@@ -922,8 +908,6 @@
     - `function DOMDocument::getFeature`
     - `function DOMDocument::setUserData`
     - `function DOMDocument::getUserData`
-    - `function DOMNodeList::count`
-    - `function DOMNamedNodeMap::count`
     - `function DOMCharacterData::compareDocumentPosition`
     - `function DOMCharacterData::isEqualNode`
     - `function DOMCharacterData::getFeature`
@@ -993,7 +977,6 @@
     - `function DOMProcessingInstruction::setUserData`
     - `function DOMProcessingInstruction::getUserData`
     - `class DOMStringExtend`
-    - `const DOM_PHP_ERR`
 ??? tiny "[=42% "**simplexml** 17 / 40"]"
     - `function SimpleXMLElement::saveXML`
     - `class SimpleXMLIterator`
@@ -1061,11 +1044,8 @@
     	happy faceâ€¬
 ??? tiny "[=99% "**tokenizer** 139 / 140"]"
     - `const T_BAD_CHARACTER`
-??? tiny "[=86% "**pcre** 25 / 29"]"
+??? tiny "[=97% "**pcre** 28 / 29"]"
     - `function preg_filter`
-    - `const PCRE_VERSION_MAJOR`
-    - `const PCRE_VERSION_MINOR`
-    - `const PCRE_JIT_SUPPORT`
 ??? tiny "[=91% "**filter** 59 / 65"]"
     - `const FILTER_VALIDATE_DOMAIN`
     - `const FILTER_VALIDATE_MAC`
@@ -1073,14 +1053,10 @@
     - `const FILTER_SANITIZE_ADD_SLASHES`
     - `const FILTER_FLAG_STRIP_BACKTICK`
     - `const FILTER_FLAG_EMAIL_UNICODE`
-??? tiny "[=98% "**ftp** 46 / 47"]"
-    - `function ftp_exec`
 ??? tiny "[=100% "**gettext** 10 / 10"]"
     	happy faceâ€¬
-??? tiny "[=79% "**iconv** 11 / 14"]"
-    - `function iconv_mime_encode`
-    - `function iconv_mime_decode`
-    - `function iconv_mime_decode_headers`
+??? tiny "[=100% "**iconv** 14 / 14"]"
+    	happy faceâ€¬
 ??? tiny "[=55% "**mbstring** 47 / 85"]"
     - `function mb_output_handler`
     - `function mb_encoding_aliases`
