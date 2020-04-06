@@ -215,7 +215,7 @@
     - `const MHASH_JOAAT`
     - `const MHASH_CRC32C`
 ??? tiny "[=100% "**session** 46 / 46"]"
-    	happy faceâ€¬
+    	happy face
 ??? tiny "[=73% "**zip** 95 / 131"]"
     - `const ZipArchive::FL_ENC_GUESS`
     - `const ZipArchive::FL_ENC_RAW`
@@ -981,7 +981,7 @@
     - `function SimpleXMLElement::saveXML`
     - `class SimpleXMLIterator`
 ??? tiny "[=100% "**xmlreader** 48 / 48"]"
-    	happy faceâ€¬
+    	happy face
 ??? tiny "[=51% "**xmlwriter** 43 / 85"]"
     - `function xmlwriter_open_uri`
     - `function xmlwriter_open_memory`
@@ -1041,7 +1041,7 @@
     - `const LIBEXSLT_VERSION`
     - `const LIBEXSLT_DOTTED_VERSION`
 ??? tiny "[=100% "**ctype** 11 / 11"]"
-    	happy faceâ€¬
+    	happy face
 ??? tiny "[=99% "**tokenizer** 139 / 140"]"
     - `const T_BAD_CHARACTER`
 ??? tiny "[=97% "**pcre** 28 / 29"]"
@@ -1054,9 +1054,9 @@
     - `const FILTER_FLAG_STRIP_BACKTICK`
     - `const FILTER_FLAG_EMAIL_UNICODE`
 ??? tiny "[=100% "**gettext** 10 / 10"]"
-    	happy faceâ€¬
+    	happy face
 ??? tiny "[=100% "**iconv** 14 / 14"]"
-    	happy faceâ€¬
+    	happy face
 ??? tiny "[=55% "**mbstring** 47 / 85"]"
     - `function mb_output_handler`
     - `function mb_encoding_aliases`
@@ -1307,4 +1307,4 @@
     - `const PNG_FILTER_PAETH`
     - `const PNG_ALL_FILTERS`
 ??? tiny "[=100% "**exif** 6 / 6"]"
-    	happy faceâ€¬
+    	happy face
