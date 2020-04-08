@@ -25,7 +25,7 @@ public class X {
   // Constructor used internally to initialize the class without calling the `__construct` function.
   [EditorBrowsable(EditorBrowsableState.Never)]
   [CompilerGenerated, PhpFieldsOnlyCtor]
-  protected internal X(Context <ctx>, QueryValue`1 _) : base() {
+  protected internal X(Context <ctx>, DummyFieldsOnlyCtor _) : base() {
     this.<ctx> = <ctx>;
   }  
   // Regular class constructor.
