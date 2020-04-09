@@ -12,7 +12,7 @@ The type information is populated lazily when it is needed by the runtime. Get o
 - `#!c# PhpTypeInfoExtension.GetPhpTypeInfo(this Type type)`
 - `#!c# PhpTypeInfoExtension.GetPhpTypeInfo(this RuntimeTypeHandle handle)`
 - `#!c# PhpTypeInfoExtension.GetPhpTypeInfo(this object instance)`
-- `#!c# Context.GetDeclaredTypes()` retrieves a list of all available types declared within [Context](context).
+- `#!c# Context.GetDeclaredTypes()` retrieves a list of all available types declared within [Context](/api/ref/context/).
 
 ## Properties
 
@@ -27,7 +27,7 @@ Type | Gets the underlaying `#!c# System.Type`.
 BaseType | Gets the reference to the base type.
 RuntimeMethods | Gets a table of the type's methods and accessor to magic methods.
 DeclaredFields | Gets a table of the type's fields, properties and constants.
-RuntimeFieldsHolder | Gets a reference to the type's [special field](/api/assembly/compiled-class#additional-class-members) holding dynamic class properties. The field is of type [PhpArray](phparray).
+RuntimeFieldsHolder | Gets a reference to the type's [special field](/api/assembly/compiled-class#additional-class-members) holding dynamic class properties. The field is of type [PhpArray](/api/ref/phparray/).
 
 ## Related links
 

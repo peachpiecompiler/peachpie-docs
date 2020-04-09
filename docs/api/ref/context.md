@@ -19,17 +19,17 @@ A new instance of `Context` is created in two ways:
 Method | Summary
 ---    | ---
 AddScriptReference(Assembly) | Loads declarations from given [compiled assembly](/api/assembly/compiled-assembly). *(app static)*
-Call(string, [PhpValue](phpvalue)[] args) : [PhpValue](phpvalue) | Dynamically invokes a function declared within the current context.
-Create(string, [PhpValue](phpvalue)[] args) : object | Dynamically instantiates a class declared within the current context.
+Call(string, [PhpValue](/api/ref/phpvalue/)[] args) : [PhpValue](/api/ref/phpvalue/) | Dynamically invokes a function declared within the current context.
+Create(string, [PhpValue](/api/ref/phpvalue/)[] args) : object | Dynamically instantiates a class declared within the current context.
 DeclareFunction(string, Delegate) | Dynamically declares a global function within the current context.
 DeclareScript(string, MainDelegate) | Adds or overwrites a script descriptor by its relative file path. *(app static)*
 DeclareType&lt;T&gt;() | Dynamically declares a CLR type into the current context.
-DefineConstant(string, [PhpValue](phpvalue)) | Defines a global constant within the current context.
+DefineConstant(string, [PhpValue](/api/ref/phpvalue/)) | Defines a global constant within the current context.
 GetDeclaredFunctions() : IEnumerable&lt;RoutineInfo&gt; | Enumerates global functions declared within the current context.
 GetDeclaredType(string) : PhpTypeInfo | Gets type descriptor representing a type declared within the current context. Optionally performs autoload process if necessary.
 GetDeclaredTypes() : IEnumerable&lt;PhpTypeInfo&gt; | Enumerates types declared within the current context.
 GetIncludedScripts() : IEnumerable&lt;ScriptInfo&gt; | Enumerates script descriptors representing script files that were included within the current context.
-TryGetConstant(string, out [PhpValue](phpvalue)) : bool | Gets a global constant value defined within the current context.
+TryGetConstant(string, out [PhpValue](/api/ref/phpvalue/)) : bool | Gets a global constant value defined within the current context.
 Dispose() | Ends the life cycle of the context and disposes associated resources.
 
 ## Helper methods
@@ -44,13 +44,13 @@ RootPath : string | An absolute directory path representing the root of all the 
 StringEncoding : Encoding | The encoding used to perform encoding and decoding between byte[] and string. Used for scripts output (echo), and internal string encoding. Default and recommended value is `UTF-8`.
 HttpPhpContext : IHttpPhpContext | Gets instance of an interface providing web application APIs. Gets `null` reference for non-web applications.
 Output : TextWriter | Gets the output stream used for `echo` and other output routines.
-Globals : [PhpArray](phparray) | Gets or sets an array representing PHP's `$GLOBALS`.
-Server : [PhpArray](phparray) | Gets or sets an array representing PHP's `$_SERVER`.
-Session : [PhpArray](phparray) | Gets or sets an array representing PHP's `$_SESSION`.
-Cookie : [PhpArray](phparray) | Gets or sets an array representing PHP's `$_COOKIE`.
-Get : [PhpArray](phparray) | Gets or sets an array representing PHP's `$_GET`.
-Post : [PhpArray](phparray) | Gets or sets an array representing PHP's `$_POST`.
-Request : [PhpArray](phparray) | Gets or sets an array representing PHP's `$_REQUEST`.
+Globals : [PhpArray](/api/ref/phparray/) | Gets or sets an array representing PHP's `$GLOBALS`.
+Server : [PhpArray](/api/ref/phparray/) | Gets or sets an array representing PHP's `$_SERVER`.
+Session : [PhpArray](/api/ref/phparray/) | Gets or sets an array representing PHP's `$_SESSION`.
+Cookie : [PhpArray](/api/ref/phparray/) | Gets or sets an array representing PHP's `$_COOKIE`.
+Get : [PhpArray](/api/ref/phparray/) | Gets or sets an array representing PHP's `$_GET`.
+Post : [PhpArray](/api/ref/phparray/) | Gets or sets an array representing PHP's `$_POST`.
+Request : [PhpArray](/api/ref/phparray/) | Gets or sets an array representing PHP's `$_REQUEST`.
 
 ## Remarks
 

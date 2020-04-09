@@ -8,9 +8,9 @@ The interface represents an abstraction of a value converted to `callable`. It i
 
 From | Method
 ---  | ---
-[PhpValue](phpvalue) | `#!c# value.AsCallable()`<br/>Casts given value to a callable according to PHP semantics. Can result in a reference to invalid `PhpCallback`.
+[PhpValue](/api/ref/phpvalue/) | `#!c# value.AsCallable()`<br/>Casts given value to a callable according to PHP semantics. Can result in a reference to invalid `PhpCallback`.
 `#!c# System.Delegate` | `#!c# RoutineInfo.CreateUserRoutine(name, delegate)`<br/>Creates callable to a delegate.
-`#!c# string` | `#!c# PhpCallback.Create(name)`<br/>Creates callable to a declared function. When the callable is invoked, function gets resolved within given [Context](context).
+`#!c# string` | `#!c# PhpCallback.Create(name)`<br/>Creates callable to a declared function. When the callable is invoked, function gets resolved within given [Context](/api/ref/context/).
 
 ## Methods
 
@@ -21,7 +21,7 @@ Method | Description
 
 ## Remarks
 
-The list of declared functions is managed as a set of **IPhpCallable** instances by [Context](context).
+The list of declared functions is managed as a set of **IPhpCallable** instances by [Context](/api/ref/context/).
 
 Library functions may accept an argument of type **IPhpCallable**. It is a well known argument type and the compiler and the runtime will convert passed value to **IPhpCallable** implicitly using [construction](#construction).
 
