@@ -23,6 +23,8 @@ theme:
   icon:
     logo: material/home
     repo: fontawesome/brands/github
+  favicon: img/favicon.ico
+  logo: img/logo.png
   features:
     - tabs
     - instant
