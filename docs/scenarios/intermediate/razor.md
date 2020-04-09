@@ -64,7 +64,7 @@ Now you can display the output of your PHP script inside a Razor or Partial View
 
 If you want to pass data to your PHP script, you can do so by specifying the second parameter of the `Php("test.php", model)` method. You can pass the current .NET Model or any other object. To use it, simply refer to `$this` variable in the PHP code. If you are not comfortable with using `$this`, you can take advantage of the PeachPie API and pass any C# variable into a global PHP variable by calling something like:
 ```csharp
-HttpContext.GetOrCreateContext().Globals["mydata"] = (PhpValue)"Hi from C#!";
+HttpContext.GetOrCreateContext().Globals["mydata"] = "Hi from C#!";
 ```
 This code will create a PHP global variable `$mydata`. `GetOrCreateContext()` is an extension method that gets you the PHP Context out of the ASP.NET Core HttpContext.
 
