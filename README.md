@@ -11,7 +11,7 @@ python -m pip install --upgrade pip
 pip install pymdown-extensions
 pip install mkdocs
 pip install mkdocs-awesome-pages-plugin
-pip install mkdocs-material
+pip install mkdocs-material==5.0.1
 ```
 
 ## run locally:

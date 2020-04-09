@@ -33,7 +33,7 @@ details.tiny summary {
   background: none;
 }
 details.tiny summary:before {
-  content: "";
+  content: none;
 }
 details.tiny ul {
   padding-left: 16px;
