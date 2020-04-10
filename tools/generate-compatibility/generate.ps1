@@ -45,18 +45,18 @@ $peachpie = $output_peachpie | ConvertFrom-Json
 
 # prolog
 "!!! tip ""PeachPie $($peachpie.version) vs. PHP $($php.version)"""
-"    Following table compares defined extensions, functions and classes of a regular ``php`` against ``peachpie``. Not implemented entries are listed below each category."
+"    The table lists PHP extensions that the project aims for."
+"    Not implemented functions, classes and constants are listed below the each extension."
 
-""
-"### Extensions"
-""
+# ""
+# "### Extensions"
+# ""
+# # extensions
+# progress "extensions" $php.extensions $peachpie.extensions
 
-# extensions
-progress "extensions" $php.extensions $peachpie.extensions
-
-""
-"### Classes & Functions"
-""
+# ""
+# "### Classes & Functions"
+# ""
 
 $peachpie_all = @()
 
@@ -64,7 +64,7 @@ foreach ($ext in $peachpie.extensions) {
     $peachpie_all = $peachpie_all + $peachpie."ext-$ext"
 }
 
-foreach ($ext in $peachpie.extensions) {
+foreach ($ext in $php.extensions) {
     #if ($php."ext-$ext")
     progress $ext $php."ext-$ext" $peachpie_all #$peachpie."ext-$ext"
 }
