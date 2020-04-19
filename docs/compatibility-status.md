@@ -1,6 +1,6 @@
-﻿!!! tip "PeachPie 0.9.950 vs. PHP 7.4.1"
+﻿!!! tip "PeachPie 0.9.961 vs. PHP 7.4.1"
     The table lists PHP extensions that the project aims for.
-    Not implemented functions, classes and constants are listed within the each extension.
+    Not implemented functions, classes and constants are listed below the each extension.
 ??? tiny "[=79% "**Core** 245 / 312"]"
     - `function get_mangled_object_vars`
     - `function get_resources`
@@ -102,24 +102,16 @@
     - `const CAL_JEWISH_ADD_GERESHAYIM`
 ??? tiny "[=100% "**ctype** 11 / 11"]"
     	happy faceâ€¬
-??? tiny "[=90% "**date** 171 / 189"]"
-    - `function date_time_set`
-    - `function date_date_set`
-    - `function date_isodate_set`
-    - `function date_interval_format`
+??? tiny "[=96% "**date** 182 / 189"]"
     - `function date_sun_info`
     - `function DateTimeZone::__wakeup`
     - `function DateTimeZone::__set_state`
     - `function DateInterval::__wakeup`
     - `function DateInterval::__set_state`
-    - `class DatePeriod`
-??? tiny "[=91% "**filter** 59 / 65"]"
-    - `const FILTER_VALIDATE_DOMAIN`
-    - `const FILTER_VALIDATE_MAC`
-    - `const FILTER_SANITIZE_FULL_SPECIAL_CHARS`
-    - `const FILTER_SANITIZE_ADD_SLASHES`
-    - `const FILTER_FLAG_STRIP_BACKTICK`
-    - `const FILTER_FLAG_EMAIL_UNICODE`
+    - `function DatePeriod::__wakeup`
+    - `function DatePeriod::__set_state`
+??? tiny "[=100% "**filter** 65 / 65"]"
+    	happy faceâ€¬
 ??? tiny "[=28% "**hash** 15 / 54"]"
     - `function hash_hmac_algos`
     - `function hash_hkdf`
@@ -198,7 +190,7 @@
     - `class ReflectionZendExtension`
 ??? tiny "[=100% "**session** 46 / 46"]"
     	happy faceâ€¬
-??? tiny "[=83% "**standard** 729 / 874"]"
+??? tiny "[=85% "**standard** 742 / 874"]"
     - `function phpcredits`
     - `function vfprintf`
     - `function getservbyname`
@@ -211,7 +203,6 @@
     - `function convert_uuencode`
     - `function convert_uudecode`
     - `function getrusage`
-    - `function debug_zval_dump`
     - `function register_tick_function`
     - `function unregister_tick_function`
     - `function restore_include_path`
@@ -292,12 +283,6 @@
     - `const PASSWORD_ARGON2_DEFAULT_TIME_COST`
     - `const PASSWORD_ARGON2_DEFAULT_THREADS`
     - `const PASSWORD_ARGON2_PROVIDER`
-    - `const MT_RAND_MT19937`
-    - `const MT_RAND_PHP`
-    - `const SCANDIR_SORT_ASCENDING`
-    - `const SCANDIR_SORT_DESCENDING`
-    - `const SCANDIR_SORT_NONE`
-    - `const GLOB_AVAILABLE_FLAGS`
     - `const LOG_EMERG`
     - `const LOG_ALERT`
     - `const LOG_CRIT`
@@ -323,7 +308,6 @@
     - `const LOG_NDELAY`
     - `const LOG_NOWAIT`
     - `const LOG_PERROR`
-    - `const ASSERT_EXCEPTION`
     - `const STREAM_OPTION_BLOCKING`
     - `const STREAM_OPTION_READ_TIMEOUT`
     - `const STREAM_OPTION_READ_BUFFER`
@@ -339,11 +323,6 @@
     - `const STREAM_META_GROUP`
     - `const STREAM_META_GROUP_NAME`
     - `const STREAM_META_ACCESS`
-    - `const IMAGETYPE_WEBP`
-    - `const DNS_CAA`
-    - `const DNS_SRV`
-    - `const DNS_NAPTR`
-    - `const DNS_A6`
 ??? tiny "[=99% "**tokenizer** 139 / 140"]"
     - `const T_BAD_CHARACTER`
 ??? tiny "[=73% "**zip** 95 / 131"]"
@@ -915,9 +894,7 @@
     - `function mbereg_search_getpos`
     - `function mbereg_search_setpos`
     - `const MB_ONIGURUMA_VERSION`
-??? tiny "[=100% "**exif** 6 / 6"]"
-    	happy faceâ€¬
-??? tiny "[=52% "**gd** 102 / 195"]"
+??? tiny "[=59% "**gd** 116 / 195"]"
     - `function imagechar`
     - `function imagecharup`
     - `function imagepalettecopy`
@@ -930,11 +907,7 @@
     - `function imagecolorclosestalpha`
     - `function imagegrabwindow`
     - `function imagegrabscreen`
-    - `function imageflip`
-    - `function imagecrop`
     - `function imagecropauto`
-    - `function imagescale`
-    - `function imageaffine`
     - `function imageaffinematrixconcat`
     - `function imageaffinematrixget`
     - `function imagesetinterpolation`
@@ -960,12 +933,6 @@
     - `function imagelayereffect`
     - `function imagexbm`
     - `function imageresolution`
-    - `const IMG_WEBP`
-    - `const IMG_BMP`
-    - `const IMG_TGA`
-    - `const IMG_FLIP_HORIZONTAL`
-    - `const IMG_FLIP_VERTICAL`
-    - `const IMG_FLIP_BOTH`
     - `const IMG_EFFECT_REPLACE`
     - `const IMG_EFFECT_ALPHABLEND`
     - `const IMG_EFFECT_NORMAL`
@@ -979,9 +946,6 @@
     - `const IMG_CROP_THRESHOLD`
     - `const IMG_BELL`
     - `const IMG_BESSEL`
-    - `const IMG_BILINEAR_FIXED`
-    - `const IMG_BICUBIC`
-    - `const IMG_BICUBIC_FIXED`
     - `const IMG_BLACKMAN`
     - `const IMG_BOX`
     - `const IMG_BSPLINE`
@@ -995,7 +959,6 @@
     - `const IMG_POWER`
     - `const IMG_QUADRATIC`
     - `const IMG_SINC`
-    - `const IMG_NEAREST_NEIGHBOUR`
     - `const IMG_WEIGHTED4`
     - `const IMG_TRIANGLE`
     - `const IMG_AFFINE_TRANSLATE`
@@ -1107,8 +1070,8 @@
     - `const CURLOPT_PROXY_TLS13_CIPHERS`
     - `const CURLOPT_TLS13_CIPHERS`
     - `const CURL_VERSION_ALTSVC`
-??? tiny "[=95% "**fileinfo** 20 / 21"]"
-    - `function finfo::finfo`
+??? tiny "[=100% "**exif** 6 / 6"]"
+    	happy faceâ€¬
 ??? tiny "[=0% "**xmlrpc** 0 / 14"]"
     - `function xmlrpc_encode`
     - `function xmlrpc_decode`
@@ -1124,21 +1087,6 @@
     - `function xmlrpc_parse_method_descriptions`
     - `function xmlrpc_server_add_introspection_data`
     - `function xmlrpc_server_register_introspection_callback`
-??? tiny "[=48% "**xsl** 13 / 27"]"
-    - `function XSLTProcessor::setProfiling`
-    - `function XSLTProcessor::setSecurityPrefs`
-    - `function XSLTProcessor::getSecurityPrefs`
-    - `const XSL_SECPREF_NONE`
-    - `const XSL_SECPREF_READ_FILE`
-    - `const XSL_SECPREF_WRITE_FILE`
-    - `const XSL_SECPREF_CREATE_DIRECTORY`
-    - `const XSL_SECPREF_READ_NETWORK`
-    - `const XSL_SECPREF_WRITE_NETWORK`
-    - `const XSL_SECPREF_DEFAULT`
-    - `const LIBXSLT_VERSION`
-    - `const LIBXSLT_DOTTED_VERSION`
-    - `const LIBEXSLT_VERSION`
-    - `const LIBEXSLT_DOTTED_VERSION`
 ??? tiny "[=20% "**Phar** 59 / 288"]"
     - `function Phar::__destruct`
     - `function Phar::addEmptyDir`
@@ -1791,6 +1739,21 @@
     - `const TIDY_NODETYPE_JSTE`
     - `const TIDY_NODETYPE_PHP`
     - `const TIDY_NODETYPE_XMLDECL`
+??? tiny "[=48% "**xsl** 13 / 27"]"
+    - `function XSLTProcessor::setProfiling`
+    - `function XSLTProcessor::setSecurityPrefs`
+    - `function XSLTProcessor::getSecurityPrefs`
+    - `const XSL_SECPREF_NONE`
+    - `const XSL_SECPREF_READ_FILE`
+    - `const XSL_SECPREF_WRITE_FILE`
+    - `const XSL_SECPREF_CREATE_DIRECTORY`
+    - `const XSL_SECPREF_READ_NETWORK`
+    - `const XSL_SECPREF_WRITE_NETWORK`
+    - `const XSL_SECPREF_DEFAULT`
+    - `const LIBXSLT_VERSION`
+    - `const LIBXSLT_DOTTED_VERSION`
+    - `const LIBEXSLT_VERSION`
+    - `const LIBEXSLT_DOTTED_VERSION`
 ??? tiny "[=0% "**sockets** 0 / 155"]"
     - `function socket_select`
     - `function socket_create`
@@ -1947,3 +1910,371 @@
     - `const IPV6_HOPLIMIT`
     - `const IPV6_RECVTCLASS`
     - `const IPV6_TCLASS`
+??? tiny "[=95% "**fileinfo** 20 / 21"]"
+    - `function finfo::finfo`
+??? tiny "[=0% "**intl** 7 / 1751"]"
+    - `function collator_create`
+    - `function collator_compare`
+    - `function collator_get_attribute`
+    - `function collator_set_attribute`
+    - `function collator_get_strength`
+    - `function collator_set_strength`
+    - `function collator_sort`
+    - `function collator_sort_with_sort_keys`
+    - `function collator_asort`
+    - `function collator_get_locale`
+    - `function collator_get_error_code`
+    - `function collator_get_error_message`
+    - `function collator_get_sort_key`
+    - `function numfmt_create`
+    - `function numfmt_format`
+    - `function numfmt_parse`
+    - `function numfmt_format_currency`
+    - `function numfmt_parse_currency`
+    - `function numfmt_set_attribute`
+    - `function numfmt_get_attribute`
+    - `function numfmt_set_text_attribute`
+    - `function numfmt_get_text_attribute`
+    - `function numfmt_set_symbol`
+    - `function numfmt_get_symbol`
+    - `function numfmt_set_pattern`
+    - `function numfmt_get_pattern`
+    - `function numfmt_get_locale`
+    - `function numfmt_get_error_code`
+    - `function numfmt_get_error_message`
+    - `function normalizer_normalize`
+    - `function normalizer_is_normalized`
+    - `function normalizer_get_raw_decomposition`
+    - `function locale_get_default`
+    - `function locale_set_default`
+    - `function locale_get_primary_language`
+    - `function locale_get_script`
+    - `function locale_get_region`
+    - `function locale_get_keywords`
+    - `function locale_get_display_script`
+    - `function locale_get_display_region`
+    - `function locale_get_display_name`
+    - `function locale_get_display_language`
+    - `function locale_get_display_variant`
+    - `function locale_compose`
+    - `function locale_parse`
+    - `function locale_get_all_variants`
+    - `function locale_filter_matches`
+    - `function locale_canonicalize`
+    - `function locale_lookup`
+    - `function locale_accept_from_http`
+    - `function msgfmt_create`
+    - `function msgfmt_format`
+    - `function msgfmt_format_message`
+    - `function msgfmt_parse`
+    - `function msgfmt_parse_message`
+    - `function msgfmt_set_pattern`
+    - `function msgfmt_get_pattern`
+    - `function msgfmt_get_locale`
+    - `function msgfmt_get_error_code`
+    - `function msgfmt_get_error_message`
+    - `function datefmt_create`
+    - `function datefmt_get_datetype`
+    - `function datefmt_get_timetype`
+    - `function datefmt_get_calendar`
+    - `function datefmt_get_calendar_object`
+    - `function datefmt_set_calendar`
+    - `function datefmt_get_locale`
+    - `function datefmt_get_timezone_id`
+    - `function datefmt_get_timezone`
+    - `function datefmt_set_timezone`
+    - `function datefmt_get_pattern`
+    - `function datefmt_set_pattern`
+    - `function datefmt_is_lenient`
+    - `function datefmt_set_lenient`
+    - `function datefmt_format`
+    - `function datefmt_format_object`
+    - `function datefmt_parse`
+    - `function datefmt_localtime`
+    - `function datefmt_get_error_code`
+    - `function datefmt_get_error_message`
+    - `function grapheme_strlen`
+    - `function grapheme_strpos`
+    - `function grapheme_stripos`
+    - `function grapheme_strrpos`
+    - `function grapheme_strripos`
+    - `function grapheme_substr`
+    - `function grapheme_strstr`
+    - `function grapheme_stristr`
+    - `function grapheme_extract`
+    - `function resourcebundle_create`
+    - `function resourcebundle_get`
+    - `function resourcebundle_count`
+    - `function resourcebundle_locales`
+    - `function resourcebundle_get_error_code`
+    - `function resourcebundle_get_error_message`
+    - `function transliterator_create`
+    - `function transliterator_create_from_rules`
+    - `function transliterator_list_ids`
+    - `function transliterator_create_inverse`
+    - `function transliterator_transliterate`
+    - `function transliterator_get_error_code`
+    - `function transliterator_get_error_message`
+    - `function intltz_create_time_zone`
+    - `function intltz_from_date_time_zone`
+    - `function intltz_create_default`
+    - `function intltz_get_id`
+    - `function intltz_get_gmt`
+    - `function intltz_get_unknown`
+    - `function intltz_create_enumeration`
+    - `function intltz_count_equivalent_ids`
+    - `function intltz_create_time_zone_id_enumeration`
+    - `function intltz_get_canonical_id`
+    - `function intltz_get_region`
+    - `function intltz_get_tz_data_version`
+    - `function intltz_get_equivalent_id`
+    - `function intltz_use_daylight_time`
+    - `function intltz_get_offset`
+    - `function intltz_get_raw_offset`
+    - `function intltz_has_same_rules`
+    - `function intltz_get_display_name`
+    - `function intltz_get_dst_savings`
+    - `function intltz_to_date_time_zone`
+    - `function intltz_get_error_code`
+    - `function intltz_get_error_message`
+    - `function intlcal_create_instance`
+    - `function intlcal_get_keyword_values_for_locale`
+    - `function intlcal_get_now`
+    - `function intlcal_get_available_locales`
+    - `function intlcal_get`
+    - `function intlcal_get_time`
+    - `function intlcal_set_time`
+    - `function intlcal_add`
+    - `function intlcal_set_time_zone`
+    - `function intlcal_after`
+    - `function intlcal_before`
+    - `function intlcal_set`
+    - `function intlcal_roll`
+    - `function intlcal_clear`
+    - `function intlcal_field_difference`
+    - `function intlcal_get_actual_maximum`
+    - `function intlcal_get_actual_minimum`
+    - `function intlcal_get_day_of_week_type`
+    - `function intlcal_get_first_day_of_week`
+    - `function intlcal_get_greatest_minimum`
+    - `function intlcal_get_least_maximum`
+    - `function intlcal_get_locale`
+    - `function intlcal_get_maximum`
+    - `function intlcal_get_minimal_days_in_first_week`
+    - `function intlcal_get_minimum`
+    - `function intlcal_get_time_zone`
+    - `function intlcal_get_type`
+    - `function intlcal_get_weekend_transition`
+    - `function intlcal_in_daylight_time`
+    - `function intlcal_is_equivalent_to`
+    - `function intlcal_is_lenient`
+    - `function intlcal_is_set`
+    - `function intlcal_is_weekend`
+    - `function intlcal_set_first_day_of_week`
+    - `function intlcal_set_lenient`
+    - `function intlcal_set_minimal_days_in_first_week`
+    - `function intlcal_equals`
+    - `function intlcal_from_date_time`
+    - `function intlcal_to_date_time`
+    - `function intlcal_get_repeated_wall_time_option`
+    - `function intlcal_get_skipped_wall_time_option`
+    - `function intlcal_set_repeated_wall_time_option`
+    - `function intlcal_set_skipped_wall_time_option`
+    - `function intlcal_get_error_code`
+    - `function intlcal_get_error_message`
+    - `function intlgregcal_create_instance`
+    - `function intlgregcal_set_gregorian_change`
+    - `function intlgregcal_get_gregorian_change`
+    - `function intlgregcal_is_leap_year`
+    - `function intl_get_error_code`
+    - `function intl_get_error_message`
+    - `function intl_is_failure`
+    - `function intl_error_name`
+    - `class Collator`
+    - `class NumberFormatter`
+    - `class Normalizer`
+    - `class Locale`
+    - `class MessageFormatter`
+    - `class IntlDateFormatter`
+    - `class ResourceBundle`
+    - `class Transliterator`
+    - `class IntlTimeZone`
+    - `class IntlCalendar`
+    - `class IntlGregorianCalendar`
+    - `class Spoofchecker`
+    - `class IntlException`
+    - `class IntlIterator`
+    - `class IntlBreakIterator`
+    - `class IntlRuleBasedBreakIterator`
+    - `class IntlCodePointBreakIterator`
+    - `class IntlPartsIterator`
+    - `class UConverter`
+    - `class IntlChar`
+    - `const INTL_MAX_LOCALE_LEN`
+    - `const INTL_ICU_VERSION`
+    - `const INTL_ICU_DATA_VERSION`
+    - `const ULOC_ACTUAL_LOCALE`
+    - `const ULOC_VALID_LOCALE`
+    - `const GRAPHEME_EXTR_COUNT`
+    - `const GRAPHEME_EXTR_MAXBYTES`
+    - `const GRAPHEME_EXTR_MAXCHARS`
+    - `const U_USING_FALLBACK_WARNING`
+    - `const U_ERROR_WARNING_START`
+    - `const U_USING_DEFAULT_WARNING`
+    - `const U_SAFECLONE_ALLOCATED_WARNING`
+    - `const U_STATE_OLD_WARNING`
+    - `const U_STRING_NOT_TERMINATED_WARNING`
+    - `const U_SORT_KEY_TOO_SHORT_WARNING`
+    - `const U_AMBIGUOUS_ALIAS_WARNING`
+    - `const U_DIFFERENT_UCA_VERSION`
+    - `const U_ERROR_WARNING_LIMIT`
+    - `const U_ZERO_ERROR`
+    - `const U_ILLEGAL_ARGUMENT_ERROR`
+    - `const U_MISSING_RESOURCE_ERROR`
+    - `const U_INVALID_FORMAT_ERROR`
+    - `const U_FILE_ACCESS_ERROR`
+    - `const U_INTERNAL_PROGRAM_ERROR`
+    - `const U_MESSAGE_PARSE_ERROR`
+    - `const U_MEMORY_ALLOCATION_ERROR`
+    - `const U_INDEX_OUTOFBOUNDS_ERROR`
+    - `const U_PARSE_ERROR`
+    - `const U_INVALID_CHAR_FOUND`
+    - `const U_TRUNCATED_CHAR_FOUND`
+    - `const U_ILLEGAL_CHAR_FOUND`
+    - `const U_INVALID_TABLE_FORMAT`
+    - `const U_INVALID_TABLE_FILE`
+    - `const U_BUFFER_OVERFLOW_ERROR`
+    - `const U_UNSUPPORTED_ERROR`
+    - `const U_RESOURCE_TYPE_MISMATCH`
+    - `const U_ILLEGAL_ESCAPE_SEQUENCE`
+    - `const U_UNSUPPORTED_ESCAPE_SEQUENCE`
+    - `const U_NO_SPACE_AVAILABLE`
+    - `const U_CE_NOT_FOUND_ERROR`
+    - `const U_PRIMARY_TOO_LONG_ERROR`
+    - `const U_STATE_TOO_OLD_ERROR`
+    - `const U_TOO_MANY_ALIASES_ERROR`
+    - `const U_ENUM_OUT_OF_SYNC_ERROR`
+    - `const U_INVARIANT_CONVERSION_ERROR`
+    - `const U_INVALID_STATE_ERROR`
+    - `const U_COLLATOR_VERSION_MISMATCH`
+    - `const U_USELESS_COLLATOR_ERROR`
+    - `const U_NO_WRITE_PERMISSION`
+    - `const U_STANDARD_ERROR_LIMIT`
+    - `const U_BAD_VARIABLE_DEFINITION`
+    - `const U_PARSE_ERROR_START`
+    - `const U_MALFORMED_RULE`
+    - `const U_MALFORMED_SET`
+    - `const U_MALFORMED_SYMBOL_REFERENCE`
+    - `const U_MALFORMED_UNICODE_ESCAPE`
+    - `const U_MALFORMED_VARIABLE_DEFINITION`
+    - `const U_MALFORMED_VARIABLE_REFERENCE`
+    - `const U_MISMATCHED_SEGMENT_DELIMITERS`
+    - `const U_MISPLACED_ANCHOR_START`
+    - `const U_MISPLACED_CURSOR_OFFSET`
+    - `const U_MISPLACED_QUANTIFIER`
+    - `const U_MISSING_OPERATOR`
+    - `const U_MISSING_SEGMENT_CLOSE`
+    - `const U_MULTIPLE_ANTE_CONTEXTS`
+    - `const U_MULTIPLE_CURSORS`
+    - `const U_MULTIPLE_POST_CONTEXTS`
+    - `const U_TRAILING_BACKSLASH`
+    - `const U_UNDEFINED_SEGMENT_REFERENCE`
+    - `const U_UNDEFINED_VARIABLE`
+    - `const U_UNQUOTED_SPECIAL`
+    - `const U_UNTERMINATED_QUOTE`
+    - `const U_RULE_MASK_ERROR`
+    - `const U_MISPLACED_COMPOUND_FILTER`
+    - `const U_MULTIPLE_COMPOUND_FILTERS`
+    - `const U_INVALID_RBT_SYNTAX`
+    - `const U_INVALID_PROPERTY_PATTERN`
+    - `const U_MALFORMED_PRAGMA`
+    - `const U_UNCLOSED_SEGMENT`
+    - `const U_ILLEGAL_CHAR_IN_SEGMENT`
+    - `const U_VARIABLE_RANGE_EXHAUSTED`
+    - `const U_VARIABLE_RANGE_OVERLAP`
+    - `const U_ILLEGAL_CHARACTER`
+    - `const U_INTERNAL_TRANSLITERATOR_ERROR`
+    - `const U_INVALID_ID`
+    - `const U_INVALID_FUNCTION`
+    - `const U_PARSE_ERROR_LIMIT`
+    - `const U_UNEXPECTED_TOKEN`
+    - `const U_FMT_PARSE_ERROR_START`
+    - `const U_MULTIPLE_DECIMAL_SEPARATORS`
+    - `const U_MULTIPLE_DECIMAL_SEPERATORS`
+    - `const U_MULTIPLE_EXPONENTIAL_SYMBOLS`
+    - `const U_MALFORMED_EXPONENTIAL_PATTERN`
+    - `const U_MULTIPLE_PERCENT_SYMBOLS`
+    - `const U_MULTIPLE_PERMILL_SYMBOLS`
+    - `const U_MULTIPLE_PAD_SPECIFIERS`
+    - `const U_PATTERN_SYNTAX_ERROR`
+    - `const U_ILLEGAL_PAD_POSITION`
+    - `const U_UNMATCHED_BRACES`
+    - `const U_UNSUPPORTED_PROPERTY`
+    - `const U_UNSUPPORTED_ATTRIBUTE`
+    - `const U_FMT_PARSE_ERROR_LIMIT`
+    - `const U_BRK_INTERNAL_ERROR`
+    - `const U_BRK_ERROR_START`
+    - `const U_BRK_HEX_DIGITS_EXPECTED`
+    - `const U_BRK_SEMICOLON_EXPECTED`
+    - `const U_BRK_RULE_SYNTAX`
+    - `const U_BRK_UNCLOSED_SET`
+    - `const U_BRK_ASSIGN_ERROR`
+    - `const U_BRK_VARIABLE_REDFINITION`
+    - `const U_BRK_MISMATCHED_PAREN`
+    - `const U_BRK_NEW_LINE_IN_QUOTED_STRING`
+    - `const U_BRK_UNDEFINED_VARIABLE`
+    - `const U_BRK_INIT_ERROR`
+    - `const U_BRK_RULE_EMPTY_SET`
+    - `const U_BRK_UNRECOGNIZED_OPTION`
+    - `const U_BRK_MALFORMED_RULE_TAG`
+    - `const U_BRK_ERROR_LIMIT`
+    - `const U_REGEX_INTERNAL_ERROR`
+    - `const U_REGEX_ERROR_START`
+    - `const U_REGEX_RULE_SYNTAX`
+    - `const U_REGEX_INVALID_STATE`
+    - `const U_REGEX_BAD_ESCAPE_SEQUENCE`
+    - `const U_REGEX_PROPERTY_SYNTAX`
+    - `const U_REGEX_UNIMPLEMENTED`
+    - `const U_REGEX_MISMATCHED_PAREN`
+    - `const U_REGEX_NUMBER_TOO_BIG`
+    - `const U_REGEX_BAD_INTERVAL`
+    - `const U_REGEX_MAX_LT_MIN`
+    - `const U_REGEX_INVALID_BACK_REF`
+    - `const U_REGEX_INVALID_FLAG`
+    - `const U_REGEX_LOOK_BEHIND_LIMIT`
+    - `const U_REGEX_SET_CONTAINS_STRING`
+    - `const U_REGEX_ERROR_LIMIT`
+    - `const U_IDNA_PROHIBITED_ERROR`
+    - `const U_IDNA_ERROR_START`
+    - `const U_IDNA_UNASSIGNED_ERROR`
+    - `const U_IDNA_CHECK_BIDI_ERROR`
+    - `const U_IDNA_STD3_ASCII_RULES_ERROR`
+    - `const U_IDNA_ACE_PREFIX_ERROR`
+    - `const U_IDNA_VERIFICATION_ERROR`
+    - `const U_IDNA_LABEL_TOO_LONG_ERROR`
+    - `const U_IDNA_ZERO_LENGTH_LABEL_ERROR`
+    - `const U_IDNA_DOMAIN_NAME_TOO_LONG_ERROR`
+    - `const U_IDNA_ERROR_LIMIT`
+    - `const U_STRINGPREP_PROHIBITED_ERROR`
+    - `const U_STRINGPREP_UNASSIGNED_ERROR`
+    - `const U_STRINGPREP_CHECK_BIDI_ERROR`
+    - `const U_ERROR_LIMIT`
+    - `const IDNA_CHECK_BIDI`
+    - `const IDNA_CHECK_CONTEXTJ`
+    - `const IDNA_NONTRANSITIONAL_TO_ASCII`
+    - `const IDNA_NONTRANSITIONAL_TO_UNICODE`
+    - `const IDNA_ERROR_EMPTY_LABEL`
+    - `const IDNA_ERROR_LABEL_TOO_LONG`
+    - `const IDNA_ERROR_DOMAIN_NAME_TOO_LONG`
+    - `const IDNA_ERROR_LEADING_HYPHEN`
+    - `const IDNA_ERROR_TRAILING_HYPHEN`
+    - `const IDNA_ERROR_HYPHEN_3_4`
+    - `const IDNA_ERROR_LEADING_COMBINING_MARK`
+    - `const IDNA_ERROR_DISALLOWED`
+    - `const IDNA_ERROR_PUNYCODE`
+    - `const IDNA_ERROR_LABEL_HAS_DOT`
+    - `const IDNA_ERROR_INVALID_ACE_LABEL`
+    - `const IDNA_ERROR_BIDI`
+    - `const IDNA_ERROR_CONTEXTJ`
+??? tiny "[=98% "**ftp** 46 / 47"]"
+    - `function ftp_exec`
