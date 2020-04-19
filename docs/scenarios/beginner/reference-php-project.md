@@ -24,7 +24,7 @@ First create a project file. It is an XML file with extension `.msbuildproj`, de
 > *`library.msbuildproj`:*
 
 ```xml
-<Project Sdk="Peachpie.NET.Sdk/0.9.950">
+<Project Sdk="Peachpie.NET.Sdk/0.9.961">
   <PropertyGroup>
     <OutputType>library</OutputType>
     <TargetFramework>netstandard2.0</TargetFramework>
