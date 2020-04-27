@@ -34,6 +34,8 @@ function collect() {
             
             foreach ($c->getMethods(ReflectionMethod::IS_PUBLIC) as $m) {
                 /** @var ReflectionMethod $m */
+                if ($c->name == $m->name)
+                    continue; // finfo::finfo, implicit ctor, always defined, should not be in PHP reflection
                 $set[] = "function $c->name::$m->name";
             }
 
