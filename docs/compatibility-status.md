@@ -1,6 +1,6 @@
 ﻿!!! tip "PeachPie 0.9.970 vs. PHP 7.4.1"
     The table lists PHP extensions that the project aims for.
-    Not implemented functions, classes and constants are listed below the each extension.
+    Not implemented functions, classes and constants are listed below each extension.
 ??? tiny "[=86% "**Core** 268 / 312"]"
     - `function get_mangled_object_vars`
     - `function get_resources`
