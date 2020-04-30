@@ -52,3 +52,31 @@ The setup above results in `PackageVersion` property set to `1.2.3-dev`.
 ## Composer Dependencies
 
 > Sections "require", "require-dev" and "suggest" are not processed (yet). Same as the "autoload" section.
+
+## Composer Autoload
+
+Composer autoloading provides standard approach in defining classes automatically. Compiler processes the "autoload" section and tries to avoid autoloading process in the first place. Classes, interfaces and traits fulfiling the autoload map are declared implicitly without need of invoking autoloaders during run time.
+
+In case a source file contains more than just the class itself, autoloading cannot be fully optimized. In such case, containing source file has to be looked up and invoked during run time causing an unnecesary overhead.
+
+> Available since `0.9.971`
+
+*Sample "composer.json":*
+```json
+{
+    "autoload": {
+        "psr-4": {
+            "Vendor\\Namespace\\": "src/",
+            "": "src/",
+        },
+        "psr-0": {
+            "Vendor\\Namespace\\": "src/",
+            "Vendor_Namespace_": "src/"
+        },
+        "classmap": ["src/", "lib/", "Something.php"],
+        "exclude-from-classmap": ["/src/Tests/", "/lib/tests/"]
+    }
+}
+```
+
+This behavior differs from standard PHP where the map above is used to generate autoloaders which are invoked every time when an unknown class, interface or trait is being used in every new web request.
