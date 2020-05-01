@@ -10,12 +10,12 @@ Following table lists composer meta and corresponding project properties being a
 
 Meta | MsBuild Property | Nuspec Value
 ---  | --- | ---
-Name | PackageId | Id
-Description | PackageDescription | Description
-Version | Version, PackageVersion /1/ | Version
-License | PackageLicenseExpression | license
-Homepage | PackageProjectUrl | ProjectUrl
-Authors | Authors | Authors
+"name" | PackageId | Id
+"description" | PackageDescription | Description
+"version" | Version, PackageVersion /1/ | Version
+"license" | PackageLicenseExpression | license
+"homepage" | PackageProjectUrl | ProjectUrl
+"authors" | Authors | Authors
 
 **/1/** Version respects specified `$(VersionSuffix)` property. In case project has non-empty `VersionSuffix`, the resulting `Version` will have the suffix specified even composer's `version` meta does not have it.
 
@@ -51,7 +51,7 @@ The setup above results in `PackageVersion` property set to `1.2.3-dev`.
 
 ## Composer Dependencies
 
-> Sections "require", "require-dev" and "suggest" are not processed (yet). Same as the "autoload" section.
+> Sections "require", "require-dev" and "suggest" are not processed (yet).
 
 ## Composer Autoload
 
