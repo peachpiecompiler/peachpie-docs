@@ -12,7 +12,7 @@ class X {
 ```
 
 ```c#
-[PhpType("X", "index.php")]
+[PhpType("X", "index.php", 0)]
 public class X {
   
   // Reference to Context associated with the current instance.
@@ -72,7 +72,19 @@ Optional parameters (those with an initial value) are translated to correspondin
 
 ## Attributes
 
-The type is annotated with `#!c# [PhpTypeAttribute]`. The attribute contains a fully qualified PHP class name and relative file path where it was declared.
+### PhpTypeAttribute
+
+The type is annotated with `#!c# [PhpTypeAttribute]`. The attribute annotates the type with following properties:
+- *ExplicitTypeName* (string) - fully qualified PHP type name as it appears in PHP context.
+- *FileName* (string) - relative file path where the type was declared.
+- *Autoload* (byte) - flag indicating how was the type set for autoloading. See [composer.json](/php/composer-json/) for enabling the autoload. The values of the flag are:
+  - `0`: the type was not marked as autoloadable.
+  - `1`: the type is set to be autoloaded, but containing file or base types have side effects.
+  - `2`: the type can be safely autoloaded without side effects.
+
+### PhpTraitAttribute
+
+The attribute annotates types of type trait. See [compiled trait](/api/assembly/compiled-trait/) for more details.
 
 ## Remarks
 
