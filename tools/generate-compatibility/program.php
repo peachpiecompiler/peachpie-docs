@@ -31,11 +31,14 @@ function collect() {
         foreach ($re->getClasses() as $c) {
             /** @var ReflectionClass $c */
             $set[] = "class $c->name";
-            
+
             foreach ($c->getMethods(ReflectionMethod::IS_PUBLIC) as $m) {
                 /** @var ReflectionMethod $m */
                 if ($c->name == $m->name)
                     continue; // finfo::finfo, implicit ctor, always defined, should not be in PHP reflection
+                if ($m->name == "_bad_state_ex")
+                    continue; // ignore SplFileInfo::_bad_state_ex() methods, they are dummy and have no meaning
+
                 $set[] = "function $c->name::$m->name";
             }
 
@@ -45,7 +48,7 @@ function collect() {
             }
         }
 
-        foreach ($re->getConstants() as $cname => $cvalue){
+        foreach ($re->getConstants() as $cname => $cvalue) {
             /** @var string $cname */
             $set[] = "const $cname";
         }

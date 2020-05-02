@@ -146,14 +146,8 @@
     - `const JSON_UNESCAPED_LINE_TERMINATORS`
     - `const JSON_INVALID_UTF8_IGNORE`
     - `const JSON_INVALID_UTF8_SUBSTITUTE`
-??? tiny "[=99% "**SPL** 1096 / 1103"]"
-    - `function SplFileInfo::_bad_state_ex`
-    - `function DirectoryIterator::_bad_state_ex`
-    - `function FilesystemIterator::_bad_state_ex`
-    - `function RecursiveDirectoryIterator::_bad_state_ex`
-    - `function GlobIterator::_bad_state_ex`
-    - `function SplFileObject::_bad_state_ex`
-    - `function SplTempFileObject::_bad_state_ex`
+??? tiny "[=100% "**SPL** 1096 / 1096"]"
+    	happy face
 ??? tiny "[=100% "**pcre** 29 / 29"]"
     	happy face
 ??? tiny "[=0% "**readline** 0 / 9"]"
@@ -1070,7 +1064,7 @@
     - `const LIBXSLT_DOTTED_VERSION`
     - `const LIBEXSLT_VERSION`
     - `const LIBEXSLT_DOTTED_VERSION`
-??? tiny "[=20% "**Phar** 59 / 288"]"
+??? tiny "[=21% "**Phar** 59 / 285"]"
     - `function Phar::__destruct`
     - `function Phar::addEmptyDir`
     - `function Phar::addFile`
@@ -1151,7 +1145,6 @@
     - `function Phar::openFile`
     - `function Phar::setFileClass`
     - `function Phar::setInfoClass`
-    - `function Phar::_bad_state_ex`
     - `const Phar::CURRENT_MODE_MASK`
     - `const Phar::CURRENT_AS_PATHNAME`
     - `const Phar::CURRENT_AS_FILEINFO`
@@ -1272,7 +1265,6 @@
     - `function PharData::openFile`
     - `function PharData::setFileClass`
     - `function PharData::setInfoClass`
-    - `function PharData::_bad_state_ex`
     - `const PharData::CURRENT_MODE_MASK`
     - `const PharData::CURRENT_AS_PATHNAME`
     - `const PharData::CURRENT_AS_FILEINFO`
@@ -1299,7 +1291,6 @@
     - `function PharFileInfo::isCompressed`
     - `function PharFileInfo::isCRCChecked`
     - `function PharFileInfo::setMetadata`
-    - `function PharFileInfo::_bad_state_ex`
 ??? tiny "[=0% "**soap** 0 / 120"]"
     - `function use_soap_error_handler`
     - `function is_soap_fault`
