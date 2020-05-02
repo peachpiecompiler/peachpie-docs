@@ -88,7 +88,7 @@
     - `const CAL_JEWISH_ADD_ALAFIM`
     - `const CAL_JEWISH_ADD_GERESHAYIM`
 ??? tiny "[=100% "**ctype** 11 / 11"]"
-    	happy faceâ€¬
+    	happy face
 ??? tiny "[=96% "**date** 182 / 189"]"
     - `function date_sun_info`
     - `function DateTimeZone::__wakeup`
@@ -98,7 +98,7 @@
     - `function DatePeriod::__wakeup`
     - `function DatePeriod::__set_state`
 ??? tiny "[=100% "**filter** 65 / 65"]"
-    	happy faceâ€¬
+    	happy face
 ??? tiny "[=28% "**hash** 15 / 54"]"
     - `function hash_hmac_algos`
     - `function hash_hkdf`
@@ -140,7 +140,7 @@
     - `const MHASH_JOAAT`
     - `const MHASH_CRC32C`
 ??? tiny "[=100% "**iconv** 14 / 14"]"
-    	happy faceâ€¬
+    	happy face
 ??? tiny "[=91% "**json** 41 / 45"]"
     - `const JSON_PARTIAL_OUTPUT_ON_ERROR`
     - `const JSON_UNESCAPED_LINE_TERMINATORS`
@@ -155,7 +155,7 @@
     - `function SplFileObject::_bad_state_ex`
     - `function SplTempFileObject::_bad_state_ex`
 ??? tiny "[=100% "**pcre** 29 / 29"]"
-    	happy faceâ€¬
+    	happy face
 ??? tiny "[=0% "**readline** 0 / 9"]"
     - `function readline`
     - `function readline_info`
@@ -171,7 +171,7 @@
     - `function ReflectionProperty::hasType`
     - `class ReflectionZendExtension`
 ??? tiny "[=100% "**session** 46 / 46"]"
-    	happy faceâ€¬
+    	happy face
 ??? tiny "[=87% "**standard** 760 / 874"]"
     - `function phpcredits`
     - `function vfprintf`
@@ -579,7 +579,7 @@
     - `function xml_set_unparsed_entity_decl_handler`
     - `const XML_SAX_IMPL`
 ??? tiny "[=100% "**xmlreader** 48 / 48"]"
-    	happy faceâ€¬
+    	happy face
 ??? tiny "[=51% "**xmlwriter** 43 / 85"]"
     - `function xmlwriter_open_uri`
     - `function xmlwriter_open_memory`
@@ -859,7 +859,7 @@
     - `function mbereg_search_setpos`
     - `const MB_ONIGURUMA_VERSION`
 ??? tiny "[=100% "**exif** 6 / 6"]"
-    	happy faceâ€¬
+    	happy face
 ??? tiny "[=59% "**gd** 116 / 195"]"
     - `function imagechar`
     - `function imagecharup`
@@ -941,7 +941,7 @@
     - `const PNG_FILTER_PAETH`
     - `const PNG_ALL_FILTERS`
 ??? tiny "[=100% "**gettext** 10 / 10"]"
-    	happy faceâ€¬
+    	happy face
 ??? tiny "[=85% "**curl** 508 / 601"]"
     - `function curl_copy_handle`
     - `function curl_strerror`
@@ -1037,7 +1037,9 @@
     - `const CURLOPT_TLS13_CIPHERS`
     - `const CURL_VERSION_ALTSVC`
 ??? tiny "[=100% "**fileinfo** 20 / 20"]"
-    	happy faceâ€¬
+    	happy face
+??? tiny "[=100% "**ftp** 47 / 47"]"
+    	happy face
 ??? tiny "[=0% "**xmlrpc** 0 / 14"]"
     - `function xmlrpc_encode`
     - `function xmlrpc_decode`

@@ -22,7 +22,7 @@ function progress {
   "??? tiny ""[=$( [int](100 * $progress / $php.count) )% ""**$title** $progress / $($php.count)""]"""
 
   if ($missing.count -eq 0) {
-    "    	happy face‬"
+    "    	happy face"
   } else {
     foreach ($item in $missing) {
       if ($item -match "\w+\s+(\w+)::" -and $missing.contains("class $($Matches.1)")) {
@@ -46,7 +46,7 @@ $peachpie = $output_peachpie | ConvertFrom-Json
 # prolog
 "!!! tip ""PeachPie $($peachpie.version) vs. PHP $($php.version)"""
 "    The table lists PHP extensions that the project aims for."
-"    Not implemented functions, classes and constants are listed below the each extension."
+"    Not implemented functions, classes and constants are listed below each extension."
 
 # ""
 # "### Extensions"
