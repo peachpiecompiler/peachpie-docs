@@ -4,7 +4,7 @@
 
 ## Metadata
 
-By default, `composer.json` file is processed during build time. In result certain composer meta data are mapped to corresponding project properties which results in having created NuGet packages automatically annotated.
+By default, the `composer.json` file is processed during build time. As a result, certain composer metadata is mapped to the corresponding project properties, thanks to which the created NuGet packages are automatically annotated.
 
 Following table lists composer meta and corresponding project properties being automatically set:
 
