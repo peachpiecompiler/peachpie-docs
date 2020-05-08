@@ -31,6 +31,10 @@ The `ComposerJsonPath` property controls path to the `composer.json` file. If th
 
 Set `ComposerJsonPath` to `false` in order to disable processing of composer.json meta data during build.
 
+### $(ComposerAutoload)
+
+Setting `ComposerAutoload` to `true` or `false` controls whether autoload rules are processed.
+
 ### $(VersionSuffix)
 
 Explicitly setting `VersionSuffix` allows to override suffix portion of `version` meta data from composer file. If `VersionSuffix` is non-empty string, the resulting version will respect the suffix.
@@ -55,11 +59,11 @@ The setup above results in `PackageVersion` property set to `1.2.3-dev`.
 
 ## Composer Autoload
 
-Composer autoloading provides standard approach in defining classes automatically. Compiler processes the "autoload" section and tries to avoid autoloading process in the first place. Classes, interfaces and traits fulfiling the autoload map are declared implicitly without need of invoking autoloaders during run time.
+Composer autoloading provides standard approach in defining classes automatically. Compiler processes the "autoload" section and tries to avoid autoloading process in the first place. Classes, interfaces and traits fulfiling the specified rules are declared implicitly without need of invoking autoloaders during run time.
 
 In case a source file contains more than just the class itself, autoloading cannot be fully optimized. In such case, containing source file has to be looked up and invoked during run time causing an unnecesary overhead.
 
-> Available since `0.9.971`
+> Available since `0.9.980`
 
 *Sample "composer.json":*
 ```json
