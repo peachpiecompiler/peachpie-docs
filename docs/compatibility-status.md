@@ -1,4 +1,4 @@
-﻿!!! tip "PeachPie 0.9.970 vs. PHP 7.4.1"
+﻿!!! tip "PeachPie 0.9.981 vs. PHP 7.4.1"
     The table lists PHP extensions that the project aims for.
     Not implemented functions, classes and constants are listed below each extension.
 ??? tiny "[=86% "**Core** 268 / 312"]"
@@ -281,8 +281,8 @@
     - `const STREAM_META_GROUP`
     - `const STREAM_META_GROUP_NAME`
     - `const STREAM_META_ACCESS`
-??? tiny "[=99% "**tokenizer** 139 / 140"]"
-    - `const T_BAD_CHARACTER`
+??? tiny "[=100% "**tokenizer** 140 / 140"]"
+    	happy face
 ??? tiny "[=73% "**zip** 95 / 131"]"
     - `const ZipArchive::FL_ENC_GUESS`
     - `const ZipArchive::FL_ENC_RAW`
@@ -452,40 +452,11 @@
     - `function DOMProcessingInstruction::setUserData`
     - `function DOMProcessingInstruction::getUserData`
     - `class DOMStringExtend`
-??? tiny "[=76% "**PDO** 110 / 144"]"
-    - `const PDO::PARAM_STR_NATL`
-    - `const PDO::PARAM_STR_CHAR`
-    - `const PDO::PARAM_EVT_ALLOC`
-    - `const PDO::PARAM_EVT_FREE`
-    - `const PDO::PARAM_EVT_EXEC_PRE`
-    - `const PDO::PARAM_EVT_EXEC_POST`
-    - `const PDO::PARAM_EVT_FETCH_PRE`
-    - `const PDO::PARAM_EVT_FETCH_POST`
-    - `const PDO::PARAM_EVT_NORMALIZE`
-    - `const PDO::ATTR_DEFAULT_STR_PARAM`
-    - `const PDO::ERR_NONE`
-    - `const PDO::MYSQL_ATTR_USE_BUFFERED_QUERY`
-    - `const PDO::MYSQL_ATTR_LOCAL_INFILE`
-    - `const PDO::MYSQL_ATTR_INIT_COMMAND`
-    - `const PDO::MYSQL_ATTR_COMPRESS`
-    - `const PDO::MYSQL_ATTR_DIRECT_QUERY`
-    - `const PDO::MYSQL_ATTR_FOUND_ROWS`
-    - `const PDO::MYSQL_ATTR_IGNORE_SPACE`
-    - `const PDO::MYSQL_ATTR_SSL_KEY`
-    - `const PDO::MYSQL_ATTR_SSL_CERT`
-    - `const PDO::MYSQL_ATTR_SSL_CA`
-    - `const PDO::MYSQL_ATTR_SSL_CAPATH`
-    - `const PDO::MYSQL_ATTR_SSL_CIPHER`
-    - `const PDO::MYSQL_ATTR_SERVER_PUBLIC_KEY`
-    - `const PDO::MYSQL_ATTR_MULTI_STATEMENTS`
-    - `const PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT`
+??? tiny "[=97% "**PDO** 139 / 144"]"
     - `const PDO::SQLITE_DETERMINISTIC`
-    - `const PDO::SQLITE_ATTR_OPEN_FLAGS`
     - `const PDO::SQLITE_OPEN_READONLY`
     - `const PDO::SQLITE_OPEN_READWRITE`
     - `const PDO::SQLITE_OPEN_CREATE`
-    - `const PDO::SQLITE_ATTR_READONLY_STATEMENT`
-    - `const PDO::SQLITE_ATTR_EXTENDED_RESULT_CODES`
     - `class PDORow`
 ??? tiny "[=26% "**openssl** 27 / 105"]"
     - `function openssl_get_cert_locations`
