@@ -41,6 +41,8 @@ PHP5019 | The expression is not being read | The expression does not have any ef
 PHP5020 | Assignment made to same variable | The expression does not have any effect, it is usually a typo in the source code.
 PHP5026 | Missing the call of parent::__construct() | Class constructor should call its base constructor.
 PHP5029 | Method __toString() must return a string value | Value returned from `__tostring()` method is not a string value. This is a fatal error at run time.
+PHP5031 | PCRE pattern parse error | Provided regular expression is invalid and will fail to parse.
+PHP5032 | Type is already defined | The type name (class, interface, or trait) is already defined. This definition won't be used, and may cause a fatal error at run time.
 
 ## Informational
 
