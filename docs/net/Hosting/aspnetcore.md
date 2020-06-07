@@ -45,24 +45,34 @@ Once the PHP library project is ready, open or create an ASP.NET Core web applic
 
 ## Hosting PHP library on ASP.NET Core application
 
-Add reference to the PHP library project `website.msbuildproj`, and to the `Peachpie.AspNetCore.Web` supporting library.
+Add reference to the PHP library project `website.msbuildproj`, and to the `Peachpie.AspNetCore.Web` supporting package:
 
-```xml
-<ProjectReference Include="../website/website.msbuildproj" />
+*using a commandline:*
+```shell
+dotnet add reference ../website/website.msbuildproj
+dotnet add package Peachpie.AspNetCore.Web
 ```
 
+*or by editing the .csproj project file:*
 ```xml
-<PackageReference Include="Peachpie.AspNetCore.Web" Version="0.9.981" />
+<ItemGroup>
+  <ProjectReference Include="../website/website.msbuildproj" />
+  <PackageReference Include="Peachpie.AspNetCore.Web" Version="0.9.981" />
+</ItemGroup>
 ```
+
+In result, you should have a following project structure:
+
+![AS.NET Core Solution](/img/vs-aspnetcore-sln.png)
 
 ### Configuration
 
-PHP request pipeline has to be configured before being used. Navigate to your startup class, and alter the `ConfigureServices` method:
+PHP request pipeline has to be configured before being used. Navigate to the startup class, and alter the `ConfigureServices` method:
 
 ```c#
 public void ConfigureServices(IServiceCollection services)
 {
-    servies.AddPhp(options =>
+    services.AddPhp(options =>
     {
         // options.Session.AutoStart = true;
     });
