@@ -86,5 +86,8 @@ The extension method **AddPhp(options)** setups default PHP configuration, and i
 Integrate PHP handler into the request pipeline:
 
 ```c#
-app.UsePhp();
+public void Configure(IApplicationBuilder app)
+{
+    app.UsePhp();
+}
 ```
