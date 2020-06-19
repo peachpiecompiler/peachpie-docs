@@ -1,4 +1,4 @@
-﻿!!! tip "PeachPie 0.9.981 vs. PHP 7.4.1"
+﻿!!! tip "PeachPie 0.9.990 vs. PHP 7.4.1"
     The table lists PHP extensions that the project aims for.
     Not implemented functions, classes and constants are listed below each extension.
 ??? tiny "[=86% "**Core** 268 / 312"]"
@@ -537,8 +537,7 @@
     - `const OPENSSL_CIPHER_AES_192_CBC`
     - `const OPENSSL_CIPHER_AES_256_CBC`
     - `const OPENSSL_TLSEXT_SERVER_NAME`
-??? tiny "[=42% "**SimpleXML** 17 / 40"]"
-    - `function SimpleXMLElement::saveXML`
+??? tiny "[=45% "**SimpleXML** 18 / 40"]"
     - `class SimpleXMLIterator`
 ??? tiny "[=96% "**xml** 47 / 49"]"
     - `function xml_set_unparsed_entity_decl_handler`
@@ -588,7 +587,7 @@
     - `function xmlwriter_write_dtd_entity`
     - `function xmlwriter_output_memory`
     - `function xmlwriter_flush`
-??? tiny "[=37% "**mysqli** 114 / 309"]"
+??? tiny "[=37% "**mysqli** 115 / 309"]"
     - `function mysqli_autocommit`
     - `function mysqli_begin_transaction`
     - `function mysqli_change_user`
@@ -599,7 +598,6 @@
     - `function mysqli_execute`
     - `function mysqli_fetch_lengths`
     - `function mysqli_fetch_all`
-    - `function mysqli_field_count`
     - `function mysqli_get_connection_stats`
     - `function mysqli_get_client_stats`
     - `function mysqli_get_charset`
@@ -825,9 +823,7 @@
     - `const MB_ONIGURUMA_VERSION`
 ??? tiny "[=100% "**exif** 6 / 6"]"
     	happy face
-??? tiny "[=59% "**gd** 116 / 195"]"
-    - `function imagechar`
-    - `function imagecharup`
+??? tiny "[=66% "**gd** 129 / 195"]"
     - `function imagepalettecopy`
     - `function imagecolorclosest`
     - `function imagecolorclosesthwb`
@@ -839,8 +835,6 @@
     - `function imagegrabwindow`
     - `function imagegrabscreen`
     - `function imagecropauto`
-    - `function imageaffinematrixconcat`
-    - `function imageaffinematrixget`
     - `function imagesetinterpolation`
     - `function imagesetbrush`
     - `function imagesetstyle`
@@ -851,10 +845,7 @@
     - `function imagewbmp`
     - `function imagebmp`
     - `function imagegammacorrect`
-    - `function imagefilltoborder`
     - `function imageloadfont`
-    - `function imageopenpolygon`
-    - `function imagestringup`
     - `function imagesetclip`
     - `function imagegetclip`
     - `function imagedashedline`
@@ -863,7 +854,6 @@
     - `function png2wbmp`
     - `function imagelayereffect`
     - `function imagexbm`
-    - `function imageresolution`
     - `const IMG_EFFECT_REPLACE`
     - `const IMG_EFFECT_ALPHABLEND`
     - `const IMG_EFFECT_NORMAL`
@@ -892,11 +882,6 @@
     - `const IMG_SINC`
     - `const IMG_WEIGHTED4`
     - `const IMG_TRIANGLE`
-    - `const IMG_AFFINE_TRANSLATE`
-    - `const IMG_AFFINE_SCALE`
-    - `const IMG_AFFINE_ROTATE`
-    - `const IMG_AFFINE_SHEAR_HORIZONTAL`
-    - `const IMG_AFFINE_SHEAR_VERTICAL`
     - `const IMG_FILTER_SCATTER`
     - `const PNG_NO_FILTER`
     - `const PNG_FILTER_NONE`
