@@ -1,6 +1,6 @@
-﻿!!! tip "PeachPie 0.9.990 vs. PHP 7.4.1"
+﻿!!! tip "PeachPie 1.0.0-preview1 vs. PHP 7.4.1"
     The table lists PHP extensions that the project aims for.
-    Not implemented functions, classes and constants are listed below each extension.
+    Missing functions, classes and constants are listed below. Note, even not-listed functions may have an incomplete behavior.
 ??? tiny "[=86% "**Core** 268 / 312"]"
     - `function get_mangled_object_vars`
     - `function get_resources`
@@ -537,56 +537,15 @@
     - `const OPENSSL_CIPHER_AES_192_CBC`
     - `const OPENSSL_CIPHER_AES_256_CBC`
     - `const OPENSSL_TLSEXT_SERVER_NAME`
-??? tiny "[=45% "**SimpleXML** 18 / 40"]"
-    - `class SimpleXMLIterator`
+??? tiny "[=100% "**SimpleXML** 40 / 40"]"
+    	happy face
 ??? tiny "[=96% "**xml** 47 / 49"]"
     - `function xml_set_unparsed_entity_decl_handler`
     - `const XML_SAX_IMPL`
 ??? tiny "[=100% "**xmlreader** 48 / 48"]"
     	happy face
-??? tiny "[=51% "**xmlwriter** 43 / 85"]"
-    - `function xmlwriter_open_uri`
-    - `function xmlwriter_open_memory`
-    - `function xmlwriter_set_indent`
-    - `function xmlwriter_set_indent_string`
-    - `function xmlwriter_start_comment`
-    - `function xmlwriter_end_comment`
-    - `function xmlwriter_start_attribute`
-    - `function xmlwriter_end_attribute`
-    - `function xmlwriter_write_attribute`
-    - `function xmlwriter_start_attribute_ns`
-    - `function xmlwriter_write_attribute_ns`
-    - `function xmlwriter_start_element`
-    - `function xmlwriter_end_element`
-    - `function xmlwriter_full_end_element`
-    - `function xmlwriter_start_element_ns`
-    - `function xmlwriter_write_element`
-    - `function xmlwriter_write_element_ns`
-    - `function xmlwriter_start_pi`
-    - `function xmlwriter_end_pi`
-    - `function xmlwriter_write_pi`
-    - `function xmlwriter_start_cdata`
-    - `function xmlwriter_end_cdata`
-    - `function xmlwriter_write_cdata`
-    - `function xmlwriter_text`
-    - `function xmlwriter_write_raw`
-    - `function xmlwriter_start_document`
-    - `function xmlwriter_end_document`
-    - `function xmlwriter_write_comment`
-    - `function xmlwriter_start_dtd`
-    - `function xmlwriter_end_dtd`
-    - `function xmlwriter_write_dtd`
-    - `function xmlwriter_start_dtd_element`
-    - `function xmlwriter_end_dtd_element`
-    - `function xmlwriter_write_dtd_element`
-    - `function xmlwriter_start_dtd_attlist`
-    - `function xmlwriter_end_dtd_attlist`
-    - `function xmlwriter_write_dtd_attlist`
-    - `function xmlwriter_start_dtd_entity`
-    - `function xmlwriter_end_dtd_entity`
-    - `function xmlwriter_write_dtd_entity`
-    - `function xmlwriter_output_memory`
-    - `function xmlwriter_flush`
+??? tiny "[=100% "**xmlwriter** 85 / 85"]"
+    	happy face
 ??? tiny "[=37% "**mysqli** 115 / 309"]"
     - `function mysqli_autocommit`
     - `function mysqli_begin_transaction`
@@ -782,7 +741,7 @@
     - `const MYSQLI_TRANS_COR_AND_NO_CHAIN`
     - `const MYSQLI_TRANS_COR_RELEASE`
     - `const MYSQLI_TRANS_COR_NO_RELEASE`
-??? tiny "[=55% "**mbstring** 47 / 85"]"
+??? tiny "[=56% "**mbstring** 48 / 85"]"
     - `function mb_output_handler`
     - `function mb_encoding_aliases`
     - `function mb_convert_kana`
@@ -790,7 +749,6 @@
     - `function mb_decode_mimeheader`
     - `function mb_encode_numericentity`
     - `function mb_decode_numericentity`
-    - `function mb_scrub`
     - `function mb_regex_set_options`
     - `function mb_ereg`
     - `function mb_eregi`

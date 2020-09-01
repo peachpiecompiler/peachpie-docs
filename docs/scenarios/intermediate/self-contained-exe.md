@@ -11,7 +11,7 @@ echo "Hello world!";
 and a corresponding project file indicating that the output should be exe:
 
 ```xml
-<Project Sdk="Peachpie.NET.Sdk/0.9.990">
+<Project Sdk="Peachpie.NET.Sdk/1.0.0-preview1">
   <PropertyGroup>
     <OutputType>exe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
@@ -40,7 +40,7 @@ This creates a self-contained executable PHP application targeting the operating
 
 A few tips on how to minimize the size of the resulting application:
 
-* On Linux, you can get rid of culture-specific functionalities and keep just the “Invariant” culture features (cuts about 26MB of data). More detail [at globalization-invariant-mode.md](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
+* On Linux, you can get rid of culture-specific functionalities and keep just the "Invariant" culture features (cuts about 26MB of data). More detail [at globalization-invariant-mode.md](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
 * Use `dotnet-warp` to merge DLL files and remove unnecessary IL and methods. More info can be found [at hanselman.com](https://hanselman.com/blog/BrainstormingCreatingASmallSingleSelfcontainedExecutableOutOfANETCoreApplication.aspx).
 
 !!! note

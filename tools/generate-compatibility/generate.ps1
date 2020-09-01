@@ -46,7 +46,7 @@ $peachpie = $output_peachpie | ConvertFrom-Json
 # prolog
 "!!! tip ""PeachPie $($peachpie.version) vs. PHP $($php.version)"""
 "    The table lists PHP extensions that the project aims for."
-"    Not implemented functions, classes and constants are listed below each extension."
+"    Missing functions, classes and constants are listed below. Note, even not-listed functions may have an incomplete behavior."
 
 # ""
 # "### Extensions"
