@@ -8,5 +8,6 @@
     <Compile Include="**/*.php" />
     <PackageReference Include="Peachpie.Library.PDO.MySql" Version="$(PeachpieVersion)" />
     <PackageReference Include="Peachpie.Library.PDO.Sqlite" Version="$(PeachpieVersion)" />
+    <PackageReference Include="Peachpie.Library.ComDotNet" Version="$(PeachpieVersion)" />
   </ItemGroup>
 </Project>
