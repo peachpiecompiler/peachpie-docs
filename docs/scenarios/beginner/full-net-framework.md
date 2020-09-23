@@ -30,8 +30,16 @@ Optionally, specify [the startup object](/php/msbuild#startupobject), which shou
 Assuming the project with PHP files is compiled as a library, you can be targeting either `netstandard2.0` or `net461`.
 
 ```xml
-<TargetFramework>netstandard2.0</TargetFramework>
+<TargetFramework>net461</TargetFramework>
 <AssemblyName>MyWebsite</AssemblyName><!-- an optional name -->
+```
+
+Add a package reference to request handler:
+
+```xml
+<ItemGroup>
+  <PackageReference Include="Peachpie.RequestHandler" Version="1.0.0-preview1" />
+</ItemGroup>
 ```
 
 You can handle the requests to `*.php` pages on your ASP.NET (Integrated Pipeline) server (specifically IIS 7, IIS Express or Apache with mod_mono) in two ways; either by modifying `web.config` and passing requests directly to `MyWebsite.dll`, or by handling the requests programatically in your C# code.
@@ -48,7 +56,7 @@ Alter the web application's `web.config` file with the following configuration w
 </system.webServer>
 ```
 
-Ensure the `/bin` folder of your ASP.NET application contains all the necessary assemblies including `MyWebsite.dll`, `Peachpie.RequestHandler.dll` and other Peachpie runtime assemblies. 
+> Ensure the `/bin` folder of your ASP.NET application contains all the necessary assemblies including `MyWebsite.dll`, `Peachpie.RequestHandler.dll` and other Peachpie runtime assemblies. 
 
 ### Option 2: Programatically
 
