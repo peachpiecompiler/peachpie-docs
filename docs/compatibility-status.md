@@ -1,4 +1,4 @@
-﻿!!! tip "PeachPie 1.0.0-preview1 vs. PHP 7.4.1"
+﻿!!! tip "PeachPie 1.0.0-preview2 vs. PHP 7.4.1"
     The table lists PHP extensions that the project aims for.
     Missing functions, classes and constants are listed below. Note, even not-listed functions may have an incomplete behavior.
 ??? tiny "[=86% "**Core** 268 / 312"]"
