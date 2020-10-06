@@ -107,7 +107,7 @@ Enables or disables the build of an `.xml` file with the `XMLDoc` generated from
 !!! success "enabling this option is recommended"
     In case the project containing the XML documentation is referenced by a C# project, the IDE's IntelliSense will display additional text information collected from the `XMLDoc` file.
 
-Enaling this property also sets following properties if not specified else:
+Enabling this property also sets following properties if not specified else:
 
 - `DocumentationFile`
 - `PublishDocumentationFile = true`
