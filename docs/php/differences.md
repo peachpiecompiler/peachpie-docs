@@ -16,3 +16,12 @@ The constant has a string value with the full PeachPie version including the pre
 ## Garbage Collection
 
 It is important to remember, the .NET runtime has its own Garbage Collection mechanism. It destructs objects in a different order than standard PHP does. Behavior of destructors is not defined yet. Any destructors defined in the compiled code produces a compile-time warning.
+
+## `DEBUG` constant
+
+When the application is compiled in the *Debug* configuration, the `DEBUG` constant is defined implicitly. *Debug* is the default configuration. This results in an exception in user's code whenever the code tries to re-define the `DEBUG` constant.
+
+```php
+// results in an exception, since DEBUG is already defined.
+define('DEBUG', 1); 
+```
