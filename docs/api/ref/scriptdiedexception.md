@@ -1,7 +1,7 @@
 # ScriptDiedException
 
 <small>**assembly:** Peachpie.Runtime.dll</small><br/>
-<small>**inherits:** `System.Exception`</small>
+<small>**inherits:** `PhpErrorException`, `System.Exception`</small>
 
 `ScriptDiedException` is thrown to simulate PHP's `die` and `exit` constructs. This is a well-known exception that is thrown by design and can thus be ignored in your development environment. The exception supposes to be thrown and will be safely handled.
 
