@@ -6,30 +6,67 @@ param (
 )
 
 function progress {
-  param ([string]$title, [array]$php ,[array]$peachpie)
+  param ([string]$title, [array]$php , [array]$peachpie)
 
   if (!$php) { return }
-  
-  # dfference of two arrays:
-  $diff = Compare-Object -ReferenceObject $php -DifferenceObject $peachpie
 
-  # filter only items present in $php and not present in $peachpie
-  # InputObject, SideIndicator
-  $missing = $diff | where SideIndicator -eq "<=" | Select-Object -ExpandProperty InputObject
+  $peachpie_matched = @()
+  $rows = @() #table rows
+
+  foreach ($element in $php) {
+    $matched = $false
+    if ($element -match "([^\(]*)\((.*)\)") {
+      # function, has parameter list
+      $element_name = $Matches.1
+      $element_params = $Matches.2
+      foreach ($x in $peachpie) {
+        if ($x -match "([^\(]*)\((.*)\)" -and $element_name -eq $Matches.1) {
+          $matched = $true
+          $peachpie_matched += $x
+          $x_params = $Matches.2
+          if ($element_params -eq $x_params) {
+            # $rows += "$($element) | $($x)"
+          }
+          else {
+            $rows += "$($element_name)(<span style='color:green;'>$($element_params)</span>) | $($element_name)(<span style='color:yellow;font-weight:bold;'>$($x_params)</span>)"
+          }
+          break
+        }
+      }
+    }
+    else {
+      if ($peachpie -contains $element) {
+        $matched = $true
+        $peachpie_matched += $element
+        # $rows += "$($element) | $($element)"
+      }
+    }
+    if (-not $matched) {
+      if ($element -match "\w+\s+(\w+)::" -and -not $peachpie_matched.contains("class $($Matches.1)")) {
+        continue; # containing class was already reported, do not report its members
+      }
+
+      $rows += "$($element) | <span style='color:red;font-weight:bold;'>$($element)</span>"
+    }
+  }
+
+  # foreach ($element in $peachpie) {
+  #   if (-not $peachpie_matched.contains($element)) {
+  #     $rows += " | <span style='color:red;font-weight:bold;'>$($element)</span>"
+  #   }
+  # }
 
   # render progress
-  $progress = $php.count - $missing.count
+  $progress = $peachpie_matched.count
   "??? tiny ""[=$( [int](100 * $progress / $php.count) )% ""**$title** $progress / $($php.count)""]"""
+  
+  if ($rows.count -ne 0) {
+    "    | PHP | PeachPie |"
+    "    | --- | ---      |"
+  }
 
-  if ($missing.count -eq 0) {
-    "    	happy face"
-  } else {
-    foreach ($item in $missing) {
-      if ($item -match "\w+\s+(\w+)::" -and $missing.contains("class $($Matches.1)")) {
-        continue; # containing class was already reported, do not report its member functions
-      }
-      "    - ``$item``"
-    }
+  foreach ($row in $rows) {
+    "    | $row |"
   }
 }
 
@@ -45,8 +82,8 @@ $peachpie = $output_peachpie | ConvertFrom-Json
 
 # prolog
 "!!! tip ""PeachPie $($peachpie.version) vs. PHP $($php.version)"""
-"    The table lists PHP extensions that the project aims for."
-"    Missing functions, classes and constants are listed below. Note, even not-listed functions may have an incomplete behavior."
+"    The table lists PHP extensions that the project aims for"
+"    and compares the public functions, classes, and constants."
 
 # ""
 # "### Extensions"
@@ -61,12 +98,12 @@ $peachpie = $output_peachpie | ConvertFrom-Json
 $peachpie_all = @()
 
 foreach ($ext in $peachpie.extensions) {
-    $peachpie_all = $peachpie_all + $peachpie."ext-$ext"
+  $peachpie_all = $peachpie_all + $peachpie."ext-$ext"
 }
 
 foreach ($ext in $php.extensions) {
-    #if ($php."ext-$ext")
-    progress $ext $php."ext-$ext" $peachpie_all #$peachpie."ext-$ext"
+  #if ($php."ext-$ext")
+  progress $ext $php."ext-$ext" $peachpie_all #$peachpie."ext-$ext"
 }
 
 # TODO: overall

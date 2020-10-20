@@ -7,7 +7,7 @@
  * {
  *  "version": "7.4.0-rc",
  *  "extensions": ["Core", "Spl"],
- *  "ext-core": ["strlen", "Error", "PHP_VERSION"]
+ *  "ext-core": ["strlen($string)", "Error", "PHP_VERSION"]
  * }
  * ```
  */
@@ -24,8 +24,9 @@ function collect() {
         $re = new ReflectionExtension($ext);
         $set = [];
 
-        foreach ($re->getFunctions() as $f => $_) {
-            $set[] = "function $f";
+        foreach ($re->getFunctions() as $fname => $f) {
+            /** @var ReflectionFunction $f */
+            $set[] = "function $fname" . fnParams($f);
         }
 
         foreach ($re->getClasses() as $c) {
@@ -39,7 +40,7 @@ function collect() {
                 if ($m->name == "_bad_state_ex")
                     continue; // ignore SplFileInfo::_bad_state_ex() methods, they are dummy and have no meaning
 
-                $set[] = "function $c->name::$m->name";
+                $set[] = "function $c->name::$m->name" . fnParams($m);
             }
 
             foreach ($c->getConstants() as $cname => $cvalue) {
@@ -59,6 +60,18 @@ function collect() {
 
     //
     return $result;
+}
+
+/** Gets function parameters string. */
+function fnParams(ReflectionFunctionAbstract $f) {
+    $str = "";
+    foreach ($f->getParameters() as $p) {
+        /** @var ReflectionParameter $p */
+        if ($str)
+            $str .= ",";
+        $str .= "$" . $p->name; // TODO: optional, type
+    }
+    return "($str)";
 }
 
 echo json_encode(collect());
