@@ -21,7 +21,7 @@ Since all the PHP exception classes and user PHP exception classes are derived f
 ```c#
 try { /* invoke PHP code */ }
 // handle only the Error exception class (full name is Pchp.Library.Spl.Error)
-catch (Error err)
+catch (Error err) { ... }
 // handle any exception including a PHP exception
 catch (Exception ex) { ... }
 ```
