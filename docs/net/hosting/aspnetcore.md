@@ -10,7 +10,7 @@ Directory with PHP project - its source files and static files - needs to be com
 
 */website/website.msbuildproj:*
 ```xml
-<Project Sdk="Peachpie.NET.Sdk/1.0.0-preview2">
+<Project Sdk="Peachpie.NET.Sdk/1.0.0-preview3">
   <PropertyGroup>
     <OutputType>library</OutputType>
     <TargetFramework>netstandard2.1</TargetFramework>
@@ -57,7 +57,7 @@ dotnet add package Peachpie.AspNetCore.Web
 ```xml
 <ItemGroup>
   <ProjectReference Include="../website/website.msbuildproj" />
-  <PackageReference Include="Peachpie.AspNetCore.Web" Version="1.0.0-preview2" />
+  <PackageReference Include="Peachpie.AspNetCore.Web" Version="1.0.0-preview3" />
 </ItemGroup>
 ```
 
