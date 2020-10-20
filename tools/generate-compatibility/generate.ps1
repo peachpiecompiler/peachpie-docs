@@ -28,7 +28,7 @@ function progress {
             # $rows += "$($element) | $($x)"
           }
           else {
-            $rows += "$($element_name)(<span style='color:green;'>$($element_params)</span>) | $($element_name)(<span style='color:yellow;font-weight:bold;'>$($x_params)</span>)"
+            $rows += "$($element_name)(<span style='color:green;'>$($element_params)</span>) | $($element_name)(<span style='font-weight:bold;text-decoration:underline;'>$($x_params)</span>)"
           }
           break
         }
@@ -46,13 +46,13 @@ function progress {
         continue; # containing class was already reported, do not report its members
       }
 
-      $rows += "$($element) | <span style='color:red;font-weight:bold;'>$($element)</span>"
+      $rows += "$($element) | - <span style='color:red;font-weight:bold;'>$($element)</span>"
     }
   }
 
   # foreach ($element in $peachpie) {
   #   if (-not $peachpie_matched.contains($element)) {
-  #     $rows += " | <span style='color:red;font-weight:bold;'>$($element)</span>"
+  #     $rows += " | + <span style='color:red;font-weight:bold;'>$($element)</span>"
   #   }
   # }
 
