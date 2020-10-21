@@ -50,15 +50,19 @@ function progress {
     }
   }
 
-  # foreach ($element in $peachpie) {
-  #   if (-not $peachpie_matched.contains($element)) {
-  #     $rows += " | + <span style='color:red;font-weight:bold;'>$($element)</span>"
-  #   }
-  # }
+  foreach ($element in $peachpie) {
+    if (-not $peachpie_matched.contains($element)) {
+      $rows += " | + <span style='color:red;font-weight:bold;'>$($element)</span>"
+    }
+  }
 
   # render progress
   $progress = $peachpie_matched.count
   "??? tiny ""[=$( [int](100 * $progress / $php.count) )% ""**$title** $progress / $($php.count)""]"""
+
+  # ""
+  # "# **$title**"
+  # ""
   
   if ($rows.count -ne 0) {
     "    | PHP | PeachPie |"
@@ -95,15 +99,14 @@ $peachpie = $output_peachpie | ConvertFrom-Json
 # "### Classes & Functions"
 # ""
 
-$peachpie_all = @()
-
-foreach ($ext in $peachpie.extensions) {
-  $peachpie_all = $peachpie_all + $peachpie."ext-$ext"
-}
+# $peachpie_all = @()
+# foreach ($ext in $peachpie.extensions) {
+#   $peachpie_all = $peachpie_all + $peachpie."ext-$ext"
+# }
 
 foreach ($ext in $php.extensions) {
   #if ($php."ext-$ext")
-  progress $ext $php."ext-$ext" $peachpie_all #$peachpie."ext-$ext"
+  progress $ext $php."ext-$ext" $peachpie."ext-$ext"
 }
 
 # TODO: overall
