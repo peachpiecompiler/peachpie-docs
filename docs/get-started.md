@@ -12,7 +12,7 @@ Open a command prompt and run the following command:
 
 !!! example "install dotnet templates"
     ```bash
-    dotnet new -i Peachpie.Templates::*
+    dotnet new -i "Peachpie.Templates::*"
     ```
 
 The `dotnet` command downloads the latest project template to be used to create new PeachPie projects for you.
