@@ -62,6 +62,9 @@ public static class MyFunctions {
 
     // declaration of a global constant as a C# property, evaluated every time the constant gets used
     public static object MYCONST3 => new stdClass();
+
+    // declaration of a global constant as a lazy value, evaluated every time the constant gets used
+    public static readonly Func<Context, string> MYCONST4 = (ctx) => "lazy value";
 }
 ```
 
@@ -71,6 +74,8 @@ mystrlen("");
 myecho(123);
 echo MYCONST;
 echo MYCONST2;
+echo MYCONST3;
+echo MYCONST4;
 ```
 
 ### Special Parameters
@@ -81,12 +86,12 @@ In order to access special PeachPie objects, such as the current `Context`, foll
 
 Add `Context ctx` as the first parameter of the method. The runtime will implicitly fill this parameter with an instance of the current `Pchp.Core.Context` object.
 ```c#
-public static void myecho(Context ctx){ ctx.Echo("Hello from library!"); }
+public static void myecho(Context ctx) { ctx.Echo("Hello from library!"); }
 ```
 
 #### Accessing array of local variables
 
 Add the `[ImportLocals] PhpArray locals` parameter before regular parameters. The runtime will implicitly pass the current local variables to this parameter.
 ```c#
-public static void getlocals([ImportLocals] PhpArray locals){ /* locals contain set of caller routine local variables*/ }
+public static void getlocals([ImportValue(ValueSpec.Locals)] PhpArray locals){ /* locals contain set of caller routine local variables*/ }
 ```
