@@ -19,9 +19,9 @@ It is important to remember, the .NET runtime has its own Garbage Collection mec
 
 ## `DEBUG` constant
 
-When the application is compiled in the *Debug* configuration, the `DEBUG` constant is defined implicitly. *Debug* is the default configuration. This results in an exception in user's code whenever the code tries to re-define the `DEBUG` constant.
+When the application is compiled in the *Debug* configuration, the `DEBUG` constant is defined implicitly. *Debug* is the default configuration. This may result in a warning notice in user's code whenever the code tries to re-define the `DEBUG` constant.
 
 ```php
-// results in an exception, since DEBUG is already defined.
+// results in a warning, since DEBUG may be already defined.
 define('DEBUG', 1); 
 ```
