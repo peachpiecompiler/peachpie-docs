@@ -12,7 +12,13 @@ A new instance of `Context` is created in two ways:
 
 - **Implicitly by the framework:** The appropriate context is created for a web application during its request handling routine. Its instance is then passed to PHP routines and to handlers during the request life cycle implicitly.
 
-- **Explicitly by instantiating it:** It is possible to create an instance of a default context and use it in order to drive a custom PHP application's state. A new instance of the default context can be created by the static method below <br/> `#!c# Context.CreateEmpty()` <br/> It is important to set newly created context's `WorkingDirectory` and `RootPath` properties.
+- **Explicitly by instantiating it:** It is possible to create an instance of a default context and use it in order to drive a custom PHP application's state.
+
+  - `#!c# Context.CreateEmpty()` creates a new CLI context, without an output stream being specified. It is important to set newly created context's `Context.WorkingDirectory` and `Context.RootPath` properties.
+
+  - `#!c# Context.CreateConsole(main)` create a new CLI content with the output redirected to the applications console and `$_SERVER` variables to be initialized according to `main` argument.
+
+  - `#!c# HttpContextExtension.GetOrCreateContext(HttpContext)` creates a web context from the given `Microsoft.AspNetCore.Http.HttpContext` instance.
 
 ## Methods
 
