@@ -18,7 +18,7 @@ A new instance of `Context` is created in two ways:
 
   - `#!c# Context.CreateConsole(main)` create a new CLI content with the output redirected to the applications console and `$_SERVER` variables to be initialized according to `main` argument.
 
-  - `#!c# HttpContextExtension.GetOrCreateContext(HttpContext)` creates a web context from the given `Microsoft.AspNetCore.Http.HttpContext` instance.
+  - `#!c# HttpContextExtension.GetOrCreateContext(HttpContext)` creates a web context from the given `Microsoft.AspNetCore.Http.HttpContext` instance. You need to add a reference to package `Peachpie.AspNetCore.Web`.
 
 ## Methods
 
