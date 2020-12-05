@@ -5,7 +5,7 @@ MSBuild is the build system for .NET and Visual Studio. The MSBuild project file
 ## Sample Project File
 
 ```xml
-<Project Sdk="Peachpie.NET.Sdk/1.0.0-preview3">
+<Project Sdk="Peachpie.NET.Sdk/1.0.0-preview4">
   <PropertyGroup>
     <OutputType>library</OutputType>
     <TargetFramework>netstandard2.1</TargetFramework>
@@ -35,7 +35,7 @@ dotnet build
 The `OutputType` property specifies whether to output an executable (`.exe`) or a library (`.dll`). The possible values are:
 
 - library
-- exe - in combination with `#!xml <TargetFramework>netcoreapp2.0</TargetFramework>` or higher.
+- exe - in combination with `#!xml <TargetFramework>netcoreapp3.1</TargetFramework>` or higher.
 - winexe
 - module
 
@@ -47,7 +47,7 @@ The `LangVersion` property specifies the version of the PHP semantic. This allow
 <LangVersion>5.4</LangVersion>
 ```
 
-The options are `5.4`, `5.5`, `5.6`, `7.0`, `7.1`, `7.2` etc.
+The options are `5.4`, `5.5`, `5.6`, `7.0`, `7.1`, `7.2` etc., `default` and `latest`.
 
 This option affects the source code syntax and the types used in type hints. The following code has a different semantic according to the `LangVersion` value:
 ```php
