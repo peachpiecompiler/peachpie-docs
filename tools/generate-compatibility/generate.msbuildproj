@@ -3,6 +3,7 @@
     <OutputType>exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <StartupObject>program.php</StartupObject>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="**/*.php" />

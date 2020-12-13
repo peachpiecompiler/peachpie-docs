@@ -37,7 +37,7 @@ function collect() {
                 /** @var ReflectionMethod $m */
                 if ($c->name == $m->name)
                     continue; // finfo::finfo, implicit ctor, always defined, should not be in PHP reflection
-                if ($m->name == "_bad_state_ex")
+                if ($m->name == "_bad_state_ex" || $m->name == "__debugInfo")
                     continue; // ignore SplFileInfo::_bad_state_ex() methods, they are dummy and have no meaning
 
                 $set[] = "function $c->name::$m->name" . fnParams($m);
@@ -74,4 +74,4 @@ function fnParams(ReflectionFunctionAbstract $f) {
     return "($str)";
 }
 
-echo json_encode(collect());
+echo json_encode(collect(), JSON_PRETTY_PRINT);

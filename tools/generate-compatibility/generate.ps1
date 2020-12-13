@@ -28,7 +28,7 @@ function progress {
             # $rows += "$($element) | $($x)"
           }
           else {
-            $rows += "$($element_name)(<span style='color:green;'>$($element_params)</span>) | $($element_name)(<span style='font-weight:bold;text-decoration:underline;'>$($x_params)</span>)"
+            # $rows += "$($element_name)(<span style='color:green;'>$($element_params)</span>) | $($element_name)(<span style='font-weight:bold;text-decoration:underline;'>$($x_params)</span>)"
           }
           break
         }
