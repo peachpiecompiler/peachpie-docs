@@ -1,43 +1,17 @@
-﻿!!! tip "PeachPie 1.0.0-preview3 vs. PHP 7.4.1"
+﻿!!! tip "PeachPie 1.0.0-preview4 vs. PHP 8.0.0"
     The table lists PHP extensions that the project aims for
     and compares the public functions, classes, and constants.
-??? tiny "[=86% "**Core** 268 / 312"]"
+??? tiny "[=77% "**Core** 277 / 358"]"
     | PHP | PeachPie |
     | --- | ---      |
-    | function func_get_arg(<span style='color:green;'>$arg_num</span>) | function func_get_arg(<span style='font-weight:bold;text-decoration:underline;'>$index</span>) |
-    | function strlen(<span style='color:green;'>$str</span>) | function strlen(<span style='font-weight:bold;text-decoration:underline;'>$x</span>) |
-    | function strncmp(<span style='color:green;'>$str1,$str2,$len</span>) | function strncmp(<span style='font-weight:bold;text-decoration:underline;'>$str1,$str2,$length</span>) |
-    | function strncasecmp(<span style='color:green;'>$str1,$str2,$len</span>) | function strncasecmp(<span style='font-weight:bold;text-decoration:underline;'>$str1,$str2,$length</span>) |
-    | function each(<span style='color:green;'>$arr</span>) | function each(<span style='font-weight:bold;text-decoration:underline;'>$array</span>) |
-    | function error_reporting(<span style='color:green;'>$new_error_level</span>) | function error_reporting(<span style='font-weight:bold;text-decoration:underline;'>$level</span>) |
-    | function define(<span style='color:green;'>$constant_name,$value,$case_insensitive</span>) | function define(<span style='font-weight:bold;text-decoration:underline;'>$name,$value,$caseInsensitive</span>) |
-    | function defined(<span style='color:green;'>$constant_name</span>) | function defined(<span style='font-weight:bold;text-decoration:underline;'>$name</span>) |
-    | function get_class(<span style='color:green;'>$object</span>) | function get_class(<span style='font-weight:bold;text-decoration:underline;'>$obj</span>) |
-    | function get_parent_class(<span style='color:green;'>$object</span>) | function get_parent_class(<span style='font-weight:bold;text-decoration:underline;'>$classNameOrObject</span>) |
-    | function method_exists(<span style='color:green;'>$object,$method</span>) | function method_exists(<span style='font-weight:bold;text-decoration:underline;'>$object,$methodName</span>) |
-    | function property_exists(<span style='color:green;'>$object_or_class,$property_name</span>) | function property_exists(<span style='font-weight:bold;text-decoration:underline;'>$classNameOrObject,$propertyName</span>) |
-    | function interface_exists(<span style='color:green;'>$classname,$autoload</span>) | function interface_exists(<span style='font-weight:bold;text-decoration:underline;'>$ifaceName,$autoload</span>) |
-    | function function_exists(<span style='color:green;'>$function_name</span>) | function function_exists(<span style='font-weight:bold;text-decoration:underline;'>$name</span>) |
-    | function class_alias(<span style='color:green;'>$user_class_name,$alias_name,$autoload</span>) | function class_alias(<span style='font-weight:bold;text-decoration:underline;'>$original,$alias,$autoload</span>) |
-    | function is_subclass_of(<span style='color:green;'>$object,$class_name,$allow_string</span>) | function is_subclass_of(<span style='font-weight:bold;text-decoration:underline;'>$classNameOrObject,$baseClassName,$allow_string</span>) |
-    | function is_a(<span style='color:green;'>$object,$class_name,$allow_string</span>) | function is_a(<span style='font-weight:bold;text-decoration:underline;'>$value,$class_name,$allow_string</span>) |
-    | function get_mangled_object_vars($obj) | - <span style='color:red;font-weight:bold;'>function get_mangled_object_vars($obj)</span> |
-    | function get_class_methods(<span style='color:green;'>$class</span>) | function get_class_methods(<span style='font-weight:bold;text-decoration:underline;'>$classNameOrObject</span>) |
-    | function trigger_error(<span style='color:green;'>$message,$error_type</span>) | function trigger_error(<span style='font-weight:bold;text-decoration:underline;'>$error_msg,$error_type</span>) |
-    | function user_error(<span style='color:green;'>$message,$error_type</span>) | function user_error(<span style='font-weight:bold;text-decoration:underline;'>$error_msg,$error_type</span>) |
-    | function set_error_handler(<span style='color:green;'>$error_handler,$error_types</span>) | function set_error_handler(<span style='font-weight:bold;text-decoration:underline;'>$newHandler,$errorTypes</span>) |
-    | function set_exception_handler(<span style='color:green;'>$exception_handler</span>) | function set_exception_handler(<span style='font-weight:bold;text-decoration:underline;'>$newHandler</span>) |
-    | function get_defined_functions(<span style='color:green;'>$exclude_disabled</span>) | function get_defined_functions(<span style='font-weight:bold;text-decoration:underline;'></span>) |
-    | function get_resource_type(<span style='color:green;'>$res</span>) | function get_resource_type(<span style='font-weight:bold;text-decoration:underline;'>$resource</span>) |
+    | function get_mangled_object_vars($object) | - <span style='color:red;font-weight:bold;'>function get_mangled_object_vars($object)</span> |
     | function get_resources($type) | - <span style='color:red;font-weight:bold;'>function get_resources($type)</span> |
-    | function extension_loaded(<span style='color:green;'>$extension_name</span>) | function extension_loaded(<span style='font-weight:bold;text-decoration:underline;'>$name</span>) |
-    | function get_extension_funcs(<span style='color:green;'>$extension_name</span>) | function get_extension_funcs(<span style='font-weight:bold;text-decoration:underline;'>$extension</span>) |
     | function gc_status() | - <span style='color:red;font-weight:bold;'>function gc_status()</span> |
-    | function Closure::call(<span style='color:green;'>$newthis,$parameters</span>) | function Closure::call(<span style='font-weight:bold;text-decoration:underline;'>$newthis,$arguments</span>) |
-    | function Closure::__invoke(<span style='color:green;'></span>) | function Closure::__invoke(<span style='font-weight:bold;text-decoration:underline;'>$arguments</span>) |
-    | function Generator::throw(<span style='color:green;'>$exception</span>) | function Generator::throw(<span style='font-weight:bold;text-decoration:underline;'>$ex</span>) |
+    | class InternalIterator | - <span style='color:red;font-weight:bold;'>class InternalIterator</span> |
     | class ClosedGeneratorException | - <span style='color:red;font-weight:bold;'>class ClosedGeneratorException</span> |
     | function WeakReference::__construct() | - <span style='color:red;font-weight:bold;'>function WeakReference::__construct()</span> |
+    | class WeakMap | - <span style='color:red;font-weight:bold;'>class WeakMap</span> |
+    | class Attribute | - <span style='color:red;font-weight:bold;'>class Attribute</span> |
     | const ZEND_THREAD_SAFE | - <span style='color:red;font-weight:bold;'>const ZEND_THREAD_SAFE</span> |
     | const ZEND_DEBUG_BUILD | - <span style='color:red;font-weight:bold;'>const ZEND_DEBUG_BUILD</span> |
     | const PHP_WINDOWS_EVENT_CTRL_C | - <span style='color:red;font-weight:bold;'>const PHP_WINDOWS_EVENT_CTRL_C</span> |
@@ -56,51 +30,69 @@
     | const PHP_CONFIG_FILE_SCAN_DIR | - <span style='color:red;font-weight:bold;'>const PHP_CONFIG_FILE_SCAN_DIR</span> |
     | const PHP_SHLIB_SUFFIX | - <span style='color:red;font-weight:bold;'>const PHP_SHLIB_SUFFIX</span> |
     | const PHP_BINARY | - <span style='color:red;font-weight:bold;'>const PHP_BINARY</span> |
+    | const PHP_OUTPUT_HANDLER_START | - <span style='color:red;font-weight:bold;'>const PHP_OUTPUT_HANDLER_START</span> |
     | const PHP_OUTPUT_HANDLER_WRITE | - <span style='color:red;font-weight:bold;'>const PHP_OUTPUT_HANDLER_WRITE</span> |
     | const PHP_OUTPUT_HANDLER_FLUSH | - <span style='color:red;font-weight:bold;'>const PHP_OUTPUT_HANDLER_FLUSH</span> |
     | const PHP_OUTPUT_HANDLER_CLEAN | - <span style='color:red;font-weight:bold;'>const PHP_OUTPUT_HANDLER_CLEAN</span> |
     | const PHP_OUTPUT_HANDLER_FINAL | - <span style='color:red;font-weight:bold;'>const PHP_OUTPUT_HANDLER_FINAL</span> |
+    | const PHP_OUTPUT_HANDLER_CONT | - <span style='color:red;font-weight:bold;'>const PHP_OUTPUT_HANDLER_CONT</span> |
+    | const PHP_OUTPUT_HANDLER_END | - <span style='color:red;font-weight:bold;'>const PHP_OUTPUT_HANDLER_END</span> |
     | const PHP_OUTPUT_HANDLER_CLEANABLE | - <span style='color:red;font-weight:bold;'>const PHP_OUTPUT_HANDLER_CLEANABLE</span> |
     | const PHP_OUTPUT_HANDLER_FLUSHABLE | - <span style='color:red;font-weight:bold;'>const PHP_OUTPUT_HANDLER_FLUSHABLE</span> |
     | const PHP_OUTPUT_HANDLER_REMOVABLE | - <span style='color:red;font-weight:bold;'>const PHP_OUTPUT_HANDLER_REMOVABLE</span> |
     | const PHP_OUTPUT_HANDLER_STDFLAGS | - <span style='color:red;font-weight:bold;'>const PHP_OUTPUT_HANDLER_STDFLAGS</span> |
     | const PHP_OUTPUT_HANDLER_STARTED | - <span style='color:red;font-weight:bold;'>const PHP_OUTPUT_HANDLER_STARTED</span> |
     | const PHP_OUTPUT_HANDLER_DISABLED | - <span style='color:red;font-weight:bold;'>const PHP_OUTPUT_HANDLER_DISABLED</span> |
+    | const UPLOAD_ERR_OK | - <span style='color:red;font-weight:bold;'>const UPLOAD_ERR_OK</span> |
+    | const UPLOAD_ERR_INI_SIZE | - <span style='color:red;font-weight:bold;'>const UPLOAD_ERR_INI_SIZE</span> |
+    | const UPLOAD_ERR_FORM_SIZE | - <span style='color:red;font-weight:bold;'>const UPLOAD_ERR_FORM_SIZE</span> |
+    | const UPLOAD_ERR_PARTIAL | - <span style='color:red;font-weight:bold;'>const UPLOAD_ERR_PARTIAL</span> |
+    | const UPLOAD_ERR_NO_FILE | - <span style='color:red;font-weight:bold;'>const UPLOAD_ERR_NO_FILE</span> |
+    | const UPLOAD_ERR_NO_TMP_DIR | - <span style='color:red;font-weight:bold;'>const UPLOAD_ERR_NO_TMP_DIR</span> |
+    | const UPLOAD_ERR_CANT_WRITE | - <span style='color:red;font-weight:bold;'>const UPLOAD_ERR_CANT_WRITE</span> |
+    | const UPLOAD_ERR_EXTENSION | - <span style='color:red;font-weight:bold;'>const UPLOAD_ERR_EXTENSION</span> |
     | const PHP_CLI_PROCESS_TITLE | - <span style='color:red;font-weight:bold;'>const PHP_CLI_PROCESS_TITLE</span> |
+    | const STDIN | - <span style='color:red;font-weight:bold;'>const STDIN</span> |
+    | const STDOUT | - <span style='color:red;font-weight:bold;'>const STDOUT</span> |
+    | const STDERR | - <span style='color:red;font-weight:bold;'>const STDERR</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function each($arr)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function create_function($args,$code)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function Generator::__wakeup()</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const PEACHPIE_VERSION</span> |
 ??? tiny "[=0% "**bcmath** 0 / 10"]"
     | PHP | PeachPie |
     | --- | ---      |
-    | function bcadd($left_operand,$right_operand,$scale) | - <span style='color:red;font-weight:bold;'>function bcadd($left_operand,$right_operand,$scale)</span> |
-    | function bcsub($left_operand,$right_operand,$scale) | - <span style='color:red;font-weight:bold;'>function bcsub($left_operand,$right_operand,$scale)</span> |
-    | function bcmul($left_operand,$right_operand,$scale) | - <span style='color:red;font-weight:bold;'>function bcmul($left_operand,$right_operand,$scale)</span> |
-    | function bcdiv($left_operand,$right_operand,$scale) | - <span style='color:red;font-weight:bold;'>function bcdiv($left_operand,$right_operand,$scale)</span> |
-    | function bcmod($left_operand,$right_operand,$scale) | - <span style='color:red;font-weight:bold;'>function bcmod($left_operand,$right_operand,$scale)</span> |
-    | function bcpow($x,$y,$scale) | - <span style='color:red;font-weight:bold;'>function bcpow($x,$y,$scale)</span> |
-    | function bcsqrt($operand,$scale) | - <span style='color:red;font-weight:bold;'>function bcsqrt($operand,$scale)</span> |
+    | function bcadd($num1,$num2,$scale) | - <span style='color:red;font-weight:bold;'>function bcadd($num1,$num2,$scale)</span> |
+    | function bcsub($num1,$num2,$scale) | - <span style='color:red;font-weight:bold;'>function bcsub($num1,$num2,$scale)</span> |
+    | function bcmul($num1,$num2,$scale) | - <span style='color:red;font-weight:bold;'>function bcmul($num1,$num2,$scale)</span> |
+    | function bcdiv($num1,$num2,$scale) | - <span style='color:red;font-weight:bold;'>function bcdiv($num1,$num2,$scale)</span> |
+    | function bcmod($num1,$num2,$scale) | - <span style='color:red;font-weight:bold;'>function bcmod($num1,$num2,$scale)</span> |
+    | function bcpowmod($num,$exponent,$modulus,$scale) | - <span style='color:red;font-weight:bold;'>function bcpowmod($num,$exponent,$modulus,$scale)</span> |
+    | function bcpow($num,$exponent,$scale) | - <span style='color:red;font-weight:bold;'>function bcpow($num,$exponent,$scale)</span> |
+    | function bcsqrt($num,$scale) | - <span style='color:red;font-weight:bold;'>function bcsqrt($num,$scale)</span> |
+    | function bccomp($num1,$num2,$scale) | - <span style='color:red;font-weight:bold;'>function bccomp($num1,$num2,$scale)</span> |
     | function bcscale($scale) | - <span style='color:red;font-weight:bold;'>function bcscale($scale)</span> |
-    | function bccomp($left_operand,$right_operand,$scale) | - <span style='color:red;font-weight:bold;'>function bccomp($left_operand,$right_operand,$scale)</span> |
-    | function bcpowmod($x,$y,$mod,$scale) | - <span style='color:red;font-weight:bold;'>function bcpowmod($x,$y,$mod,$scale)</span> |
 ??? tiny "[=0% "**calendar** 0 / 39"]"
     | PHP | PeachPie |
     | --- | ---      |
-    | function jdtogregorian($juliandaycount) | - <span style='color:red;font-weight:bold;'>function jdtogregorian($juliandaycount)</span> |
-    | function gregoriantojd($month,$day,$year) | - <span style='color:red;font-weight:bold;'>function gregoriantojd($month,$day,$year)</span> |
-    | function jdtojulian($juliandaycount) | - <span style='color:red;font-weight:bold;'>function jdtojulian($juliandaycount)</span> |
-    | function juliantojd($month,$day,$year) | - <span style='color:red;font-weight:bold;'>function juliantojd($month,$day,$year)</span> |
-    | function jdtojewish($juliandaycount,$hebrew,$fl) | - <span style='color:red;font-weight:bold;'>function jdtojewish($juliandaycount,$hebrew,$fl)</span> |
-    | function jewishtojd($month,$day,$year) | - <span style='color:red;font-weight:bold;'>function jewishtojd($month,$day,$year)</span> |
-    | function jdtofrench($juliandaycount) | - <span style='color:red;font-weight:bold;'>function jdtofrench($juliandaycount)</span> |
-    | function frenchtojd($month,$day,$year) | - <span style='color:red;font-weight:bold;'>function frenchtojd($month,$day,$year)</span> |
-    | function jddayofweek($juliandaycount,$mode) | - <span style='color:red;font-weight:bold;'>function jddayofweek($juliandaycount,$mode)</span> |
-    | function jdmonthname($juliandaycount,$mode) | - <span style='color:red;font-weight:bold;'>function jdmonthname($juliandaycount,$mode)</span> |
-    | function easter_date($year) | - <span style='color:red;font-weight:bold;'>function easter_date($year)</span> |
-    | function easter_days($year,$method) | - <span style='color:red;font-weight:bold;'>function easter_days($year,$method)</span> |
-    | function unixtojd($timestamp) | - <span style='color:red;font-weight:bold;'>function unixtojd($timestamp)</span> |
-    | function jdtounix($jday) | - <span style='color:red;font-weight:bold;'>function jdtounix($jday)</span> |
-    | function cal_to_jd($calendar,$month,$day,$year) | - <span style='color:red;font-weight:bold;'>function cal_to_jd($calendar,$month,$day,$year)</span> |
-    | function cal_from_jd($jd,$calendar) | - <span style='color:red;font-weight:bold;'>function cal_from_jd($jd,$calendar)</span> |
     | function cal_days_in_month($calendar,$month,$year) | - <span style='color:red;font-weight:bold;'>function cal_days_in_month($calendar,$month,$year)</span> |
+    | function cal_from_jd($julian_day,$calendar) | - <span style='color:red;font-weight:bold;'>function cal_from_jd($julian_day,$calendar)</span> |
     | function cal_info($calendar) | - <span style='color:red;font-weight:bold;'>function cal_info($calendar)</span> |
+    | function cal_to_jd($calendar,$month,$day,$year) | - <span style='color:red;font-weight:bold;'>function cal_to_jd($calendar,$month,$day,$year)</span> |
+    | function easter_date($year,$mode) | - <span style='color:red;font-weight:bold;'>function easter_date($year,$mode)</span> |
+    | function easter_days($year,$mode) | - <span style='color:red;font-weight:bold;'>function easter_days($year,$mode)</span> |
+    | function frenchtojd($month,$day,$year) | - <span style='color:red;font-weight:bold;'>function frenchtojd($month,$day,$year)</span> |
+    | function gregoriantojd($month,$day,$year) | - <span style='color:red;font-weight:bold;'>function gregoriantojd($month,$day,$year)</span> |
+    | function jddayofweek($julian_day,$mode) | - <span style='color:red;font-weight:bold;'>function jddayofweek($julian_day,$mode)</span> |
+    | function jdmonthname($julian_day,$mode) | - <span style='color:red;font-weight:bold;'>function jdmonthname($julian_day,$mode)</span> |
+    | function jdtofrench($julian_day) | - <span style='color:red;font-weight:bold;'>function jdtofrench($julian_day)</span> |
+    | function jdtogregorian($julian_day) | - <span style='color:red;font-weight:bold;'>function jdtogregorian($julian_day)</span> |
+    | function jdtojewish($julian_day,$hebrew,$flags) | - <span style='color:red;font-weight:bold;'>function jdtojewish($julian_day,$hebrew,$flags)</span> |
+    | function jdtojulian($julian_day) | - <span style='color:red;font-weight:bold;'>function jdtojulian($julian_day)</span> |
+    | function jdtounix($julian_day) | - <span style='color:red;font-weight:bold;'>function jdtounix($julian_day)</span> |
+    | function jewishtojd($month,$day,$year) | - <span style='color:red;font-weight:bold;'>function jewishtojd($month,$day,$year)</span> |
+    | function juliantojd($month,$day,$year) | - <span style='color:red;font-weight:bold;'>function juliantojd($month,$day,$year)</span> |
+    | function unixtojd($timestamp) | - <span style='color:red;font-weight:bold;'>function unixtojd($timestamp)</span> |
     | const CAL_GREGORIAN | - <span style='color:red;font-weight:bold;'>const CAL_GREGORIAN</span> |
     | const CAL_JULIAN | - <span style='color:red;font-weight:bold;'>const CAL_JULIAN</span> |
     | const CAL_JEWISH | - <span style='color:red;font-weight:bold;'>const CAL_JEWISH</span> |
@@ -123,59 +115,38 @@
     | const CAL_JEWISH_ADD_ALAFIM | - <span style='color:red;font-weight:bold;'>const CAL_JEWISH_ADD_ALAFIM</span> |
     | const CAL_JEWISH_ADD_GERESHAYIM | - <span style='color:red;font-weight:bold;'>const CAL_JEWISH_ADD_GERESHAYIM</span> |
 ??? tiny "[=100% "**ctype** 11 / 11"]"
-??? tiny "[=96% "**date** 182 / 189"]"
+??? tiny "[=96% "**date** 184 / 192"]"
     | PHP | PeachPie |
     | --- | ---      |
-    | function strtotime(<span style='color:green;'>$time,$now</span>) | function strtotime(<span style='font-weight:bold;text-decoration:underline;'>$time,$start</span>) |
-    | function mktime(<span style='color:green;'>$hour,$min,$sec,$mon,$day,$year</span>) | function mktime(<span style='font-weight:bold;text-decoration:underline;'>$hour,$minute,$second,$month,$day,$year,$daylightSaving</span>) |
-    | function gmmktime(<span style='color:green;'>$hour,$min,$sec,$mon,$day,$year</span>) | function gmmktime(<span style='font-weight:bold;text-decoration:underline;'>$hour,$minute,$second,$month,$day,$year,$dummy</span>) |
-    | function localtime(<span style='color:green;'>$timestamp,$associative_array</span>) | function localtime(<span style='font-weight:bold;text-decoration:underline;'>$timestamp,$returnAssociative</span>) |
-    | function date_create_from_format(<span style='color:green;'>$format,$time,$object</span>) | function date_create_from_format(<span style='font-weight:bold;text-decoration:underline;'>$format,$time,$timezone</span>) |
-    | function date_create_immutable_from_format(<span style='color:green;'>$format,$time,$object</span>) | function date_create_immutable_from_format(<span style='font-weight:bold;text-decoration:underline;'>$format,$time,$timezone</span>) |
-    | function date_parse(<span style='color:green;'>$date</span>) | function date_parse(<span style='font-weight:bold;text-decoration:underline;'>$time</span>) |
-    | function date_format(<span style='color:green;'>$object,$format</span>) | function date_format(<span style='font-weight:bold;text-decoration:underline;'>$datetime,$format</span>) |
-    | function date_modify(<span style='color:green;'>$object,$modify</span>) | function date_modify(<span style='font-weight:bold;text-decoration:underline;'>$datetime,$modify</span>) |
-    | function date_timezone_get(<span style='color:green;'>$object</span>) | function date_timezone_get(<span style='font-weight:bold;text-decoration:underline;'>$dt</span>) |
-    | function date_timezone_set(<span style='color:green;'>$object,$timezone</span>) | function date_timezone_set(<span style='font-weight:bold;text-decoration:underline;'>$dt,$timezone</span>) |
-    | function date_offset_get(<span style='color:green;'>$object</span>) | function date_offset_get(<span style='font-weight:bold;text-decoration:underline;'>$datetime</span>) |
-    | function date_diff(<span style='color:green;'>$object,$object2,$absolute</span>) | function date_diff(<span style='font-weight:bold;text-decoration:underline;'>$datetime1,$datetime2,$absolute</span>) |
-    | function date_time_set(<span style='color:green;'>$object,$hour,$minute,$second,$microseconds</span>) | function date_time_set(<span style='font-weight:bold;text-decoration:underline;'>$object,$hour,$minute,$second</span>) |
-    | function timezone_offset_get(<span style='color:green;'>$object,$datetime</span>) | function timezone_offset_get(<span style='font-weight:bold;text-decoration:underline;'>$timezone,$datetime</span>) |
-    | function timezone_transitions_get(<span style='color:green;'>$object,$timestamp_begin,$timestamp_end</span>) | function timezone_transitions_get(<span style='font-weight:bold;text-decoration:underline;'>$timezone,$timestamp_begin,$timestamp_end</span>) |
-    | function date_default_timezone_set(<span style='color:green;'>$timezone_identifier</span>) | function date_default_timezone_set(<span style='font-weight:bold;text-decoration:underline;'>$zoneName</span>) |
-    | function date_sunrise(<span style='color:green;'>$time,$format,$latitude,$longitude,$zenith,$gmt_offset</span>) | function date_sunrise(<span style='font-weight:bold;text-decoration:underline;'>$timestamp,$format,$latitude,$longitude,$zenith,$offset</span>) |
-    | function date_sunset(<span style='color:green;'>$time,$format,$latitude,$longitude,$zenith,$gmt_offset</span>) | function date_sunset(<span style='font-weight:bold;text-decoration:underline;'>$timestamp,$format,$latitude,$longitude,$zenith,$offset</span>) |
-    | function date_sun_info($time,$latitude,$longitude) | - <span style='color:red;font-weight:bold;'>function date_sun_info($time,$latitude,$longitude)</span> |
-    | function DateTimeInterface::diff(<span style='color:green;'>$object,$absolute</span>) | function DateTimeInterface::diff(<span style='font-weight:bold;text-decoration:underline;'>$datetime2,$absolute</span>) |
-    | function DateTime::createFromImmutable(<span style='color:green;'>$DateTimeImmutable</span>) | function DateTime::createFromImmutable(<span style='font-weight:bold;text-decoration:underline;'>$datetime</span>) |
-    | function DateTime::createFromFormat(<span style='color:green;'>$format,$time,$object</span>) | function DateTime::createFromFormat(<span style='font-weight:bold;text-decoration:underline;'>$format,$time,$timezone</span>) |
-    | function DateTime::setTime(<span style='color:green;'>$hour,$minute,$second,$microseconds</span>) | function DateTime::setTime(<span style='font-weight:bold;text-decoration:underline;'>$hour,$minute,$second</span>) |
-    | function DateTime::diff(<span style='color:green;'>$object,$absolute</span>) | function DateTime::diff(<span style='font-weight:bold;text-decoration:underline;'>$datetime2,$absolute</span>) |
-    | function DateTimeImmutable::createFromFormat(<span style='color:green;'>$format,$time,$object</span>) | function DateTimeImmutable::createFromFormat(<span style='font-weight:bold;text-decoration:underline;'>$format,$time,$timezone</span>) |
-    | function DateTimeImmutable::diff(<span style='color:green;'>$object,$absolute</span>) | function DateTimeImmutable::diff(<span style='font-weight:bold;text-decoration:underline;'>$datetime2,$absolute</span>) |
-    | function DateTimeZone::__construct(<span style='color:green;'>$timezone</span>) | function DateTimeZone::__construct(<span style='font-weight:bold;text-decoration:underline;'>$timezone_name</span>) |
+    | function date_sun_info($timestamp,$latitude,$longitude) | - <span style='color:red;font-weight:bold;'>function date_sun_info($timestamp,$latitude,$longitude)</span> |
     | function DateTimeZone::__wakeup() | - <span style='color:red;font-weight:bold;'>function DateTimeZone::__wakeup()</span> |
     | function DateTimeZone::__set_state($array) | - <span style='color:red;font-weight:bold;'>function DateTimeZone::__set_state($array)</span> |
-    | function DateTimeZone::getOffset(<span style='color:green;'>$object</span>) | function DateTimeZone::getOffset(<span style='font-weight:bold;text-decoration:underline;'>$datetime</span>) |
     | function DateInterval::__wakeup() | - <span style='color:red;font-weight:bold;'>function DateInterval::__wakeup()</span> |
     | function DateInterval::__set_state($array) | - <span style='color:red;font-weight:bold;'>function DateInterval::__set_state($array)</span> |
-    | function DatePeriod::__construct(<span style='color:green;'>$start,$interval,$end</span>) | function DatePeriod::__construct(<span style='font-weight:bold;text-decoration:underline;'>$start,$interval,$end,$options</span>) |
     | function DatePeriod::__wakeup() | - <span style='color:red;font-weight:bold;'>function DatePeriod::__wakeup()</span> |
     | function DatePeriod::__set_state($array) | - <span style='color:red;font-weight:bold;'>function DatePeriod::__set_state($array)</span> |
-??? tiny "[=100% "**filter** 65 / 65"]"
+    | function DatePeriod::getIterator() | - <span style='color:red;font-weight:bold;'>function DatePeriod::getIterator()</span> |
+??? tiny "[=98% "**filter** 60 / 61"]"
     | PHP | PeachPie |
     | --- | ---      |
-    | function filter_var_array(<span style='color:green;'>$data,$definition,$add_empty</span>) | function filter_var_array(<span style='font-weight:bold;text-decoration:underline;'>$data,$definition</span>) |
-??? tiny "[=28% "**hash** 15 / 54"]"
+    | const FILTER_VALIDATE_BOOL | - <span style='color:red;font-weight:bold;'>const FILTER_VALIDATE_BOOL</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const INPUT_SESSION</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const INPUT_REQUEST</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const FILTER_SANITIZE_MAGIC_QUOTES</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const FILTER_FLAG_SCHEME_REQUIRED</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const FILTER_FLAG_HOST_REQUIRED</span> |
+??? tiny "[=27% "**hash** 15 / 56"]"
     | PHP | PeachPie |
     | --- | ---      |
     | function hash_hmac_algos() | - <span style='color:red;font-weight:bold;'>function hash_hmac_algos()</span> |
-    | function hash_hkdf($ikm,$algo,$length,$string,$salt) | - <span style='color:red;font-weight:bold;'>function hash_hkdf($ikm,$algo,$length,$string,$salt)</span> |
-    | function mhash_keygen_s2k($hash,$input_password,$salt,$bytes) | - <span style='color:red;font-weight:bold;'>function mhash_keygen_s2k($hash,$input_password,$salt,$bytes)</span> |
-    | function mhash_get_block_size($hash) | - <span style='color:red;font-weight:bold;'>function mhash_get_block_size($hash)</span> |
-    | function mhash_get_hash_name($hash) | - <span style='color:red;font-weight:bold;'>function mhash_get_hash_name($hash)</span> |
+    | function hash_hkdf($algo,$key,$length,$info,$salt) | - <span style='color:red;font-weight:bold;'>function hash_hkdf($algo,$key,$length,$info,$salt)</span> |
+    | function mhash_get_block_size($algo) | - <span style='color:red;font-weight:bold;'>function mhash_get_block_size($algo)</span> |
+    | function mhash_get_hash_name($algo) | - <span style='color:red;font-weight:bold;'>function mhash_get_hash_name($algo)</span> |
+    | function mhash_keygen_s2k($algo,$password,$salt,$length) | - <span style='color:red;font-weight:bold;'>function mhash_keygen_s2k($algo,$password,$salt,$length)</span> |
     | function mhash_count() | - <span style='color:red;font-weight:bold;'>function mhash_count()</span> |
-    | function mhash($hash,$data,$key) | - <span style='color:red;font-weight:bold;'>function mhash($hash,$data,$key)</span> |
+    | function mhash($algo,$data,$key) | - <span style='color:red;font-weight:bold;'>function mhash($algo,$data,$key)</span> |
+    | function HashContext::__serialize() | - <span style='color:red;font-weight:bold;'>function HashContext::__serialize()</span> |
+    | function HashContext::__unserialize($data) | - <span style='color:red;font-weight:bold;'>function HashContext::__unserialize($data)</span> |
     | const MHASH_CRC32 | - <span style='color:red;font-weight:bold;'>const MHASH_CRC32</span> |
     | const MHASH_MD5 | - <span style='color:red;font-weight:bold;'>const MHASH_MD5</span> |
     | const MHASH_SHA1 | - <span style='color:red;font-weight:bold;'>const MHASH_SHA1</span> |
@@ -208,532 +179,151 @@
     | const MHASH_FNV1A64 | - <span style='color:red;font-weight:bold;'>const MHASH_FNV1A64</span> |
     | const MHASH_JOAAT | - <span style='color:red;font-weight:bold;'>const MHASH_JOAAT</span> |
     | const MHASH_CRC32C | - <span style='color:red;font-weight:bold;'>const MHASH_CRC32C</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const HASH_DEFAULT</span> |
 ??? tiny "[=100% "**iconv** 14 / 14"]"
+??? tiny "[=93% "**json** 42 / 45"]"
     | PHP | PeachPie |
     | --- | ---      |
-    | function iconv_mime_encode(<span style='color:green;'>$field_name,$field_value,$preference</span>) | function iconv_mime_encode(<span style='font-weight:bold;text-decoration:underline;'>$field_name,$field_value,$preferences</span>) |
-    | function iconv_mime_decode(<span style='color:green;'>$encoded_string,$mode,$charset</span>) | function iconv_mime_decode(<span style='font-weight:bold;text-decoration:underline;'>$encoded_header,$mode,$charset</span>) |
-    | function iconv_mime_decode_headers(<span style='color:green;'>$headers,$mode,$charset</span>) | function iconv_mime_decode_headers(<span style='font-weight:bold;text-decoration:underline;'>$encoded_headers,$mode,$charset</span>) |
-??? tiny "[=91% "**json** 41 / 45"]"
-    | PHP | PeachPie |
-    | --- | ---      |
-    | const JSON_PARTIAL_OUTPUT_ON_ERROR | - <span style='color:red;font-weight:bold;'>const JSON_PARTIAL_OUTPUT_ON_ERROR</span> |
     | const JSON_UNESCAPED_LINE_TERMINATORS | - <span style='color:red;font-weight:bold;'>const JSON_UNESCAPED_LINE_TERMINATORS</span> |
     | const JSON_INVALID_UTF8_IGNORE | - <span style='color:red;font-weight:bold;'>const JSON_INVALID_UTF8_IGNORE</span> |
     | const JSON_INVALID_UTF8_SUBSTITUTE | - <span style='color:red;font-weight:bold;'>const JSON_INVALID_UTF8_SUBSTITUTE</span> |
-??? tiny "[=100% "**SPL** 1096 / 1096"]"
+??? tiny "[=100% "**SPL** 1089 / 1090"]"
     | PHP | PeachPie |
     | --- | ---      |
-    | function spl_autoload(<span style='color:green;'>$class_name,$file_extensions</span>) | function spl_autoload(<span style='font-weight:bold;text-decoration:underline;'>$className</span>) |
-    | function spl_autoload_extensions(<span style='color:green;'>$file_extensions</span>) | function spl_autoload_extensions(<span style='font-weight:bold;text-decoration:underline;'>$fileExtensions</span>) |
-    | function spl_autoload_register(<span style='color:green;'>$autoload_function,$throw,$prepend</span>) | function spl_autoload_register(<span style='font-weight:bold;text-decoration:underline;'>$autoloadFunction,$throwError,$prepend</span>) |
-    | function spl_autoload_unregister(<span style='color:green;'>$autoload_function</span>) | function spl_autoload_unregister(<span style='font-weight:bold;text-decoration:underline;'>$autoloadFunction</span>) |
-    | function spl_autoload_call(<span style='color:green;'>$class_name</span>) | function spl_autoload_call(<span style='font-weight:bold;text-decoration:underline;'>$className</span>) |
-    | function class_parents(<span style='color:green;'>$instance,$autoload</span>) | function class_parents(<span style='font-weight:bold;text-decoration:underline;'>$classNameOrObject,$useAutoload</span>) |
-    | function class_implements(<span style='color:green;'>$what,$autoload</span>) | function class_implements(<span style='font-weight:bold;text-decoration:underline;'>$classNameOrObject,$useAutoload</span>) |
-    | function class_uses(<span style='color:green;'>$what,$autoload</span>) | function class_uses(<span style='font-weight:bold;text-decoration:underline;'>$classNameOrObject,$useAutoload</span>) |
-    | function IteratorIterator::__construct(<span style='color:green;'>$iterator</span>) | function IteratorIterator::__construct(<span style='font-weight:bold;text-decoration:underline;'>$iterator,$classname</span>) |
-    | function FilterIterator::__construct(<span style='color:green;'>$iterator</span>) | function FilterIterator::__construct(<span style='font-weight:bold;text-decoration:underline;'>$iterator,$classname</span>) |
-    | function RecursiveFilterIterator::__construct(<span style='color:green;'>$iterator</span>) | function RecursiveFilterIterator::__construct(<span style='font-weight:bold;text-decoration:underline;'>$iterator,$classname</span>) |
-    | function ParentIterator::__construct(<span style='color:green;'>$iterator</span>) | function ParentIterator::__construct(<span style='font-weight:bold;text-decoration:underline;'>$iterator,$classname</span>) |
-    | function CachingIterator::offsetGet(<span style='color:green;'>$index</span>) | function CachingIterator::offsetGet(<span style='font-weight:bold;text-decoration:underline;'>$offset</span>) |
-    | function CachingIterator::offsetSet(<span style='color:green;'>$index,$newval</span>) | function CachingIterator::offsetSet(<span style='font-weight:bold;text-decoration:underline;'>$offset,$value</span>) |
-    | function CachingIterator::offsetUnset(<span style='color:green;'>$index</span>) | function CachingIterator::offsetUnset(<span style='font-weight:bold;text-decoration:underline;'>$offset</span>) |
-    | function CachingIterator::offsetExists(<span style='color:green;'>$index</span>) | function CachingIterator::offsetExists(<span style='font-weight:bold;text-decoration:underline;'>$offset</span>) |
-    | function RecursiveCachingIterator::offsetGet(<span style='color:green;'>$index</span>) | function RecursiveCachingIterator::offsetGet(<span style='font-weight:bold;text-decoration:underline;'>$offset</span>) |
-    | function RecursiveCachingIterator::offsetSet(<span style='color:green;'>$index,$newval</span>) | function RecursiveCachingIterator::offsetSet(<span style='font-weight:bold;text-decoration:underline;'>$offset,$value</span>) |
-    | function RecursiveCachingIterator::offsetUnset(<span style='color:green;'>$index</span>) | function RecursiveCachingIterator::offsetUnset(<span style='font-weight:bold;text-decoration:underline;'>$offset</span>) |
-    | function RecursiveCachingIterator::offsetExists(<span style='color:green;'>$index</span>) | function RecursiveCachingIterator::offsetExists(<span style='font-weight:bold;text-decoration:underline;'>$offset</span>) |
-    | function NoRewindIterator::__construct(<span style='color:green;'>$iterator</span>) | function NoRewindIterator::__construct(<span style='font-weight:bold;text-decoration:underline;'>$iterator,$classname</span>) |
-    | function InfiniteIterator::__construct(<span style='color:green;'>$iterator</span>) | function InfiniteIterator::__construct(<span style='font-weight:bold;text-decoration:underline;'>$iterator,$classname</span>) |
-    | function RecursiveTreeIterator::__construct(<span style='color:green;'>$iterator,$flags,$caching_it_flags,$mode</span>) | function RecursiveTreeIterator::__construct(<span style='font-weight:bold;text-decoration:underline;'>$it,$flags,$cit_flags,$mode</span>) |
-    | function RecursiveTreeIterator::setPrefixPart(<span style='color:green;'>$part,$value</span>) | function RecursiveTreeIterator::setPrefixPart(<span style='font-weight:bold;text-decoration:underline;'>$part,$prefix</span>) |
-    | function ArrayObject::__unserialize(<span style='color:green;'>$serialized</span>) | function ArrayObject::__unserialize(<span style='font-weight:bold;text-decoration:underline;'>$array</span>) |
-    | function ArrayObject::setIteratorClass(<span style='color:green;'>$iteratorClass</span>) | function ArrayObject::setIteratorClass(<span style='font-weight:bold;text-decoration:underline;'>$iterator_class</span>) |
-    | function ArrayIterator::offsetSet(<span style='color:green;'>$index,$newval</span>) | function ArrayIterator::offsetSet(<span style='font-weight:bold;text-decoration:underline;'>$index,$value</span>) |
-    | function ArrayIterator::unserialize(<span style='color:green;'>$serialized</span>) | function ArrayIterator::unserialize(<span style='font-weight:bold;text-decoration:underline;'>$data</span>) |
-    | function ArrayIterator::__unserialize(<span style='color:green;'>$serialized</span>) | function ArrayIterator::__unserialize(<span style='font-weight:bold;text-decoration:underline;'>$array</span>) |
-    | function RecursiveArrayIterator::offsetSet(<span style='color:green;'>$index,$newval</span>) | function RecursiveArrayIterator::offsetSet(<span style='font-weight:bold;text-decoration:underline;'>$index,$value</span>) |
-    | function RecursiveArrayIterator::unserialize(<span style='color:green;'>$serialized</span>) | function RecursiveArrayIterator::unserialize(<span style='font-weight:bold;text-decoration:underline;'>$data</span>) |
-    | function RecursiveArrayIterator::__unserialize(<span style='color:green;'>$serialized</span>) | function RecursiveArrayIterator::__unserialize(<span style='font-weight:bold;text-decoration:underline;'>$array</span>) |
-    | function RecursiveDirectoryIterator::hasChildren(<span style='color:green;'>$allow_links</span>) | function RecursiveDirectoryIterator::hasChildren(<span style='font-weight:bold;text-decoration:underline;'></span>) |
-    | function SplFileObject::fputcsv(<span style='color:green;'>$fields,$delimiter,$enclosure,$escape</span>) | function SplFileObject::fputcsv(<span style='font-weight:bold;text-decoration:underline;'>$fields,$delimiter,$enclosure</span>) |
-    | function SplFileObject::fseek(<span style='color:green;'>$pos,$whence</span>) | function SplFileObject::fseek(<span style='font-weight:bold;text-decoration:underline;'>$offset,$whence</span>) |
-    | function SplFileObject::fscanf(<span style='color:green;'>$format,$vars</span>) | function SplFileObject::fscanf(<span style='font-weight:bold;text-decoration:underline;'>$format,$arg,$args</span>) |
-    | function SplFileObject::fwrite(<span style='color:green;'>$str,$length</span>) | function SplFileObject::fwrite(<span style='font-weight:bold;text-decoration:underline;'>$data,$length</span>) |
-    | function SplTempFileObject::fputcsv(<span style='color:green;'>$fields,$delimiter,$enclosure,$escape</span>) | function SplTempFileObject::fputcsv(<span style='font-weight:bold;text-decoration:underline;'>$fields,$delimiter,$enclosure</span>) |
-    | function SplTempFileObject::fseek(<span style='color:green;'>$pos,$whence</span>) | function SplTempFileObject::fseek(<span style='font-weight:bold;text-decoration:underline;'>$offset,$whence</span>) |
-    | function SplTempFileObject::fscanf(<span style='color:green;'>$format,$vars</span>) | function SplTempFileObject::fscanf(<span style='font-weight:bold;text-decoration:underline;'>$format,$arg,$args</span>) |
-    | function SplTempFileObject::fwrite(<span style='color:green;'>$str,$length</span>) | function SplTempFileObject::fwrite(<span style='font-weight:bold;text-decoration:underline;'>$data,$length</span>) |
-    | function SplDoublyLinkedList::offsetExists(<span style='color:green;'>$index</span>) | function SplDoublyLinkedList::offsetExists(<span style='font-weight:bold;text-decoration:underline;'>$offset</span>) |
-    | function SplDoublyLinkedList::offsetGet(<span style='color:green;'>$index</span>) | function SplDoublyLinkedList::offsetGet(<span style='font-weight:bold;text-decoration:underline;'>$offset</span>) |
-    | function SplDoublyLinkedList::offsetSet(<span style='color:green;'>$index,$newval</span>) | function SplDoublyLinkedList::offsetSet(<span style='font-weight:bold;text-decoration:underline;'>$offset,$value</span>) |
-    | function SplDoublyLinkedList::offsetUnset(<span style='color:green;'>$index</span>) | function SplDoublyLinkedList::offsetUnset(<span style='font-weight:bold;text-decoration:underline;'>$offset</span>) |
-    | function SplDoublyLinkedList::__unserialize(<span style='color:green;'>$serialized</span>) | function SplDoublyLinkedList::__unserialize(<span style='font-weight:bold;text-decoration:underline;'>$array</span>) |
-    | function SplQueue::offsetExists(<span style='color:green;'>$index</span>) | function SplQueue::offsetExists(<span style='font-weight:bold;text-decoration:underline;'>$offset</span>) |
-    | function SplQueue::offsetGet(<span style='color:green;'>$index</span>) | function SplQueue::offsetGet(<span style='font-weight:bold;text-decoration:underline;'>$offset</span>) |
-    | function SplQueue::offsetSet(<span style='color:green;'>$index,$newval</span>) | function SplQueue::offsetSet(<span style='font-weight:bold;text-decoration:underline;'>$offset,$value</span>) |
-    | function SplQueue::offsetUnset(<span style='color:green;'>$index</span>) | function SplQueue::offsetUnset(<span style='font-weight:bold;text-decoration:underline;'>$offset</span>) |
-    | function SplQueue::__unserialize(<span style='color:green;'>$serialized</span>) | function SplQueue::__unserialize(<span style='font-weight:bold;text-decoration:underline;'>$array</span>) |
-    | function SplStack::offsetExists(<span style='color:green;'>$index</span>) | function SplStack::offsetExists(<span style='font-weight:bold;text-decoration:underline;'>$offset</span>) |
-    | function SplStack::offsetGet(<span style='color:green;'>$index</span>) | function SplStack::offsetGet(<span style='font-weight:bold;text-decoration:underline;'>$offset</span>) |
-    | function SplStack::offsetSet(<span style='color:green;'>$index,$newval</span>) | function SplStack::offsetSet(<span style='font-weight:bold;text-decoration:underline;'>$offset,$value</span>) |
-    | function SplStack::offsetUnset(<span style='color:green;'>$index</span>) | function SplStack::offsetUnset(<span style='font-weight:bold;text-decoration:underline;'>$offset</span>) |
-    | function SplStack::__unserialize(<span style='color:green;'>$serialized</span>) | function SplStack::__unserialize(<span style='font-weight:bold;text-decoration:underline;'>$array</span>) |
-    | function SplPriorityQueue::compare(<span style='color:green;'>$value1,$value2</span>) | function SplPriorityQueue::compare(<span style='font-weight:bold;text-decoration:underline;'>$priority1,$priority2</span>) |
-    | function SplFixedArray::setSize(<span style='color:green;'>$value</span>) | function SplFixedArray::setSize(<span style='font-weight:bold;text-decoration:underline;'>$size</span>) |
-    | function SplFixedArray::offsetExists(<span style='color:green;'>$index</span>) | function SplFixedArray::offsetExists(<span style='font-weight:bold;text-decoration:underline;'>$offset</span>) |
-    | function SplFixedArray::offsetGet(<span style='color:green;'>$index</span>) | function SplFixedArray::offsetGet(<span style='font-weight:bold;text-decoration:underline;'>$offset</span>) |
-    | function SplFixedArray::offsetSet(<span style='color:green;'>$index,$newval</span>) | function SplFixedArray::offsetSet(<span style='font-weight:bold;text-decoration:underline;'>$offset,$value</span>) |
-    | function SplFixedArray::offsetUnset(<span style='color:green;'>$index</span>) | function SplFixedArray::offsetUnset(<span style='font-weight:bold;text-decoration:underline;'>$offset</span>) |
-    | function SplObjectStorage::addAll(<span style='color:green;'>$object</span>) | function SplObjectStorage::addAll(<span style='font-weight:bold;text-decoration:underline;'>$storage</span>) |
-    | function SplObjectStorage::removeAll(<span style='color:green;'>$object</span>) | function SplObjectStorage::removeAll(<span style='font-weight:bold;text-decoration:underline;'>$storage</span>) |
-    | function SplObjectStorage::removeAllExcept(<span style='color:green;'>$object</span>) | function SplObjectStorage::removeAllExcept(<span style='font-weight:bold;text-decoration:underline;'>$storage</span>) |
-    | function SplObjectStorage::setInfo(<span style='color:green;'>$info</span>) | function SplObjectStorage::setInfo(<span style='font-weight:bold;text-decoration:underline;'>$data</span>) |
-    | function SplObjectStorage::__unserialize(<span style='color:green;'>$serialized</span>) | function SplObjectStorage::__unserialize(<span style='font-weight:bold;text-decoration:underline;'>$array</span>) |
-    | function SplObjectStorage::offsetExists(<span style='color:green;'>$object</span>) | function SplObjectStorage::offsetExists(<span style='font-weight:bold;text-decoration:underline;'>$offset</span>) |
-    | function SplObjectStorage::offsetSet(<span style='color:green;'>$object,$data</span>) | function SplObjectStorage::offsetSet(<span style='font-weight:bold;text-decoration:underline;'>$offset,$value</span>) |
-    | function SplObjectStorage::offsetUnset(<span style='color:green;'>$object</span>) | function SplObjectStorage::offsetUnset(<span style='font-weight:bold;text-decoration:underline;'>$offset</span>) |
-    | function SplObjectStorage::offsetGet(<span style='color:green;'>$object</span>) | function SplObjectStorage::offsetGet(<span style='font-weight:bold;text-decoration:underline;'>$offset</span>) |
-    | function MultipleIterator::attachIterator(<span style='color:green;'>$iterator,$infos</span>) | function MultipleIterator::attachIterator(<span style='font-weight:bold;text-decoration:underline;'>$iter,$info</span>) |
-    | function MultipleIterator::detachIterator(<span style='color:green;'>$iterator</span>) | function MultipleIterator::detachIterator(<span style='font-weight:bold;text-decoration:underline;'>$iter</span>) |
-    | function MultipleIterator::containsIterator(<span style='color:green;'>$iterator</span>) | function MultipleIterator::containsIterator(<span style='font-weight:bold;text-decoration:underline;'>$iter</span>) |
-??? tiny "[=100% "**pcre** 29 / 29"]"
+    | function SplFixedArray::getIterator() | - <span style='color:red;font-weight:bold;'>function SplFixedArray::getIterator()</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SplFixedArray::rewind()</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SplFixedArray::next()</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SplFixedArray::valid()</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SplFixedArray::key()</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SplFixedArray::current()</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SplDoublyLinkedList::__construct()</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SplQueue::__construct()</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SplStack::__construct()</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SplPriorityQueue::__construct()</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SplHeap::__construct()</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SplMinHeap::__construct()</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SplMaxHeap::__construct()</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function ArrayIterator::__set($prop,$value)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function ArrayIterator::__get($prop)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function RecursiveArrayIterator::__set($prop,$value)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function RecursiveArrayIterator::__get($prop)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function EmptyIterator::__construct()</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function IteratorIterator::__call($name,$arguments)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function InfiniteIterator::__call($name,$arguments)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function NoRewindIterator::__call($name,$arguments)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function FilterIterator::__call($name,$arguments)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function CallbackFilterIterator::__call($name,$arguments)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function RecursiveCallbackFilterIterator::__call($name,$arguments)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function LimitIterator::__call($name,$arguments)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function AppendIterator::__call($name,$arguments)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function RecursiveFilterIterator::__call($name,$arguments)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function ParentIterator::__call($name,$arguments)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function CachingIterator::__call($name,$arguments)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function RecursiveCachingIterator::__call($name,$arguments)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function RegexIterator::__call($name,$arguments)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function RecursiveRegexIterator::__call($name,$arguments)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function ArrayObject::__set($prop,$value)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function ArrayObject::__get($prop)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const ArrayObject::DefaultIteratorClass</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function RecursiveIteratorIterator::__call($name,$arguments)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function RecursiveTreeIterator::__call($name,$arguments)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const RecursiveTreeIterator::PREFIX_MAX</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SplFileObject::fgetss($allowable_tags)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SplTempFileObject::fgetss($allowable_tags)</span> |
+??? tiny "[=100% "**pcre** 30 / 30"]"
     | PHP | PeachPie |
     | --- | ---      |
-    | function preg_match(<span style='color:green;'>$pattern,$subject,$subpatterns,$flags,$offset</span>) | function preg_match(<span style='font-weight:bold;text-decoration:underline;'>$pattern,$subject,$matches,$flags,$offset</span>) |
-    | function preg_match_all(<span style='color:green;'>$pattern,$subject,$subpatterns,$flags,$offset</span>) | function preg_match_all(<span style='font-weight:bold;text-decoration:underline;'>$pattern,$subject,$matches,$flags,$offset</span>) |
-    | function preg_replace(<span style='color:green;'>$regex,$replace,$subject,$limit,$count</span>) | function preg_replace(<span style='font-weight:bold;text-decoration:underline;'>$pattern,$replacement,$subject,$limit,$count</span>) |
-    | function preg_replace_callback(<span style='color:green;'>$regex,$callback,$subject,$limit,$count,$flags</span>) | function preg_replace_callback(<span style='font-weight:bold;text-decoration:underline;'>$pattern,$callback,$subject,$limit,$count</span>) |
-    | function preg_replace_callback_array(<span style='color:green;'>$pattern,$subject,$limit,$count,$flags</span>) | function preg_replace_callback_array(<span style='font-weight:bold;text-decoration:underline;'>$patterns_and_callbacks,$subject,$limit,$count</span>) |
-    | function preg_filter(<span style='color:green;'>$regex,$replace,$subject,$limit,$count</span>) | function preg_filter(<span style='font-weight:bold;text-decoration:underline;'>$pattern,$replacement,$subject,$limit,$count</span>) |
-    | function preg_quote(<span style='color:green;'>$str,$delim_char</span>) | function preg_quote(<span style='font-weight:bold;text-decoration:underline;'>$str,$delimiter</span>) |
-    | function preg_grep(<span style='color:green;'>$regex,$input,$flags</span>) | function preg_grep(<span style='font-weight:bold;text-decoration:underline;'>$pattern,$input,$flags</span>) |
+    |  | + <span style='color:red;font-weight:bold;'>const PREG_REPLACE_EVAL</span> |
 ??? tiny "[=0% "**readline** 0 / 9"]"
     | PHP | PeachPie |
     | --- | ---      |
     | function readline($prompt) | - <span style='color:red;font-weight:bold;'>function readline($prompt)</span> |
-    | function readline_info($varname,$newvalue) | - <span style='color:red;font-weight:bold;'>function readline_info($varname,$newvalue)</span> |
+    | function readline_info($var_name,$value) | - <span style='color:red;font-weight:bold;'>function readline_info($var_name,$value)</span> |
     | function readline_add_history($prompt) | - <span style='color:red;font-weight:bold;'>function readline_add_history($prompt)</span> |
     | function readline_clear_history() | - <span style='color:red;font-weight:bold;'>function readline_clear_history()</span> |
     | function readline_list_history() | - <span style='color:red;font-weight:bold;'>function readline_list_history()</span> |
     | function readline_read_history($filename) | - <span style='color:red;font-weight:bold;'>function readline_read_history($filename)</span> |
     | function readline_write_history($filename) | - <span style='color:red;font-weight:bold;'>function readline_write_history($filename)</span> |
-    | function readline_completion_function($funcname) | - <span style='color:red;font-weight:bold;'>function readline_completion_function($funcname)</span> |
+    | function readline_completion_function($callback) | - <span style='color:red;font-weight:bold;'>function readline_completion_function($callback)</span> |
     | const READLINE_LIB | - <span style='color:red;font-weight:bold;'>const READLINE_LIB</span> |
-??? tiny "[=97% "**Reflection** 331 / 342"]"
+??? tiny "[=95% "**Reflection** 338 / 357"]"
     | PHP | PeachPie |
     | --- | ---      |
-    | function ReflectionMethod::__construct(<span style='color:green;'>$class_or_method,$name</span>) | function ReflectionMethod::__construct(<span style='font-weight:bold;text-decoration:underline;'>$class_method,$name</span>) |
-    | function ReflectionMethod::setAccessible(<span style='color:green;'>$value</span>) | function ReflectionMethod::setAccessible(<span style='font-weight:bold;text-decoration:underline;'>$accessible</span>) |
-    | function ReflectionClass::__construct(<span style='color:green;'>$argument</span>) | function ReflectionClass::__construct(<span style='font-weight:bold;text-decoration:underline;'>$class</span>) |
-    | function ReflectionClass::getStaticPropertyValue(<span style='color:green;'>$name,$default</span>) | function ReflectionClass::getStaticPropertyValue(<span style='font-weight:bold;text-decoration:underline;'>$name</span>) |
-    | function ReflectionObject::__construct(<span style='color:green;'>$argument</span>) | function ReflectionObject::__construct(<span style='font-weight:bold;text-decoration:underline;'>$_instance</span>) |
-    | function ReflectionObject::getStaticPropertyValue(<span style='color:green;'>$name,$default</span>) | function ReflectionObject::getStaticPropertyValue(<span style='font-weight:bold;text-decoration:underline;'>$name</span>) |
-    | function ReflectionProperty::setValue(<span style='color:green;'>$object,$value</span>) | function ReflectionProperty::setValue(<span style='font-weight:bold;text-decoration:underline;'>$value,$value</span>) |
-    | function ReflectionProperty::setAccessible(<span style='color:green;'>$visible</span>) | function ReflectionProperty::setAccessible(<span style='font-weight:bold;text-decoration:underline;'>$accessible</span>) |
+    | function ReflectionParameter::isPromoted() | - <span style='color:red;font-weight:bold;'>function ReflectionParameter::isPromoted()</span> |
+    | function ReflectionProperty::isPromoted() | - <span style='color:red;font-weight:bold;'>function ReflectionProperty::isPromoted()</span> |
     | function ReflectionProperty::getType() | - <span style='color:red;font-weight:bold;'>function ReflectionProperty::getType()</span> |
     | function ReflectionProperty::hasType() | - <span style='color:red;font-weight:bold;'>function ReflectionProperty::hasType()</span> |
+    | function ReflectionProperty::hasDefaultValue() | - <span style='color:red;font-weight:bold;'>function ReflectionProperty::hasDefaultValue()</span> |
+    | function ReflectionProperty::getDefaultValue() | - <span style='color:red;font-weight:bold;'>function ReflectionProperty::getDefaultValue()</span> |
+    | const ReflectionClassConstant::IS_PUBLIC | - <span style='color:red;font-weight:bold;'>const ReflectionClassConstant::IS_PUBLIC</span> |
+    | const ReflectionClassConstant::IS_PROTECTED | - <span style='color:red;font-weight:bold;'>const ReflectionClassConstant::IS_PROTECTED</span> |
+    | const ReflectionClassConstant::IS_PRIVATE | - <span style='color:red;font-weight:bold;'>const ReflectionClassConstant::IS_PRIVATE</span> |
     | class ReflectionZendExtension | - <span style='color:red;font-weight:bold;'>class ReflectionZendExtension</span> |
+    | function ReflectionAttribute::getTarget() | - <span style='color:red;font-weight:bold;'>function ReflectionAttribute::getTarget()</span> |
+    | function ReflectionAttribute::isRepeated() | - <span style='color:red;font-weight:bold;'>function ReflectionAttribute::isRepeated()</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function Reflection::export($reflector,$return)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function ReflectionClass::export($argument,$return)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function ReflectionClassConstant::export($class,$name,$return)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function ReflectionExtension::export($name,$return)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function ReflectionFunction::export($name,$return)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function ReflectionMethod::export($class,$name,$return)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function ReflectionObject::export($argument,$return)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function ReflectionParameter::export($function,$parameter,$return)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function ReflectionProperty::export($class,$name,$return)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function ReflectionType::isBuiltin()</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function ReflectionUnionType::isBuiltin()</span> |
 ??? tiny "[=100% "**session** 46 / 46"]"
     | PHP | PeachPie |
     | --- | ---      |
-    | function session_name(<span style='color:green;'>$name</span>) | function session_name(<span style='font-weight:bold;text-decoration:underline;'>$newName</span>) |
-    | function session_module_name(<span style='color:green;'>$module</span>) | function session_module_name(<span style='font-weight:bold;text-decoration:underline;'>$newmodule</span>) |
-    | function session_save_path(<span style='color:green;'>$path</span>) | function session_save_path(<span style='font-weight:bold;text-decoration:underline;'></span>) |
-    | function session_id(<span style='color:green;'>$id</span>) | function session_id(<span style='font-weight:bold;text-decoration:underline;'>$newid</span>) |
-    | function session_regenerate_id(<span style='color:green;'>$delete_old_session</span>) | function session_regenerate_id(<span style='font-weight:bold;text-decoration:underline;'></span>) |
-    | function session_set_save_handler(<span style='color:green;'>$open,$close,$read,$write,$destroy,$gc,$create_sid,$validate_sid,$update_timestamp</span>) | function session_set_save_handler(<span style='font-weight:bold;text-decoration:underline;'>$sessionhandler,$register_shutdown,$read,$write,$destroy,$gc,$create_sid,$validate_sid,$update_timestamp</span>) |
-    | function session_cache_expire(<span style='color:green;'>$new_cache_expire</span>) | function session_cache_expire(<span style='font-weight:bold;text-decoration:underline;'></span>) |
-    | function session_set_cookie_params(<span style='color:green;'>$lifetime_or_options,$path,$domain,$secure,$httponly</span>) | function session_set_cookie_params(<span style='font-weight:bold;text-decoration:underline;'>$lifetime,$path,$domain,$secure,$httponly</span>) |
-    | function SessionHandlerInterface::read(<span style='color:green;'>$key</span>) | function SessionHandlerInterface::read(<span style='font-weight:bold;text-decoration:underline;'>$session_id</span>) |
-    | function SessionHandlerInterface::write(<span style='color:green;'>$key,$val</span>) | function SessionHandlerInterface::write(<span style='font-weight:bold;text-decoration:underline;'>$session_id,$session_data</span>) |
-    | function SessionHandlerInterface::destroy(<span style='color:green;'>$key</span>) | function SessionHandlerInterface::destroy(<span style='font-weight:bold;text-decoration:underline;'>$session_id</span>) |
-    | function SessionHandler::read(<span style='color:green;'>$key</span>) | function SessionHandler::read(<span style='font-weight:bold;text-decoration:underline;'>$session_id</span>) |
-    | function SessionHandler::write(<span style='color:green;'>$key,$val</span>) | function SessionHandler::write(<span style='font-weight:bold;text-decoration:underline;'>$session_id,$session_data</span>) |
-    | function SessionHandler::destroy(<span style='color:green;'>$key</span>) | function SessionHandler::destroy(<span style='font-weight:bold;text-decoration:underline;'>$session_id</span>) |
-??? tiny "[=87% "**standard** 760 / 874"]"
+    |  | + <span style='color:red;font-weight:bold;'>function SessionHandler::updateTimestamp($key,$val)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SessionHandler::validateId($key)</span> |
+??? tiny "[=84% "**standard** 729 / 871"]"
     | PHP | PeachPie |
     | --- | ---      |
-    | function constant(<span style='color:green;'>$const_name</span>) | function constant(<span style='font-weight:bold;text-decoration:underline;'>$name</span>) |
-    | function bin2hex(<span style='color:green;'>$data</span>) | function bin2hex(<span style='font-weight:bold;text-decoration:underline;'>$str</span>) |
-    | function usleep(<span style='color:green;'>$micro_seconds</span>) | function usleep(<span style='font-weight:bold;text-decoration:underline;'>$microseconds</span>) |
-    | function wordwrap(<span style='color:green;'>$str,$width,$break,$cut</span>) | function wordwrap(<span style='font-weight:bold;text-decoration:underline;'>$str,$width,$lineBreak,$cut</span>) |
-    | function htmlspecialchars(<span style='color:green;'>$string,$quote_style,$encoding,$double_encode</span>) | function htmlspecialchars(<span style='font-weight:bold;text-decoration:underline;'>$str,$quoteStyle,$charSet,$doubleEncode</span>) |
-    | function htmlentities(<span style='color:green;'>$string,$quote_style,$encoding,$double_encode</span>) | function htmlentities(<span style='font-weight:bold;text-decoration:underline;'>$str,$quoteStyle,$charSet,$doubleEncode</span>) |
-    | function html_entity_decode(<span style='color:green;'>$string,$quote_style,$encoding</span>) | function html_entity_decode(<span style='font-weight:bold;text-decoration:underline;'>$str,$quoteStyle,$charSet</span>) |
-    | function htmlspecialchars_decode(<span style='color:green;'>$string,$quote_style</span>) | function htmlspecialchars_decode(<span style='font-weight:bold;text-decoration:underline;'>$str,$quoteStyle</span>) |
-    | function get_html_translation_table(<span style='color:green;'>$table,$quote_style,$encoding</span>) | function get_html_translation_table(<span style='font-weight:bold;text-decoration:underline;'>$table,$quoteStyle</span>) |
-    | function sha1(<span style='color:green;'>$str,$raw_output</span>) | function sha1(<span style='font-weight:bold;text-decoration:underline;'>$bytes,$rawOutput</span>) |
-    | function sha1_file(<span style='color:green;'>$filename,$raw_output</span>) | function sha1_file(<span style='font-weight:bold;text-decoration:underline;'>$fileName,$rawOutput</span>) |
-    | function md5(<span style='color:green;'>$str,$raw_output</span>) | function md5(<span style='font-weight:bold;text-decoration:underline;'>$bytes,$raw_output</span>) |
-    | function md5_file(<span style='color:green;'>$filename,$raw_output</span>) | function md5_file(<span style='font-weight:bold;text-decoration:underline;'>$fileName,$rawOutput</span>) |
-    | function crc32(<span style='color:green;'>$str</span>) | function crc32(<span style='font-weight:bold;text-decoration:underline;'>$bytes</span>) |
-    | function iptcparse(<span style='color:green;'>$iptcdata</span>) | function iptcparse(<span style='font-weight:bold;text-decoration:underline;'>$iptcblock</span>) |
-    | function getimagesize(<span style='color:green;'>$imagefile,$info</span>) | function getimagesize(<span style='font-weight:bold;text-decoration:underline;'>$filename,$imageinfo</span>) |
-    | function getimagesizefromstring(<span style='color:green;'>$imagefile,$info</span>) | function getimagesizefromstring(<span style='font-weight:bold;text-decoration:underline;'>$bytes,$imageinfo</span>) |
-    | function phpcredits($flag) | - <span style='color:red;font-weight:bold;'>function phpcredits($flag)</span> |
-    | function strnatcmp(<span style='color:green;'>$s1,$s2</span>) | function strnatcmp(<span style='font-weight:bold;text-decoration:underline;'>$x,$y</span>) |
-    | function strnatcasecmp(<span style='color:green;'>$s1,$s2</span>) | function strnatcasecmp(<span style='font-weight:bold;text-decoration:underline;'>$x,$y</span>) |
-    | function strspn(<span style='color:green;'>$str,$mask,$start,$len</span>) | function strspn(<span style='font-weight:bold;text-decoration:underline;'>$str,$acceptedChars,$offset,$length</span>) |
-    | function strcspn(<span style='color:green;'>$str,$mask,$start,$len</span>) | function strcspn(<span style='font-weight:bold;text-decoration:underline;'>$str,$acceptedChars,$offset,$length</span>) |
-    | function strtok(<span style='color:green;'>$str,$token</span>) | function strtok(<span style='font-weight:bold;text-decoration:underline;'>$str,$delimiters</span>) |
-    | function hebrev(<span style='color:green;'>$str,$max_chars_per_line</span>) | function hebrev(<span style='font-weight:bold;text-decoration:underline;'>$str,$maxCharactersPerLine</span>) |
-    | function hebrevc(<span style='color:green;'>$str,$max_chars_per_line</span>) | function hebrevc(<span style='font-weight:bold;text-decoration:underline;'>$str,$maxCharactersPerLine</span>) |
-    | function nl2br(<span style='color:green;'>$str,$is_xhtml</span>) | function nl2br(<span style='font-weight:bold;text-decoration:underline;'>$str,$isXHTML</span>) |
-    | function strstr(<span style='color:green;'>$haystack,$needle,$part</span>) | function strstr(<span style='font-weight:bold;text-decoration:underline;'>$haystack,$needle,$beforeNeedle</span>) |
-    | function stristr(<span style='color:green;'>$haystack,$needle,$part</span>) | function stristr(<span style='font-weight:bold;text-decoration:underline;'>$haystack,$needle,$beforeNeedle</span>) |
-    | function str_word_count(<span style='color:green;'>$str,$format,$charlist</span>) | function str_word_count(<span style='font-weight:bold;text-decoration:underline;'>$str,$format,$addWordChars</span>) |
-    | function str_split(<span style='color:green;'>$str,$split_length</span>) | function str_split(<span style='font-weight:bold;text-decoration:underline;'>$str,$splitLength</span>) |
-    | function strpbrk(<span style='color:green;'>$haystack,$char_list</span>) | function strpbrk(<span style='font-weight:bold;text-decoration:underline;'>$haystack,$charList</span>) |
-    | function substr_compare(<span style='color:green;'>$main_str,$str,$offset,$length,$case_sensitivity</span>) | function substr_compare(<span style='font-weight:bold;text-decoration:underline;'>$mainStr,$str,$offset,$length,$ignoreCase</span>) |
-    | function substr(<span style='color:green;'>$str,$start,$length</span>) | function substr(<span style='font-weight:bold;text-decoration:underline;'>$str,$offset,$length</span>) |
-    | function substr_replace(<span style='color:green;'>$str,$replace,$start,$length</span>) | function substr_replace(<span style='font-weight:bold;text-decoration:underline;'>$subject,$replacement,$offset,$length</span>) |
-    | function strtr(<span style='color:green;'>$str,$from,$to</span>) | function strtr(<span style='font-weight:bold;text-decoration:underline;'>$str,$replacePairs,$to</span>) |
-    | function addcslashes(<span style='color:green;'>$str,$charlist</span>) | function addcslashes(<span style='font-weight:bold;text-decoration:underline;'>$str,$mask</span>) |
-    | function rtrim(<span style='color:green;'>$str,$character_mask</span>) | function rtrim(<span style='font-weight:bold;text-decoration:underline;'>$str,$whiteSpaceCharacters</span>) |
-    | function str_replace(<span style='color:green;'>$search,$replace,$subject,$replace_count</span>) | function str_replace(<span style='font-weight:bold;text-decoration:underline;'>$search,$replace,$subject,$count</span>) |
-    | function str_ireplace(<span style='color:green;'>$search,$replace,$subject,$replace_count</span>) | function str_ireplace(<span style='font-weight:bold;text-decoration:underline;'>$search,$replace,$subject,$count</span>) |
-    | function str_repeat(<span style='color:green;'>$input,$mult</span>) | function str_repeat(<span style='font-weight:bold;text-decoration:underline;'>$str,$count</span>) |
-    | function count_chars(<span style='color:green;'>$input,$mode</span>) | function count_chars(<span style='font-weight:bold;text-decoration:underline;'>$data,$mode</span>) |
-    | function chunk_split(<span style='color:green;'>$str,$chunklen,$ending</span>) | function chunk_split(<span style='font-weight:bold;text-decoration:underline;'>$str,$chunkLength,$endOfChunk</span>) |
-    | function trim(<span style='color:green;'>$str,$character_mask</span>) | function trim(<span style='font-weight:bold;text-decoration:underline;'>$str,$whiteSpaceCharacters</span>) |
-    | function ltrim(<span style='color:green;'>$str,$character_mask</span>) | function ltrim(<span style='font-weight:bold;text-decoration:underline;'>$str,$whiteSpaceCharacters</span>) |
-    | function strip_tags(<span style='color:green;'>$str,$allowable_tags</span>) | function strip_tags(<span style='font-weight:bold;text-decoration:underline;'>$str,$allowableTags</span>) |
-    | function similar_text(<span style='color:green;'>$str1,$str2,$percent</span>) | function similar_text(<span style='font-weight:bold;text-decoration:underline;'>$first,$second,$percent</span>) |
-    | function setlocale(<span style='color:green;'>$category,$locales</span>) | function setlocale(<span style='font-weight:bold;text-decoration:underline;'>$category,$locale,$moreLocales</span>) |
-    | function levenshtein(<span style='color:green;'>$str1,$str2,$cost_ins,$cost_rep,$cost_del</span>) | function levenshtein(<span style='font-weight:bold;text-decoration:underline;'>$src,$dst,$insertCost,$replaceCost,$deleteCost</span>) |
-    | function chr(<span style='color:green;'>$codepoint</span>) | function chr(<span style='font-weight:bold;text-decoration:underline;'>$bytevalue</span>) |
-    | function ord(<span style='color:green;'>$character</span>) | function ord(<span style='font-weight:bold;text-decoration:underline;'>$string</span>) |
-    | function parse_str(<span style='color:green;'>$encoded_string,$result</span>) | function parse_str(<span style='font-weight:bold;text-decoration:underline;'>$str,$result</span>) |
-    | function str_getcsv(<span style='color:green;'>$string,$delimiter,$enclosure,$escape</span>) | function str_getcsv(<span style='font-weight:bold;text-decoration:underline;'>$input,$delimiter,$enclosure,$escape</span>) |
-    | function str_pad(<span style='color:green;'>$input,$pad_length,$pad_string,$pad_type</span>) | function str_pad(<span style='font-weight:bold;text-decoration:underline;'>$str,$totalWidth,$paddingString,$paddingType</span>) |
-    | function chop(<span style='color:green;'>$str,$character_mask</span>) | function chop(<span style='font-weight:bold;text-decoration:underline;'>$str,$whiteSpaceCharacters</span>) |
-    | function strchr(<span style='color:green;'>$haystack,$needle,$part</span>) | function strchr(<span style='font-weight:bold;text-decoration:underline;'>$haystack,$needle</span>) |
-    | function sprintf(<span style='color:green;'>$format,$args</span>) | function sprintf(<span style='font-weight:bold;text-decoration:underline;'>$format,$arguments</span>) |
-    | function vsprintf(<span style='color:green;'>$format,$args</span>) | function vsprintf(<span style='font-weight:bold;text-decoration:underline;'>$format,$arguments</span>) |
-    | function fprintf(<span style='color:green;'>$stream,$format,$args</span>) | function fprintf(<span style='font-weight:bold;text-decoration:underline;'>$handle,$format,$arguments</span>) |
-    | function vfprintf($stream,$format,$args) | - <span style='color:red;font-weight:bold;'>function vfprintf($stream,$format,$args)</span> |
-    | function sscanf(<span style='color:green;'>$str,$format,$vars</span>) | function sscanf(<span style='font-weight:bold;text-decoration:underline;'>$str,$format,$arg,$arguments</span>) |
-    | function fscanf(<span style='color:green;'>$stream,$format,$vars</span>) | function fscanf(<span style='font-weight:bold;text-decoration:underline;'>$handle,$format,$arg,$arguments</span>) |
-    | function http_build_query(<span style='color:green;'>$formdata,$prefix,$arg_separator,$enc_type</span>) | function http_build_query(<span style='font-weight:bold;text-decoration:underline;'>$formData,$numericPrefix,$argSeparator,$encType</span>) |
-    | function readlink(<span style='color:green;'>$filename</span>) | function readlink(<span style='font-weight:bold;text-decoration:underline;'>$path</span>) |
-    | function linkinfo(<span style='color:green;'>$filename</span>) | function linkinfo(<span style='font-weight:bold;text-decoration:underline;'>$path</span>) |
-    | function unlink(<span style='color:green;'>$filename,$context</span>) | function unlink(<span style='font-weight:bold;text-decoration:underline;'>$path,$context</span>) |
-    | function exec(<span style='color:green;'>$command,$output,$return_value</span>) | function exec(<span style='font-weight:bold;text-decoration:underline;'>$command,$output,$exitCode</span>) |
-    | function system(<span style='color:green;'>$command,$return_value</span>) | function system(<span style='font-weight:bold;text-decoration:underline;'>$command,$exitCode</span>) |
-    | function passthru(<span style='color:green;'>$command,$return_value</span>) | function passthru(<span style='font-weight:bold;text-decoration:underline;'>$command,$exitCode</span>) |
-    | function shell_exec(<span style='color:green;'>$cmd</span>) | function shell_exec(<span style='font-weight:bold;text-decoration:underline;'>$command</span>) |
-    | function proc_open(<span style='color:green;'>$command,$descriptorspec,$pipes,$cwd,$env,$other_options</span>) | function proc_open(<span style='font-weight:bold;text-decoration:underline;'>$command,$descriptors,$pipes,$workingDirectory,$envVariables,$options</span>) |
-    | function srand(<span style='color:green;'>$seed,$mode</span>) | function srand(<span style='font-weight:bold;text-decoration:underline;'>$seed</span>) |
-    | function getservbyname($service,$protocol) | - <span style='color:red;font-weight:bold;'>function getservbyname($service,$protocol)</span> |
-    | function getservbyport($port,$protocol) | - <span style='color:red;font-weight:bold;'>function getservbyport($port,$protocol)</span> |
-    | function getprotobynumber(<span style='color:green;'>$proto</span>) | function getprotobynumber(<span style='font-weight:bold;text-decoration:underline;'>$type</span>) |
-    | function getmygid() | - <span style='color:red;font-weight:bold;'>function getmygid()</span> |
-    | function getmyinode() | - <span style='color:red;font-weight:bold;'>function getmyinode()</span> |
-    | function base64_decode(<span style='color:green;'>$str,$strict</span>) | function base64_decode(<span style='font-weight:bold;text-decoration:underline;'>$encoded_data,$strict</span>) |
-    | function base64_encode(<span style='color:green;'>$str</span>) | function base64_encode(<span style='font-weight:bold;text-decoration:underline;'>$data_to_encode</span>) |
-    | function password_hash(<span style='color:green;'>$password,$algo,$options</span>) | function password_hash(<span style='font-weight:bold;text-decoration:underline;'>$password,$algo,$opt</span>) |
-    | function password_needs_rehash(<span style='color:green;'>$hash,$algo,$options</span>) | function password_needs_rehash(<span style='font-weight:bold;text-decoration:underline;'>$hash,$algo,$opt</span>) |
-    | function password_algos() | - <span style='color:red;font-weight:bold;'>function password_algos()</span> |
-    | function convert_uuencode($data) | - <span style='color:red;font-weight:bold;'>function convert_uuencode($data)</span> |
-    | function convert_uudecode($data) | - <span style='color:red;font-weight:bold;'>function convert_uudecode($data)</span> |
-    | function abs(<span style='color:green;'>$number</span>) | function abs(<span style='font-weight:bold;text-decoration:underline;'>$lx</span>) |
-    | function ceil(<span style='color:green;'>$number</span>) | function ceil(<span style='font-weight:bold;text-decoration:underline;'>$x</span>) |
-    | function floor(<span style='color:green;'>$number</span>) | function floor(<span style='font-weight:bold;text-decoration:underline;'>$x</span>) |
-    | function round(<span style='color:green;'>$number,$precision,$mode</span>) | function round(<span style='font-weight:bold;text-decoration:underline;'>$x,$precision,$mode</span>) |
-    | function sin(<span style='color:green;'>$number</span>) | function sin(<span style='font-weight:bold;text-decoration:underline;'>$x</span>) |
-    | function cos(<span style='color:green;'>$number</span>) | function cos(<span style='font-weight:bold;text-decoration:underline;'>$x</span>) |
-    | function tan(<span style='color:green;'>$number</span>) | function tan(<span style='font-weight:bold;text-decoration:underline;'>$x</span>) |
-    | function asin(<span style='color:green;'>$number</span>) | function asin(<span style='font-weight:bold;text-decoration:underline;'>$x</span>) |
-    | function acos(<span style='color:green;'>$number</span>) | function acos(<span style='font-weight:bold;text-decoration:underline;'>$x</span>) |
-    | function atan(<span style='color:green;'>$number</span>) | function atan(<span style='font-weight:bold;text-decoration:underline;'>$x</span>) |
-    | function atanh(<span style='color:green;'>$number</span>) | function atanh(<span style='font-weight:bold;text-decoration:underline;'>$x</span>) |
-    | function sinh(<span style='color:green;'>$number</span>) | function sinh(<span style='font-weight:bold;text-decoration:underline;'>$x</span>) |
-    | function cosh(<span style='color:green;'>$number</span>) | function cosh(<span style='font-weight:bold;text-decoration:underline;'>$x</span>) |
-    | function tanh(<span style='color:green;'>$number</span>) | function tanh(<span style='font-weight:bold;text-decoration:underline;'>$x</span>) |
-    | function asinh(<span style='color:green;'>$number</span>) | function asinh(<span style='font-weight:bold;text-decoration:underline;'>$x</span>) |
-    | function acosh(<span style='color:green;'>$number</span>) | function acosh(<span style='font-weight:bold;text-decoration:underline;'>$x</span>) |
-    | function expm1(<span style='color:green;'>$number</span>) | function expm1(<span style='font-weight:bold;text-decoration:underline;'>$x</span>) |
-    | function log1p(<span style='color:green;'>$number</span>) | function log1p(<span style='font-weight:bold;text-decoration:underline;'>$x</span>) |
-    | function is_finite(<span style='color:green;'>$val</span>) | function is_finite(<span style='font-weight:bold;text-decoration:underline;'>$x</span>) |
-    | function is_nan(<span style='color:green;'>$val</span>) | function is_nan(<span style='font-weight:bold;text-decoration:underline;'>$x</span>) |
-    | function is_infinite(<span style='color:green;'>$val</span>) | function is_infinite(<span style='font-weight:bold;text-decoration:underline;'>$x</span>) |
-    | function pow(<span style='color:green;'>$base,$exponent</span>) | function pow(<span style='font-weight:bold;text-decoration:underline;'>$base,$exp</span>) |
-    | function exp(<span style='color:green;'>$number</span>) | function exp(<span style='font-weight:bold;text-decoration:underline;'>$x</span>) |
-    | function log(<span style='color:green;'>$number,$base</span>) | function log(<span style='font-weight:bold;text-decoration:underline;'>$x,$logBase</span>) |
-    | function log10(<span style='color:green;'>$number</span>) | function log10(<span style='font-weight:bold;text-decoration:underline;'>$x</span>) |
-    | function sqrt(<span style='color:green;'>$number</span>) | function sqrt(<span style='font-weight:bold;text-decoration:underline;'>$x</span>) |
-    | function hypot(<span style='color:green;'>$num1,$num2</span>) | function hypot(<span style='font-weight:bold;text-decoration:underline;'>$x,$y</span>) |
-    | function deg2rad(<span style='color:green;'>$number</span>) | function deg2rad(<span style='font-weight:bold;text-decoration:underline;'>$degrees</span>) |
-    | function rad2deg(<span style='color:green;'>$number</span>) | function rad2deg(<span style='font-weight:bold;text-decoration:underline;'>$radians</span>) |
-    | function bindec(<span style='color:green;'>$binary_number</span>) | function bindec(<span style='font-weight:bold;text-decoration:underline;'>$str</span>) |
-    | function hexdec(<span style='color:green;'>$hexadecimal_number</span>) | function hexdec(<span style='font-weight:bold;text-decoration:underline;'>$str</span>) |
-    | function octdec(<span style='color:green;'>$octal_number</span>) | function octdec(<span style='font-weight:bold;text-decoration:underline;'>$str</span>) |
-    | function decbin(<span style='color:green;'>$decimal_number</span>) | function decbin(<span style='font-weight:bold;text-decoration:underline;'>$number</span>) |
-    | function decoct(<span style='color:green;'>$decimal_number</span>) | function decoct(<span style='font-weight:bold;text-decoration:underline;'>$number</span>) |
-    | function dechex(<span style='color:green;'>$decimal_number</span>) | function dechex(<span style='font-weight:bold;text-decoration:underline;'>$number</span>) |
-    | function number_format(<span style='color:green;'>$number,$num_decimal_places,$dec_separator,$thousands_separator</span>) | function number_format(<span style='font-weight:bold;text-decoration:underline;'>$number,$decimals,$decimalPoint,$thousandsSeparator</span>) |
-    | function inet_pton(<span style='color:green;'>$ip_address</span>) | function inet_pton(<span style='font-weight:bold;text-decoration:underline;'>$address</span>) |
-    | function ip2long(<span style='color:green;'>$ip_address</span>) | function ip2long(<span style='font-weight:bold;text-decoration:underline;'>$ipAddress</span>) |
-    | function long2ip(<span style='color:green;'>$proper_address</span>) | function long2ip(<span style='font-weight:bold;text-decoration:underline;'>$properAddress</span>) |
-    | function getenv(<span style='color:green;'>$varname,$local_only</span>) | function getenv(<span style='font-weight:bold;text-decoration:underline;'>$name</span>) |
-    | function getopt(<span style='color:green;'>$options,$opts,$optind</span>) | function getopt(<span style='font-weight:bold;text-decoration:underline;'>$options,$longopts</span>) |
-    | function microtime(<span style='color:green;'>$get_as_float</span>) | function microtime(<span style='font-weight:bold;text-decoration:underline;'>$returnDouble</span>) |
-    | function gettimeofday(<span style='color:green;'>$get_as_float</span>) | function gettimeofday(<span style='font-weight:bold;text-decoration:underline;'>$returnDouble</span>) |
-    | function getrusage($who) | - <span style='color:red;font-weight:bold;'>function getrusage($who)</span> |
-    | function convert_cyr_string(<span style='color:green;'>$str,$from,$to</span>) | function convert_cyr_string(<span style='font-weight:bold;text-decoration:underline;'>$bytes,$srcCharset,$dstCharset</span>) |
-    | function get_cfg_var(<span style='color:green;'>$option_name</span>) | function get_cfg_var(<span style='font-weight:bold;text-decoration:underline;'>$option</span>) |
-    | function call_user_func(<span style='color:green;'>$function_name,$parameters</span>) | function call_user_func(<span style='font-weight:bold;text-decoration:underline;'>$function,$args</span>) |
-    | function call_user_func_array(<span style='color:green;'>$function_name,$parameters</span>) | function call_user_func_array(<span style='font-weight:bold;text-decoration:underline;'>$function,$args</span>) |
-    | function forward_static_call(<span style='color:green;'>$function_name,$parameters</span>) | function forward_static_call(<span style='font-weight:bold;text-decoration:underline;'>$function,$args</span>) |
-    | function forward_static_call_array(<span style='color:green;'>$function_name,$parameters</span>) | function forward_static_call_array(<span style='font-weight:bold;text-decoration:underline;'>$function,$args</span>) |
-    | function serialize(<span style='color:green;'>$var</span>) | function serialize(<span style='font-weight:bold;text-decoration:underline;'>$value</span>) |
-    | function unserialize(<span style='color:green;'>$variable_representation,$allowed_classes</span>) | function unserialize(<span style='font-weight:bold;text-decoration:underline;'>$str,$options</span>) |
-    | function var_dump(<span style='color:green;'>$vars</span>) | function var_dump(<span style='font-weight:bold;text-decoration:underline;'>$variables</span>) |
-    | function var_export(<span style='color:green;'>$var,$return</span>) | function var_export(<span style='font-weight:bold;text-decoration:underline;'>$variable,$returnString</span>) |
-    | function debug_zval_dump(<span style='color:green;'>$vars</span>) | function debug_zval_dump(<span style='font-weight:bold;text-decoration:underline;'>$variables</span>) |
-    | function print_r(<span style='color:green;'>$var,$return</span>) | function print_r(<span style='font-weight:bold;text-decoration:underline;'>$value,$returnString</span>) |
-    | function register_shutdown_function(<span style='color:green;'>$function_name,$parameters</span>) | function register_shutdown_function(<span style='font-weight:bold;text-decoration:underline;'>$function,$arguments</span>) |
-    | function register_tick_function($function_name,$parameters) | - <span style='color:red;font-weight:bold;'>function register_tick_function($function_name,$parameters)</span> |
-    | function unregister_tick_function($function_name) | - <span style='color:red;font-weight:bold;'>function unregister_tick_function($function_name)</span> |
-    | function highlight_file(<span style='color:green;'>$file_name,$return</span>) | function highlight_file(<span style='font-weight:bold;text-decoration:underline;'>$filename,$return</span>) |
-    | function show_source(<span style='color:green;'>$file_name,$return</span>) | function show_source(<span style='font-weight:bold;text-decoration:underline;'>$filename,$return</span>) |
-    | function highlight_string(<span style='color:green;'>$string,$return</span>) | function highlight_string(<span style='font-weight:bold;text-decoration:underline;'>$source,$return</span>) |
-    | function php_strip_whitespace(<span style='color:green;'>$file_name</span>) | function php_strip_whitespace(<span style='font-weight:bold;text-decoration:underline;'>$filename</span>) |
-    | function ini_get(<span style='color:green;'>$varname</span>) | function ini_get(<span style='font-weight:bold;text-decoration:underline;'>$option</span>) |
-    | function ini_set(<span style='color:green;'>$varname,$newvalue</span>) | function ini_set(<span style='font-weight:bold;text-decoration:underline;'>$option,$value</span>) |
-    | function ini_alter(<span style='color:green;'>$varname,$newvalue</span>) | function ini_alter(<span style='font-weight:bold;text-decoration:underline;'>$option,$value</span>) |
-    | function ini_restore(<span style='color:green;'>$varname</span>) | function ini_restore(<span style='font-weight:bold;text-decoration:underline;'>$option</span>) |
-    | function restore_include_path() | - <span style='color:red;font-weight:bold;'>function restore_include_path()</span> |
-    | function setcookie(<span style='color:green;'>$name,$value,$expires_or_options,$path,$domain,$secure,$httponly</span>) | function setcookie(<span style='font-weight:bold;text-decoration:underline;'>$name,$value,$expire,$path,$domain,$secure,$httponly</span>) |
-    | function setrawcookie(<span style='color:green;'>$name,$value,$expires_or_options,$path,$domain,$secure,$httponly</span>) | function setrawcookie(<span style='font-weight:bold;text-decoration:underline;'>$name,$value,$expire,$path,$domain,$secure,$httponly</span>) |
-    | function header(<span style='color:green;'>$header,$replace,$http_response_code</span>) | function header(<span style='font-weight:bold;text-decoration:underline;'>$str,$replace,$http_response_code</span>) |
-    | function parse_ini_file(<span style='color:green;'>$filename,$process_sections,$scanner_mode</span>) | function parse_ini_file(<span style='font-weight:bold;text-decoration:underline;'>$fileName,$processSections,$scanner_mode</span>) |
-    | function parse_ini_string(<span style='color:green;'>$ini_string,$process_sections,$scanner_mode</span>) | function parse_ini_string(<span style='font-weight:bold;text-decoration:underline;'>$ini,$processSections,$scanner_mode</span>) |
-    | function move_uploaded_file(<span style='color:green;'>$path,$new_path</span>) | function move_uploaded_file(<span style='font-weight:bold;text-decoration:underline;'>$path,$destination</span>) |
-    | function gethostbyaddr(<span style='color:green;'>$ip_address</span>) | function gethostbyaddr(<span style='font-weight:bold;text-decoration:underline;'>$ipAddress</span>) |
-    | function net_get_interfaces() | - <span style='color:red;font-weight:bold;'>function net_get_interfaces()</span> |
-    | function dns_get_record(<span style='color:green;'>$hostname,$type,$authns,$addtl,$raw</span>) | function dns_get_record(<span style='font-weight:bold;text-decoration:underline;'>$host,$type,$authNS,$additional</span>) |
-    | function intval(<span style='color:green;'>$var,$base</span>) | function intval(<span style='font-weight:bold;text-decoration:underline;'>$variable,$base</span>) |
-    | function floatval(<span style='color:green;'>$var</span>) | function floatval(<span style='font-weight:bold;text-decoration:underline;'>$variable</span>) |
-    | function doubleval(<span style='color:green;'>$var</span>) | function doubleval(<span style='font-weight:bold;text-decoration:underline;'>$variable</span>) |
-    | function strval(<span style='color:green;'>$var</span>) | function strval(<span style='font-weight:bold;text-decoration:underline;'>$variable</span>) |
-    | function boolval(<span style='color:green;'>$var</span>) | function boolval(<span style='font-weight:bold;text-decoration:underline;'>$variable</span>) |
-    | function gettype(<span style='color:green;'>$var</span>) | function gettype(<span style='font-weight:bold;text-decoration:underline;'>$variable</span>) |
-    | function settype(<span style='color:green;'>$var,$type</span>) | function settype(<span style='font-weight:bold;text-decoration:underline;'>$variable,$type</span>) |
-    | function is_null(<span style='color:green;'>$var</span>) | function is_null(<span style='font-weight:bold;text-decoration:underline;'>$variable</span>) |
-    | function is_resource(<span style='color:green;'>$var</span>) | function is_resource(<span style='font-weight:bold;text-decoration:underline;'>$variable</span>) |
-    | function is_bool(<span style='color:green;'>$var</span>) | function is_bool(<span style='font-weight:bold;text-decoration:underline;'>$variable</span>) |
-    | function is_int(<span style='color:green;'>$var</span>) | function is_int(<span style='font-weight:bold;text-decoration:underline;'>$variable</span>) |
-    | function is_float(<span style='color:green;'>$var</span>) | function is_float(<span style='font-weight:bold;text-decoration:underline;'>$variable</span>) |
-    | function is_integer(<span style='color:green;'>$var</span>) | function is_integer(<span style='font-weight:bold;text-decoration:underline;'>$variable</span>) |
-    | function is_long(<span style='color:green;'>$var</span>) | function is_long(<span style='font-weight:bold;text-decoration:underline;'>$variable</span>) |
-    | function is_double(<span style='color:green;'>$var</span>) | function is_double(<span style='font-weight:bold;text-decoration:underline;'>$variable</span>) |
-    | function is_real(<span style='color:green;'>$var</span>) | function is_real(<span style='font-weight:bold;text-decoration:underline;'>$variable</span>) |
-    | function is_numeric(<span style='color:green;'>$value</span>) | function is_numeric(<span style='font-weight:bold;text-decoration:underline;'>$variable</span>) |
-    | function is_string(<span style='color:green;'>$var</span>) | function is_string(<span style='font-weight:bold;text-decoration:underline;'>$variable</span>) |
-    | function is_array(<span style='color:green;'>$var</span>) | function is_array(<span style='font-weight:bold;text-decoration:underline;'>$variable</span>) |
-    | function is_object(<span style='color:green;'>$var</span>) | function is_object(<span style='font-weight:bold;text-decoration:underline;'>$variable</span>) |
-    | function is_scalar(<span style='color:green;'>$value</span>) | function is_scalar(<span style='font-weight:bold;text-decoration:underline;'>$variable</span>) |
-    | function is_callable(<span style='color:green;'>$var,$syntax_only,$callable_name</span>) | function is_callable(<span style='font-weight:bold;text-decoration:underline;'>$variable,$syntaxOnly,$callableName</span>) |
-    | function is_iterable(<span style='color:green;'>$var</span>) | function is_iterable(<span style='font-weight:bold;text-decoration:underline;'>$variable</span>) |
-    | function is_countable(<span style='color:green;'>$var</span>) | function is_countable(<span style='font-weight:bold;text-decoration:underline;'>$value</span>) |
-    | function pclose(<span style='color:green;'>$fp</span>) | function pclose(<span style='font-weight:bold;text-decoration:underline;'>$pipeHandle</span>) |
-    | function readfile(<span style='color:green;'>$filename,$flags,$context</span>) | function readfile(<span style='font-weight:bold;text-decoration:underline;'>$path,$flags,$context</span>) |
-    | function rewind(<span style='color:green;'>$fp</span>) | function rewind(<span style='font-weight:bold;text-decoration:underline;'>$handle</span>) |
-    | function fclose(<span style='color:green;'>$fp</span>) | function fclose(<span style='font-weight:bold;text-decoration:underline;'>$handle</span>) |
-    | function feof(<span style='color:green;'>$fp</span>) | function feof(<span style='font-weight:bold;text-decoration:underline;'>$handle</span>) |
-    | function fgetc(<span style='color:green;'>$fp</span>) | function fgetc(<span style='font-weight:bold;text-decoration:underline;'>$handle</span>) |
-    | function fgets(<span style='color:green;'>$fp,$length</span>) | function fgets(<span style='font-weight:bold;text-decoration:underline;'>$handle,$length</span>) |
-    | function fgetss(<span style='color:green;'>$fp,$length,$allowable_tags</span>) | function fgetss(<span style='font-weight:bold;text-decoration:underline;'>$handle,$length,$allowableTags</span>) |
-    | function fread(<span style='color:green;'>$fp,$length</span>) | function fread(<span style='font-weight:bold;text-decoration:underline;'>$handle,$length</span>) |
-    | function fopen(<span style='color:green;'>$filename,$mode,$use_include_path,$context</span>) | function fopen(<span style='font-weight:bold;text-decoration:underline;'>$path,$mode,$flags,$context</span>) |
-    | function fpassthru(<span style='color:green;'>$fp</span>) | function fpassthru(<span style='font-weight:bold;text-decoration:underline;'>$handle</span>) |
-    | function ftruncate(<span style='color:green;'>$fp,$size</span>) | function ftruncate(<span style='font-weight:bold;text-decoration:underline;'>$handle,$size</span>) |
-    | function fstat(<span style='color:green;'>$fp</span>) | function fstat(<span style='font-weight:bold;text-decoration:underline;'>$handle</span>) |
-    | function fseek(<span style='color:green;'>$fp,$offset,$whence</span>) | function fseek(<span style='font-weight:bold;text-decoration:underline;'>$handle,$offset,$whence</span>) |
-    | function ftell(<span style='color:green;'>$fp</span>) | function ftell(<span style='font-weight:bold;text-decoration:underline;'>$handle</span>) |
-    | function fflush(<span style='color:green;'>$fp</span>) | function fflush(<span style='font-weight:bold;text-decoration:underline;'>$handle</span>) |
-    | function fwrite(<span style='color:green;'>$fp,$str,$length</span>) | function fwrite(<span style='font-weight:bold;text-decoration:underline;'>$handle,$data,$length</span>) |
-    | function fputs(<span style='color:green;'>$fp,$str,$length</span>) | function fputs(<span style='font-weight:bold;text-decoration:underline;'>$handle,$data,$length</span>) |
-    | function rename(<span style='color:green;'>$old_name,$new_name,$context</span>) | function rename(<span style='font-weight:bold;text-decoration:underline;'>$oldpath,$newpath</span>) |
-    | function copy(<span style='color:green;'>$source_file,$destination_file,$context</span>) | function copy(<span style='font-weight:bold;text-decoration:underline;'>$source,$dest</span>) |
-    | function file(<span style='color:green;'>$filename,$flags,$context</span>) | function file(<span style='font-weight:bold;text-decoration:underline;'>$path,$flags,$context</span>) |
-    | function file_get_contents(<span style='color:green;'>$filename,$flags,$context,$offset,$maxlen</span>) | function file_get_contents(<span style='font-weight:bold;text-decoration:underline;'>$path,$flags,$context,$offset,$maxLength</span>) |
-    | function file_put_contents(<span style='color:green;'>$filename,$data,$flags,$context</span>) | function file_put_contents(<span style='font-weight:bold;text-decoration:underline;'>$path,$data,$flags,$context</span>) |
-    | function stream_select(<span style='color:green;'>$read_streams,$write_streams,$except_streams,$tv_sec,$tv_usec</span>) | function stream_select(<span style='font-weight:bold;text-decoration:underline;'>$read,$write,$except,$tv_sec,$tv_usec</span>) |
-    | function stream_context_create(<span style='color:green;'>$options,$params</span>) | function stream_context_create(<span style='font-weight:bold;text-decoration:underline;'>$data</span>) |
-    | function stream_context_set_params(<span style='color:green;'>$stream_or_context,$options</span>) | function stream_context_set_params(<span style='font-weight:bold;text-decoration:underline;'>$stream_or_context,$parameters</span>) |
-    | function stream_context_get_params($stream_or_context) | - <span style='color:red;font-weight:bold;'>function stream_context_get_params($stream_or_context)</span> |
-    | function stream_context_set_option(<span style='color:green;'>$stream_or_context,$wrappername,$optionname,$value</span>) | function stream_context_set_option(<span style='font-weight:bold;text-decoration:underline;'>$stream_or_context,$options,$option,$data</span>) |
-    | function stream_context_get_default($options) | - <span style='color:red;font-weight:bold;'>function stream_context_get_default($options)</span> |
-    | function stream_context_set_default($options) | - <span style='color:red;font-weight:bold;'>function stream_context_set_default($options)</span> |
-    | function stream_filter_prepend(<span style='color:green;'>$stream,$filtername,$read_write,$filterparams</span>) | function stream_filter_prepend(<span style='font-weight:bold;text-decoration:underline;'>$stream,$filter,$read_write,$parameters</span>) |
-    | function stream_filter_append(<span style='color:green;'>$stream,$filtername,$read_write,$filterparams</span>) | function stream_filter_append(<span style='font-weight:bold;text-decoration:underline;'>$stream,$filter,$read_write,$parameters</span>) |
-    | function stream_socket_client(<span style='color:green;'>$remoteaddress,$errcode,$errstring,$timeout,$flags,$context</span>) | function stream_socket_client(<span style='font-weight:bold;text-decoration:underline;'>$remoteSocket,$errno,$errstr,$timeout,$flags,$context</span>) |
-    | function stream_socket_server(<span style='color:green;'>$localaddress,$errcode,$errstring,$flags,$context</span>) | function stream_socket_server(<span style='font-weight:bold;text-decoration:underline;'>$localSocket,$errno,$errstr,$flags,$context</span>) |
-    | function stream_socket_accept(<span style='color:green;'>$serverstream,$timeout,$peername</span>) | function stream_socket_accept(<span style='font-weight:bold;text-decoration:underline;'>$serverSocket,$timeout,$peerName</span>) |
-    | function stream_socket_get_name(<span style='color:green;'>$stream,$want_peer</span>) | function stream_socket_get_name(<span style='font-weight:bold;text-decoration:underline;'>$handle,$wantPeer</span>) |
-    | function stream_socket_recvfrom(<span style='color:green;'>$stream,$amount,$flags,$remote_addr</span>) | function stream_socket_recvfrom(<span style='font-weight:bold;text-decoration:underline;'>$socket,$length,$flags,$address</span>) |
-    | function stream_socket_sendto(<span style='color:green;'>$stream,$data,$flags,$target_addr</span>) | function stream_socket_sendto(<span style='font-weight:bold;text-decoration:underline;'>$socket,$data,$flags,$address</span>) |
-    | function stream_socket_enable_crypto(<span style='color:green;'>$stream,$enable,$cryptokind,$sessionstream</span>) | function stream_socket_enable_crypto(<span style='font-weight:bold;text-decoration:underline;'>$stream,$enable,$crypto_method,$session_stream</span>) |
-    | function stream_socket_pair($domain,$type,$protocol) | - <span style='color:red;font-weight:bold;'>function stream_socket_pair($domain,$type,$protocol)</span> |
-    | function stream_copy_to_stream(<span style='color:green;'>$source,$dest,$maxlen,$pos</span>) | function stream_copy_to_stream(<span style='font-weight:bold;text-decoration:underline;'>$source,$destination,$maxlength,$offset</span>) |
-    | function stream_get_contents(<span style='color:green;'>$source,$maxlen,$offset</span>) | function stream_get_contents(<span style='font-weight:bold;text-decoration:underline;'>$handle,$maxLength,$offset</span>) |
-    | function stream_supports_lock($stream) | - <span style='color:red;font-weight:bold;'>function stream_supports_lock($stream)</span> |
-    | function fgetcsv(<span style='color:green;'>$fp,$length,$delimiter,$enclosure,$escape</span>) | function fgetcsv(<span style='font-weight:bold;text-decoration:underline;'>$handle,$length,$delimiter,$enclosure,$escape_char</span>) |
-    | function fputcsv(<span style='color:green;'>$fp,$fields,$delimiter,$enclosure,$escape_char</span>) | function fputcsv(<span style='font-weight:bold;text-decoration:underline;'>$handle,$fields,$delimiter,$enclosure</span>) |
-    | function flock(<span style='color:green;'>$fp,$operation,$wouldblock</span>) | function flock(<span style='font-weight:bold;text-decoration:underline;'>$handle,$operation,$wouldblock</span>) |
-    | function get_meta_tags($filename,$use_include_path) | - <span style='color:red;font-weight:bold;'>function get_meta_tags($filename,$use_include_path)</span> |
-    | function stream_set_read_buffer($fp,$buffer) | - <span style='color:red;font-weight:bold;'>function stream_set_read_buffer($fp,$buffer)</span> |
-    | function stream_set_write_buffer(<span style='color:green;'>$fp,$buffer</span>) | function stream_set_write_buffer(<span style='font-weight:bold;text-decoration:underline;'>$resource,$buffer</span>) |
-    | function set_file_buffer(<span style='color:green;'>$fp,$buffer</span>) | function set_file_buffer(<span style='font-weight:bold;text-decoration:underline;'>$resource,$buffer</span>) |
-    | function stream_set_chunk_size($fp,$chunk_size) | - <span style='color:red;font-weight:bold;'>function stream_set_chunk_size($fp,$chunk_size)</span> |
-    | function stream_set_blocking(<span style='color:green;'>$socket,$mode</span>) | function stream_set_blocking(<span style='font-weight:bold;text-decoration:underline;'>$resource,$mode</span>) |
-    | function socket_set_blocking(<span style='color:green;'>$socket,$mode</span>) | function socket_set_blocking(<span style='font-weight:bold;text-decoration:underline;'>$stream,$mode</span>) |
-    | function stream_get_meta_data(<span style='color:green;'>$fp</span>) | function stream_get_meta_data(<span style='font-weight:bold;text-decoration:underline;'>$resource</span>) |
-    | function stream_get_line(<span style='color:green;'>$stream,$maxlen,$ending</span>) | function stream_get_line(<span style='font-weight:bold;text-decoration:underline;'>$handle,$length,$ending</span>) |
-    | function stream_register_wrapper(<span style='color:green;'>$protocol,$classname,$flags</span>) | function stream_register_wrapper(<span style='font-weight:bold;text-decoration:underline;'>$protocol,$userWrapperName,$flags</span>) |
+    | function output_reset_rewrite_vars() | - <span style='color:red;font-weight:bold;'>function output_reset_rewrite_vars()</span> |
+    | function output_add_rewrite_var($name,$value) | - <span style='color:red;font-weight:bold;'>function output_add_rewrite_var($name,$value)</span> |
     | function stream_wrapper_unregister($protocol) | - <span style='color:red;font-weight:bold;'>function stream_wrapper_unregister($protocol)</span> |
     | function stream_wrapper_restore($protocol) | - <span style='color:red;font-weight:bold;'>function stream_wrapper_restore($protocol)</span> |
-    | function stream_is_local(<span style='color:green;'>$stream</span>) | function stream_is_local(<span style='font-weight:bold;text-decoration:underline;'>$url</span>) |
-    | function stream_set_timeout(<span style='color:green;'>$stream,$seconds,$microseconds</span>) | function stream_set_timeout(<span style='font-weight:bold;text-decoration:underline;'>$resource,$seconds,$microseconds</span>) |
-    | function socket_get_status(<span style='color:green;'>$fp</span>) | function socket_get_status(<span style='font-weight:bold;text-decoration:underline;'>$stream</span>) |
-    | function fnmatch(<span style='color:green;'>$pattern,$filename,$flags</span>) | function fnmatch(<span style='font-weight:bold;text-decoration:underline;'>$pattern,$path,$flags</span>) |
-    | function fsockopen(<span style='color:green;'>$hostname,$port,$errno,$errstr,$timeout</span>) | function fsockopen(<span style='font-weight:bold;text-decoration:underline;'>$target,$port,$errno,$errstr,$timeout,$persistent</span>) |
-    | function pfsockopen(<span style='color:green;'>$hostname,$port,$errno,$errstr,$timeout</span>) | function pfsockopen(<span style='font-weight:bold;text-decoration:underline;'>$target,$port,$errno,$errstr,$timeout</span>) |
-    | function unpack(<span style='color:green;'>$format,$input,$offset</span>) | function unpack(<span style='font-weight:bold;text-decoration:underline;'>$format,$data</span>) |
-    | function get_browser(<span style='color:green;'>$browser_name,$return_array</span>) | function get_browser(<span style='font-weight:bold;text-decoration:underline;'>$user_agent,$return_array</span>) |
-    | function opendir(<span style='color:green;'>$path,$context</span>) | function opendir(<span style='font-weight:bold;text-decoration:underline;'>$directory</span>) |
-    | function closedir(<span style='color:green;'>$dir_handle</span>) | function closedir(<span style='font-weight:bold;text-decoration:underline;'>$dirHandle</span>) |
-    | function rewinddir(<span style='color:green;'>$dir_handle</span>) | function rewinddir(<span style='font-weight:bold;text-decoration:underline;'>$dirHandle</span>) |
-    | function readdir(<span style='color:green;'>$dir_handle</span>) | function readdir(<span style='font-weight:bold;text-decoration:underline;'>$dirHandle</span>) |
-    | function dir(<span style='color:green;'>$directory,$context</span>) | function dir(<span style='font-weight:bold;text-decoration:underline;'>$directory</span>) |
-    | function scandir(<span style='color:green;'>$dir,$sorting_order,$context</span>) | function scandir(<span style='font-weight:bold;text-decoration:underline;'>$directory,$sorting_order</span>) |
-    | function fileatime(<span style='color:green;'>$filename</span>) | function fileatime(<span style='font-weight:bold;text-decoration:underline;'>$path</span>) |
-    | function filectime(<span style='color:green;'>$filename</span>) | function filectime(<span style='font-weight:bold;text-decoration:underline;'>$path</span>) |
-    | function filegroup(<span style='color:green;'>$filename</span>) | function filegroup(<span style='font-weight:bold;text-decoration:underline;'>$path</span>) |
-    | function fileinode(<span style='color:green;'>$filename</span>) | function fileinode(<span style='font-weight:bold;text-decoration:underline;'>$path</span>) |
-    | function filemtime(<span style='color:green;'>$filename</span>) | function filemtime(<span style='font-weight:bold;text-decoration:underline;'>$path</span>) |
-    | function fileowner(<span style='color:green;'>$filename</span>) | function fileowner(<span style='font-weight:bold;text-decoration:underline;'>$path</span>) |
-    | function fileperms(<span style='color:green;'>$filename</span>) | function fileperms(<span style='font-weight:bold;text-decoration:underline;'>$path</span>) |
-    | function filesize(<span style='color:green;'>$filename</span>) | function filesize(<span style='font-weight:bold;text-decoration:underline;'>$path</span>) |
-    | function filetype(<span style='color:green;'>$filename</span>) | function filetype(<span style='font-weight:bold;text-decoration:underline;'>$path</span>) |
-    | function file_exists(<span style='color:green;'>$filename</span>) | function file_exists(<span style='font-weight:bold;text-decoration:underline;'>$path</span>) |
-    | function is_writable(<span style='color:green;'>$filename</span>) | function is_writable(<span style='font-weight:bold;text-decoration:underline;'>$path</span>) |
-    | function is_writeable(<span style='color:green;'>$filename</span>) | function is_writeable(<span style='font-weight:bold;text-decoration:underline;'>$path</span>) |
-    | function is_readable(<span style='color:green;'>$filename</span>) | function is_readable(<span style='font-weight:bold;text-decoration:underline;'>$path</span>) |
-    | function is_executable(<span style='color:green;'>$filename</span>) | function is_executable(<span style='font-weight:bold;text-decoration:underline;'>$path</span>) |
-    | function is_file(<span style='color:green;'>$filename</span>) | function is_file(<span style='font-weight:bold;text-decoration:underline;'>$path</span>) |
-    | function is_dir(<span style='color:green;'>$filename</span>) | function is_dir(<span style='font-weight:bold;text-decoration:underline;'>$path</span>) |
-    | function is_link(<span style='color:green;'>$filename</span>) | function is_link(<span style='font-weight:bold;text-decoration:underline;'>$path</span>) |
-    | function stat(<span style='color:green;'>$filename</span>) | function stat(<span style='font-weight:bold;text-decoration:underline;'>$path</span>) |
-    | function lstat(<span style='color:green;'>$filename</span>) | function lstat(<span style='font-weight:bold;text-decoration:underline;'>$path</span>) |
-    | function chgrp(<span style='color:green;'>$filename,$group</span>) | function chgrp(<span style='font-weight:bold;text-decoration:underline;'>$path,$group</span>) |
-    | function chmod(<span style='color:green;'>$filename,$mode</span>) | function chmod(<span style='font-weight:bold;text-decoration:underline;'>$path,$mode</span>) |
-    | function touch(<span style='color:green;'>$filename,$time,$atime</span>) | function touch(<span style='font-weight:bold;text-decoration:underline;'>$path,$mtime,$atime</span>) |
-    | function disk_total_space(<span style='color:green;'>$path</span>) | function disk_total_space(<span style='font-weight:bold;text-decoration:underline;'>$directory</span>) |
-    | function disk_free_space(<span style='color:green;'>$path</span>) | function disk_free_space(<span style='font-weight:bold;text-decoration:underline;'>$directory</span>) |
-    | function diskfreespace(<span style='color:green;'>$path</span>) | function diskfreespace(<span style='font-weight:bold;text-decoration:underline;'>$directory</span>) |
-    | function realpath_cache_size() | - <span style='color:red;font-weight:bold;'>function realpath_cache_size()</span> |
-    | function realpath_cache_get() | - <span style='color:red;font-weight:bold;'>function realpath_cache_get()</span> |
-    | function openlog($ident,$option,$facility) | - <span style='color:red;font-weight:bold;'>function openlog($ident,$option,$facility)</span> |
-    | function syslog($priority,$message) | - <span style='color:red;font-weight:bold;'>function syslog($priority,$message)</span> |
+    | function getservbyname($service,$protocol) | - <span style='color:red;font-weight:bold;'>function getservbyname($service,$protocol)</span> |
+    | function getservbyport($port,$protocol) | - <span style='color:red;font-weight:bold;'>function getservbyport($port,$protocol)</span> |
+    | function register_tick_function($callback,$args) | - <span style='color:red;font-weight:bold;'>function register_tick_function($callback,$args)</span> |
+    | function unregister_tick_function($callback) | - <span style='color:red;font-weight:bold;'>function unregister_tick_function($callback)</span> |
+    | function net_get_interfaces() | - <span style='color:red;font-weight:bold;'>function net_get_interfaces()</span> |
+    | function ftok($filename,$project_id) | - <span style='color:red;font-weight:bold;'>function ftok($filename,$project_id)</span> |
+    | function getmygid() | - <span style='color:red;font-weight:bold;'>function getmygid()</span> |
+    | function getmyinode() | - <span style='color:red;font-weight:bold;'>function getmyinode()</span> |
+    | function openlog($prefix,$flags,$facility) | - <span style='color:red;font-weight:bold;'>function openlog($prefix,$flags,$facility)</span> |
     | function closelog() | - <span style='color:red;font-weight:bold;'>function closelog()</span> |
-    | function metaphone(<span style='color:green;'>$text,$phones</span>) | function metaphone(<span style='font-weight:bold;text-decoration:underline;'>$str</span>) |
-    | function ob_start(<span style='color:green;'>$user_function,$chunk_size,$flags</span>) | function ob_start(<span style='font-weight:bold;text-decoration:underline;'>$filter,$chunkSize,$erase</span>) |
-    | function ob_get_status(<span style='color:green;'>$full_status</span>) | function ob_get_status(<span style='font-weight:bold;text-decoration:underline;'>$full</span>) |
-    | function ob_implicit_flush(<span style='color:green;'>$flag</span>) | function ob_implicit_flush(<span style='font-weight:bold;text-decoration:underline;'>$doFlush</span>) |
-    | function ksort(<span style='color:green;'>$arg,$sort_flags</span>) | function ksort(<span style='font-weight:bold;text-decoration:underline;'>$array,$comparisonMethod</span>) |
-    | function krsort(<span style='color:green;'>$arg,$sort_flags</span>) | function krsort(<span style='font-weight:bold;text-decoration:underline;'>$array,$comparisonMethod</span>) |
-    | function natsort(<span style='color:green;'>$arg</span>) | function natsort(<span style='font-weight:bold;text-decoration:underline;'>$array</span>) |
-    | function natcasesort(<span style='color:green;'>$arg</span>) | function natcasesort(<span style='font-weight:bold;text-decoration:underline;'>$array</span>) |
-    | function asort(<span style='color:green;'>$arg,$sort_flags</span>) | function asort(<span style='font-weight:bold;text-decoration:underline;'>$array,$comparisonMethod</span>) |
-    | function arsort(<span style='color:green;'>$arg,$sort_flags</span>) | function arsort(<span style='font-weight:bold;text-decoration:underline;'>$array,$comparisonMethod</span>) |
-    | function sort(<span style='color:green;'>$arg,$sort_flags</span>) | function sort(<span style='font-weight:bold;text-decoration:underline;'>$array,$comparisonMethod</span>) |
-    | function rsort(<span style='color:green;'>$arg,$sort_flags</span>) | function rsort(<span style='font-weight:bold;text-decoration:underline;'>$array,$comparisonMethod</span>) |
-    | function usort(<span style='color:green;'>$arg,$cmp_function</span>) | function usort(<span style='font-weight:bold;text-decoration:underline;'>$array,$compare</span>) |
-    | function uasort(<span style='color:green;'>$arg,$cmp_function</span>) | function uasort(<span style='font-weight:bold;text-decoration:underline;'>$array,$compare</span>) |
-    | function uksort(<span style='color:green;'>$arg,$cmp_function</span>) | function uksort(<span style='font-weight:bold;text-decoration:underline;'>$array,$compare</span>) |
-    | function shuffle(<span style='color:green;'>$arg</span>) | function shuffle(<span style='font-weight:bold;text-decoration:underline;'>$array</span>) |
-    | function array_walk(<span style='color:green;'>$input,$funcname,$userdata</span>) | function array_walk(<span style='font-weight:bold;text-decoration:underline;'>$array,$callback,$data</span>) |
-    | function array_walk_recursive(<span style='color:green;'>$input,$funcname,$userdata</span>) | function array_walk_recursive(<span style='font-weight:bold;text-decoration:underline;'>$array,$callback,$data</span>) |
-    | function count(<span style='color:green;'>$var,$mode</span>) | function count(<span style='font-weight:bold;text-decoration:underline;'>$variable,$mode</span>) |
-    | function end(<span style='color:green;'>$arg</span>) | function end(<span style='font-weight:bold;text-decoration:underline;'>$array</span>) |
-    | function prev(<span style='color:green;'>$arg</span>) | function prev(<span style='font-weight:bold;text-decoration:underline;'>$array</span>) |
-    | function next(<span style='color:green;'>$arg</span>) | function next(<span style='font-weight:bold;text-decoration:underline;'>$array</span>) |
-    | function reset(<span style='color:green;'>$arg</span>) | function reset(<span style='font-weight:bold;text-decoration:underline;'>$array</span>) |
-    | function current(<span style='color:green;'>$arg</span>) | function current(<span style='font-weight:bold;text-decoration:underline;'>$array</span>) |
-    | function key(<span style='color:green;'>$arg</span>) | function key(<span style='font-weight:bold;text-decoration:underline;'>$array</span>) |
-    | function extract(<span style='color:green;'>$arg,$extract_type,$prefix</span>) | function extract(<span style='font-weight:bold;text-decoration:underline;'>$vars,$type,$prefix</span>) |
-    | function compact(<span style='color:green;'>$var_names</span>) | function compact(<span style='font-weight:bold;text-decoration:underline;'>$names</span>) |
-    | function array_fill(<span style='color:green;'>$start_key,$num,$val</span>) | function array_fill(<span style='font-weight:bold;text-decoration:underline;'>$startIndex,$count,$value</span>) |
-    | function array_fill_keys(<span style='color:green;'>$keys,$val</span>) | function array_fill_keys(<span style='font-weight:bold;text-decoration:underline;'>$keys,$value</span>) |
-    | function array_multisort(<span style='color:green;'>$arr1,$sort_order,$sort_flags,$arr2</span>) | function array_multisort(<span style='font-weight:bold;text-decoration:underline;'>$first,$args</span>) |
-    | function array_push(<span style='color:green;'>$stack,$vars</span>) | function array_push(<span style='font-weight:bold;text-decoration:underline;'>$array,$vars</span>) |
-    | function array_pop(<span style='color:green;'>$stack</span>) | function array_pop(<span style='font-weight:bold;text-decoration:underline;'>$array</span>) |
-    | function array_shift(<span style='color:green;'>$stack</span>) | function array_shift(<span style='font-weight:bold;text-decoration:underline;'>$array</span>) |
-    | function array_unshift(<span style='color:green;'>$stack,$vars</span>) | function array_unshift(<span style='font-weight:bold;text-decoration:underline;'>$array,$vars</span>) |
-    | function array_splice(<span style='color:green;'>$arg,$offset,$length,$replacement</span>) | function array_splice(<span style='font-weight:bold;text-decoration:underline;'>$array,$offset,$length,$replacement</span>) |
-    | function array_slice(<span style='color:green;'>$arg,$offset,$length,$preserve_keys</span>) | function array_slice(<span style='font-weight:bold;text-decoration:underline;'>$array,$offset,$length,$preserveKeys</span>) |
-    | function array_merge_recursive(<span style='color:green;'>$arrays</span>) | function array_merge_recursive(<span style='font-weight:bold;text-decoration:underline;'>$array,$arrays</span>) |
-    | function array_replace(<span style='color:green;'>$arr1,$arrays</span>) | function array_replace(<span style='font-weight:bold;text-decoration:underline;'>$array,$arrays</span>) |
-    | function array_replace_recursive(<span style='color:green;'>$arr1,$arrays</span>) | function array_replace_recursive(<span style='font-weight:bold;text-decoration:underline;'>$array,$arrays</span>) |
-    | function array_keys(<span style='color:green;'>$arg,$search_value,$strict</span>) | function array_keys(<span style='font-weight:bold;text-decoration:underline;'>$array,$searchValue,$strict</span>) |
-    | function array_key_first(<span style='color:green;'>$arg</span>) | function array_key_first(<span style='font-weight:bold;text-decoration:underline;'>$array</span>) |
-    | function array_key_last(<span style='color:green;'>$arg</span>) | function array_key_last(<span style='font-weight:bold;text-decoration:underline;'>$array</span>) |
-    | function array_values(<span style='color:green;'>$arg</span>) | function array_values(<span style='font-weight:bold;text-decoration:underline;'>$array</span>) |
-    | function array_count_values(<span style='color:green;'>$arg</span>) | function array_count_values(<span style='font-weight:bold;text-decoration:underline;'>$array</span>) |
-    | function array_column(<span style='color:green;'>$arg,$column_key,$index_key</span>) | function array_column(<span style='font-weight:bold;text-decoration:underline;'>$input,$column_key,$index_key</span>) |
-    | function array_reverse(<span style='color:green;'>$input,$preserve_keys</span>) | function array_reverse(<span style='font-weight:bold;text-decoration:underline;'>$array,$preserveKeys</span>) |
-    | function array_reduce(<span style='color:green;'>$arg,$callback,$initial</span>) | function array_reduce(<span style='font-weight:bold;text-decoration:underline;'>$array,$function,$initialValue</span>) |
-    | function array_pad(<span style='color:green;'>$arg,$pad_size,$pad_value</span>) | function array_pad(<span style='font-weight:bold;text-decoration:underline;'>$array,$length,$value</span>) |
-    | function array_flip(<span style='color:green;'>$arg</span>) | function array_flip(<span style='font-weight:bold;text-decoration:underline;'>$array</span>) |
-    | function array_change_key_case(<span style='color:green;'>$input,$case</span>) | function array_change_key_case(<span style='font-weight:bold;text-decoration:underline;'>$array,$keyCase</span>) |
-    | function array_rand(<span style='color:green;'>$arg,$num_req</span>) | function array_rand(<span style='font-weight:bold;text-decoration:underline;'>$array,$count</span>) |
-    | function array_unique(<span style='color:green;'>$arg,$flags</span>) | function array_unique(<span style='font-weight:bold;text-decoration:underline;'>$array,$sortFlags</span>) |
-    | function array_intersect(<span style='color:green;'>$arr1,$arrays</span>) | function array_intersect(<span style='font-weight:bold;text-decoration:underline;'>$array,$arrays</span>) |
-    | function array_intersect_key(<span style='color:green;'>$arr1,$arrays</span>) | function array_intersect_key(<span style='font-weight:bold;text-decoration:underline;'>$array,$arrays</span>) |
-    | function array_intersect_ukey(<span style='color:green;'>$arr1,$arr2,$callback_key_compare_func</span>) | function array_intersect_ukey(<span style='font-weight:bold;text-decoration:underline;'>$array,$array0,$arraysAndComparer</span>) |
-    | function array_uintersect(<span style='color:green;'>$arr1,$arr2,$callback_data_compare_func</span>) | function array_uintersect(<span style='font-weight:bold;text-decoration:underline;'>$array,$array0,$arraysAndComparer</span>) |
-    | function array_intersect_assoc(<span style='color:green;'>$arr1,$arrays</span>) | function array_intersect_assoc(<span style='font-weight:bold;text-decoration:underline;'>$array,$arrays</span>) |
-    | function array_uintersect_assoc(<span style='color:green;'>$arr1,$arr2,$callback_data_compare_func</span>) | function array_uintersect_assoc(<span style='font-weight:bold;text-decoration:underline;'>$array,$array0,$arraysAndComparer</span>) |
-    | function array_intersect_uassoc(<span style='color:green;'>$arr1,$arr2,$callback_key_compare_func</span>) | function array_intersect_uassoc(<span style='font-weight:bold;text-decoration:underline;'>$array,$array0,$arraysAndComparer</span>) |
-    | function array_uintersect_uassoc(<span style='color:green;'>$arr1,$arr2,$callback_data_compare_func,$callback_key_compare_func</span>) | function array_uintersect_uassoc(<span style='font-weight:bold;text-decoration:underline;'>$array,$array0,$arraysAndComparers</span>) |
-    | function array_diff(<span style='color:green;'>$arr1,$arrays</span>) | function array_diff(<span style='font-weight:bold;text-decoration:underline;'>$array,$arrays</span>) |
-    | function array_diff_key(<span style='color:green;'>$arr1,$arrays</span>) | function array_diff_key(<span style='font-weight:bold;text-decoration:underline;'>$array,$arrays</span>) |
-    | function array_diff_ukey(<span style='color:green;'>$arr1,$arr2,$callback_key_comp_func</span>) | function array_diff_ukey(<span style='font-weight:bold;text-decoration:underline;'>$array,$array0,$arraysAndComparer</span>) |
-    | function array_udiff(<span style='color:green;'>$arr1,$arr2,$callback_data_comp_func</span>) | function array_udiff(<span style='font-weight:bold;text-decoration:underline;'>$array1,$array2,$arraysAndComparer</span>) |
-    | function array_diff_assoc(<span style='color:green;'>$arr1,$arrays</span>) | function array_diff_assoc(<span style='font-weight:bold;text-decoration:underline;'>$array,$arrays</span>) |
-    | function array_udiff_assoc(<span style='color:green;'>$arr1,$arr2,$callback_key_comp_func</span>) | function array_udiff_assoc(<span style='font-weight:bold;text-decoration:underline;'>$array,$array0,$arraysAndComparer</span>) |
-    | function array_diff_uassoc(<span style='color:green;'>$arr1,$arr2,$callback_data_comp_func</span>) | function array_diff_uassoc(<span style='font-weight:bold;text-decoration:underline;'>$array,$array0,$arraysAndComparer</span>) |
-    | function array_udiff_uassoc(<span style='color:green;'>$arr1,$arr2,$callback_data_comp_func,$callback_key_comp_func</span>) | function array_udiff_uassoc(<span style='font-weight:bold;text-decoration:underline;'>$array,$array0,$arraysAndComparers</span>) |
-    | function array_sum(<span style='color:green;'>$arg</span>) | function array_sum(<span style='font-weight:bold;text-decoration:underline;'>$array</span>) |
-    | function array_product(<span style='color:green;'>$arg</span>) | function array_product(<span style='font-weight:bold;text-decoration:underline;'>$array</span>) |
-    | function array_filter(<span style='color:green;'>$arg,$callback,$use_keys</span>) | function array_filter(<span style='font-weight:bold;text-decoration:underline;'>$array,$callback,$flag</span>) |
-    | function array_map(<span style='color:green;'>$callback,$arrays</span>) | function array_map(<span style='font-weight:bold;text-decoration:underline;'>$map,$arrays</span>) |
-    | function array_chunk(<span style='color:green;'>$arg,$size,$preserve_keys</span>) | function array_chunk(<span style='font-weight:bold;text-decoration:underline;'>$array,$size,$preserveKeys</span>) |
-    | function array_key_exists(<span style='color:green;'>$key,$search</span>) | function array_key_exists(<span style='font-weight:bold;text-decoration:underline;'>$key,$array</span>) |
-    | function pos(<span style='color:green;'>$arg</span>) | function pos(<span style='font-weight:bold;text-decoration:underline;'>$array</span>) |
-    | function sizeof(<span style='color:green;'>$var,$mode</span>) | function sizeof(<span style='font-weight:bold;text-decoration:underline;'>$variable,$mode</span>) |
-    | function key_exists(<span style='color:green;'>$key,$search</span>) | function key_exists(<span style='font-weight:bold;text-decoration:underline;'>$key,$array</span>) |
-    | function assert(<span style='color:green;'>$assertion,$description</span>) | function assert(<span style='font-weight:bold;text-decoration:underline;'>$assertion,$action</span>) |
-    | function version_compare(<span style='color:green;'>$ver1,$ver2,$oper</span>) | function version_compare(<span style='font-weight:bold;text-decoration:underline;'>$version1,$version2,$op</span>) |
-    | function ftok($pathname,$proj) | - <span style='color:red;font-weight:bold;'>function ftok($pathname,$proj)</span> |
-    | function stream_filter_register(<span style='color:green;'>$filtername,$classname</span>) | function stream_filter_register(<span style='font-weight:bold;text-decoration:underline;'>$filter,$classname</span>) |
-    | function output_add_rewrite_var($name,$value) | - <span style='color:red;font-weight:bold;'>function output_add_rewrite_var($name,$value)</span> |
-    | function output_reset_rewrite_vars() | - <span style='color:red;font-weight:bold;'>function output_reset_rewrite_vars()</span> |
-    | function sapi_windows_cp_set($code_page) | - <span style='color:red;font-weight:bold;'>function sapi_windows_cp_set($code_page)</span> |
-    | function sapi_windows_cp_get() | - <span style='color:red;font-weight:bold;'>function sapi_windows_cp_get()</span> |
-    | function sapi_windows_cp_is_utf8() | - <span style='color:red;font-weight:bold;'>function sapi_windows_cp_is_utf8()</span> |
+    | function syslog($priority,$message) | - <span style='color:red;font-weight:bold;'>function syslog($priority,$message)</span> |
+    | function getdir($directory,$context) | - <span style='color:red;font-weight:bold;'>function getdir($directory,$context)</span> |
+    | function get_meta_tags($filename,$use_include_path) | - <span style='color:red;font-weight:bold;'>function get_meta_tags($filename,$use_include_path)</span> |
+    | function realpath_cache_get() | - <span style='color:red;font-weight:bold;'>function realpath_cache_get()</span> |
+    | function realpath_cache_size() | - <span style='color:red;font-weight:bold;'>function realpath_cache_size()</span> |
+    | function vfprintf($stream,$format,$values) | - <span style='color:red;font-weight:bold;'>function vfprintf($stream,$format,$values)</span> |
+    | function image_type_to_mime_type($image_type) | - <span style='color:red;font-weight:bold;'>function image_type_to_mime_type($image_type)</span> |
+    | function image_type_to_extension($image_type,$include_dot) | - <span style='color:red;font-weight:bold;'>function image_type_to_extension($image_type,$include_dot)</span> |
+    | function getimagesize($filename,$image_info) | - <span style='color:red;font-weight:bold;'>function getimagesize($filename,$image_info)</span> |
+    | function getimagesizefromstring($string,$image_info) | - <span style='color:red;font-weight:bold;'>function getimagesizefromstring($string,$image_info)</span> |
+    | function phpcredits($flags) | - <span style='color:red;font-weight:bold;'>function phpcredits($flags)</span> |
+    | function iptcembed($iptc_data,$filename,$spool) | - <span style='color:red;font-weight:bold;'>function iptcembed($iptc_data,$filename,$spool)</span> |
+    | function iptcparse($iptc_block) | - <span style='color:red;font-weight:bold;'>function iptcparse($iptc_block)</span> |
+    | function getrusage($mode) | - <span style='color:red;font-weight:bold;'>function getrusage($mode)</span> |
+    | function password_algos() | - <span style='color:red;font-weight:bold;'>function password_algos()</span> |
+    | function stream_context_get_params($context) | - <span style='color:red;font-weight:bold;'>function stream_context_get_params($context)</span> |
+    | function stream_context_get_default($options) | - <span style='color:red;font-weight:bold;'>function stream_context_get_default($options)</span> |
+    | function stream_context_set_default($options) | - <span style='color:red;font-weight:bold;'>function stream_context_set_default($options)</span> |
+    | function stream_socket_pair($domain,$type,$protocol) | - <span style='color:red;font-weight:bold;'>function stream_socket_pair($domain,$type,$protocol)</span> |
+    | function stream_supports_lock($stream) | - <span style='color:red;font-weight:bold;'>function stream_supports_lock($stream)</span> |
+    | function stream_set_read_buffer($stream,$size) | - <span style='color:red;font-weight:bold;'>function stream_set_read_buffer($stream,$size)</span> |
+    | function stream_set_chunk_size($stream,$size) | - <span style='color:red;font-weight:bold;'>function stream_set_chunk_size($stream,$size)</span> |
+    | function convert_uuencode($string) | - <span style='color:red;font-weight:bold;'>function convert_uuencode($string)</span> |
+    | function convert_uudecode($string) | - <span style='color:red;font-weight:bold;'>function convert_uudecode($string)</span> |
+    | function sapi_windows_cp_set($codepage) | - <span style='color:red;font-weight:bold;'>function sapi_windows_cp_set($codepage)</span> |
+    | function sapi_windows_cp_get($kind) | - <span style='color:red;font-weight:bold;'>function sapi_windows_cp_get($kind)</span> |
     | function sapi_windows_cp_conv($in_codepage,$out_codepage,$subject) | - <span style='color:red;font-weight:bold;'>function sapi_windows_cp_conv($in_codepage,$out_codepage,$subject)</span> |
-    | function sapi_windows_set_ctrl_handler($callable,$add) | - <span style='color:red;font-weight:bold;'>function sapi_windows_set_ctrl_handler($callable,$add)</span> |
+    | function sapi_windows_cp_is_utf8() | - <span style='color:red;font-weight:bold;'>function sapi_windows_cp_is_utf8()</span> |
+    | function sapi_windows_set_ctrl_handler($handler,$add) | - <span style='color:red;font-weight:bold;'>function sapi_windows_set_ctrl_handler($handler,$add)</span> |
     | function sapi_windows_generate_ctrl_event($event,$pid) | - <span style='color:red;font-weight:bold;'>function sapi_windows_generate_ctrl_event($event,$pid)</span> |
-    | function dl(<span style='color:green;'>$extension_filename</span>) | function dl(<span style='font-weight:bold;text-decoration:underline;'>$library</span>) |
-    | function Directory::close(<span style='color:green;'>$dir_handle</span>) | function Directory::close(<span style='font-weight:bold;text-decoration:underline;'>$handle</span>) |
-    | function Directory::rewind(<span style='color:green;'>$dir_handle</span>) | function Directory::rewind(<span style='font-weight:bold;text-decoration:underline;'>$handle</span>) |
-    | function Directory::read(<span style='color:green;'>$dir_handle</span>) | function Directory::read(<span style='font-weight:bold;text-decoration:underline;'>$handle</span>) |
     | const CREDITS_GROUP | - <span style='color:red;font-weight:bold;'>const CREDITS_GROUP</span> |
     | const CREDITS_GENERAL | - <span style='color:red;font-weight:bold;'>const CREDITS_GENERAL</span> |
     | const CREDITS_SAPI | - <span style='color:red;font-weight:bold;'>const CREDITS_SAPI</span> |
@@ -742,6 +332,7 @@
     | const CREDITS_FULLPAGE | - <span style='color:red;font-weight:bold;'>const CREDITS_FULLPAGE</span> |
     | const CREDITS_QA | - <span style='color:red;font-weight:bold;'>const CREDITS_QA</span> |
     | const CREDITS_ALL | - <span style='color:red;font-weight:bold;'>const CREDITS_ALL</span> |
+    | const PATHINFO_ALL | - <span style='color:red;font-weight:bold;'>const PATHINFO_ALL</span> |
     | const STREAM_NOTIFY_CONNECT | - <span style='color:red;font-weight:bold;'>const STREAM_NOTIFY_CONNECT</span> |
     | const STREAM_NOTIFY_AUTH_REQUIRED | - <span style='color:red;font-weight:bold;'>const STREAM_NOTIFY_AUTH_REQUIRED</span> |
     | const STREAM_NOTIFY_AUTH_RESULT | - <span style='color:red;font-weight:bold;'>const STREAM_NOTIFY_AUTH_RESULT</span> |
@@ -810,35 +401,111 @@
     | const STREAM_META_GROUP | - <span style='color:red;font-weight:bold;'>const STREAM_META_GROUP</span> |
     | const STREAM_META_GROUP_NAME | - <span style='color:red;font-weight:bold;'>const STREAM_META_GROUP_NAME</span> |
     | const STREAM_META_ACCESS | - <span style='color:red;font-weight:bold;'>const STREAM_META_ACCESS</span> |
-??? tiny "[=100% "**tokenizer** 140 / 140"]"
-??? tiny "[=73% "**zip** 95 / 131"]"
+    | const IMAGETYPE_GIF | - <span style='color:red;font-weight:bold;'>const IMAGETYPE_GIF</span> |
+    | const IMAGETYPE_JPEG | - <span style='color:red;font-weight:bold;'>const IMAGETYPE_JPEG</span> |
+    | const IMAGETYPE_PNG | - <span style='color:red;font-weight:bold;'>const IMAGETYPE_PNG</span> |
+    | const IMAGETYPE_SWF | - <span style='color:red;font-weight:bold;'>const IMAGETYPE_SWF</span> |
+    | const IMAGETYPE_PSD | - <span style='color:red;font-weight:bold;'>const IMAGETYPE_PSD</span> |
+    | const IMAGETYPE_BMP | - <span style='color:red;font-weight:bold;'>const IMAGETYPE_BMP</span> |
+    | const IMAGETYPE_TIFF_II | - <span style='color:red;font-weight:bold;'>const IMAGETYPE_TIFF_II</span> |
+    | const IMAGETYPE_TIFF_MM | - <span style='color:red;font-weight:bold;'>const IMAGETYPE_TIFF_MM</span> |
+    | const IMAGETYPE_JPC | - <span style='color:red;font-weight:bold;'>const IMAGETYPE_JPC</span> |
+    | const IMAGETYPE_JP2 | - <span style='color:red;font-weight:bold;'>const IMAGETYPE_JP2</span> |
+    | const IMAGETYPE_JPX | - <span style='color:red;font-weight:bold;'>const IMAGETYPE_JPX</span> |
+    | const IMAGETYPE_JB2 | - <span style='color:red;font-weight:bold;'>const IMAGETYPE_JB2</span> |
+    | const IMAGETYPE_SWC | - <span style='color:red;font-weight:bold;'>const IMAGETYPE_SWC</span> |
+    | const IMAGETYPE_IFF | - <span style='color:red;font-weight:bold;'>const IMAGETYPE_IFF</span> |
+    | const IMAGETYPE_WBMP | - <span style='color:red;font-weight:bold;'>const IMAGETYPE_WBMP</span> |
+    | const IMAGETYPE_JPEG2000 | - <span style='color:red;font-weight:bold;'>const IMAGETYPE_JPEG2000</span> |
+    | const IMAGETYPE_XBM | - <span style='color:red;font-weight:bold;'>const IMAGETYPE_XBM</span> |
+    | const IMAGETYPE_ICO | - <span style='color:red;font-weight:bold;'>const IMAGETYPE_ICO</span> |
+    | const IMAGETYPE_WEBP | - <span style='color:red;font-weight:bold;'>const IMAGETYPE_WEBP</span> |
+    | const IMAGETYPE_UNKNOWN | - <span style='color:red;font-weight:bold;'>const IMAGETYPE_UNKNOWN</span> |
+    | const IMAGETYPE_COUNT | - <span style='color:red;font-weight:bold;'>const IMAGETYPE_COUNT</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function fgetss($handle,$length,$allowableTags)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function chroot($directory)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function money_format($format,$number)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function hebrevc($str,$maxCharactersPerLine)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function sha256($str,$raw_output)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function sha256_file($filename,$raw_output)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function convert_cyr_string($bytes,$srcCharset,$dstCharset)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function nl_langinfo($item)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function ezmlm_hash($addr)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function get_magic_quotes_gpc()</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function get_magic_quotes_runtime()</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function set_magic_quotes_runtime($value)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function is_real($variable)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function apache_request_headers()</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function getallheaders()</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function idn_to_ascii($domain,$options,$variant,$idna_info)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function idn_to_utf8($domain,$options,$variant,$idna_info)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function posix_getpid()</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function fastcgi_finish_request()</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function zend_thread_id()</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const DNS_CAA</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const ASSERT_QUIET_EVAL</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const PHP_OUTPUT_HANDLER_START</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const PHP_OUTPUT_HANDLER_CONT</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const PHP_OUTPUT_HANDLER_END</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const UPLOAD_ERR_OK</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const UPLOAD_ERR_INI_SIZE</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const UPLOAD_ERR_FORM_SIZE</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const UPLOAD_ERR_PARTIAL</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const UPLOAD_ERR_NO_FILE</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const UPLOAD_ERR_NO_TMP_DIR</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const UPLOAD_ERR_CANT_WRITE</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const UPLOAD_ERR_EXTENSION</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const IDNA_DEFAULT</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const IDNA_ALLOW_UNASSIGNED</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const IDNA_USE_STD3_RULES</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const INTL_IDNA_VARIANT_2003</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const INTL_IDNA_VARIANT_UTS46</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const STDIN</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const STDOUT</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const STDERR</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const STREAM_ENFORCE_SAFE_MODE</span> |
+??? tiny "[=93% "**tokenizer** 143 / 153"]"
     | PHP | PeachPie |
     | --- | ---      |
-    | function zip_entry_open(<span style='color:green;'>$zip_dp,$zip_entry,$mode</span>) | function zip_entry_open(<span style='font-weight:bold;text-decoration:underline;'>$zip,$zip_entry,$mode</span>) |
-    | function zip_entry_close(<span style='color:green;'>$zip_ent</span>) | function zip_entry_close(<span style='font-weight:bold;text-decoration:underline;'>$zip_entry</span>) |
-    | function zip_entry_read(<span style='color:green;'>$zip_entry,$len</span>) | function zip_entry_read(<span style='font-weight:bold;text-decoration:underline;'>$zip_entry,$length</span>) |
-    | function ZipArchive::addFromString(<span style='color:green;'>$name,$content</span>) | function ZipArchive::addFromString(<span style='font-weight:bold;text-decoration:underline;'>$localname,$contents</span>) |
-    | function ZipArchive::addFile(<span style='color:green;'>$filepath,$entryname,$start,$length</span>) | function ZipArchive::addFile(<span style='font-weight:bold;text-decoration:underline;'>$filename,$localname,$start,$length</span>) |
-    | function ZipArchive::renameIndex(<span style='color:green;'>$index,$new_name</span>) | function ZipArchive::renameIndex(<span style='font-weight:bold;text-decoration:underline;'>$index,$newname</span>) |
-    | function ZipArchive::renameName(<span style='color:green;'>$name,$new_name</span>) | function ZipArchive::renameName(<span style='font-weight:bold;text-decoration:underline;'>$name,$newname</span>) |
-    | function ZipArchive::statName(<span style='color:green;'>$filename,$flags</span>) | function ZipArchive::statName(<span style='font-weight:bold;text-decoration:underline;'>$name,$flags</span>) |
-    | function ZipArchive::locateName(<span style='color:green;'>$filename,$flags</span>) | function ZipArchive::locateName(<span style='font-weight:bold;text-decoration:underline;'>$name,$flags</span>) |
-    | function ZipArchive::extractTo(<span style='color:green;'>$pathto,$files</span>) | function ZipArchive::extractTo(<span style='font-weight:bold;text-decoration:underline;'>$destination,$entries</span>) |
-    | function ZipArchive::getFromName(<span style='color:green;'>$entryname,$len,$flags</span>) | function ZipArchive::getFromName(<span style='font-weight:bold;text-decoration:underline;'>$name,$length,$flags</span>) |
-    | function ZipArchive::getFromIndex(<span style='color:green;'>$index,$len,$flags</span>) | function ZipArchive::getFromIndex(<span style='font-weight:bold;text-decoration:underline;'>$index,$length,$flags</span>) |
-    | function ZipArchive::getStream(<span style='color:green;'>$entryname</span>) | function ZipArchive::getStream(<span style='font-weight:bold;text-decoration:underline;'>$name</span>) |
-    | function ZipArchive::setCompressionName(<span style='color:green;'>$name,$method,$compflags</span>) | function ZipArchive::setCompressionName(<span style='font-weight:bold;text-decoration:underline;'>$name,$comp_method,$comp_flags</span>) |
-    | function ZipArchive::setCompressionIndex(<span style='color:green;'>$index,$method,$compflags</span>) | function ZipArchive::setCompressionIndex(<span style='font-weight:bold;text-decoration:underline;'>$index,$comp_method,$comp_flags</span>) |
+    | class PhpToken | - <span style='color:red;font-weight:bold;'>class PhpToken</span> |
+    | const T_NAME_FULLY_QUALIFIED | - <span style='color:red;font-weight:bold;'>const T_NAME_FULLY_QUALIFIED</span> |
+    | const T_NAME_RELATIVE | - <span style='color:red;font-weight:bold;'>const T_NAME_RELATIVE</span> |
+    | const T_NAME_QUALIFIED | - <span style='color:red;font-weight:bold;'>const T_NAME_QUALIFIED</span> |
+??? tiny "[=61% "**zip** 95 / 155"]"
+    | PHP | PeachPie |
+    | --- | ---      |
+    | function ZipArchive::replaceFile($filepath,$index,$start,$length,$flags) | - <span style='color:red;font-weight:bold;'>function ZipArchive::replaceFile($filepath,$index,$start,$length,$flags)</span> |
+    | function ZipArchive::setMtimeIndex($index,$timestamp,$flags) | - <span style='color:red;font-weight:bold;'>function ZipArchive::setMtimeIndex($index,$timestamp,$flags)</span> |
+    | function ZipArchive::setMtimeName($name,$timestamp,$flags) | - <span style='color:red;font-weight:bold;'>function ZipArchive::setMtimeName($name,$timestamp,$flags)</span> |
+    | function ZipArchive::registerProgressCallback($rate,$callback) | - <span style='color:red;font-weight:bold;'>function ZipArchive::registerProgressCallback($rate,$callback)</span> |
+    | function ZipArchive::registerCancelCallback($callback) | - <span style='color:red;font-weight:bold;'>function ZipArchive::registerCancelCallback($callback)</span> |
+    | const ZipArchive::RDONLY | - <span style='color:red;font-weight:bold;'>const ZipArchive::RDONLY</span> |
+    | const ZipArchive::FL_RECOMPRESS | - <span style='color:red;font-weight:bold;'>const ZipArchive::FL_RECOMPRESS</span> |
+    | const ZipArchive::FL_ENCRYPTED | - <span style='color:red;font-weight:bold;'>const ZipArchive::FL_ENCRYPTED</span> |
+    | const ZipArchive::FL_OVERWRITE | - <span style='color:red;font-weight:bold;'>const ZipArchive::FL_OVERWRITE</span> |
+    | const ZipArchive::FL_LOCAL | - <span style='color:red;font-weight:bold;'>const ZipArchive::FL_LOCAL</span> |
+    | const ZipArchive::FL_CENTRAL | - <span style='color:red;font-weight:bold;'>const ZipArchive::FL_CENTRAL</span> |
     | const ZipArchive::FL_ENC_GUESS | - <span style='color:red;font-weight:bold;'>const ZipArchive::FL_ENC_GUESS</span> |
     | const ZipArchive::FL_ENC_RAW | - <span style='color:red;font-weight:bold;'>const ZipArchive::FL_ENC_RAW</span> |
     | const ZipArchive::FL_ENC_STRICT | - <span style='color:red;font-weight:bold;'>const ZipArchive::FL_ENC_STRICT</span> |
     | const ZipArchive::FL_ENC_UTF_8 | - <span style='color:red;font-weight:bold;'>const ZipArchive::FL_ENC_UTF_8</span> |
     | const ZipArchive::FL_ENC_CP437 | - <span style='color:red;font-weight:bold;'>const ZipArchive::FL_ENC_CP437</span> |
     | const ZipArchive::CM_LZMA | - <span style='color:red;font-weight:bold;'>const ZipArchive::CM_LZMA</span> |
+    | const ZipArchive::CM_LZMA2 | - <span style='color:red;font-weight:bold;'>const ZipArchive::CM_LZMA2</span> |
+    | const ZipArchive::CM_XZ | - <span style='color:red;font-weight:bold;'>const ZipArchive::CM_XZ</span> |
     | const ZipArchive::CM_TERSE | - <span style='color:red;font-weight:bold;'>const ZipArchive::CM_TERSE</span> |
     | const ZipArchive::CM_LZ77 | - <span style='color:red;font-weight:bold;'>const ZipArchive::CM_LZ77</span> |
     | const ZipArchive::CM_WAVPACK | - <span style='color:red;font-weight:bold;'>const ZipArchive::CM_WAVPACK</span> |
     | const ZipArchive::CM_PPMD | - <span style='color:red;font-weight:bold;'>const ZipArchive::CM_PPMD</span> |
+    | const ZipArchive::ER_ENCRNOTSUPP | - <span style='color:red;font-weight:bold;'>const ZipArchive::ER_ENCRNOTSUPP</span> |
+    | const ZipArchive::ER_RDONLY | - <span style='color:red;font-weight:bold;'>const ZipArchive::ER_RDONLY</span> |
+    | const ZipArchive::ER_NOPASSWD | - <span style='color:red;font-weight:bold;'>const ZipArchive::ER_NOPASSWD</span> |
+    | const ZipArchive::ER_WRONGPASSWD | - <span style='color:red;font-weight:bold;'>const ZipArchive::ER_WRONGPASSWD</span> |
+    | const ZipArchive::ER_OPNOTSUPP | - <span style='color:red;font-weight:bold;'>const ZipArchive::ER_OPNOTSUPP</span> |
+    | const ZipArchive::ER_INUSE | - <span style='color:red;font-weight:bold;'>const ZipArchive::ER_INUSE</span> |
+    | const ZipArchive::ER_TELL | - <span style='color:red;font-weight:bold;'>const ZipArchive::ER_TELL</span> |
+    | const ZipArchive::ER_COMPRESSED_DATA | - <span style='color:red;font-weight:bold;'>const ZipArchive::ER_COMPRESSED_DATA</span> |
+    | const ZipArchive::ER_CANCELLED | - <span style='color:red;font-weight:bold;'>const ZipArchive::ER_CANCELLED</span> |
     | const ZipArchive::OPSYS_DOS | - <span style='color:red;font-weight:bold;'>const ZipArchive::OPSYS_DOS</span> |
     | const ZipArchive::OPSYS_AMIGA | - <span style='color:red;font-weight:bold;'>const ZipArchive::OPSYS_AMIGA</span> |
     | const ZipArchive::OPSYS_OPENVMS | - <span style='color:red;font-weight:bold;'>const ZipArchive::OPSYS_OPENVMS</span> |
@@ -848,7 +515,6 @@
     | const ZipArchive::OPSYS_OS_2 | - <span style='color:red;font-weight:bold;'>const ZipArchive::OPSYS_OS_2</span> |
     | const ZipArchive::OPSYS_MACINTOSH | - <span style='color:red;font-weight:bold;'>const ZipArchive::OPSYS_MACINTOSH</span> |
     | const ZipArchive::OPSYS_Z_SYSTEM | - <span style='color:red;font-weight:bold;'>const ZipArchive::OPSYS_Z_SYSTEM</span> |
-    | const ZipArchive::OPSYS_Z_CPM | - <span style='color:red;font-weight:bold;'>const ZipArchive::OPSYS_Z_CPM</span> |
     | const ZipArchive::OPSYS_CPM | - <span style='color:red;font-weight:bold;'>const ZipArchive::OPSYS_CPM</span> |
     | const ZipArchive::OPSYS_WINDOWS_NTFS | - <span style='color:red;font-weight:bold;'>const ZipArchive::OPSYS_WINDOWS_NTFS</span> |
     | const ZipArchive::OPSYS_MVS | - <span style='color:red;font-weight:bold;'>const ZipArchive::OPSYS_MVS</span> |
@@ -862,39 +528,25 @@
     | const ZipArchive::OPSYS_OS_X | - <span style='color:red;font-weight:bold;'>const ZipArchive::OPSYS_OS_X</span> |
     | const ZipArchive::OPSYS_DEFAULT | - <span style='color:red;font-weight:bold;'>const ZipArchive::OPSYS_DEFAULT</span> |
     | const ZipArchive::EM_NONE | - <span style='color:red;font-weight:bold;'>const ZipArchive::EM_NONE</span> |
+    | const ZipArchive::EM_TRAD_PKWARE | - <span style='color:red;font-weight:bold;'>const ZipArchive::EM_TRAD_PKWARE</span> |
     | const ZipArchive::EM_AES_128 | - <span style='color:red;font-weight:bold;'>const ZipArchive::EM_AES_128</span> |
     | const ZipArchive::EM_AES_192 | - <span style='color:red;font-weight:bold;'>const ZipArchive::EM_AES_192</span> |
     | const ZipArchive::EM_AES_256 | - <span style='color:red;font-weight:bold;'>const ZipArchive::EM_AES_256</span> |
-??? tiny "[=43% "**zlib** 25 / 58"]"
+    | const ZipArchive::EM_UNKNOWN | - <span style='color:red;font-weight:bold;'>const ZipArchive::EM_UNKNOWN</span> |
+    | const ZipArchive::LIBZIP_VERSION | - <span style='color:red;font-weight:bold;'>const ZipArchive::LIBZIP_VERSION</span> |
+??? tiny "[=41% "**zlib** 24 / 59"]"
     | PHP | PeachPie |
     | --- | ---      |
-    | function gzrewind(<span style='color:green;'>$fp</span>) | function gzrewind(<span style='font-weight:bold;text-decoration:underline;'>$zp</span>) |
-    | function gzclose(<span style='color:green;'>$fp</span>) | function gzclose(<span style='font-weight:bold;text-decoration:underline;'>$zp</span>) |
-    | function gzeof(<span style='color:green;'>$fp</span>) | function gzeof(<span style='font-weight:bold;text-decoration:underline;'>$zp</span>) |
-    | function gzgetc(<span style='color:green;'>$fp</span>) | function gzgetc(<span style='font-weight:bold;text-decoration:underline;'>$zp</span>) |
-    | function gzgets(<span style='color:green;'>$fp,$length</span>) | function gzgets(<span style='font-weight:bold;text-decoration:underline;'>$zp,$length</span>) |
-    | function gzgetss(<span style='color:green;'>$fp,$length,$allowable_tags</span>) | function gzgetss(<span style='font-weight:bold;text-decoration:underline;'>$zp,$length,$allowable_tags</span>) |
-    | function gzread(<span style='color:green;'>$fp,$length</span>) | function gzread(<span style='font-weight:bold;text-decoration:underline;'>$zp,$length</span>) |
-    | function gzpassthru(<span style='color:green;'>$fp</span>) | function gzpassthru(<span style='font-weight:bold;text-decoration:underline;'>$zp</span>) |
-    | function gzseek(<span style='color:green;'>$fp,$offset,$whence</span>) | function gzseek(<span style='font-weight:bold;text-decoration:underline;'>$zp,$offset,$whence</span>) |
-    | function gztell(<span style='color:green;'>$fp</span>) | function gztell(<span style='font-weight:bold;text-decoration:underline;'>$zp</span>) |
-    | function gzwrite(<span style='color:green;'>$fp,$str,$length</span>) | function gzwrite(<span style='font-weight:bold;text-decoration:underline;'>$zp,$str,$length</span>) |
-    | function gzputs(<span style='color:green;'>$fp,$str,$length</span>) | function gzputs(<span style='font-weight:bold;text-decoration:underline;'>$zp,$str,$length</span>) |
-    | function gzcompress(<span style='color:green;'>$data,$level,$encoding</span>) | function gzcompress(<span style='font-weight:bold;text-decoration:underline;'>$data,$level</span>) |
-    | function gzuncompress(<span style='color:green;'>$data,$max_decoded_len</span>) | function gzuncompress(<span style='font-weight:bold;text-decoration:underline;'>$data,$length</span>) |
-    | function gzdeflate(<span style='color:green;'>$data,$level,$encoding</span>) | function gzdeflate(<span style='font-weight:bold;text-decoration:underline;'>$data,$level</span>) |
-    | function gzinflate(<span style='color:green;'>$data,$max_decoded_len</span>) | function gzinflate(<span style='font-weight:bold;text-decoration:underline;'>$data,$length</span>) |
-    | function gzencode(<span style='color:green;'>$data,$level,$encoding</span>) | function gzencode(<span style='font-weight:bold;text-decoration:underline;'>$data,$level,$encoding_mode</span>) |
-    | function gzdecode(<span style='color:green;'>$data,$max_decoded_len</span>) | function gzdecode(<span style='font-weight:bold;text-decoration:underline;'>$data,$length</span>) |
     | function zlib_encode($data,$encoding,$level) | - <span style='color:red;font-weight:bold;'>function zlib_encode($data,$encoding,$level)</span> |
-    | function zlib_decode($data,$max_decoded_len) | - <span style='color:red;font-weight:bold;'>function zlib_decode($data,$max_decoded_len)</span> |
-    | function deflate_init($encoding,$level) | - <span style='color:red;font-weight:bold;'>function deflate_init($encoding,$level)</span> |
-    | function deflate_add($resource,$add,$flush_behavior) | - <span style='color:red;font-weight:bold;'>function deflate_add($resource,$add,$flush_behavior)</span> |
+    | function zlib_decode($data,$max_length) | - <span style='color:red;font-weight:bold;'>function zlib_decode($data,$max_length)</span> |
+    | function deflate_init($encoding,$options) | - <span style='color:red;font-weight:bold;'>function deflate_init($encoding,$options)</span> |
+    | function deflate_add($context,$data,$flush_mode) | - <span style='color:red;font-weight:bold;'>function deflate_add($context,$data,$flush_mode)</span> |
     | function inflate_init($encoding,$options) | - <span style='color:red;font-weight:bold;'>function inflate_init($encoding,$options)</span> |
-    | function inflate_add($context,$encoded_data,$flush_mode) | - <span style='color:red;font-weight:bold;'>function inflate_add($context,$encoded_data,$flush_mode)</span> |
-    | function inflate_get_status($resource) | - <span style='color:red;font-weight:bold;'>function inflate_get_status($resource)</span> |
-    | function inflate_get_read_len($resource) | - <span style='color:red;font-weight:bold;'>function inflate_get_read_len($resource)</span> |
-    | function ob_gzhandler(<span style='color:green;'>$data,$flags</span>) | function ob_gzhandler(<span style='font-weight:bold;text-decoration:underline;'>$data,$mode</span>) |
+    | function inflate_add($context,$data,$flush_mode) | - <span style='color:red;font-weight:bold;'>function inflate_add($context,$data,$flush_mode)</span> |
+    | function inflate_get_status($context) | - <span style='color:red;font-weight:bold;'>function inflate_get_status($context)</span> |
+    | function inflate_get_read_len($context) | - <span style='color:red;font-weight:bold;'>function inflate_get_read_len($context)</span> |
+    | class InflateContext | - <span style='color:red;font-weight:bold;'>class InflateContext</span> |
+    | class DeflateContext | - <span style='color:red;font-weight:bold;'>class DeflateContext</span> |
     | const ZLIB_ENCODING_RAW | - <span style='color:red;font-weight:bold;'>const ZLIB_ENCODING_RAW</span> |
     | const ZLIB_ENCODING_GZIP | - <span style='color:red;font-weight:bold;'>const ZLIB_ENCODING_GZIP</span> |
     | const ZLIB_ENCODING_DEFLATE | - <span style='color:red;font-weight:bold;'>const ZLIB_ENCODING_DEFLATE</span> |
@@ -920,276 +572,144 @@
     | const ZLIB_MEM_ERROR | - <span style='color:red;font-weight:bold;'>const ZLIB_MEM_ERROR</span> |
     | const ZLIB_BUF_ERROR | - <span style='color:red;font-weight:bold;'>const ZLIB_BUF_ERROR</span> |
     | const ZLIB_VERSION_ERROR | - <span style='color:red;font-weight:bold;'>const ZLIB_VERSION_ERROR</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function gzopen64($filename,$mode,$use_include_path)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function gzseek64($zp,$offset,$whence)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function gztell64($zp)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function gzgetss($zp,$length,$allowable_tags)</span> |
 ??? tiny "[=83% "**libxml** 29 / 35"]"
     | PHP | PeachPie |
     | --- | ---      |
-    | function libxml_set_streams_context(<span style='color:green;'>$context</span>) | function libxml_set_streams_context(<span style='font-weight:bold;text-decoration:underline;'>$streams_context</span>) |
     | function libxml_set_external_entity_loader($resolver_function) | - <span style='color:red;font-weight:bold;'>function libxml_set_external_entity_loader($resolver_function)</span> |
     | const LIBXML_LOADED_VERSION | - <span style='color:red;font-weight:bold;'>const LIBXML_LOADED_VERSION</span> |
     | const LIBXML_PEDANTIC | - <span style='color:red;font-weight:bold;'>const LIBXML_PEDANTIC</span> |
     | const LIBXML_BIGLINES | - <span style='color:red;font-weight:bold;'>const LIBXML_BIGLINES</span> |
     | const LIBXML_HTML_NOIMPLIED | - <span style='color:red;font-weight:bold;'>const LIBXML_HTML_NOIMPLIED</span> |
     | const LIBXML_HTML_NODEFDTD | - <span style='color:red;font-weight:bold;'>const LIBXML_HTML_NODEFDTD</span> |
-??? tiny "[=81% "**dom** 416 / 516"]"
+??? tiny "[=91% "**dom** 410 / 451"]"
     | PHP | PeachPie |
     | --- | ---      |
-    | class DOMStringList | - <span style='color:red;font-weight:bold;'>class DOMStringList</span> |
-    | class DOMNameList | - <span style='color:red;font-weight:bold;'>class DOMNameList</span> |
-    | class DOMImplementationList | - <span style='color:red;font-weight:bold;'>class DOMImplementationList</span> |
-    | class DOMImplementationSource | - <span style='color:red;font-weight:bold;'>class DOMImplementationSource</span> |
-    | function DOMImplementation::hasFeature(<span style='color:green;'></span>) | function DOMImplementation::hasFeature(<span style='font-weight:bold;text-decoration:underline;'>$feature,$version</span>) |
-    | function DOMNode::insertBefore(<span style='color:green;'>$newChild,$refChild</span>) | function DOMNode::insertBefore(<span style='font-weight:bold;text-decoration:underline;'>$newnode,$refnode</span>) |
-    | function DOMNode::replaceChild(<span style='color:green;'>$newChild,$oldChild</span>) | function DOMNode::replaceChild(<span style='font-weight:bold;text-decoration:underline;'>$newnode,$oldnode</span>) |
-    | function DOMNode::removeChild(<span style='color:green;'>$oldChild</span>) | function DOMNode::removeChild(<span style='font-weight:bold;text-decoration:underline;'>$oldnode</span>) |
-    | function DOMNode::appendChild(<span style='color:green;'>$newChild</span>) | function DOMNode::appendChild(<span style='font-weight:bold;text-decoration:underline;'>$newnode</span>) |
-    | function DOMNode::compareDocumentPosition($other) | - <span style='color:red;font-weight:bold;'>function DOMNode::compareDocumentPosition($other)</span> |
-    | function DOMNode::isSameNode(<span style='color:green;'>$other</span>) | function DOMNode::isSameNode(<span style='font-weight:bold;text-decoration:underline;'>$anotherNode</span>) |
-    | function DOMNode::isEqualNode($arg) | - <span style='color:red;font-weight:bold;'>function DOMNode::isEqualNode($arg)</span> |
-    | function DOMNode::getFeature($feature,$version) | - <span style='color:red;font-weight:bold;'>function DOMNode::getFeature($feature,$version)</span> |
-    | function DOMNode::setUserData($key,$data,$handler) | - <span style='color:red;font-weight:bold;'>function DOMNode::setUserData($key,$data,$handler)</span> |
-    | function DOMNode::getUserData($key) | - <span style='color:red;font-weight:bold;'>function DOMNode::getUserData($key)</span> |
+    | class DOMParentNode | - <span style='color:red;font-weight:bold;'>class DOMParentNode</span> |
+    | class DOMChildNode | - <span style='color:red;font-weight:bold;'>class DOMChildNode</span> |
     | class DOMNameSpaceNode | - <span style='color:red;font-weight:bold;'>class DOMNameSpaceNode</span> |
     | function DOMDocumentFragment::__construct() | - <span style='color:red;font-weight:bold;'>function DOMDocumentFragment::__construct()</span> |
-    | function DOMDocumentFragment::insertBefore(<span style='color:green;'>$newChild,$refChild</span>) | function DOMDocumentFragment::insertBefore(<span style='font-weight:bold;text-decoration:underline;'>$newnode,$refnode</span>) |
-    | function DOMDocumentFragment::replaceChild(<span style='color:green;'>$newChild,$oldChild</span>) | function DOMDocumentFragment::replaceChild(<span style='font-weight:bold;text-decoration:underline;'>$newnode,$oldnode</span>) |
-    | function DOMDocumentFragment::removeChild(<span style='color:green;'>$oldChild</span>) | function DOMDocumentFragment::removeChild(<span style='font-weight:bold;text-decoration:underline;'>$oldnode</span>) |
-    | function DOMDocumentFragment::appendChild(<span style='color:green;'>$newChild</span>) | function DOMDocumentFragment::appendChild(<span style='font-weight:bold;text-decoration:underline;'>$newnode</span>) |
-    | function DOMDocumentFragment::compareDocumentPosition($other) | - <span style='color:red;font-weight:bold;'>function DOMDocumentFragment::compareDocumentPosition($other)</span> |
-    | function DOMDocumentFragment::isSameNode(<span style='color:green;'>$other</span>) | function DOMDocumentFragment::isSameNode(<span style='font-weight:bold;text-decoration:underline;'>$anotherNode</span>) |
-    | function DOMDocumentFragment::isEqualNode($arg) | - <span style='color:red;font-weight:bold;'>function DOMDocumentFragment::isEqualNode($arg)</span> |
-    | function DOMDocumentFragment::getFeature($feature,$version) | - <span style='color:red;font-weight:bold;'>function DOMDocumentFragment::getFeature($feature,$version)</span> |
-    | function DOMDocumentFragment::setUserData($key,$data,$handler) | - <span style='color:red;font-weight:bold;'>function DOMDocumentFragment::setUserData($key,$data,$handler)</span> |
-    | function DOMDocumentFragment::getUserData($key) | - <span style='color:red;font-weight:bold;'>function DOMDocumentFragment::getUserData($key)</span> |
-    | function DOMDocument::createElement(<span style='color:green;'>$tagName,$value</span>) | function DOMDocument::createElement(<span style='font-weight:bold;text-decoration:underline;'>$name,$value</span>) |
-    | function DOMDocument::getElementsByTagName(<span style='color:green;'>$tagName</span>) | function DOMDocument::getElementsByTagName(<span style='font-weight:bold;text-decoration:underline;'>$name</span>) |
-    | function DOMDocument::load(<span style='color:green;'>$source,$options</span>) | function DOMDocument::load(<span style='font-weight:bold;text-decoration:underline;'>$filename,$options</span>) |
-    | function DOMDocument::save(<span style='color:green;'>$file</span>) | function DOMDocument::save(<span style='font-weight:bold;text-decoration:underline;'>$filename,$options</span>) |
-    | function DOMDocument::loadHTMLFile(<span style='color:green;'>$source,$options</span>) | function DOMDocument::loadHTMLFile(<span style='font-weight:bold;text-decoration:underline;'>$filename,$options</span>) |
-    | function DOMDocument::saveHTML(<span style='color:green;'></span>) | function DOMDocument::saveHTML(<span style='font-weight:bold;text-decoration:underline;'>$node</span>) |
-    | function DOMDocument::saveHTMLFile(<span style='color:green;'>$file</span>) | function DOMDocument::saveHTMLFile(<span style='font-weight:bold;text-decoration:underline;'>$filename</span>) |
-    | function DOMDocument::schemaValidate(<span style='color:green;'>$filename</span>) | function DOMDocument::schemaValidate(<span style='font-weight:bold;text-decoration:underline;'>$schemaFile,$flags</span>) |
-    | function DOMDocument::schemaValidateSource(<span style='color:green;'>$source</span>) | function DOMDocument::schemaValidateSource(<span style='font-weight:bold;text-decoration:underline;'>$schemaString,$flags</span>) |
-    | function DOMDocument::relaxNGValidate(<span style='color:green;'>$filename</span>) | function DOMDocument::relaxNGValidate(<span style='font-weight:bold;text-decoration:underline;'>$schemaFile</span>) |
-    | function DOMDocument::relaxNGValidateSource(<span style='color:green;'>$source</span>) | function DOMDocument::relaxNGValidateSource(<span style='font-weight:bold;text-decoration:underline;'>$schema</span>) |
-    | function DOMDocument::insertBefore(<span style='color:green;'>$newChild,$refChild</span>) | function DOMDocument::insertBefore(<span style='font-weight:bold;text-decoration:underline;'>$newnode,$refnode</span>) |
-    | function DOMDocument::replaceChild(<span style='color:green;'>$newChild,$oldChild</span>) | function DOMDocument::replaceChild(<span style='font-weight:bold;text-decoration:underline;'>$newnode,$oldnode</span>) |
-    | function DOMDocument::removeChild(<span style='color:green;'>$oldChild</span>) | function DOMDocument::removeChild(<span style='font-weight:bold;text-decoration:underline;'>$oldnode</span>) |
-    | function DOMDocument::appendChild(<span style='color:green;'>$newChild</span>) | function DOMDocument::appendChild(<span style='font-weight:bold;text-decoration:underline;'>$newnode</span>) |
-    | function DOMDocument::compareDocumentPosition($other) | - <span style='color:red;font-weight:bold;'>function DOMDocument::compareDocumentPosition($other)</span> |
-    | function DOMDocument::isSameNode(<span style='color:green;'>$other</span>) | function DOMDocument::isSameNode(<span style='font-weight:bold;text-decoration:underline;'>$anotherNode</span>) |
-    | function DOMDocument::isEqualNode($arg) | - <span style='color:red;font-weight:bold;'>function DOMDocument::isEqualNode($arg)</span> |
-    | function DOMDocument::getFeature($feature,$version) | - <span style='color:red;font-weight:bold;'>function DOMDocument::getFeature($feature,$version)</span> |
-    | function DOMDocument::setUserData($key,$data,$handler) | - <span style='color:red;font-weight:bold;'>function DOMDocument::setUserData($key,$data,$handler)</span> |
-    | function DOMDocument::getUserData($key) | - <span style='color:red;font-weight:bold;'>function DOMDocument::getUserData($key)</span> |
-    | function DOMNamedNodeMap::setNamedItem(<span style='color:green;'>$arg</span>) | function DOMNamedNodeMap::setNamedItem(<span style='font-weight:bold;text-decoration:underline;'>$item</span>) |
-    | function DOMNamedNodeMap::setNamedItemNS(<span style='color:green;'>$arg</span>) | function DOMNamedNodeMap::setNamedItemNS(<span style='font-weight:bold;text-decoration:underline;'>$item</span>) |
-    | function DOMCharacterData::insertBefore(<span style='color:green;'>$newChild,$refChild</span>) | function DOMCharacterData::insertBefore(<span style='font-weight:bold;text-decoration:underline;'>$newnode,$refnode</span>) |
-    | function DOMCharacterData::replaceChild(<span style='color:green;'>$newChild,$oldChild</span>) | function DOMCharacterData::replaceChild(<span style='font-weight:bold;text-decoration:underline;'>$newnode,$oldnode</span>) |
-    | function DOMCharacterData::removeChild(<span style='color:green;'>$oldChild</span>) | function DOMCharacterData::removeChild(<span style='font-weight:bold;text-decoration:underline;'>$oldnode</span>) |
-    | function DOMCharacterData::appendChild(<span style='color:green;'>$newChild</span>) | function DOMCharacterData::appendChild(<span style='font-weight:bold;text-decoration:underline;'>$newnode</span>) |
-    | function DOMCharacterData::compareDocumentPosition($other) | - <span style='color:red;font-weight:bold;'>function DOMCharacterData::compareDocumentPosition($other)</span> |
-    | function DOMCharacterData::isSameNode(<span style='color:green;'>$other</span>) | function DOMCharacterData::isSameNode(<span style='font-weight:bold;text-decoration:underline;'>$anotherNode</span>) |
-    | function DOMCharacterData::isEqualNode($arg) | - <span style='color:red;font-weight:bold;'>function DOMCharacterData::isEqualNode($arg)</span> |
-    | function DOMCharacterData::getFeature($feature,$version) | - <span style='color:red;font-weight:bold;'>function DOMCharacterData::getFeature($feature,$version)</span> |
-    | function DOMCharacterData::setUserData($key,$data,$handler) | - <span style='color:red;font-weight:bold;'>function DOMCharacterData::setUserData($key,$data,$handler)</span> |
-    | function DOMCharacterData::getUserData($key) | - <span style='color:red;font-weight:bold;'>function DOMCharacterData::getUserData($key)</span> |
+    | function DOMDocumentFragment::append($nodes) | - <span style='color:red;font-weight:bold;'>function DOMDocumentFragment::append($nodes)</span> |
+    | function DOMDocumentFragment::prepend($nodes) | - <span style='color:red;font-weight:bold;'>function DOMDocumentFragment::prepend($nodes)</span> |
+    | function DOMDocument::append($nodes) | - <span style='color:red;font-weight:bold;'>function DOMDocument::append($nodes)</span> |
+    | function DOMDocument::prepend($nodes) | - <span style='color:red;font-weight:bold;'>function DOMDocument::prepend($nodes)</span> |
+    | function DOMNodeList::getIterator() | - <span style='color:red;font-weight:bold;'>function DOMNodeList::getIterator()</span> |
+    | function DOMNamedNodeMap::getIterator() | - <span style='color:red;font-weight:bold;'>function DOMNamedNodeMap::getIterator()</span> |
+    | function DOMCharacterData::replaceWith($nodes) | - <span style='color:red;font-weight:bold;'>function DOMCharacterData::replaceWith($nodes)</span> |
+    | function DOMCharacterData::remove() | - <span style='color:red;font-weight:bold;'>function DOMCharacterData::remove()</span> |
+    | function DOMCharacterData::before($nodes) | - <span style='color:red;font-weight:bold;'>function DOMCharacterData::before($nodes)</span> |
+    | function DOMCharacterData::after($nodes) | - <span style='color:red;font-weight:bold;'>function DOMCharacterData::after($nodes)</span> |
     | function DOMAttr::isId() | - <span style='color:red;font-weight:bold;'>function DOMAttr::isId()</span> |
-    | function DOMAttr::insertBefore(<span style='color:green;'>$newChild,$refChild</span>) | function DOMAttr::insertBefore(<span style='font-weight:bold;text-decoration:underline;'>$newnode,$refnode</span>) |
-    | function DOMAttr::replaceChild(<span style='color:green;'>$newChild,$oldChild</span>) | function DOMAttr::replaceChild(<span style='font-weight:bold;text-decoration:underline;'>$newnode,$oldnode</span>) |
-    | function DOMAttr::removeChild(<span style='color:green;'>$oldChild</span>) | function DOMAttr::removeChild(<span style='font-weight:bold;text-decoration:underline;'>$oldnode</span>) |
-    | function DOMAttr::appendChild(<span style='color:green;'>$newChild</span>) | function DOMAttr::appendChild(<span style='font-weight:bold;text-decoration:underline;'>$newnode</span>) |
-    | function DOMAttr::compareDocumentPosition($other) | - <span style='color:red;font-weight:bold;'>function DOMAttr::compareDocumentPosition($other)</span> |
-    | function DOMAttr::isSameNode(<span style='color:green;'>$other</span>) | function DOMAttr::isSameNode(<span style='font-weight:bold;text-decoration:underline;'>$anotherNode</span>) |
-    | function DOMAttr::isEqualNode($arg) | - <span style='color:red;font-weight:bold;'>function DOMAttr::isEqualNode($arg)</span> |
-    | function DOMAttr::getFeature($feature,$version) | - <span style='color:red;font-weight:bold;'>function DOMAttr::getFeature($feature,$version)</span> |
-    | function DOMAttr::setUserData($key,$data,$handler) | - <span style='color:red;font-weight:bold;'>function DOMAttr::setUserData($key,$data,$handler)</span> |
-    | function DOMAttr::getUserData($key) | - <span style='color:red;font-weight:bold;'>function DOMAttr::getUserData($key)</span> |
-    | function DOMElement::setAttributeNode(<span style='color:green;'>$newAttr</span>) | function DOMElement::setAttributeNode(<span style='font-weight:bold;text-decoration:underline;'>$attribute</span>) |
-    | function DOMElement::removeAttributeNode(<span style='color:green;'>$oldAttr</span>) | function DOMElement::removeAttributeNode(<span style='font-weight:bold;text-decoration:underline;'>$attribute</span>) |
-    | function DOMElement::setAttributeNodeNS(<span style='color:green;'>$newAttr</span>) | function DOMElement::setAttributeNodeNS(<span style='font-weight:bold;text-decoration:underline;'>$attribute</span>) |
-    | function DOMElement::setIdAttributeNode(<span style='color:green;'>$attr,$isId</span>) | function DOMElement::setIdAttributeNode(<span style='font-weight:bold;text-decoration:underline;'>$attribute,$isId</span>) |
-    | function DOMElement::__construct(<span style='color:green;'>$name,$value,$uri</span>) | function DOMElement::__construct(<span style='font-weight:bold;text-decoration:underline;'>$name,$value,$namespaceUri</span>) |
-    | function DOMElement::insertBefore(<span style='color:green;'>$newChild,$refChild</span>) | function DOMElement::insertBefore(<span style='font-weight:bold;text-decoration:underline;'>$newnode,$refnode</span>) |
-    | function DOMElement::replaceChild(<span style='color:green;'>$newChild,$oldChild</span>) | function DOMElement::replaceChild(<span style='font-weight:bold;text-decoration:underline;'>$newnode,$oldnode</span>) |
-    | function DOMElement::removeChild(<span style='color:green;'>$oldChild</span>) | function DOMElement::removeChild(<span style='font-weight:bold;text-decoration:underline;'>$oldnode</span>) |
-    | function DOMElement::appendChild(<span style='color:green;'>$newChild</span>) | function DOMElement::appendChild(<span style='font-weight:bold;text-decoration:underline;'>$newnode</span>) |
-    | function DOMElement::compareDocumentPosition($other) | - <span style='color:red;font-weight:bold;'>function DOMElement::compareDocumentPosition($other)</span> |
-    | function DOMElement::isSameNode(<span style='color:green;'>$other</span>) | function DOMElement::isSameNode(<span style='font-weight:bold;text-decoration:underline;'>$anotherNode</span>) |
-    | function DOMElement::isEqualNode($arg) | - <span style='color:red;font-weight:bold;'>function DOMElement::isEqualNode($arg)</span> |
-    | function DOMElement::getFeature($feature,$version) | - <span style='color:red;font-weight:bold;'>function DOMElement::getFeature($feature,$version)</span> |
-    | function DOMElement::setUserData($key,$data,$handler) | - <span style='color:red;font-weight:bold;'>function DOMElement::setUserData($key,$data,$handler)</span> |
-    | function DOMElement::getUserData($key) | - <span style='color:red;font-weight:bold;'>function DOMElement::getUserData($key)</span> |
+    | function DOMElement::remove() | - <span style='color:red;font-weight:bold;'>function DOMElement::remove()</span> |
+    | function DOMElement::before($nodes) | - <span style='color:red;font-weight:bold;'>function DOMElement::before($nodes)</span> |
+    | function DOMElement::after($nodes) | - <span style='color:red;font-weight:bold;'>function DOMElement::after($nodes)</span> |
+    | function DOMElement::replaceWith($nodes) | - <span style='color:red;font-weight:bold;'>function DOMElement::replaceWith($nodes)</span> |
+    | function DOMElement::append($nodes) | - <span style='color:red;font-weight:bold;'>function DOMElement::append($nodes)</span> |
+    | function DOMElement::prepend($nodes) | - <span style='color:red;font-weight:bold;'>function DOMElement::prepend($nodes)</span> |
     | function DOMText::isElementContentWhitespace() | - <span style='color:red;font-weight:bold;'>function DOMText::isElementContentWhitespace()</span> |
-    | function DOMText::replaceWholeText($content) | - <span style='color:red;font-weight:bold;'>function DOMText::replaceWholeText($content)</span> |
-    | function DOMText::insertBefore(<span style='color:green;'>$newChild,$refChild</span>) | function DOMText::insertBefore(<span style='font-weight:bold;text-decoration:underline;'>$newnode,$refnode</span>) |
-    | function DOMText::replaceChild(<span style='color:green;'>$newChild,$oldChild</span>) | function DOMText::replaceChild(<span style='font-weight:bold;text-decoration:underline;'>$newnode,$oldnode</span>) |
-    | function DOMText::removeChild(<span style='color:green;'>$oldChild</span>) | function DOMText::removeChild(<span style='font-weight:bold;text-decoration:underline;'>$oldnode</span>) |
-    | function DOMText::appendChild(<span style='color:green;'>$newChild</span>) | function DOMText::appendChild(<span style='font-weight:bold;text-decoration:underline;'>$newnode</span>) |
-    | function DOMText::compareDocumentPosition($other) | - <span style='color:red;font-weight:bold;'>function DOMText::compareDocumentPosition($other)</span> |
-    | function DOMText::isSameNode(<span style='color:green;'>$other</span>) | function DOMText::isSameNode(<span style='font-weight:bold;text-decoration:underline;'>$anotherNode</span>) |
-    | function DOMText::isEqualNode($arg) | - <span style='color:red;font-weight:bold;'>function DOMText::isEqualNode($arg)</span> |
-    | function DOMText::getFeature($feature,$version) | - <span style='color:red;font-weight:bold;'>function DOMText::getFeature($feature,$version)</span> |
-    | function DOMText::setUserData($key,$data,$handler) | - <span style='color:red;font-weight:bold;'>function DOMText::setUserData($key,$data,$handler)</span> |
-    | function DOMText::getUserData($key) | - <span style='color:red;font-weight:bold;'>function DOMText::getUserData($key)</span> |
-    | function DOMComment::insertBefore(<span style='color:green;'>$newChild,$refChild</span>) | function DOMComment::insertBefore(<span style='font-weight:bold;text-decoration:underline;'>$newnode,$refnode</span>) |
-    | function DOMComment::replaceChild(<span style='color:green;'>$newChild,$oldChild</span>) | function DOMComment::replaceChild(<span style='font-weight:bold;text-decoration:underline;'>$newnode,$oldnode</span>) |
-    | function DOMComment::removeChild(<span style='color:green;'>$oldChild</span>) | function DOMComment::removeChild(<span style='font-weight:bold;text-decoration:underline;'>$oldnode</span>) |
-    | function DOMComment::appendChild(<span style='color:green;'>$newChild</span>) | function DOMComment::appendChild(<span style='font-weight:bold;text-decoration:underline;'>$newnode</span>) |
-    | function DOMComment::compareDocumentPosition($other) | - <span style='color:red;font-weight:bold;'>function DOMComment::compareDocumentPosition($other)</span> |
-    | function DOMComment::isSameNode(<span style='color:green;'>$other</span>) | function DOMComment::isSameNode(<span style='font-weight:bold;text-decoration:underline;'>$anotherNode</span>) |
-    | function DOMComment::isEqualNode($arg) | - <span style='color:red;font-weight:bold;'>function DOMComment::isEqualNode($arg)</span> |
-    | function DOMComment::getFeature($feature,$version) | - <span style='color:red;font-weight:bold;'>function DOMComment::getFeature($feature,$version)</span> |
-    | function DOMComment::setUserData($key,$data,$handler) | - <span style='color:red;font-weight:bold;'>function DOMComment::setUserData($key,$data,$handler)</span> |
-    | function DOMComment::getUserData($key) | - <span style='color:red;font-weight:bold;'>function DOMComment::getUserData($key)</span> |
-    | class DOMTypeinfo | - <span style='color:red;font-weight:bold;'>class DOMTypeinfo</span> |
-    | class DOMUserDataHandler | - <span style='color:red;font-weight:bold;'>class DOMUserDataHandler</span> |
-    | class DOMDomError | - <span style='color:red;font-weight:bold;'>class DOMDomError</span> |
-    | class DOMErrorHandler | - <span style='color:red;font-weight:bold;'>class DOMErrorHandler</span> |
-    | class DOMLocator | - <span style='color:red;font-weight:bold;'>class DOMLocator</span> |
-    | function DOMConfiguration::setParameter($name,$value) | - <span style='color:red;font-weight:bold;'>function DOMConfiguration::setParameter($name,$value)</span> |
-    | function DOMConfiguration::getParameter($name) | - <span style='color:red;font-weight:bold;'>function DOMConfiguration::getParameter($name)</span> |
-    | function DOMConfiguration::canSetParameter($name,$value) | - <span style='color:red;font-weight:bold;'>function DOMConfiguration::canSetParameter($name,$value)</span> |
+    | function DOMText::replaceWith($nodes) | - <span style='color:red;font-weight:bold;'>function DOMText::replaceWith($nodes)</span> |
+    | function DOMText::remove() | - <span style='color:red;font-weight:bold;'>function DOMText::remove()</span> |
+    | function DOMText::before($nodes) | - <span style='color:red;font-weight:bold;'>function DOMText::before($nodes)</span> |
+    | function DOMText::after($nodes) | - <span style='color:red;font-weight:bold;'>function DOMText::after($nodes)</span> |
+    | function DOMComment::replaceWith($nodes) | - <span style='color:red;font-weight:bold;'>function DOMComment::replaceWith($nodes)</span> |
+    | function DOMComment::remove() | - <span style='color:red;font-weight:bold;'>function DOMComment::remove()</span> |
+    | function DOMComment::before($nodes) | - <span style='color:red;font-weight:bold;'>function DOMComment::before($nodes)</span> |
+    | function DOMComment::after($nodes) | - <span style='color:red;font-weight:bold;'>function DOMComment::after($nodes)</span> |
     | function DOMCdataSection::isElementContentWhitespace() | - <span style='color:red;font-weight:bold;'>function DOMCdataSection::isElementContentWhitespace()</span> |
-    | function DOMCdataSection::replaceWholeText($content) | - <span style='color:red;font-weight:bold;'>function DOMCdataSection::replaceWholeText($content)</span> |
-    | function DOMCdataSection::insertBefore(<span style='color:green;'>$newChild,$refChild</span>) | function DOMCdataSection::insertBefore(<span style='font-weight:bold;text-decoration:underline;'>$newnode,$refnode</span>) |
-    | function DOMCdataSection::replaceChild(<span style='color:green;'>$newChild,$oldChild</span>) | function DOMCdataSection::replaceChild(<span style='font-weight:bold;text-decoration:underline;'>$newnode,$oldnode</span>) |
-    | function DOMCdataSection::removeChild(<span style='color:green;'>$oldChild</span>) | function DOMCdataSection::removeChild(<span style='font-weight:bold;text-decoration:underline;'>$oldnode</span>) |
-    | function DOMCdataSection::appendChild(<span style='color:green;'>$newChild</span>) | function DOMCdataSection::appendChild(<span style='font-weight:bold;text-decoration:underline;'>$newnode</span>) |
-    | function DOMCdataSection::compareDocumentPosition($other) | - <span style='color:red;font-weight:bold;'>function DOMCdataSection::compareDocumentPosition($other)</span> |
-    | function DOMCdataSection::isSameNode(<span style='color:green;'>$other</span>) | function DOMCdataSection::isSameNode(<span style='font-weight:bold;text-decoration:underline;'>$anotherNode</span>) |
-    | function DOMCdataSection::isEqualNode($arg) | - <span style='color:red;font-weight:bold;'>function DOMCdataSection::isEqualNode($arg)</span> |
-    | function DOMCdataSection::getFeature($feature,$version) | - <span style='color:red;font-weight:bold;'>function DOMCdataSection::getFeature($feature,$version)</span> |
-    | function DOMCdataSection::setUserData($key,$data,$handler) | - <span style='color:red;font-weight:bold;'>function DOMCdataSection::setUserData($key,$data,$handler)</span> |
-    | function DOMCdataSection::getUserData($key) | - <span style='color:red;font-weight:bold;'>function DOMCdataSection::getUserData($key)</span> |
-    | function DOMDocumentType::insertBefore(<span style='color:green;'>$newChild,$refChild</span>) | function DOMDocumentType::insertBefore(<span style='font-weight:bold;text-decoration:underline;'>$newnode,$refnode</span>) |
-    | function DOMDocumentType::replaceChild(<span style='color:green;'>$newChild,$oldChild</span>) | function DOMDocumentType::replaceChild(<span style='font-weight:bold;text-decoration:underline;'>$newnode,$oldnode</span>) |
-    | function DOMDocumentType::removeChild(<span style='color:green;'>$oldChild</span>) | function DOMDocumentType::removeChild(<span style='font-weight:bold;text-decoration:underline;'>$oldnode</span>) |
-    | function DOMDocumentType::appendChild(<span style='color:green;'>$newChild</span>) | function DOMDocumentType::appendChild(<span style='font-weight:bold;text-decoration:underline;'>$newnode</span>) |
-    | function DOMDocumentType::compareDocumentPosition($other) | - <span style='color:red;font-weight:bold;'>function DOMDocumentType::compareDocumentPosition($other)</span> |
-    | function DOMDocumentType::isSameNode(<span style='color:green;'>$other</span>) | function DOMDocumentType::isSameNode(<span style='font-weight:bold;text-decoration:underline;'>$anotherNode</span>) |
-    | function DOMDocumentType::isEqualNode($arg) | - <span style='color:red;font-weight:bold;'>function DOMDocumentType::isEqualNode($arg)</span> |
-    | function DOMDocumentType::getFeature($feature,$version) | - <span style='color:red;font-weight:bold;'>function DOMDocumentType::getFeature($feature,$version)</span> |
-    | function DOMDocumentType::setUserData($key,$data,$handler) | - <span style='color:red;font-weight:bold;'>function DOMDocumentType::setUserData($key,$data,$handler)</span> |
-    | function DOMDocumentType::getUserData($key) | - <span style='color:red;font-weight:bold;'>function DOMDocumentType::getUserData($key)</span> |
-    | function DOMNotation::insertBefore(<span style='color:green;'>$newChild,$refChild</span>) | function DOMNotation::insertBefore(<span style='font-weight:bold;text-decoration:underline;'>$newnode,$refnode</span>) |
-    | function DOMNotation::replaceChild(<span style='color:green;'>$newChild,$oldChild</span>) | function DOMNotation::replaceChild(<span style='font-weight:bold;text-decoration:underline;'>$newnode,$oldnode</span>) |
-    | function DOMNotation::removeChild(<span style='color:green;'>$oldChild</span>) | function DOMNotation::removeChild(<span style='font-weight:bold;text-decoration:underline;'>$oldnode</span>) |
-    | function DOMNotation::appendChild(<span style='color:green;'>$newChild</span>) | function DOMNotation::appendChild(<span style='font-weight:bold;text-decoration:underline;'>$newnode</span>) |
-    | function DOMNotation::compareDocumentPosition($other) | - <span style='color:red;font-weight:bold;'>function DOMNotation::compareDocumentPosition($other)</span> |
-    | function DOMNotation::isSameNode(<span style='color:green;'>$other</span>) | function DOMNotation::isSameNode(<span style='font-weight:bold;text-decoration:underline;'>$anotherNode</span>) |
-    | function DOMNotation::isEqualNode($arg) | - <span style='color:red;font-weight:bold;'>function DOMNotation::isEqualNode($arg)</span> |
-    | function DOMNotation::getFeature($feature,$version) | - <span style='color:red;font-weight:bold;'>function DOMNotation::getFeature($feature,$version)</span> |
-    | function DOMNotation::setUserData($key,$data,$handler) | - <span style='color:red;font-weight:bold;'>function DOMNotation::setUserData($key,$data,$handler)</span> |
-    | function DOMNotation::getUserData($key) | - <span style='color:red;font-weight:bold;'>function DOMNotation::getUserData($key)</span> |
-    | function DOMEntity::insertBefore(<span style='color:green;'>$newChild,$refChild</span>) | function DOMEntity::insertBefore(<span style='font-weight:bold;text-decoration:underline;'>$newnode,$refnode</span>) |
-    | function DOMEntity::replaceChild(<span style='color:green;'>$newChild,$oldChild</span>) | function DOMEntity::replaceChild(<span style='font-weight:bold;text-decoration:underline;'>$newnode,$oldnode</span>) |
-    | function DOMEntity::removeChild(<span style='color:green;'>$oldChild</span>) | function DOMEntity::removeChild(<span style='font-weight:bold;text-decoration:underline;'>$oldnode</span>) |
-    | function DOMEntity::appendChild(<span style='color:green;'>$newChild</span>) | function DOMEntity::appendChild(<span style='font-weight:bold;text-decoration:underline;'>$newnode</span>) |
-    | function DOMEntity::compareDocumentPosition($other) | - <span style='color:red;font-weight:bold;'>function DOMEntity::compareDocumentPosition($other)</span> |
-    | function DOMEntity::isSameNode(<span style='color:green;'>$other</span>) | function DOMEntity::isSameNode(<span style='font-weight:bold;text-decoration:underline;'>$anotherNode</span>) |
-    | function DOMEntity::isEqualNode($arg) | - <span style='color:red;font-weight:bold;'>function DOMEntity::isEqualNode($arg)</span> |
-    | function DOMEntity::getFeature($feature,$version) | - <span style='color:red;font-weight:bold;'>function DOMEntity::getFeature($feature,$version)</span> |
-    | function DOMEntity::setUserData($key,$data,$handler) | - <span style='color:red;font-weight:bold;'>function DOMEntity::setUserData($key,$data,$handler)</span> |
-    | function DOMEntity::getUserData($key) | - <span style='color:red;font-weight:bold;'>function DOMEntity::getUserData($key)</span> |
-    | function DOMEntityReference::insertBefore(<span style='color:green;'>$newChild,$refChild</span>) | function DOMEntityReference::insertBefore(<span style='font-weight:bold;text-decoration:underline;'>$newnode,$refnode</span>) |
-    | function DOMEntityReference::replaceChild(<span style='color:green;'>$newChild,$oldChild</span>) | function DOMEntityReference::replaceChild(<span style='font-weight:bold;text-decoration:underline;'>$newnode,$oldnode</span>) |
-    | function DOMEntityReference::removeChild(<span style='color:green;'>$oldChild</span>) | function DOMEntityReference::removeChild(<span style='font-weight:bold;text-decoration:underline;'>$oldnode</span>) |
-    | function DOMEntityReference::appendChild(<span style='color:green;'>$newChild</span>) | function DOMEntityReference::appendChild(<span style='font-weight:bold;text-decoration:underline;'>$newnode</span>) |
-    | function DOMEntityReference::compareDocumentPosition($other) | - <span style='color:red;font-weight:bold;'>function DOMEntityReference::compareDocumentPosition($other)</span> |
-    | function DOMEntityReference::isSameNode(<span style='color:green;'>$other</span>) | function DOMEntityReference::isSameNode(<span style='font-weight:bold;text-decoration:underline;'>$anotherNode</span>) |
-    | function DOMEntityReference::isEqualNode($arg) | - <span style='color:red;font-weight:bold;'>function DOMEntityReference::isEqualNode($arg)</span> |
-    | function DOMEntityReference::getFeature($feature,$version) | - <span style='color:red;font-weight:bold;'>function DOMEntityReference::getFeature($feature,$version)</span> |
-    | function DOMEntityReference::setUserData($key,$data,$handler) | - <span style='color:red;font-weight:bold;'>function DOMEntityReference::setUserData($key,$data,$handler)</span> |
-    | function DOMEntityReference::getUserData($key) | - <span style='color:red;font-weight:bold;'>function DOMEntityReference::getUserData($key)</span> |
-    | function DOMProcessingInstruction::insertBefore(<span style='color:green;'>$newChild,$refChild</span>) | function DOMProcessingInstruction::insertBefore(<span style='font-weight:bold;text-decoration:underline;'>$newnode,$refnode</span>) |
-    | function DOMProcessingInstruction::replaceChild(<span style='color:green;'>$newChild,$oldChild</span>) | function DOMProcessingInstruction::replaceChild(<span style='font-weight:bold;text-decoration:underline;'>$newnode,$oldnode</span>) |
-    | function DOMProcessingInstruction::removeChild(<span style='color:green;'>$oldChild</span>) | function DOMProcessingInstruction::removeChild(<span style='font-weight:bold;text-decoration:underline;'>$oldnode</span>) |
-    | function DOMProcessingInstruction::appendChild(<span style='color:green;'>$newChild</span>) | function DOMProcessingInstruction::appendChild(<span style='font-weight:bold;text-decoration:underline;'>$newnode</span>) |
-    | function DOMProcessingInstruction::compareDocumentPosition($other) | - <span style='color:red;font-weight:bold;'>function DOMProcessingInstruction::compareDocumentPosition($other)</span> |
-    | function DOMProcessingInstruction::isSameNode(<span style='color:green;'>$other</span>) | function DOMProcessingInstruction::isSameNode(<span style='font-weight:bold;text-decoration:underline;'>$anotherNode</span>) |
-    | function DOMProcessingInstruction::isEqualNode($arg) | - <span style='color:red;font-weight:bold;'>function DOMProcessingInstruction::isEqualNode($arg)</span> |
-    | function DOMProcessingInstruction::getFeature($feature,$version) | - <span style='color:red;font-weight:bold;'>function DOMProcessingInstruction::getFeature($feature,$version)</span> |
-    | function DOMProcessingInstruction::setUserData($key,$data,$handler) | - <span style='color:red;font-weight:bold;'>function DOMProcessingInstruction::setUserData($key,$data,$handler)</span> |
-    | function DOMProcessingInstruction::getUserData($key) | - <span style='color:red;font-weight:bold;'>function DOMProcessingInstruction::getUserData($key)</span> |
-    | class DOMStringExtend | - <span style='color:red;font-weight:bold;'>class DOMStringExtend</span> |
-    | function DOMXPath::__construct(<span style='color:green;'>$doc</span>) | function DOMXPath::__construct(<span style='font-weight:bold;text-decoration:underline;'>$document</span>) |
-    | function DOMXPath::query(<span style='color:green;'>$expr,$context,$registerNodeNS</span>) | function DOMXPath::query(<span style='font-weight:bold;text-decoration:underline;'>$expr,$contextnode,$registerNodeNS</span>) |
-    | function DOMXPath::evaluate(<span style='color:green;'>$expr,$context,$registerNodeNS</span>) | function DOMXPath::evaluate(<span style='font-weight:bold;text-decoration:underline;'>$expr,$contextnode,$registerNodeNS</span>) |
-    | function DOMXPath::registerPhpFunctions(<span style='color:green;'></span>) | function DOMXPath::registerPhpFunctions(<span style='font-weight:bold;text-decoration:underline;'>$restrict</span>) |
-??? tiny "[=97% "**PDO** 139 / 144"]"
+    | function DOMCdataSection::replaceWith($nodes) | - <span style='color:red;font-weight:bold;'>function DOMCdataSection::replaceWith($nodes)</span> |
+    | function DOMCdataSection::remove() | - <span style='color:red;font-weight:bold;'>function DOMCdataSection::remove()</span> |
+    | function DOMCdataSection::before($nodes) | - <span style='color:red;font-weight:bold;'>function DOMCdataSection::before($nodes)</span> |
+    | function DOMCdataSection::after($nodes) | - <span style='color:red;font-weight:bold;'>function DOMCdataSection::after($nodes)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>class DOMConfiguration</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function DOMDocument::renameNode($node,$namespaceUri,$qualifiedName)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function DOMNamedNodeMap::setNamedItem($item)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function DOMNamedNodeMap::removeNamedItem($name)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function DOMNamedNodeMap::setNamedItemNS($item)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function DOMNamedNodeMap::removeNamedItemNS($namespaceUri,$localName)</span> |
+??? tiny "[=96% "**PDO** 139 / 145"]"
     | PHP | PeachPie |
     | --- | ---      |
-    | function PDO::__construct(<span style='color:green;'>$dsn,$username,$passwd,$options</span>) | function PDO::__construct(<span style='font-weight:bold;text-decoration:underline;'>$dsn,$username,$password,$options</span>) |
-    | function PDO::prepare(<span style='color:green;'>$statement,$options</span>) | function PDO::prepare(<span style='font-weight:bold;text-decoration:underline;'>$statement,$driver_options</span>) |
-    | function PDO::exec(<span style='color:green;'>$query</span>) | function PDO::exec(<span style='font-weight:bold;text-decoration:underline;'>$statement</span>) |
-    | function PDO::query(<span style='color:green;'></span>) | function PDO::query(<span style='font-weight:bold;text-decoration:underline;'>$statement,$args</span>) |
-    | function PDO::lastInsertId(<span style='color:green;'>$seqname</span>) | function PDO::lastInsertId(<span style='font-weight:bold;text-decoration:underline;'>$name</span>) |
-    | function PDO::quote(<span style='color:green;'>$string,$paramtype</span>) | function PDO::quote(<span style='font-weight:bold;text-decoration:underline;'>$str,$parameter_type</span>) |
     | const PDO::SQLITE_DETERMINISTIC | - <span style='color:red;font-weight:bold;'>const PDO::SQLITE_DETERMINISTIC</span> |
     | const PDO::SQLITE_OPEN_READONLY | - <span style='color:red;font-weight:bold;'>const PDO::SQLITE_OPEN_READONLY</span> |
     | const PDO::SQLITE_OPEN_READWRITE | - <span style='color:red;font-weight:bold;'>const PDO::SQLITE_OPEN_READWRITE</span> |
     | const PDO::SQLITE_OPEN_CREATE | - <span style='color:red;font-weight:bold;'>const PDO::SQLITE_OPEN_CREATE</span> |
-    | function PDOStatement::execute(<span style='color:green;'>$bound_input_params</span>) | function PDOStatement::execute(<span style='font-weight:bold;text-decoration:underline;'>$input_parameters</span>) |
-    | function PDOStatement::fetch(<span style='color:green;'>$how,$orientation,$offset</span>) | function PDOStatement::fetch(<span style='font-weight:bold;text-decoration:underline;'>$fetch_style,$cursor_orientation,$cursor_offet</span>) |
-    | function PDOStatement::bindParam(<span style='color:green;'>$paramno,$param,$type,$maxlen,$driverdata</span>) | function PDOStatement::bindParam(<span style='font-weight:bold;text-decoration:underline;'>$parameter,$variable,$data_type,$length,$driver_options</span>) |
-    | function PDOStatement::bindValue(<span style='color:green;'>$paramno,$param,$type</span>) | function PDOStatement::bindValue(<span style='font-weight:bold;text-decoration:underline;'>$parameter,$value,$data_type</span>) |
-    | function PDOStatement::fetchAll(<span style='color:green;'>$how,$class_name,$ctor_args</span>) | function PDOStatement::fetchAll(<span style='font-weight:bold;text-decoration:underline;'>$fetch_style,$fetch_argument,$ctor_args</span>) |
-    | function PDOStatement::setFetchMode(<span style='color:green;'>$mode,$params</span>) | function PDOStatement::setFetchMode(<span style='font-weight:bold;text-decoration:underline;'>$mode,$args</span>) |
+    | function PDOStatement::getIterator() | - <span style='color:red;font-weight:bold;'>function PDOStatement::getIterator()</span> |
     | class PDORow | - <span style='color:red;font-weight:bold;'>class PDORow</span> |
-??? tiny "[=26% "**openssl** 27 / 105"]"
+    |  | + <span style='color:red;font-weight:bold;'>function PDO::__call($name,$arguments)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const PDO::ATTR_DRIVER_SPECIFIC</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const PDO::SQLSRV_ENCODING_DEFAULT</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const PDO::SQLSRV_ENCODING_BINARY</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const PDO::SQLSRV_ENCODING_SYSTEM</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const PDO::SQLSRV_ENCODING_UTF8</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const PDO::SQLSRV_ATTR_ENCODING</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const PDO::SQLSRV_ATTR_QUERY_TIMEOUT</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const PDO::SQLSRV_ATTR_DIRECT_QUERY</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const PDO::SQLSRV_CURSOR_KEYSET</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const PDO::SQLSRV_CURSOR_DYNAMIC</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const PDO::SQLSRV_CURSOR_STATIC</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const PDO::SQLSRV_CURSOR_BUFFERED</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const PDO::PARAM_ZVAL</span> |
+??? tiny "[=22% "**openssl** 27 / 124"]"
     | PHP | PeachPie |
     | --- | ---      |
-    | function openssl_get_cert_locations() | - <span style='color:red;font-weight:bold;'>function openssl_get_cert_locations()</span> |
-    | function openssl_spki_new($privkey,$challenge,$algo) | - <span style='color:red;font-weight:bold;'>function openssl_spki_new($privkey,$challenge,$algo)</span> |
+    | function openssl_x509_check_private_key($certificate,$private_key) | - <span style='color:red;font-weight:bold;'>function openssl_x509_check_private_key($certificate,$private_key)</span> |
+    | function openssl_x509_verify($certificate,$public_key) | - <span style='color:red;font-weight:bold;'>function openssl_x509_verify($certificate,$public_key)</span> |
+    | function openssl_x509_parse($certificate,$short_names) | - <span style='color:red;font-weight:bold;'>function openssl_x509_parse($certificate,$short_names)</span> |
+    | function openssl_x509_checkpurpose($certificate,$purpose,$ca_info,$untrusted_certificates_file) | - <span style='color:red;font-weight:bold;'>function openssl_x509_checkpurpose($certificate,$purpose,$ca_info,$untrusted_certificates_file)</span> |
+    | function openssl_pkcs12_export_to_file($certificate,$output_filename,$private_key,$passphrase,$options) | - <span style='color:red;font-weight:bold;'>function openssl_pkcs12_export_to_file($certificate,$output_filename,$private_key,$passphrase,$options)</span> |
+    | function openssl_pkcs12_export($certificate,$output,$private_key,$passphrase,$options) | - <span style='color:red;font-weight:bold;'>function openssl_pkcs12_export($certificate,$output,$private_key,$passphrase,$options)</span> |
+    | function openssl_pkcs12_read($pkcs12,$certificates,$passphrase) | - <span style='color:red;font-weight:bold;'>function openssl_pkcs12_read($pkcs12,$certificates,$passphrase)</span> |
+    | function openssl_csr_export_to_file($csr,$output_filename,$no_text) | - <span style='color:red;font-weight:bold;'>function openssl_csr_export_to_file($csr,$output_filename,$no_text)</span> |
+    | function openssl_csr_export($csr,$output,$no_text) | - <span style='color:red;font-weight:bold;'>function openssl_csr_export($csr,$output,$no_text)</span> |
+    | function openssl_csr_sign($csr,$ca_certificate,$private_key,$days,$options,$serial) | - <span style='color:red;font-weight:bold;'>function openssl_csr_sign($csr,$ca_certificate,$private_key,$days,$options,$serial)</span> |
+    | function openssl_csr_new($distinguished_names,$private_key,$options,$extra_attributes) | - <span style='color:red;font-weight:bold;'>function openssl_csr_new($distinguished_names,$private_key,$options,$extra_attributes)</span> |
+    | function openssl_csr_get_subject($csr,$short_names) | - <span style='color:red;font-weight:bold;'>function openssl_csr_get_subject($csr,$short_names)</span> |
+    | function openssl_csr_get_public_key($csr,$short_names) | - <span style='color:red;font-weight:bold;'>function openssl_csr_get_public_key($csr,$short_names)</span> |
+    | function openssl_pkey_export_to_file($key,$output_filename,$passphrase,$options) | - <span style='color:red;font-weight:bold;'>function openssl_pkey_export_to_file($key,$output_filename,$passphrase,$options)</span> |
+    | function openssl_pkey_export($key,$output,$passphrase,$options) | - <span style='color:red;font-weight:bold;'>function openssl_pkey_export($key,$output,$passphrase,$options)</span> |
+    | function openssl_pkey_get_public($public_key) | - <span style='color:red;font-weight:bold;'>function openssl_pkey_get_public($public_key)</span> |
+    | function openssl_get_publickey($public_key) | - <span style='color:red;font-weight:bold;'>function openssl_get_publickey($public_key)</span> |
+    | function openssl_pkey_free($key) | - <span style='color:red;font-weight:bold;'>function openssl_pkey_free($key)</span> |
+    | function openssl_free_key($key) | - <span style='color:red;font-weight:bold;'>function openssl_free_key($key)</span> |
+    | function openssl_pkey_get_private($private_key,$passphrase) | - <span style='color:red;font-weight:bold;'>function openssl_pkey_get_private($private_key,$passphrase)</span> |
+    | function openssl_get_privatekey($private_key,$passphrase) | - <span style='color:red;font-weight:bold;'>function openssl_get_privatekey($private_key,$passphrase)</span> |
+    | function openssl_pkey_get_details($key) | - <span style='color:red;font-weight:bold;'>function openssl_pkey_get_details($key)</span> |
+    | function openssl_pbkdf2($password,$salt,$key_length,$iterations,$digest_algo) | - <span style='color:red;font-weight:bold;'>function openssl_pbkdf2($password,$salt,$key_length,$iterations,$digest_algo)</span> |
+    | function openssl_pkcs7_verify($input_filename,$flags,$signers_certificates_filename,$ca_info,$untrusted_certificates_filename,$content,$output_filename) | - <span style='color:red;font-weight:bold;'>function openssl_pkcs7_verify($input_filename,$flags,$signers_certificates_filename,$ca_info,$untrusted_certificates_filename,$content,$output_filename)</span> |
+    | function openssl_pkcs7_encrypt($input_filename,$output_filename,$certificate,$headers,$flags,$cipher_algo) | - <span style='color:red;font-weight:bold;'>function openssl_pkcs7_encrypt($input_filename,$output_filename,$certificate,$headers,$flags,$cipher_algo)</span> |
+    | function openssl_pkcs7_sign($input_filename,$output_filename,$certificate,$private_key,$headers,$flags,$untrusted_certificates_filename) | - <span style='color:red;font-weight:bold;'>function openssl_pkcs7_sign($input_filename,$output_filename,$certificate,$private_key,$headers,$flags,$untrusted_certificates_filename)</span> |
+    | function openssl_pkcs7_decrypt($input_filename,$output_filename,$certificate,$private_key) | - <span style='color:red;font-weight:bold;'>function openssl_pkcs7_decrypt($input_filename,$output_filename,$certificate,$private_key)</span> |
+    | function openssl_pkcs7_read($input_filename,$certificates) | - <span style='color:red;font-weight:bold;'>function openssl_pkcs7_read($input_filename,$certificates)</span> |
+    | function openssl_cms_verify($input_filename,$flags,$certificates,$ca_info,$untrusted_certificates_filename,$content,$pk7,$sigfile,$encoding) | - <span style='color:red;font-weight:bold;'>function openssl_cms_verify($input_filename,$flags,$certificates,$ca_info,$untrusted_certificates_filename,$content,$pk7,$sigfile,$encoding)</span> |
+    | function openssl_cms_encrypt($input_filename,$output_filename,$certificate,$headers,$flags,$encoding,$cipher_algo) | - <span style='color:red;font-weight:bold;'>function openssl_cms_encrypt($input_filename,$output_filename,$certificate,$headers,$flags,$encoding,$cipher_algo)</span> |
+    | function openssl_cms_sign($input_filename,$output_filename,$certificate,$private_key,$headers,$flags,$encoding,$untrusted_certificates_filename) | - <span style='color:red;font-weight:bold;'>function openssl_cms_sign($input_filename,$output_filename,$certificate,$private_key,$headers,$flags,$encoding,$untrusted_certificates_filename)</span> |
+    | function openssl_cms_decrypt($input_filename,$output_filename,$certificate,$private_key,$encoding) | - <span style='color:red;font-weight:bold;'>function openssl_cms_decrypt($input_filename,$output_filename,$certificate,$private_key,$encoding)</span> |
+    | function openssl_cms_read($input_filename,$certificates) | - <span style='color:red;font-weight:bold;'>function openssl_cms_read($input_filename,$certificates)</span> |
+    | function openssl_private_encrypt($data,$encrypted_data,$private_key,$padding) | - <span style='color:red;font-weight:bold;'>function openssl_private_encrypt($data,$encrypted_data,$private_key,$padding)</span> |
+    | function openssl_private_decrypt($data,$decrypted_data,$private_key,$padding) | - <span style='color:red;font-weight:bold;'>function openssl_private_decrypt($data,$decrypted_data,$private_key,$padding)</span> |
+    | function openssl_public_encrypt($data,$encrypted_data,$public_key,$padding) | - <span style='color:red;font-weight:bold;'>function openssl_public_encrypt($data,$encrypted_data,$public_key,$padding)</span> |
+    | function openssl_public_decrypt($data,$decrypted_data,$public_key,$padding) | - <span style='color:red;font-weight:bold;'>function openssl_public_decrypt($data,$decrypted_data,$public_key,$padding)</span> |
+    | function openssl_sign($data,$signature,$private_key,$algorithm) | - <span style='color:red;font-weight:bold;'>function openssl_sign($data,$signature,$private_key,$algorithm)</span> |
+    | function openssl_verify($data,$signature,$public_key,$algorithm) | - <span style='color:red;font-weight:bold;'>function openssl_verify($data,$signature,$public_key,$algorithm)</span> |
+    | function openssl_seal($data,$sealed_data,$encrypted_keys,$public_key,$cipher_algo,$iv) | - <span style='color:red;font-weight:bold;'>function openssl_seal($data,$sealed_data,$encrypted_keys,$public_key,$cipher_algo,$iv)</span> |
+    | function openssl_open($data,$output,$encrypted_key,$private_key,$cipher_algo,$iv) | - <span style='color:red;font-weight:bold;'>function openssl_open($data,$output,$encrypted_key,$private_key,$cipher_algo,$iv)</span> |
+    | function openssl_get_curve_names() | - <span style='color:red;font-weight:bold;'>function openssl_get_curve_names()</span> |
+    | function openssl_dh_compute_key($public_key,$private_key) | - <span style='color:red;font-weight:bold;'>function openssl_dh_compute_key($public_key,$private_key)</span> |
+    | function openssl_pkey_derive($public_key,$private_key,$key_length) | - <span style='color:red;font-weight:bold;'>function openssl_pkey_derive($public_key,$private_key,$key_length)</span> |
+    | function openssl_spki_new($private_key,$challenge,$digest_algo) | - <span style='color:red;font-weight:bold;'>function openssl_spki_new($private_key,$challenge,$digest_algo)</span> |
     | function openssl_spki_verify($spki) | - <span style='color:red;font-weight:bold;'>function openssl_spki_verify($spki)</span> |
     | function openssl_spki_export($spki) | - <span style='color:red;font-weight:bold;'>function openssl_spki_export($spki)</span> |
     | function openssl_spki_export_challenge($spki) | - <span style='color:red;font-weight:bold;'>function openssl_spki_export_challenge($spki)</span> |
-    | function openssl_pkey_free($key) | - <span style='color:red;font-weight:bold;'>function openssl_pkey_free($key)</span> |
-    | function openssl_pkey_export($key,$out,$passphrase,$config_args) | - <span style='color:red;font-weight:bold;'>function openssl_pkey_export($key,$out,$passphrase,$config_args)</span> |
-    | function openssl_pkey_export_to_file($key,$outfilename,$passphrase,$config_args) | - <span style='color:red;font-weight:bold;'>function openssl_pkey_export_to_file($key,$outfilename,$passphrase,$config_args)</span> |
-    | function openssl_pkey_get_private($key,$passphrase) | - <span style='color:red;font-weight:bold;'>function openssl_pkey_get_private($key,$passphrase)</span> |
-    | function openssl_pkey_get_public($cert) | - <span style='color:red;font-weight:bold;'>function openssl_pkey_get_public($cert)</span> |
-    | function openssl_pkey_get_details($key) | - <span style='color:red;font-weight:bold;'>function openssl_pkey_get_details($key)</span> |
-    | function openssl_free_key($key) | - <span style='color:red;font-weight:bold;'>function openssl_free_key($key)</span> |
-    | function openssl_get_privatekey($key,$passphrase) | - <span style='color:red;font-weight:bold;'>function openssl_get_privatekey($key,$passphrase)</span> |
-    | function openssl_get_publickey($cert) | - <span style='color:red;font-weight:bold;'>function openssl_get_publickey($cert)</span> |
-    | function openssl_x509_read(<span style='color:green;'>$cert</span>) | function openssl_x509_read(<span style='font-weight:bold;text-decoration:underline;'>$x509certdata</span>) |
-    | function openssl_x509_free(<span style='color:green;'>$x509</span>) | function openssl_x509_free(<span style='font-weight:bold;text-decoration:underline;'>$x509cert</span>) |
-    | function openssl_x509_parse($x509,$shortname) | - <span style='color:red;font-weight:bold;'>function openssl_x509_parse($x509,$shortname)</span> |
-    | function openssl_x509_checkpurpose($x509cert,$purpose,$cainfo,$untrustedfile) | - <span style='color:red;font-weight:bold;'>function openssl_x509_checkpurpose($x509cert,$purpose,$cainfo,$untrustedfile)</span> |
-    | function openssl_x509_check_private_key($cert,$key) | - <span style='color:red;font-weight:bold;'>function openssl_x509_check_private_key($cert,$key)</span> |
-    | function openssl_x509_verify($cert,$key) | - <span style='color:red;font-weight:bold;'>function openssl_x509_verify($cert,$key)</span> |
-    | function openssl_x509_export(<span style='color:green;'>$x509,$out,$notext</span>) | function openssl_x509_export(<span style='font-weight:bold;text-decoration:underline;'>$x509,$output,$notext</span>) |
-    | function openssl_x509_fingerprint(<span style='color:green;'>$x509,$method,$raw_output</span>) | function openssl_x509_fingerprint(<span style='font-weight:bold;text-decoration:underline;'>$x509,$hash_algorithm,$raw_output</span>) |
-    | function openssl_pkcs12_export($x509,$out,$priv_key,$pass,$args) | - <span style='color:red;font-weight:bold;'>function openssl_pkcs12_export($x509,$out,$priv_key,$pass,$args)</span> |
-    | function openssl_pkcs12_export_to_file($x509,$filename,$priv_key,$pass,$args) | - <span style='color:red;font-weight:bold;'>function openssl_pkcs12_export_to_file($x509,$filename,$priv_key,$pass,$args)</span> |
-    | function openssl_pkcs12_read($PKCS12,$certs,$pass) | - <span style='color:red;font-weight:bold;'>function openssl_pkcs12_read($PKCS12,$certs,$pass)</span> |
-    | function openssl_csr_new($dn,$privkey,$configargs,$extraattribs) | - <span style='color:red;font-weight:bold;'>function openssl_csr_new($dn,$privkey,$configargs,$extraattribs)</span> |
-    | function openssl_csr_export($csr,$out,$notext) | - <span style='color:red;font-weight:bold;'>function openssl_csr_export($csr,$out,$notext)</span> |
-    | function openssl_csr_export_to_file($csr,$outfilename,$notext) | - <span style='color:red;font-weight:bold;'>function openssl_csr_export_to_file($csr,$outfilename,$notext)</span> |
-    | function openssl_csr_sign($csr,$x509,$priv_key,$days,$config_args,$serial) | - <span style='color:red;font-weight:bold;'>function openssl_csr_sign($csr,$x509,$priv_key,$days,$config_args,$serial)</span> |
-    | function openssl_csr_get_subject($csr,$use_shortnames) | - <span style='color:red;font-weight:bold;'>function openssl_csr_get_subject($csr,$use_shortnames)</span> |
-    | function openssl_csr_get_public_key($csr,$use_shortnames) | - <span style='color:red;font-weight:bold;'>function openssl_csr_get_public_key($csr,$use_shortnames)</span> |
-    | function openssl_encrypt(<span style='color:green;'>$data,$method,$password,$options,$iv,$tag,$aad,$tag_length</span>) | function openssl_encrypt(<span style='font-weight:bold;text-decoration:underline;'>$data,$method,$key,$options,$iv,$tag,$aad,$tag_length</span>) |
-    | function openssl_decrypt(<span style='color:green;'>$data,$method,$password,$options,$iv,$tag,$aad</span>) | function openssl_decrypt(<span style='font-weight:bold;text-decoration:underline;'>$data,$method,$key,$options,$iv,$tag,$aad</span>) |
-    | function openssl_sign($data,$signature,$key,$method) | - <span style='color:red;font-weight:bold;'>function openssl_sign($data,$signature,$key,$method)</span> |
-    | function openssl_verify($data,$signature,$key,$method) | - <span style='color:red;font-weight:bold;'>function openssl_verify($data,$signature,$key,$method)</span> |
-    | function openssl_seal($data,$sealdata,$ekeys,$pubkeys,$method,$iv) | - <span style='color:red;font-weight:bold;'>function openssl_seal($data,$sealdata,$ekeys,$pubkeys,$method,$iv)</span> |
-    | function openssl_open($data,$opendata,$ekey,$privkey,$method,$iv) | - <span style='color:red;font-weight:bold;'>function openssl_open($data,$opendata,$ekey,$privkey,$method,$iv)</span> |
-    | function openssl_pbkdf2($password,$salt,$key_length,$iterations,$digest_algorithm) | - <span style='color:red;font-weight:bold;'>function openssl_pbkdf2($password,$salt,$key_length,$iterations,$digest_algorithm)</span> |
-    | function openssl_pkcs7_verify($filename,$flags,$signerscerts,$cainfo,$extracerts,$content,$pk7) | - <span style='color:red;font-weight:bold;'>function openssl_pkcs7_verify($filename,$flags,$signerscerts,$cainfo,$extracerts,$content,$pk7)</span> |
-    | function openssl_pkcs7_decrypt($infilename,$outfilename,$recipcert,$recipkey) | - <span style='color:red;font-weight:bold;'>function openssl_pkcs7_decrypt($infilename,$outfilename,$recipcert,$recipkey)</span> |
-    | function openssl_pkcs7_sign($infile,$outfile,$signcert,$signkey,$headers,$flags,$extracertsfilename) | - <span style='color:red;font-weight:bold;'>function openssl_pkcs7_sign($infile,$outfile,$signcert,$signkey,$headers,$flags,$extracertsfilename)</span> |
-    | function openssl_pkcs7_encrypt($infile,$outfile,$recipcerts,$headers,$flags,$cipher) | - <span style='color:red;font-weight:bold;'>function openssl_pkcs7_encrypt($infile,$outfile,$recipcerts,$headers,$flags,$cipher)</span> |
-    | function openssl_pkcs7_read($infilename,$certs) | - <span style='color:red;font-weight:bold;'>function openssl_pkcs7_read($infilename,$certs)</span> |
-    | function openssl_private_encrypt($data,$crypted,$key,$padding) | - <span style='color:red;font-weight:bold;'>function openssl_private_encrypt($data,$crypted,$key,$padding)</span> |
-    | function openssl_private_decrypt($data,$crypted,$key,$padding) | - <span style='color:red;font-weight:bold;'>function openssl_private_decrypt($data,$crypted,$key,$padding)</span> |
-    | function openssl_public_encrypt($data,$crypted,$key,$padding) | - <span style='color:red;font-weight:bold;'>function openssl_public_encrypt($data,$crypted,$key,$padding)</span> |
-    | function openssl_public_decrypt($data,$crypted,$key,$padding) | - <span style='color:red;font-weight:bold;'>function openssl_public_decrypt($data,$crypted,$key,$padding)</span> |
-    | function openssl_get_curve_names() | - <span style='color:red;font-weight:bold;'>function openssl_get_curve_names()</span> |
-    | function openssl_dh_compute_key($pub_key,$dh_key) | - <span style='color:red;font-weight:bold;'>function openssl_dh_compute_key($pub_key,$dh_key)</span> |
-    | function openssl_pkey_derive($peer_pub_key,$priv_key,$keylen) | - <span style='color:red;font-weight:bold;'>function openssl_pkey_derive($peer_pub_key,$priv_key,$keylen)</span> |
-    | function openssl_random_pseudo_bytes(<span style='color:green;'>$length,$result_is_strong</span>) | function openssl_random_pseudo_bytes(<span style='font-weight:bold;text-decoration:underline;'>$length,$crypto_strong</span>) |
+    | function openssl_get_cert_locations() | - <span style='color:red;font-weight:bold;'>function openssl_get_cert_locations()</span> |
+    | class OpenSSLCertificate | - <span style='color:red;font-weight:bold;'>class OpenSSLCertificate</span> |
+    | class OpenSSLCertificateSigningRequest | - <span style='color:red;font-weight:bold;'>class OpenSSLCertificateSigningRequest</span> |
+    | class OpenSSLAsymmetricKey | - <span style='color:red;font-weight:bold;'>class OpenSSLAsymmetricKey</span> |
     | const OPENSSL_VERSION_TEXT | - <span style='color:red;font-weight:bold;'>const OPENSSL_VERSION_TEXT</span> |
     | const OPENSSL_VERSION_NUMBER | - <span style='color:red;font-weight:bold;'>const OPENSSL_VERSION_NUMBER</span> |
     | const X509_PURPOSE_SSL_CLIENT | - <span style='color:red;font-weight:bold;'>const X509_PURPOSE_SSL_CLIENT</span> |
@@ -1210,6 +730,14 @@
     | const PKCS7_NOATTR | - <span style='color:red;font-weight:bold;'>const PKCS7_NOATTR</span> |
     | const PKCS7_BINARY | - <span style='color:red;font-weight:bold;'>const PKCS7_BINARY</span> |
     | const PKCS7_NOSIGS | - <span style='color:red;font-weight:bold;'>const PKCS7_NOSIGS</span> |
+    | const OPENSSL_CMS_DETACHED | - <span style='color:red;font-weight:bold;'>const OPENSSL_CMS_DETACHED</span> |
+    | const OPENSSL_CMS_TEXT | - <span style='color:red;font-weight:bold;'>const OPENSSL_CMS_TEXT</span> |
+    | const OPENSSL_CMS_NOINTERN | - <span style='color:red;font-weight:bold;'>const OPENSSL_CMS_NOINTERN</span> |
+    | const OPENSSL_CMS_NOVERIFY | - <span style='color:red;font-weight:bold;'>const OPENSSL_CMS_NOVERIFY</span> |
+    | const OPENSSL_CMS_NOCERTS | - <span style='color:red;font-weight:bold;'>const OPENSSL_CMS_NOCERTS</span> |
+    | const OPENSSL_CMS_NOATTR | - <span style='color:red;font-weight:bold;'>const OPENSSL_CMS_NOATTR</span> |
+    | const OPENSSL_CMS_BINARY | - <span style='color:red;font-weight:bold;'>const OPENSSL_CMS_BINARY</span> |
+    | const OPENSSL_CMS_NOSIGS | - <span style='color:red;font-weight:bold;'>const OPENSSL_CMS_NOSIGS</span> |
     | const OPENSSL_PKCS1_PADDING | - <span style='color:red;font-weight:bold;'>const OPENSSL_PKCS1_PADDING</span> |
     | const OPENSSL_SSLV23_PADDING | - <span style='color:red;font-weight:bold;'>const OPENSSL_SSLV23_PADDING</span> |
     | const OPENSSL_NO_PADDING | - <span style='color:red;font-weight:bold;'>const OPENSSL_NO_PADDING</span> |
@@ -1224,172 +752,134 @@
     | const OPENSSL_CIPHER_AES_192_CBC | - <span style='color:red;font-weight:bold;'>const OPENSSL_CIPHER_AES_192_CBC</span> |
     | const OPENSSL_CIPHER_AES_256_CBC | - <span style='color:red;font-weight:bold;'>const OPENSSL_CIPHER_AES_256_CBC</span> |
     | const OPENSSL_TLSEXT_SERVER_NAME | - <span style='color:red;font-weight:bold;'>const OPENSSL_TLSEXT_SERVER_NAME</span> |
-??? tiny "[=100% "**SimpleXML** 40 / 40"]"
+    | const OPENSSL_ENCODING_DER | - <span style='color:red;font-weight:bold;'>const OPENSSL_ENCODING_DER</span> |
+    | const OPENSSL_ENCODING_SMIME | - <span style='color:red;font-weight:bold;'>const OPENSSL_ENCODING_SMIME</span> |
+    | const OPENSSL_ENCODING_PEM | - <span style='color:red;font-weight:bold;'>const OPENSSL_ENCODING_PEM</span> |
+??? tiny "[=85% "**SimpleXML** 40 / 47"]"
     | PHP | PeachPie |
     | --- | ---      |
-    | function simplexml_load_file(<span style='color:green;'>$filename,$class_name,$options,$ns,$is_prefix</span>) | function simplexml_load_file(<span style='font-weight:bold;text-decoration:underline;'>$fileName,$className,$options</span>) |
-    | function simplexml_load_string(<span style='color:green;'>$data,$class_name,$options,$ns,$is_prefix</span>) | function simplexml_load_string(<span style='font-weight:bold;text-decoration:underline;'>$data,$className,$options</span>) |
-    | function simplexml_import_dom(<span style='color:green;'>$node,$class_name</span>) | function simplexml_import_dom(<span style='font-weight:bold;text-decoration:underline;'>$node,$className</span>) |
-    | function SimpleXMLElement::__construct(<span style='color:green;'>$data,$options,$data_is_url,$ns,$is_prefix</span>) | function SimpleXMLElement::__construct(<span style='font-weight:bold;text-decoration:underline;'>$data,$options,$dataIsUrl,$ns,$is_prefix</span>) |
-    | function SimpleXMLElement::registerXPathNamespace(<span style='color:green;'>$prefix,$ns</span>) | function SimpleXMLElement::registerXPathNamespace(<span style='font-weight:bold;text-decoration:underline;'>$prefix,$namespaceUri</span>) |
-    | function SimpleXMLElement::attributes(<span style='color:green;'>$ns,$is_prefix</span>) | function SimpleXMLElement::attributes(<span style='font-weight:bold;text-decoration:underline;'>$ns,$isPrefix</span>) |
-    | function SimpleXMLElement::children(<span style='color:green;'>$ns,$is_prefix</span>) | function SimpleXMLElement::children(<span style='font-weight:bold;text-decoration:underline;'>$ns,$isPrefix</span>) |
-    | function SimpleXMLElement::getNamespaces(<span style='color:green;'>$recursve</span>) | function SimpleXMLElement::getNamespaces(<span style='font-weight:bold;text-decoration:underline;'>$recursive</span>) |
-    | function SimpleXMLElement::getDocNamespaces(<span style='color:green;'>$recursve,$from_root</span>) | function SimpleXMLElement::getDocNamespaces(<span style='font-weight:bold;text-decoration:underline;'>$recursive</span>) |
-    | function SimpleXMLElement::addChild(<span style='color:green;'>$name,$value,$ns</span>) | function SimpleXMLElement::addChild(<span style='font-weight:bold;text-decoration:underline;'>$qualifiedName,$value,$namespaceUri</span>) |
-    | function SimpleXMLElement::addAttribute(<span style='color:green;'>$name,$value,$ns</span>) | function SimpleXMLElement::addAttribute(<span style='font-weight:bold;text-decoration:underline;'>$qualifiedName,$value,$namespaceUri</span>) |
-    | function SimpleXMLIterator::__construct(<span style='color:green;'>$data,$options,$data_is_url,$ns,$is_prefix</span>) | function SimpleXMLIterator::__construct(<span style='font-weight:bold;text-decoration:underline;'>$data,$options,$dataIsUrl,$ns,$is_prefix</span>) |
-    | function SimpleXMLIterator::registerXPathNamespace(<span style='color:green;'>$prefix,$ns</span>) | function SimpleXMLIterator::registerXPathNamespace(<span style='font-weight:bold;text-decoration:underline;'>$prefix,$namespaceUri</span>) |
-    | function SimpleXMLIterator::attributes(<span style='color:green;'>$ns,$is_prefix</span>) | function SimpleXMLIterator::attributes(<span style='font-weight:bold;text-decoration:underline;'>$ns,$isPrefix</span>) |
-    | function SimpleXMLIterator::children(<span style='color:green;'>$ns,$is_prefix</span>) | function SimpleXMLIterator::children(<span style='font-weight:bold;text-decoration:underline;'>$ns,$isPrefix</span>) |
-    | function SimpleXMLIterator::getNamespaces(<span style='color:green;'>$recursve</span>) | function SimpleXMLIterator::getNamespaces(<span style='font-weight:bold;text-decoration:underline;'>$recursive</span>) |
-    | function SimpleXMLIterator::getDocNamespaces(<span style='color:green;'>$recursve,$from_root</span>) | function SimpleXMLIterator::getDocNamespaces(<span style='font-weight:bold;text-decoration:underline;'>$recursive</span>) |
-    | function SimpleXMLIterator::addChild(<span style='color:green;'>$name,$value,$ns</span>) | function SimpleXMLIterator::addChild(<span style='font-weight:bold;text-decoration:underline;'>$qualifiedName,$value,$namespaceUri</span>) |
-    | function SimpleXMLIterator::addAttribute(<span style='color:green;'>$name,$value,$ns</span>) | function SimpleXMLIterator::addAttribute(<span style='font-weight:bold;text-decoration:underline;'>$qualifiedName,$value,$namespaceUri</span>) |
-??? tiny "[=96% "**xml** 47 / 49"]"
+    | function SimpleXMLElement::rewind() | - <span style='color:red;font-weight:bold;'>function SimpleXMLElement::rewind()</span> |
+    | function SimpleXMLElement::valid() | - <span style='color:red;font-weight:bold;'>function SimpleXMLElement::valid()</span> |
+    | function SimpleXMLElement::current() | - <span style='color:red;font-weight:bold;'>function SimpleXMLElement::current()</span> |
+    | function SimpleXMLElement::key() | - <span style='color:red;font-weight:bold;'>function SimpleXMLElement::key()</span> |
+    | function SimpleXMLElement::next() | - <span style='color:red;font-weight:bold;'>function SimpleXMLElement::next()</span> |
+    | function SimpleXMLElement::hasChildren() | - <span style='color:red;font-weight:bold;'>function SimpleXMLElement::hasChildren()</span> |
+    | function SimpleXMLElement::getChildren() | - <span style='color:red;font-weight:bold;'>function SimpleXMLElement::getChildren()</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SimpleXMLElement::__get($name)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SimpleXMLElement::__set($name,$value)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SimpleXMLElement::__unset($name)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SimpleXMLElement::__isset($name)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SimpleXMLElement::GetEnumerator()</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SimpleXMLElement::offsetGet($index)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SimpleXMLElement::offsetSet($index,$value)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SimpleXMLElement::offsetUnset($index)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SimpleXMLElement::offsetExists($index)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SimpleXMLIterator::__get($name)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SimpleXMLIterator::__set($name,$value)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SimpleXMLIterator::__unset($name)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SimpleXMLIterator::__isset($name)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SimpleXMLIterator::GetEnumerator()</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SimpleXMLIterator::offsetGet($index)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SimpleXMLIterator::offsetSet($index,$value)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SimpleXMLIterator::offsetUnset($index)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function SimpleXMLIterator::offsetExists($index)</span> |
+??? tiny "[=96% "**xml** 48 / 50"]"
     | PHP | PeachPie |
     | --- | ---      |
-    | function xml_parser_create_ns(<span style='color:green;'>$encoding,$sep</span>) | function xml_parser_create_ns(<span style='font-weight:bold;text-decoration:underline;'>$encoding,$namespaceSeparator</span>) |
-    | function xml_set_object(<span style='color:green;'>$parser,$obj</span>) | function xml_set_object(<span style='font-weight:bold;text-decoration:underline;'>$parser,$objRef</span>) |
-    | function xml_set_element_handler(<span style='color:green;'>$parser,$shdl,$ehdl</span>) | function xml_set_element_handler(<span style='font-weight:bold;text-decoration:underline;'>$parser,$start_element_handler,$end_element_handler</span>) |
-    | function xml_set_character_data_handler(<span style='color:green;'>$parser,$hdl</span>) | function xml_set_character_data_handler(<span style='font-weight:bold;text-decoration:underline;'>$parser,$character_data_handler</span>) |
-    | function xml_set_processing_instruction_handler(<span style='color:green;'>$parser,$hdl</span>) | function xml_set_processing_instruction_handler(<span style='font-weight:bold;text-decoration:underline;'>$parser,$processing_instruction_handler</span>) |
-    | function xml_set_default_handler(<span style='color:green;'>$parser,$hdl</span>) | function xml_set_default_handler(<span style='font-weight:bold;text-decoration:underline;'>$parser,$default_handler</span>) |
-    | function xml_set_unparsed_entity_decl_handler($parser,$hdl) | - <span style='color:red;font-weight:bold;'>function xml_set_unparsed_entity_decl_handler($parser,$hdl)</span> |
-    | function xml_set_notation_decl_handler(<span style='color:green;'>$parser,$hdl</span>) | function xml_set_notation_decl_handler(<span style='font-weight:bold;text-decoration:underline;'>$parser,$notation_decl_handler</span>) |
-    | function xml_set_external_entity_ref_handler(<span style='color:green;'>$parser,$hdl</span>) | function xml_set_external_entity_ref_handler(<span style='font-weight:bold;text-decoration:underline;'>$parser,$external_entity_ref_handler</span>) |
-    | function xml_set_start_namespace_decl_handler(<span style='color:green;'>$parser,$hdl</span>) | function xml_set_start_namespace_decl_handler(<span style='font-weight:bold;text-decoration:underline;'>$parser,$start_namespace_decl_handler</span>) |
-    | function xml_set_end_namespace_decl_handler(<span style='color:green;'>$parser,$hdl</span>) | function xml_set_end_namespace_decl_handler(<span style='font-weight:bold;text-decoration:underline;'>$parser,$end_namespace_decl_handler</span>) |
-    | function xml_parse(<span style='color:green;'>$parser,$data,$isfinal</span>) | function xml_parse(<span style='font-weight:bold;text-decoration:underline;'>$parser,$data,$is_final</span>) |
+    | class XmlParser | - <span style='color:red;font-weight:bold;'>class XmlParser</span> |
     | const XML_SAX_IMPL | - <span style='color:red;font-weight:bold;'>const XML_SAX_IMPL</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const XML_ERROR_GENERIC</span> |
 ??? tiny "[=100% "**xmlreader** 48 / 48"]"
-    | PHP | PeachPie |
-    | --- | ---      |
-    | function XMLReader::getAttributeNs(<span style='color:green;'>$name,$namespaceURI</span>) | function XMLReader::getAttributeNs(<span style='font-weight:bold;text-decoration:underline;'>$localName,$namespaceURI</span>) |
-    | function XMLReader::moveToAttributeNs(<span style='color:green;'>$name,$namespaceURI</span>) | function XMLReader::moveToAttributeNs(<span style='font-weight:bold;text-decoration:underline;'>$localName,$namespaceURI</span>) |
-    | function XMLReader::setParserProperty(<span style='color:green;'>$property,$value</span>) | function XMLReader::setParserProperty(<span style='font-weight:bold;text-decoration:underline;'>$property,$newValue</span>) |
 ??? tiny "[=100% "**xmlwriter** 85 / 85"]"
+??? tiny "[=37% "**mysqli** 115 / 310"]"
     | PHP | PeachPie |
     | --- | ---      |
-    | function xmlwriter_start_dtd_element(<span style='color:green;'>$xmlwriter,$qualifiedName</span>) | function xmlwriter_start_dtd_element(<span style='font-weight:bold;text-decoration:underline;'>$xmlwriter,$name</span>) |
-    | function xmlwriter_write_dtd_entity(<span style='color:green;'>$xmlwriter,$name,$content</span>) | function xmlwriter_write_dtd_entity(<span style='font-weight:bold;text-decoration:underline;'>$xmlwriter,$name,$content,$pe,$pubid,$sysid,$ndataid</span>) |
-    | function XMLWriter::writeAttribute(<span style='color:green;'>$name,$value</span>) | function XMLWriter::writeAttribute(<span style='font-weight:bold;text-decoration:underline;'>$name,$content</span>) |
-    | function XMLWriter::writeDtdEntity(<span style='color:green;'>$name,$content</span>) | function XMLWriter::writeDtdEntity(<span style='font-weight:bold;text-decoration:underline;'>$name,$content,$pe,$pubid,$sysid,$ndataid</span>) |
-??? tiny "[=37% "**mysqli** 115 / 309"]"
-    | PHP | PeachPie |
-    | --- | ---      |
-    | function mysqli_autocommit($link,$mode) | - <span style='color:red;font-weight:bold;'>function mysqli_autocommit($link,$mode)</span> |
-    | function mysqli_begin_transaction($link,$flags,$name) | - <span style='color:red;font-weight:bold;'>function mysqli_begin_transaction($link,$flags,$name)</span> |
-    | function mysqli_change_user($link,$user,$password,$database) | - <span style='color:red;font-weight:bold;'>function mysqli_change_user($link,$user,$password,$database)</span> |
-    | function mysqli_commit($link,$flags,$name) | - <span style='color:red;font-weight:bold;'>function mysqli_commit($link,$flags,$name)</span> |
-    | function mysqli_connect(<span style='color:green;'>$host,$user,$password,$database,$port,$socket</span>) | function mysqli_connect(<span style='font-weight:bold;text-decoration:underline;'>$host,$username,$passwd,$dbname,$port,$socket,$flags</span>) |
-    | function mysqli_connect_errno(<span style='color:green;'></span>) | function mysqli_connect_errno(<span style='font-weight:bold;text-decoration:underline;'>$link</span>) |
-    | function mysqli_connect_error(<span style='color:green;'></span>) | function mysqli_connect_error(<span style='font-weight:bold;text-decoration:underline;'>$link</span>) |
-    | function mysqli_dump_debug_info($link) | - <span style='color:red;font-weight:bold;'>function mysqli_dump_debug_info($link)</span> |
-    | function mysqli_debug($debug_options) | - <span style='color:red;font-weight:bold;'>function mysqli_debug($debug_options)</span> |
-    | function mysqli_error_list($link) | - <span style='color:red;font-weight:bold;'>function mysqli_error_list($link)</span> |
-    | function mysqli_execute($stmt) | - <span style='color:red;font-weight:bold;'>function mysqli_execute($stmt)</span> |
-    | function mysqli_fetch_field_direct(<span style='color:green;'>$result,$field_nr</span>) | function mysqli_fetch_field_direct(<span style='font-weight:bold;text-decoration:underline;'>$result,$fieldnr</span>) |
+    | function mysqli_autocommit($mysql,$enable) | - <span style='color:red;font-weight:bold;'>function mysqli_autocommit($mysql,$enable)</span> |
+    | function mysqli_begin_transaction($mysql,$flags,$name) | - <span style='color:red;font-weight:bold;'>function mysqli_begin_transaction($mysql,$flags,$name)</span> |
+    | function mysqli_change_user($mysql,$username,$password,$database) | - <span style='color:red;font-weight:bold;'>function mysqli_change_user($mysql,$username,$password,$database)</span> |
+    | function mysqli_commit($mysql,$flags,$name) | - <span style='color:red;font-weight:bold;'>function mysqli_commit($mysql,$flags,$name)</span> |
+    | function mysqli_dump_debug_info($mysql) | - <span style='color:red;font-weight:bold;'>function mysqli_dump_debug_info($mysql)</span> |
+    | function mysqli_debug($options) | - <span style='color:red;font-weight:bold;'>function mysqli_debug($options)</span> |
+    | function mysqli_error_list($mysql) | - <span style='color:red;font-weight:bold;'>function mysqli_error_list($mysql)</span> |
+    | function mysqli_execute($statement) | - <span style='color:red;font-weight:bold;'>function mysqli_execute($statement)</span> |
     | function mysqli_fetch_lengths($result) | - <span style='color:red;font-weight:bold;'>function mysqli_fetch_lengths($result)</span> |
-    | function mysqli_fetch_all($result,$result_type) | - <span style='color:red;font-weight:bold;'>function mysqli_fetch_all($result,$result_type)</span> |
-    | function mysqli_fetch_array(<span style='color:green;'>$result,$result_type</span>) | function mysqli_fetch_array(<span style='font-weight:bold;text-decoration:underline;'>$result,$resulttype</span>) |
-    | function mysqli_fetch_object(<span style='color:green;'>$result,$class_name,$params</span>) | function mysqli_fetch_object(<span style='font-weight:bold;text-decoration:underline;'>$result,$class_name,$class_params</span>) |
-    | function mysqli_field_seek(<span style='color:green;'>$result,$field_nr</span>) | function mysqli_field_seek(<span style='font-weight:bold;text-decoration:underline;'>$result,$fieldnr</span>) |
-    | function mysqli_get_connection_stats($link) | - <span style='color:red;font-weight:bold;'>function mysqli_get_connection_stats($link)</span> |
+    | function mysqli_fetch_all($result,$mode) | - <span style='color:red;font-weight:bold;'>function mysqli_fetch_all($result,$mode)</span> |
+    | function mysqli_get_connection_stats($mysql) | - <span style='color:red;font-weight:bold;'>function mysqli_get_connection_stats($mysql)</span> |
     | function mysqli_get_client_stats() | - <span style='color:red;font-weight:bold;'>function mysqli_get_client_stats()</span> |
-    | function mysqli_get_charset($link) | - <span style='color:red;font-weight:bold;'>function mysqli_get_charset($link)</span> |
-    | function mysqli_get_client_info(<span style='color:green;'></span>) | function mysqli_get_client_info(<span style='font-weight:bold;text-decoration:underline;'>$link</span>) |
-    | function mysqli_get_client_version(<span style='color:green;'></span>) | function mysqli_get_client_version(<span style='font-weight:bold;text-decoration:underline;'>$link</span>) |
+    | function mysqli_get_charset($mysql) | - <span style='color:red;font-weight:bold;'>function mysqli_get_charset($mysql)</span> |
     | function mysqli_get_links_stats() | - <span style='color:red;font-weight:bold;'>function mysqli_get_links_stats()</span> |
-    | function mysqli_get_proto_info($link) | - <span style='color:red;font-weight:bold;'>function mysqli_get_proto_info($link)</span> |
-    | function mysqli_get_warnings($link) | - <span style='color:red;font-weight:bold;'>function mysqli_get_warnings($link)</span> |
-    | function mysqli_info($link) | - <span style='color:red;font-weight:bold;'>function mysqli_info($link)</span> |
-    | function mysqli_kill($link,$connection_id) | - <span style='color:red;font-weight:bold;'>function mysqli_kill($link,$connection_id)</span> |
-    | function mysqli_multi_query($link,$query) | - <span style='color:red;font-weight:bold;'>function mysqli_multi_query($link,$query)</span> |
-    | function mysqli_poll($read,$write,$error,$sec,$usec) | - <span style='color:red;font-weight:bold;'>function mysqli_poll($read,$write,$error,$sec,$usec)</span> |
+    | function mysqli_get_proto_info($mysql) | - <span style='color:red;font-weight:bold;'>function mysqli_get_proto_info($mysql)</span> |
+    | function mysqli_get_warnings($mysql) | - <span style='color:red;font-weight:bold;'>function mysqli_get_warnings($mysql)</span> |
+    | function mysqli_info($mysql) | - <span style='color:red;font-weight:bold;'>function mysqli_info($mysql)</span> |
+    | function mysqli_kill($mysql,$process_id) | - <span style='color:red;font-weight:bold;'>function mysqli_kill($mysql,$process_id)</span> |
+    | function mysqli_multi_query($mysql,$query) | - <span style='color:red;font-weight:bold;'>function mysqli_multi_query($mysql,$query)</span> |
+    | function mysqli_poll($read,$write,$error,$seconds,$microseconds) | - <span style='color:red;font-weight:bold;'>function mysqli_poll($read,$write,$error,$seconds,$microseconds)</span> |
     | function mysqli_report($flags) | - <span style='color:red;font-weight:bold;'>function mysqli_report($flags)</span> |
-    | function mysqli_real_connect(<span style='color:green;'>$link,$host,$user,$password,$database,$port,$socket,$flags</span>) | function mysqli_real_connect(<span style='font-weight:bold;text-decoration:underline;'>$link,$host,$username,$passwd,$dbname,$port,$socket,$flags</span>) |
-    | function mysqli_real_escape_string(<span style='color:green;'>$link,$string_to_escape</span>) | function mysqli_real_escape_string(<span style='font-weight:bold;text-decoration:underline;'>$link,$escapestr</span>) |
-    | function mysqli_real_query($link,$query) | - <span style='color:red;font-weight:bold;'>function mysqli_real_query($link,$query)</span> |
-    | function mysqli_reap_async_query($link) | - <span style='color:red;font-weight:bold;'>function mysqli_reap_async_query($link)</span> |
-    | function mysqli_release_savepoint($link,$name) | - <span style='color:red;font-weight:bold;'>function mysqli_release_savepoint($link,$name)</span> |
-    | function mysqli_rollback($link,$flags,$name) | - <span style='color:red;font-weight:bold;'>function mysqli_rollback($link,$flags,$name)</span> |
-    | function mysqli_savepoint($link,$name) | - <span style='color:red;font-weight:bold;'>function mysqli_savepoint($link,$name)</span> |
-    | function mysqli_select_db(<span style='color:green;'>$link,$database</span>) | function mysqli_select_db(<span style='font-weight:bold;text-decoration:underline;'>$link,$dbname</span>) |
-    | function mysqli_stmt_attr_get($stmt,$attribute) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_attr_get($stmt,$attribute)</span> |
-    | function mysqli_stmt_attr_set($stmt,$attribute,$value) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_attr_set($stmt,$attribute,$value)</span> |
-    | function mysqli_stmt_bind_param(<span style='color:green;'>$stmt,$types,$vars</span>) | function mysqli_stmt_bind_param(<span style='font-weight:bold;text-decoration:underline;'>$stmt,$types,$variables</span>) |
-    | function mysqli_stmt_bind_result($stmt,$vars) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_bind_result($stmt,$vars)</span> |
-    | function mysqli_stmt_errno($stmt) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_errno($stmt)</span> |
-    | function mysqli_stmt_error($stmt) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_error($stmt)</span> |
-    | function mysqli_stmt_error_list($stmt) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_error_list($stmt)</span> |
-    | function mysqli_stmt_fetch($stmt) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_fetch($stmt)</span> |
-    | function mysqli_stmt_field_count($stmt) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_field_count($stmt)</span> |
-    | function mysqli_stmt_free_result($stmt) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_free_result($stmt)</span> |
-    | function mysqli_stmt_get_warnings($stmt) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_get_warnings($stmt)</span> |
-    | function mysqli_stmt_init($link) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_init($link)</span> |
-    | function mysqli_stmt_more_results($stmt) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_more_results($stmt)</span> |
-    | function mysqli_stmt_next_result($stmt) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_next_result($stmt)</span> |
-    | function mysqli_stmt_num_rows($stmt) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_num_rows($stmt)</span> |
-    | function mysqli_stmt_param_count($stmt) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_param_count($stmt)</span> |
-    | function mysqli_stmt_reset($stmt) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_reset($stmt)</span> |
-    | function mysqli_stmt_result_metadata($stmt) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_result_metadata($stmt)</span> |
-    | function mysqli_stmt_store_result($stmt) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_store_result($stmt)</span> |
-    | function mysqli_stmt_sqlstate($stmt) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_sqlstate($stmt)</span> |
-    | function mysqli_sqlstate($link) | - <span style='color:red;font-weight:bold;'>function mysqli_sqlstate($link)</span> |
-    | function mysqli_ssl_set(<span style='color:green;'>$link,$key,$cert,$certificate_authority,$certificate_authority_path,$cipher</span>) | function mysqli_ssl_set(<span style='font-weight:bold;text-decoration:underline;'>$link,$key,$cert,$ca,$capath,$cipher</span>) |
-    | function mysqli_stat($link) | - <span style='color:red;font-weight:bold;'>function mysqli_stat($link)</span> |
-    | function mysqli_store_result($link,$flags) | - <span style='color:red;font-weight:bold;'>function mysqli_store_result($link,$flags)</span> |
+    | function mysqli_real_query($mysql,$query) | - <span style='color:red;font-weight:bold;'>function mysqli_real_query($mysql,$query)</span> |
+    | function mysqli_reap_async_query($mysql) | - <span style='color:red;font-weight:bold;'>function mysqli_reap_async_query($mysql)</span> |
+    | function mysqli_release_savepoint($mysql,$name) | - <span style='color:red;font-weight:bold;'>function mysqli_release_savepoint($mysql,$name)</span> |
+    | function mysqli_rollback($mysql,$flags,$name) | - <span style='color:red;font-weight:bold;'>function mysqli_rollback($mysql,$flags,$name)</span> |
+    | function mysqli_savepoint($mysql,$name) | - <span style='color:red;font-weight:bold;'>function mysqli_savepoint($mysql,$name)</span> |
+    | function mysqli_stmt_attr_get($statement,$attribute) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_attr_get($statement,$attribute)</span> |
+    | function mysqli_stmt_attr_set($statement,$attribute,$value) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_attr_set($statement,$attribute,$value)</span> |
+    | function mysqli_stmt_bind_result($statement,$vars) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_bind_result($statement,$vars)</span> |
+    | function mysqli_stmt_errno($statement) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_errno($statement)</span> |
+    | function mysqli_stmt_error($statement) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_error($statement)</span> |
+    | function mysqli_stmt_error_list($statement) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_error_list($statement)</span> |
+    | function mysqli_stmt_fetch($statement) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_fetch($statement)</span> |
+    | function mysqli_stmt_field_count($statement) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_field_count($statement)</span> |
+    | function mysqli_stmt_free_result($statement) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_free_result($statement)</span> |
+    | function mysqli_stmt_get_warnings($statement) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_get_warnings($statement)</span> |
+    | function mysqli_stmt_init($mysql) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_init($mysql)</span> |
+    | function mysqli_stmt_more_results($statement) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_more_results($statement)</span> |
+    | function mysqli_stmt_next_result($statement) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_next_result($statement)</span> |
+    | function mysqli_stmt_num_rows($statement) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_num_rows($statement)</span> |
+    | function mysqli_stmt_param_count($statement) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_param_count($statement)</span> |
+    | function mysqli_stmt_reset($statement) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_reset($statement)</span> |
+    | function mysqli_stmt_result_metadata($statement) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_result_metadata($statement)</span> |
+    | function mysqli_stmt_store_result($statement) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_store_result($statement)</span> |
+    | function mysqli_stmt_sqlstate($statement) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt_sqlstate($statement)</span> |
+    | function mysqli_sqlstate($mysql) | - <span style='color:red;font-weight:bold;'>function mysqli_sqlstate($mysql)</span> |
+    | function mysqli_stat($mysql) | - <span style='color:red;font-weight:bold;'>function mysqli_stat($mysql)</span> |
+    | function mysqli_store_result($mysql,$mode) | - <span style='color:red;font-weight:bold;'>function mysqli_store_result($mysql,$mode)</span> |
     | function mysqli_thread_safe() | - <span style='color:red;font-weight:bold;'>function mysqli_thread_safe()</span> |
-    | function mysqli_use_result($link) | - <span style='color:red;font-weight:bold;'>function mysqli_use_result($link)</span> |
-    | function mysqli_warning_count($link) | - <span style='color:red;font-weight:bold;'>function mysqli_warning_count($link)</span> |
-    | function mysqli_refresh($link,$options) | - <span style='color:red;font-weight:bold;'>function mysqli_refresh($link,$options)</span> |
-    | function mysqli_escape_string(<span style='color:green;'>$link,$query,$resultmode</span>) | function mysqli_escape_string(<span style='font-weight:bold;text-decoration:underline;'>$link,$escapestr</span>) |
-    | function mysqli_set_opt() | - <span style='color:red;font-weight:bold;'>function mysqli_set_opt()</span> |
+    | function mysqli_use_result($mysql) | - <span style='color:red;font-weight:bold;'>function mysqli_use_result($mysql)</span> |
+    | function mysqli_warning_count($mysql) | - <span style='color:red;font-weight:bold;'>function mysqli_warning_count($mysql)</span> |
+    | function mysqli_refresh($mysql,$flags) | - <span style='color:red;font-weight:bold;'>function mysqli_refresh($mysql,$flags)</span> |
+    | function mysqli_set_opt($mysql,$option,$value) | - <span style='color:red;font-weight:bold;'>function mysqli_set_opt($mysql,$option,$value)</span> |
     | class mysqli_driver | - <span style='color:red;font-weight:bold;'>class mysqli_driver</span> |
-    | function mysqli::autocommit($mode) | - <span style='color:red;font-weight:bold;'>function mysqli::autocommit($mode)</span> |
+    | function mysqli::autocommit($enable) | - <span style='color:red;font-weight:bold;'>function mysqli::autocommit($enable)</span> |
     | function mysqli::begin_transaction($flags,$name) | - <span style='color:red;font-weight:bold;'>function mysqli::begin_transaction($flags,$name)</span> |
-    | function mysqli::change_user($user,$password,$database) | - <span style='color:red;font-weight:bold;'>function mysqli::change_user($user,$password,$database)</span> |
+    | function mysqli::change_user($username,$password,$database) | - <span style='color:red;font-weight:bold;'>function mysqli::change_user($username,$password,$database)</span> |
     | function mysqli::commit($flags,$name) | - <span style='color:red;font-weight:bold;'>function mysqli::commit($flags,$name)</span> |
-    | function mysqli::connect($host,$user,$password,$database,$port,$socket) | - <span style='color:red;font-weight:bold;'>function mysqli::connect($host,$user,$password,$database,$port,$socket)</span> |
+    | function mysqli::connect($hostname,$username,$password,$database,$port,$socket) | - <span style='color:red;font-weight:bold;'>function mysqli::connect($hostname,$username,$password,$database,$port,$socket)</span> |
     | function mysqli::dump_debug_info() | - <span style='color:red;font-weight:bold;'>function mysqli::dump_debug_info()</span> |
-    | function mysqli::debug($debug_options) | - <span style='color:red;font-weight:bold;'>function mysqli::debug($debug_options)</span> |
+    | function mysqli::debug($options) | - <span style='color:red;font-weight:bold;'>function mysqli::debug($options)</span> |
     | function mysqli::get_charset() | - <span style='color:red;font-weight:bold;'>function mysqli::get_charset()</span> |
     | function mysqli::get_client_info() | - <span style='color:red;font-weight:bold;'>function mysqli::get_client_info()</span> |
     | function mysqli::get_connection_stats() | - <span style='color:red;font-weight:bold;'>function mysqli::get_connection_stats()</span> |
     | function mysqli::get_server_info() | - <span style='color:red;font-weight:bold;'>function mysqli::get_server_info()</span> |
     | function mysqli::get_warnings() | - <span style='color:red;font-weight:bold;'>function mysqli::get_warnings()</span> |
-    | function mysqli::kill($connection_id) | - <span style='color:red;font-weight:bold;'>function mysqli::kill($connection_id)</span> |
-    | function mysqli::__construct(<span style='color:green;'>$host,$user,$password,$database,$port,$socket</span>) | function mysqli::__construct(<span style='font-weight:bold;text-decoration:underline;'>$host,$username,$passwd,$dbname,$port,$socket,$flags</span>) |
-    | function mysqli::poll($read,$write,$error,$sec,$usec) | - <span style='color:red;font-weight:bold;'>function mysqli::poll($read,$write,$error,$sec,$usec)</span> |
-    | function mysqli::real_connect(<span style='color:green;'>$host,$user,$password,$database,$port,$socket,$flags</span>) | function mysqli::real_connect(<span style='font-weight:bold;text-decoration:underline;'>$host,$username,$passwd,$dbname,$port,$socket,$flags</span>) |
-    | function mysqli::real_escape_string(<span style='color:green;'>$string_to_escape</span>) | function mysqli::real_escape_string(<span style='font-weight:bold;text-decoration:underline;'>$escapestr</span>) |
+    | function mysqli::kill($process_id) | - <span style='color:red;font-weight:bold;'>function mysqli::kill($process_id)</span> |
+    | function mysqli::poll($read,$write,$error,$seconds,$microseconds) | - <span style='color:red;font-weight:bold;'>function mysqli::poll($read,$write,$error,$seconds,$microseconds)</span> |
     | function mysqli::reap_async_query() | - <span style='color:red;font-weight:bold;'>function mysqli::reap_async_query()</span> |
-    | function mysqli::escape_string(<span style='color:green;'>$string_to_escape</span>) | function mysqli::escape_string(<span style='font-weight:bold;text-decoration:underline;'>$escapestr</span>) |
     | function mysqli::real_query($query) | - <span style='color:red;font-weight:bold;'>function mysqli::real_query($query)</span> |
     | function mysqli::release_savepoint($name) | - <span style='color:red;font-weight:bold;'>function mysqli::release_savepoint($name)</span> |
     | function mysqli::rollback($flags,$name) | - <span style='color:red;font-weight:bold;'>function mysqli::rollback($flags,$name)</span> |
     | function mysqli::savepoint($name) | - <span style='color:red;font-weight:bold;'>function mysqli::savepoint($name)</span> |
-    | function mysqli::select_db(<span style='color:green;'>$database</span>) | function mysqli::select_db(<span style='font-weight:bold;text-decoration:underline;'>$dbname</span>) |
     | function mysqli::set_opt($option,$value) | - <span style='color:red;font-weight:bold;'>function mysqli::set_opt($option,$value)</span> |
-    | function mysqli::ssl_set(<span style='color:green;'>$key,$cert,$certificate_authority,$certificate_authority_path,$cipher</span>) | function mysqli::ssl_set(<span style='font-weight:bold;text-decoration:underline;'>$key,$cert,$ca,$capath,$cipher</span>) |
     | function mysqli::stat() | - <span style='color:red;font-weight:bold;'>function mysqli::stat()</span> |
     | function mysqli::stmt_init() | - <span style='color:red;font-weight:bold;'>function mysqli::stmt_init()</span> |
-    | function mysqli::store_result($flags) | - <span style='color:red;font-weight:bold;'>function mysqli::store_result($flags)</span> |
+    | function mysqli::store_result($mode) | - <span style='color:red;font-weight:bold;'>function mysqli::store_result($mode)</span> |
     | function mysqli::thread_safe() | - <span style='color:red;font-weight:bold;'>function mysqli::thread_safe()</span> |
     | function mysqli::use_result() | - <span style='color:red;font-weight:bold;'>function mysqli::use_result()</span> |
-    | function mysqli::refresh($options) | - <span style='color:red;font-weight:bold;'>function mysqli::refresh($options)</span> |
+    | function mysqli::refresh($flags) | - <span style='color:red;font-weight:bold;'>function mysqli::refresh($flags)</span> |
     | function mysqli_warning::next() | - <span style='color:red;font-weight:bold;'>function mysqli_warning::next()</span> |
-    | function mysqli_result::__construct() | - <span style='color:red;font-weight:bold;'>function mysqli_result::__construct()</span> |
-    | function mysqli_result::fetch_field_direct(<span style='color:green;'>$field_nr</span>) | function mysqli_result::fetch_field_direct(<span style='font-weight:bold;text-decoration:underline;'>$fieldnr</span>) |
-    | function mysqli_result::fetch_all($result_type) | - <span style='color:red;font-weight:bold;'>function mysqli_result::fetch_all($result_type)</span> |
-    | function mysqli_result::fetch_array(<span style='color:green;'>$result_type</span>) | function mysqli_result::fetch_array(<span style='font-weight:bold;text-decoration:underline;'>$resulttype</span>) |
-    | function mysqli_result::fetch_object(<span style='color:green;'>$class_name,$params</span>) | function mysqli_result::fetch_object(<span style='font-weight:bold;text-decoration:underline;'>$class_name,$class_params</span>) |
-    | function mysqli_result::field_seek(<span style='color:green;'>$field_nr</span>) | function mysqli_result::field_seek(<span style='font-weight:bold;text-decoration:underline;'>$fieldnr</span>) |
-    | function mysqli_stmt::__construct(<span style='color:green;'></span>) | function mysqli_stmt::__construct(<span style='font-weight:bold;text-decoration:underline;'>$link,$query</span>) |
+    | function mysqli_result::__construct($mysql,$result_mode) | - <span style='color:red;font-weight:bold;'>function mysqli_result::__construct($mysql,$result_mode)</span> |
+    | function mysqli_result::fetch_all($mode) | - <span style='color:red;font-weight:bold;'>function mysqli_result::fetch_all($mode)</span> |
+    | function mysqli_result::getIterator() | - <span style='color:red;font-weight:bold;'>function mysqli_result::getIterator()</span> |
     | function mysqli_stmt::attr_get($attribute) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt::attr_get($attribute)</span> |
     | function mysqli_stmt::attr_set($attribute,$value) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt::attr_set($attribute,$value)</span> |
-    | function mysqli_stmt::bind_param(<span style='color:green;'>$types,$vars</span>) | function mysqli_stmt::bind_param(<span style='font-weight:bold;text-decoration:underline;'>$types,$variables</span>) |
     | function mysqli_stmt::bind_result($vars) | - <span style='color:red;font-weight:bold;'>function mysqli_stmt::bind_result($vars)</span> |
     | function mysqli_stmt::fetch() | - <span style='color:red;font-weight:bold;'>function mysqli_stmt::fetch()</span> |
     | function mysqli_stmt::get_warnings() | - <span style='color:red;font-weight:bold;'>function mysqli_stmt::get_warnings()</span> |
@@ -1499,195 +989,51 @@
     | const MYSQLI_TRANS_COR_AND_NO_CHAIN | - <span style='color:red;font-weight:bold;'>const MYSQLI_TRANS_COR_AND_NO_CHAIN</span> |
     | const MYSQLI_TRANS_COR_RELEASE | - <span style='color:red;font-weight:bold;'>const MYSQLI_TRANS_COR_RELEASE</span> |
     | const MYSQLI_TRANS_COR_NO_RELEASE | - <span style='color:red;font-weight:bold;'>const MYSQLI_TRANS_COR_NO_RELEASE</span> |
-??? tiny "[=56% "**mbstring** 48 / 85"]"
+    |  | + <span style='color:red;font-weight:bold;'>function mysqli_client_encoding($link)</span> |
+??? tiny "[=66% "**mbstring** 45 / 68"]"
     | PHP | PeachPie |
     | --- | ---      |
-    | function mb_convert_case(<span style='color:green;'>$sourcestring,$mode,$encoding</span>) | function mb_convert_case(<span style='font-weight:bold;text-decoration:underline;'>$str,$mode,$encoding</span>) |
-    | function mb_strtoupper(<span style='color:green;'>$sourcestring,$encoding</span>) | function mb_strtoupper(<span style='font-weight:bold;text-decoration:underline;'>$str,$encoding</span>) |
-    | function mb_strtolower(<span style='color:green;'>$sourcestring,$encoding</span>) | function mb_strtolower(<span style='font-weight:bold;text-decoration:underline;'>$str,$encoding</span>) |
-    | function mb_internal_encoding(<span style='color:green;'>$encoding</span>) | function mb_internal_encoding(<span style='font-weight:bold;text-decoration:underline;'>$encodingName</span>) |
-    | function mb_http_output(<span style='color:green;'>$encoding</span>) | function mb_http_output(<span style='font-weight:bold;text-decoration:underline;'>$encodingName</span>) |
-    | function mb_detect_order(<span style='color:green;'>$encoding</span>) | function mb_detect_order(<span style='font-weight:bold;text-decoration:underline;'>$encoding_list</span>) |
-    | function mb_substitute_character(<span style='color:green;'>$substchar</span>) | function mb_substitute_character(<span style='font-weight:bold;text-decoration:underline;'>$substrchar</span>) |
-    | function mb_parse_str(<span style='color:green;'>$encoded_string,$result</span>) | function mb_parse_str(<span style='font-weight:bold;text-decoration:underline;'>$encoded_string,$array</span>) |
-    | function mb_output_handler($contents,$status) | - <span style='color:red;font-weight:bold;'>function mb_output_handler($contents,$status)</span> |
-    | function mb_preferred_mime_name(<span style='color:green;'>$encoding</span>) | function mb_preferred_mime_name(<span style='font-weight:bold;text-decoration:underline;'>$encoding_name</span>) |
-    | function mb_str_split(<span style='color:green;'>$str,$split_length,$encoding</span>) | function mb_str_split(<span style='font-weight:bold;text-decoration:underline;'>$string,$split_length,$encoding</span>) |
-    | function mb_convert_encoding(<span style='color:green;'>$str,$to,$from</span>) | function mb_convert_encoding(<span style='font-weight:bold;text-decoration:underline;'>$str,$to_encoding,$from_encoding</span>) |
+    | function mb_output_handler($string,$status) | - <span style='color:red;font-weight:bold;'>function mb_output_handler($string,$status)</span> |
     | function mb_encoding_aliases($encoding) | - <span style='color:red;font-weight:bold;'>function mb_encoding_aliases($encoding)</span> |
-    | function mb_convert_kana($str,$option,$encoding) | - <span style='color:red;font-weight:bold;'>function mb_convert_kana($str,$option,$encoding)</span> |
-    | function mb_encode_mimeheader($str,$charset,$transfer,$linefeed,$indent) | - <span style='color:red;font-weight:bold;'>function mb_encode_mimeheader($str,$charset,$transfer,$linefeed,$indent)</span> |
+    | function mb_encode_mimeheader($string,$charset,$transfer_encoding,$newline,$indent) | - <span style='color:red;font-weight:bold;'>function mb_encode_mimeheader($string,$charset,$transfer_encoding,$newline,$indent)</span> |
     | function mb_decode_mimeheader($string) | - <span style='color:red;font-weight:bold;'>function mb_decode_mimeheader($string)</span> |
-    | function mb_convert_variables(<span style='color:green;'>$to,$from,$vars</span>) | function mb_convert_variables(<span style='font-weight:bold;text-decoration:underline;'>$to_encoding,$from_encoding,$vars</span>) |
-    | function mb_encode_numericentity($string,$convmap,$encoding,$is_hex) | - <span style='color:red;font-weight:bold;'>function mb_encode_numericentity($string,$convmap,$encoding,$is_hex)</span> |
-    | function mb_decode_numericentity($string,$convmap,$encoding,$is_hex) | - <span style='color:red;font-weight:bold;'>function mb_decode_numericentity($string,$convmap,$encoding,$is_hex)</span> |
-    | function mb_send_mail(<span style='color:green;'>$to,$subject,$message,$additional_headers,$additional_parameters</span>) | function mb_send_mail(<span style='font-weight:bold;text-decoration:underline;'>$to,$subject,$message,$additional_headers,$additional_parameter</span>) |
-    | function mb_regex_encoding(<span style='color:green;'>$encoding</span>) | function mb_regex_encoding(<span style='font-weight:bold;text-decoration:underline;'>$encodingName</span>) |
-    | function mb_regex_set_options($options) | - <span style='color:red;font-weight:bold;'>function mb_regex_set_options($options)</span> |
-    | function mb_ereg($pattern,$string,$registers) | - <span style='color:red;font-weight:bold;'>function mb_ereg($pattern,$string,$registers)</span> |
-    | function mb_eregi($pattern,$string,$registers) | - <span style='color:red;font-weight:bold;'>function mb_eregi($pattern,$string,$registers)</span> |
-    | function mb_ereg_replace($pattern,$replacement,$string,$option) | - <span style='color:red;font-weight:bold;'>function mb_ereg_replace($pattern,$replacement,$string,$option)</span> |
-    | function mb_eregi_replace($pattern,$replacement,$string,$option) | - <span style='color:red;font-weight:bold;'>function mb_eregi_replace($pattern,$replacement,$string,$option)</span> |
-    | function mb_ereg_replace_callback($pattern,$callback,$string,$option) | - <span style='color:red;font-weight:bold;'>function mb_ereg_replace_callback($pattern,$callback,$string,$option)</span> |
+    | function mb_convert_kana($string,$mode,$encoding) | - <span style='color:red;font-weight:bold;'>function mb_convert_kana($string,$mode,$encoding)</span> |
+    | function mb_encode_numericentity($string,$map,$encoding,$hex) | - <span style='color:red;font-weight:bold;'>function mb_encode_numericentity($string,$map,$encoding,$hex)</span> |
+    | function mb_decode_numericentity($string,$map,$encoding) | - <span style='color:red;font-weight:bold;'>function mb_decode_numericentity($string,$map,$encoding)</span> |
+    | function mb_ereg($pattern,$string,$matches) | - <span style='color:red;font-weight:bold;'>function mb_ereg($pattern,$string,$matches)</span> |
+    | function mb_eregi($pattern,$string,$matches) | - <span style='color:red;font-weight:bold;'>function mb_eregi($pattern,$string,$matches)</span> |
+    | function mb_ereg_replace($pattern,$replacement,$string,$options) | - <span style='color:red;font-weight:bold;'>function mb_ereg_replace($pattern,$replacement,$string,$options)</span> |
+    | function mb_eregi_replace($pattern,$replacement,$string,$options) | - <span style='color:red;font-weight:bold;'>function mb_eregi_replace($pattern,$replacement,$string,$options)</span> |
+    | function mb_ereg_replace_callback($pattern,$callback,$string,$options) | - <span style='color:red;font-weight:bold;'>function mb_ereg_replace_callback($pattern,$callback,$string,$options)</span> |
     | function mb_split($pattern,$string,$limit) | - <span style='color:red;font-weight:bold;'>function mb_split($pattern,$string,$limit)</span> |
-    | function mb_ereg_match($pattern,$string,$option) | - <span style='color:red;font-weight:bold;'>function mb_ereg_match($pattern,$string,$option)</span> |
-    | function mb_ereg_search($pattern,$option) | - <span style='color:red;font-weight:bold;'>function mb_ereg_search($pattern,$option)</span> |
-    | function mb_ereg_search_pos($pattern,$option) | - <span style='color:red;font-weight:bold;'>function mb_ereg_search_pos($pattern,$option)</span> |
-    | function mb_ereg_search_regs($pattern,$option) | - <span style='color:red;font-weight:bold;'>function mb_ereg_search_regs($pattern,$option)</span> |
-    | function mb_ereg_search_init($string,$pattern,$option) | - <span style='color:red;font-weight:bold;'>function mb_ereg_search_init($string,$pattern,$option)</span> |
+    | function mb_ereg_match($pattern,$string,$options) | - <span style='color:red;font-weight:bold;'>function mb_ereg_match($pattern,$string,$options)</span> |
+    | function mb_ereg_search($pattern,$options) | - <span style='color:red;font-weight:bold;'>function mb_ereg_search($pattern,$options)</span> |
+    | function mb_ereg_search_pos($pattern,$options) | - <span style='color:red;font-weight:bold;'>function mb_ereg_search_pos($pattern,$options)</span> |
+    | function mb_ereg_search_regs($pattern,$options) | - <span style='color:red;font-weight:bold;'>function mb_ereg_search_regs($pattern,$options)</span> |
+    | function mb_ereg_search_init($string,$pattern,$options) | - <span style='color:red;font-weight:bold;'>function mb_ereg_search_init($string,$pattern,$options)</span> |
     | function mb_ereg_search_getregs() | - <span style='color:red;font-weight:bold;'>function mb_ereg_search_getregs()</span> |
     | function mb_ereg_search_getpos() | - <span style='color:red;font-weight:bold;'>function mb_ereg_search_getpos()</span> |
-    | function mb_ereg_search_setpos($position) | - <span style='color:red;font-weight:bold;'>function mb_ereg_search_setpos($position)</span> |
-    | function mbregex_encoding($encoding) | - <span style='color:red;font-weight:bold;'>function mbregex_encoding($encoding)</span> |
-    | function mbereg($pattern,$string,$registers) | - <span style='color:red;font-weight:bold;'>function mbereg($pattern,$string,$registers)</span> |
-    | function mberegi($pattern,$string,$registers) | - <span style='color:red;font-weight:bold;'>function mberegi($pattern,$string,$registers)</span> |
-    | function mbereg_replace($pattern,$replacement,$string,$option) | - <span style='color:red;font-weight:bold;'>function mbereg_replace($pattern,$replacement,$string,$option)</span> |
-    | function mberegi_replace($pattern,$replacement,$string,$option) | - <span style='color:red;font-weight:bold;'>function mberegi_replace($pattern,$replacement,$string,$option)</span> |
-    | function mbsplit($pattern,$string,$limit) | - <span style='color:red;font-weight:bold;'>function mbsplit($pattern,$string,$limit)</span> |
-    | function mbereg_match($pattern,$string,$option) | - <span style='color:red;font-weight:bold;'>function mbereg_match($pattern,$string,$option)</span> |
-    | function mbereg_search($pattern,$option) | - <span style='color:red;font-weight:bold;'>function mbereg_search($pattern,$option)</span> |
-    | function mbereg_search_pos($pattern,$option) | - <span style='color:red;font-weight:bold;'>function mbereg_search_pos($pattern,$option)</span> |
-    | function mbereg_search_regs($pattern,$option) | - <span style='color:red;font-weight:bold;'>function mbereg_search_regs($pattern,$option)</span> |
-    | function mbereg_search_init($string,$pattern,$option) | - <span style='color:red;font-weight:bold;'>function mbereg_search_init($string,$pattern,$option)</span> |
-    | function mbereg_search_getregs() | - <span style='color:red;font-weight:bold;'>function mbereg_search_getregs()</span> |
-    | function mbereg_search_getpos() | - <span style='color:red;font-weight:bold;'>function mbereg_search_getpos()</span> |
-    | function mbereg_search_setpos($position) | - <span style='color:red;font-weight:bold;'>function mbereg_search_setpos($position)</span> |
+    | function mb_ereg_search_setpos($offset) | - <span style='color:red;font-weight:bold;'>function mb_ereg_search_setpos($offset)</span> |
+    | function mb_regex_set_options($options) | - <span style='color:red;font-weight:bold;'>function mb_regex_set_options($options)</span> |
     | const MB_ONIGURUMA_VERSION | - <span style='color:red;font-weight:bold;'>const MB_ONIGURUMA_VERSION</span> |
-??? tiny "[=100% "**exif** 6 / 6"]"
-    | PHP | PeachPie |
-    | --- | ---      |
-    | function exif_read_data(<span style='color:green;'>$filename,$sections_needed,$sub_arrays,$read_thumbnail</span>) | function exif_read_data(<span style='font-weight:bold;text-decoration:underline;'>$filename,$sections,$arrays,$thumbnail</span>) |
-    | function read_exif_data(<span style='color:green;'>$filename,$sections_needed,$sub_arrays,$read_thumbnail</span>) | function read_exif_data(<span style='font-weight:bold;text-decoration:underline;'>$filename,$sections,$arrays,$thumbnail</span>) |
-    | function exif_imagetype(<span style='color:green;'>$imagefile</span>) | function exif_imagetype(<span style='font-weight:bold;text-decoration:underline;'>$filename</span>) |
-??? tiny "[=66% "**gd** 129 / 195"]"
-    | PHP | PeachPie |
-    | --- | ---      |
-    | function imagearc(<span style='color:green;'>$im,$cx,$cy,$w,$h,$s,$e,$col</span>) | function imagearc(<span style='font-weight:bold;text-decoration:underline;'>$image,$cx,$cy,$width,$height,$start,$end,$color</span>) |
-    | function imageellipse(<span style='color:green;'>$im,$cx,$cy,$w,$h,$color</span>) | function imageellipse(<span style='font-weight:bold;text-decoration:underline;'>$im,$cx,$cy,$w,$h,$col</span>) |
-    | function imagechar(<span style='color:green;'>$im,$font,$x,$y,$c,$col</span>) | function imagechar(<span style='font-weight:bold;text-decoration:underline;'>$image,$font,$x,$y,$c,$color</span>) |
-    | function imagecharup(<span style='color:green;'>$im,$font,$x,$y,$c,$col</span>) | function imagecharup(<span style='font-weight:bold;text-decoration:underline;'>$image,$font,$x,$y,$c,$color</span>) |
-    | function imagepalettecopy($dst,$src) | - <span style='color:red;font-weight:bold;'>function imagepalettecopy($dst,$src)</span> |
-    | function imagecolorclosest($im,$red,$green,$blue) | - <span style='color:red;font-weight:bold;'>function imagecolorclosest($im,$red,$green,$blue)</span> |
-    | function imagecolorclosesthwb($im,$red,$green,$blue) | - <span style='color:red;font-weight:bold;'>function imagecolorclosesthwb($im,$red,$green,$blue)</span> |
-    | function imagecolordeallocate($im,$index) | - <span style='color:red;font-weight:bold;'>function imagecolordeallocate($im,$index)</span> |
-    | function imagecolorset(<span style='color:green;'>$im,$color,$red,$green,$blue,$alpha</span>) | function imagecolorset(<span style='font-weight:bold;text-decoration:underline;'>$im,$col,$red,$green,$blue</span>) |
-    | function imagecolorsforindex(<span style='color:green;'>$im,$index</span>) | function imagecolorsforindex(<span style='font-weight:bold;text-decoration:underline;'>$im,$col</span>) |
-    | function imagecopymergegray($dst_im,$src_im,$dst_x,$dst_y,$src_x,$src_y,$src_w,$src_h,$pct) | - <span style='color:red;font-weight:bold;'>function imagecopymergegray($dst_im,$src_im,$dst_x,$dst_y,$src_x,$src_y,$src_w,$src_h,$pct)</span> |
-    | function imagepalettetotruecolor($im) | - <span style='color:red;font-weight:bold;'>function imagepalettetotruecolor($im)</span> |
-    | function imagesetthickness($im,$thickness) | - <span style='color:red;font-weight:bold;'>function imagesetthickness($im,$thickness)</span> |
-    | function imagefilledellipse(<span style='color:green;'>$im,$cx,$cy,$w,$h,$color</span>) | function imagefilledellipse(<span style='font-weight:bold;text-decoration:underline;'>$im,$cx,$cy,$w,$h,$col</span>) |
-    | function imagealphablending(<span style='color:green;'>$im,$blend</span>) | function imagealphablending(<span style='font-weight:bold;text-decoration:underline;'>$im,$blendmode</span>) |
-    | function imagesavealpha(<span style='color:green;'>$im,$save</span>) | function imagesavealpha(<span style='font-weight:bold;text-decoration:underline;'>$im,$on</span>) |
-    | function imagecolorclosestalpha($im,$red,$green,$blue,$alpha) | - <span style='color:red;font-weight:bold;'>function imagecolorclosestalpha($im,$red,$green,$blue,$alpha)</span> |
-    | function imagegrabwindow($handle,$client_area) | - <span style='color:red;font-weight:bold;'>function imagegrabwindow($handle,$client_area)</span> |
-    | function imagegrabscreen() | - <span style='color:red;font-weight:bold;'>function imagegrabscreen()</span> |
-    | function imagerotate(<span style='color:green;'>$im,$angle,$bgdcolor,$ignoretransparent</span>) | function imagerotate(<span style='font-weight:bold;text-decoration:underline;'>$im,$angle,$bgcolor,$ignore_transparent</span>) |
-    | function imageflip(<span style='color:green;'>$im,$mode</span>) | function imageflip(<span style='font-weight:bold;text-decoration:underline;'>$image,$mode</span>) |
-    | function imageantialias(<span style='color:green;'>$im,$on</span>) | function imageantialias(<span style='font-weight:bold;text-decoration:underline;'>$image,$enabled</span>) |
-    | function imagecrop(<span style='color:green;'>$im,$rect</span>) | function imagecrop(<span style='font-weight:bold;text-decoration:underline;'>$image,$rect</span>) |
-    | function imagecropauto($im,$mode,$threshold,$color) | - <span style='color:red;font-weight:bold;'>function imagecropauto($im,$mode,$threshold,$color)</span> |
-    | function imagescale(<span style='color:green;'>$im,$new_width,$new_height,$mode</span>) | function imagescale(<span style='font-weight:bold;text-decoration:underline;'>$image,$new_width,$new_height,$mode</span>) |
-    | function imageaffine(<span style='color:green;'>$im,$affine,$clip</span>) | function imageaffine(<span style='font-weight:bold;text-decoration:underline;'>$image,$affine,$clip</span>) |
-    | function imagesetinterpolation($im,$method) | - <span style='color:red;font-weight:bold;'>function imagesetinterpolation($im,$method)</span> |
-    | function imagesettile(<span style='color:green;'>$im,$tile</span>) | function imagesettile(<span style='font-weight:bold;text-decoration:underline;'>$image,$tile</span>) |
-    | function imagesetbrush($im,$brush) | - <span style='color:red;font-weight:bold;'>function imagesetbrush($im,$brush)</span> |
-    | function imagesetstyle($im,$styles) | - <span style='color:red;font-weight:bold;'>function imagesetstyle($im,$styles)</span> |
-    | function imagecreatefromwebp($filename) | - <span style='color:red;font-weight:bold;'>function imagecreatefromwebp($filename)</span> |
-    | function imagecreatefrombmp($filename) | - <span style='color:red;font-weight:bold;'>function imagecreatefrombmp($filename)</span> |
-    | function imagecreatefromtga($filename) | - <span style='color:red;font-weight:bold;'>function imagecreatefromtga($filename)</span> |
-    | function imagewebp($im,$to,$quality) | - <span style='color:red;font-weight:bold;'>function imagewebp($im,$to,$quality)</span> |
-    | function imagewbmp($im,$to,$foreground) | - <span style='color:red;font-weight:bold;'>function imagewbmp($im,$to,$foreground)</span> |
-    | function imagegd(<span style='color:green;'>$im,$to</span>) | function imagegd(<span style='font-weight:bold;text-decoration:underline;'>$im</span>) |
-    | function imagebmp($im,$to,$compressed) | - <span style='color:red;font-weight:bold;'>function imagebmp($im,$to,$compressed)</span> |
-    | function imagegammacorrect($im,$inputgamma,$outputgamma) | - <span style='color:red;font-weight:bold;'>function imagegammacorrect($im,$inputgamma,$outputgamma)</span> |
-    | function imagefilledpolygon(<span style='color:green;'>$im,$points,$num_pos,$col</span>) | function imagefilledpolygon(<span style='font-weight:bold;text-decoration:underline;'>$im,$point,$num_points,$col</span>) |
-    | function imagefontwidth(<span style='color:green;'>$font</span>) | function imagefontwidth(<span style='font-weight:bold;text-decoration:underline;'>$fontInd</span>) |
-    | function imagefontheight(<span style='color:green;'>$font</span>) | function imagefontheight(<span style='font-weight:bold;text-decoration:underline;'>$fontInd</span>) |
-    | function imageinterlace(<span style='color:green;'>$im,$interlace</span>) | function imageinterlace(<span style='font-weight:bold;text-decoration:underline;'>$image,$interlace</span>) |
-    | function imageline(<span style='color:green;'>$im,$x1,$y1,$x2,$y2,$col</span>) | function imageline(<span style='font-weight:bold;text-decoration:underline;'>$im,$x1,$y1,$x2,$y2,$color</span>) |
-    | function imageloadfont($filename) | - <span style='color:red;font-weight:bold;'>function imageloadfont($filename)</span> |
-    | function imagepolygon(<span style='color:green;'>$im,$points,$num_pos,$col</span>) | function imagepolygon(<span style='font-weight:bold;text-decoration:underline;'>$im,$point,$num_points,$col</span>) |
-    | function imageopenpolygon(<span style='color:green;'>$im,$points,$num_pos,$col</span>) | function imageopenpolygon(<span style='font-weight:bold;text-decoration:underline;'>$image,$points,$num_points,$color</span>) |
-    | function imagesetpixel(<span style='color:green;'>$im,$x,$y,$col</span>) | function imagesetpixel(<span style='font-weight:bold;text-decoration:underline;'>$im,$x,$y,$color</span>) |
-    | function imagestring(<span style='color:green;'>$im,$font,$x,$y,$str,$col</span>) | function imagestring(<span style='font-weight:bold;text-decoration:underline;'>$im,$fontInd,$x,$y,$text,$col</span>) |
-    | function imagestringup(<span style='color:green;'>$im,$font,$x,$y,$str,$col</span>) | function imagestringup(<span style='font-weight:bold;text-decoration:underline;'>$im,$fontInd,$x,$y,$text,$col</span>) |
-    | function imagesetclip($im,$x1,$y1,$x2,$y2) | - <span style='color:red;font-weight:bold;'>function imagesetclip($im,$x1,$y1,$x2,$y2)</span> |
-    | function imagegetclip($im) | - <span style='color:red;font-weight:bold;'>function imagegetclip($im)</span> |
-    | function imagedashedline($im,$x1,$y1,$x2,$y2,$col) | - <span style='color:red;font-weight:bold;'>function imagedashedline($im,$x1,$y1,$x2,$y2,$col)</span> |
-    | function imagettftext(<span style='color:green;'>$im,$size,$angle,$x,$y,$col,$font_file,$text</span>) | function imagettftext(<span style='font-weight:bold;text-decoration:underline;'>$im,$size,$angle,$x,$y,$color,$font_file,$text</span>) |
-    | function imagefttext($im,$size,$angle,$x,$y,$col,$font_file,$text,$extrainfo) | - <span style='color:red;font-weight:bold;'>function imagefttext($im,$size,$angle,$x,$y,$col,$font_file,$text,$extrainfo)</span> |
-    | function jpeg2wbmp($f_org,$f_dest,$d_height,$d_width,$d_threshold) | - <span style='color:red;font-weight:bold;'>function jpeg2wbmp($f_org,$f_dest,$d_height,$d_width,$d_threshold)</span> |
-    | function png2wbmp($f_org,$f_dest,$d_height,$d_width,$d_threshold) | - <span style='color:red;font-weight:bold;'>function png2wbmp($f_org,$f_dest,$d_height,$d_width,$d_threshold)</span> |
-    | function image2wbmp(<span style='color:green;'>$im,$filename,$foreground</span>) | function image2wbmp(<span style='font-weight:bold;text-decoration:underline;'>$im,$to,$threshold</span>) |
-    | function imagelayereffect($im,$effect) | - <span style='color:red;font-weight:bold;'>function imagelayereffect($im,$effect)</span> |
-    | function imagexbm($im,$filename,$foreground) | - <span style='color:red;font-weight:bold;'>function imagexbm($im,$filename,$foreground)</span> |
-    | function imagefilter(<span style='color:green;'>$im,$filtertype,$arg1,$arg2,$arg3,$arg4</span>) | function imagefilter(<span style='font-weight:bold;text-decoration:underline;'>$image,$filtertype,$arg1,$arg2,$arg3,$arg4</span>) |
-    | function imageconvolution(<span style='color:green;'>$im,$matrix3x3,$div,$offset</span>) | function imageconvolution(<span style='font-weight:bold;text-decoration:underline;'>$src_im,$matrix3x3,$div,$offset</span>) |
-    | function imageresolution(<span style='color:green;'>$im,$res_x,$res_y</span>) | function imageresolution(<span style='font-weight:bold;text-decoration:underline;'>$image,$res_x,$res_y</span>) |
-    | const IMG_EFFECT_REPLACE | - <span style='color:red;font-weight:bold;'>const IMG_EFFECT_REPLACE</span> |
-    | const IMG_EFFECT_ALPHABLEND | - <span style='color:red;font-weight:bold;'>const IMG_EFFECT_ALPHABLEND</span> |
-    | const IMG_EFFECT_NORMAL | - <span style='color:red;font-weight:bold;'>const IMG_EFFECT_NORMAL</span> |
-    | const IMG_EFFECT_OVERLAY | - <span style='color:red;font-weight:bold;'>const IMG_EFFECT_OVERLAY</span> |
-    | const IMG_EFFECT_MULTIPLY | - <span style='color:red;font-weight:bold;'>const IMG_EFFECT_MULTIPLY</span> |
-    | const IMG_CROP_DEFAULT | - <span style='color:red;font-weight:bold;'>const IMG_CROP_DEFAULT</span> |
-    | const IMG_CROP_TRANSPARENT | - <span style='color:red;font-weight:bold;'>const IMG_CROP_TRANSPARENT</span> |
-    | const IMG_CROP_BLACK | - <span style='color:red;font-weight:bold;'>const IMG_CROP_BLACK</span> |
-    | const IMG_CROP_WHITE | - <span style='color:red;font-weight:bold;'>const IMG_CROP_WHITE</span> |
-    | const IMG_CROP_SIDES | - <span style='color:red;font-weight:bold;'>const IMG_CROP_SIDES</span> |
-    | const IMG_CROP_THRESHOLD | - <span style='color:red;font-weight:bold;'>const IMG_CROP_THRESHOLD</span> |
-    | const IMG_BELL | - <span style='color:red;font-weight:bold;'>const IMG_BELL</span> |
-    | const IMG_BESSEL | - <span style='color:red;font-weight:bold;'>const IMG_BESSEL</span> |
-    | const IMG_BLACKMAN | - <span style='color:red;font-weight:bold;'>const IMG_BLACKMAN</span> |
-    | const IMG_BOX | - <span style='color:red;font-weight:bold;'>const IMG_BOX</span> |
-    | const IMG_BSPLINE | - <span style='color:red;font-weight:bold;'>const IMG_BSPLINE</span> |
-    | const IMG_CATMULLROM | - <span style='color:red;font-weight:bold;'>const IMG_CATMULLROM</span> |
-    | const IMG_GAUSSIAN | - <span style='color:red;font-weight:bold;'>const IMG_GAUSSIAN</span> |
-    | const IMG_GENERALIZED_CUBIC | - <span style='color:red;font-weight:bold;'>const IMG_GENERALIZED_CUBIC</span> |
-    | const IMG_HERMITE | - <span style='color:red;font-weight:bold;'>const IMG_HERMITE</span> |
-    | const IMG_HAMMING | - <span style='color:red;font-weight:bold;'>const IMG_HAMMING</span> |
-    | const IMG_HANNING | - <span style='color:red;font-weight:bold;'>const IMG_HANNING</span> |
-    | const IMG_MITCHELL | - <span style='color:red;font-weight:bold;'>const IMG_MITCHELL</span> |
-    | const IMG_POWER | - <span style='color:red;font-weight:bold;'>const IMG_POWER</span> |
-    | const IMG_QUADRATIC | - <span style='color:red;font-weight:bold;'>const IMG_QUADRATIC</span> |
-    | const IMG_SINC | - <span style='color:red;font-weight:bold;'>const IMG_SINC</span> |
-    | const IMG_WEIGHTED4 | - <span style='color:red;font-weight:bold;'>const IMG_WEIGHTED4</span> |
-    | const IMG_TRIANGLE | - <span style='color:red;font-weight:bold;'>const IMG_TRIANGLE</span> |
-    | const IMG_FILTER_SCATTER | - <span style='color:red;font-weight:bold;'>const IMG_FILTER_SCATTER</span> |
-    | const PNG_NO_FILTER | - <span style='color:red;font-weight:bold;'>const PNG_NO_FILTER</span> |
-    | const PNG_FILTER_NONE | - <span style='color:red;font-weight:bold;'>const PNG_FILTER_NONE</span> |
-    | const PNG_FILTER_SUB | - <span style='color:red;font-weight:bold;'>const PNG_FILTER_SUB</span> |
-    | const PNG_FILTER_UP | - <span style='color:red;font-weight:bold;'>const PNG_FILTER_UP</span> |
-    | const PNG_FILTER_AVG | - <span style='color:red;font-weight:bold;'>const PNG_FILTER_AVG</span> |
-    | const PNG_FILTER_PAETH | - <span style='color:red;font-weight:bold;'>const PNG_FILTER_PAETH</span> |
-    | const PNG_ALL_FILTERS | - <span style='color:red;font-weight:bold;'>const PNG_ALL_FILTERS</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const MB_OVERLOAD_MAIL</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const MB_OVERLOAD_STRING</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const MB_OVERLOAD_REGEX</span> |
 ??? tiny "[=100% "**gettext** 10 / 10"]"
+??? tiny "[=84% "**curl** 509 / 605"]"
     | PHP | PeachPie |
     | --- | ---      |
-    | function textdomain(<span style='color:green;'>$domain</span>) | function textdomain(<span style='font-weight:bold;text-decoration:underline;'>$text_domain</span>) |
-    | function gettext(<span style='color:green;'>$msgid</span>) | function gettext(<span style='font-weight:bold;text-decoration:underline;'>$message</span>) |
-    | function _(<span style='color:green;'>$msgid</span>) | function _(<span style='font-weight:bold;text-decoration:underline;'>$message</span>) |
-    | function dgettext(<span style='color:green;'>$domain_name,$msgid</span>) | function dgettext(<span style='font-weight:bold;text-decoration:underline;'>$domain,$message</span>) |
-    | function dcgettext(<span style='color:green;'>$domain_name,$msgid,$category</span>) | function dcgettext(<span style='font-weight:bold;text-decoration:underline;'>$domain,$message,$category</span>) |
-    | function bindtextdomain(<span style='color:green;'>$domain_name,$dir</span>) | function bindtextdomain(<span style='font-weight:bold;text-decoration:underline;'>$domain,$directory</span>) |
-    | function ngettext(<span style='color:green;'>$msgid1,$msgid2,$count</span>) | function ngettext(<span style='font-weight:bold;text-decoration:underline;'>$msgid1,$msgid2,$n</span>) |
-    | function dngettext(<span style='color:green;'>$domain,$msgid1,$msgid2,$count</span>) | function dngettext(<span style='font-weight:bold;text-decoration:underline;'>$domain,$msgid1,$msgid2,$n</span>) |
-    | function dcngettext(<span style='color:green;'>$domain,$msgid1,$msgid2,$count,$category</span>) | function dcngettext(<span style='font-weight:bold;text-decoration:underline;'>$domain,$msgid1,$msgid2,$n,$category</span>) |
-??? tiny "[=85% "**curl** 509 / 601"]"
-    | PHP | PeachPie |
-    | --- | ---      |
-    | function curl_copy_handle($ch) | - <span style='color:red;font-weight:bold;'>function curl_copy_handle($ch)</span> |
-    | function curl_version(<span style='color:green;'>$version</span>) | function curl_version(<span style='font-weight:bold;text-decoration:underline;'>$age</span>) |
-    | function curl_getinfo(<span style='color:green;'>$ch,$option</span>) | function curl_getinfo(<span style='font-weight:bold;text-decoration:underline;'>$ch,$opt</span>) |
-    | function curl_strerror($errornum) | - <span style='color:red;font-weight:bold;'>function curl_strerror($errornum)</span> |
-    | function curl_share_strerror($errornum) | - <span style='color:red;font-weight:bold;'>function curl_share_strerror($errornum)</span> |
-    | function curl_pause($ch,$bitmask) | - <span style='color:red;font-weight:bold;'>function curl_pause($ch,$bitmask)</span> |
-    | function curl_multi_setopt(<span style='color:green;'>$sh,$option,$value</span>) | function curl_multi_setopt(<span style='font-weight:bold;text-decoration:underline;'>$mh,$option,$value</span>) |
+    | function curl_copy_handle($handle) | - <span style='color:red;font-weight:bold;'>function curl_copy_handle($handle)</span> |
+    | function curl_pause($handle,$flags) | - <span style='color:red;font-weight:bold;'>function curl_pause($handle,$flags)</span> |
+    | function curl_share_close($share_handle) | - <span style='color:red;font-weight:bold;'>function curl_share_close($share_handle)</span> |
+    | function curl_share_errno($share_handle) | - <span style='color:red;font-weight:bold;'>function curl_share_errno($share_handle)</span> |
     | function curl_share_init() | - <span style='color:red;font-weight:bold;'>function curl_share_init()</span> |
-    | function curl_share_close($sh) | - <span style='color:red;font-weight:bold;'>function curl_share_close($sh)</span> |
-    | function curl_share_setopt($sh,$option,$value) | - <span style='color:red;font-weight:bold;'>function curl_share_setopt($sh,$option,$value)</span> |
-    | function curl_share_errno($sh) | - <span style='color:red;font-weight:bold;'>function curl_share_errno($sh)</span> |
-    | function CURLFile::setMimeType(<span style='color:green;'>$name</span>) | function CURLFile::setMimeType(<span style='font-weight:bold;text-decoration:underline;'>$mime</span>) |
-    | function CURLFile::setPostFilename(<span style='color:green;'>$name</span>) | function CURLFile::setPostFilename(<span style='font-weight:bold;text-decoration:underline;'>$postname</span>) |
+    | function curl_share_setopt($share_handle,$option,$value) | - <span style='color:red;font-weight:bold;'>function curl_share_setopt($share_handle,$option,$value)</span> |
+    | function curl_share_strerror($error_code) | - <span style='color:red;font-weight:bold;'>function curl_share_strerror($error_code)</span> |
+    | function curl_strerror($error_code) | - <span style='color:red;font-weight:bold;'>function curl_strerror($error_code)</span> |
+    | class CurlHandle | - <span style='color:red;font-weight:bold;'>class CurlHandle</span> |
+    | class CurlMultiHandle | - <span style='color:red;font-weight:bold;'>class CurlMultiHandle</span> |
+    | class CurlShareHandle | - <span style='color:red;font-weight:bold;'>class CurlShareHandle</span> |
     | const CURL_VERSION_ASYNCHDNS | - <span style='color:red;font-weight:bold;'>const CURL_VERSION_ASYNCHDNS</span> |
     | const CURL_VERSION_CONV | - <span style='color:red;font-weight:bold;'>const CURL_VERSION_CONV</span> |
     | const CURL_VERSION_DEBUG | - <span style='color:red;font-weight:bold;'>const CURL_VERSION_DEBUG</span> |
@@ -1771,113 +1117,34 @@
     | const CURLOPT_DISALLOW_USERNAME_IN_URL | - <span style='color:red;font-weight:bold;'>const CURLOPT_DISALLOW_USERNAME_IN_URL</span> |
     | const CURLOPT_PROXY_TLS13_CIPHERS | - <span style='color:red;font-weight:bold;'>const CURLOPT_PROXY_TLS13_CIPHERS</span> |
     | const CURLOPT_TLS13_CIPHERS | - <span style='color:red;font-weight:bold;'>const CURLOPT_TLS13_CIPHERS</span> |
+    | const CURLOPT_HTTP09_ALLOWED | - <span style='color:red;font-weight:bold;'>const CURLOPT_HTTP09_ALLOWED</span> |
     | const CURL_VERSION_ALTSVC | - <span style='color:red;font-weight:bold;'>const CURL_VERSION_ALTSVC</span> |
-??? tiny "[=100% "**fileinfo** 20 / 20"]"
+??? tiny "[=100% "**exif** 5 / 5"]"
     | PHP | PeachPie |
     | --- | ---      |
-    | function finfo_open(<span style='color:green;'>$options,$arg</span>) | function finfo_open(<span style='font-weight:bold;text-decoration:underline;'>$options,$magic_file</span>) |
-    | function finfo_file(<span style='color:green;'>$finfo,$filename,$options,$context</span>) | function finfo_file(<span style='font-weight:bold;text-decoration:underline;'>$finfo,$file_name,$options,$context</span>) |
-    | function mime_content_type(<span style='color:green;'>$string</span>) | function mime_content_type(<span style='font-weight:bold;text-decoration:underline;'>$filename</span>) |
-    | function finfo::file(<span style='color:green;'>$filename,$options,$context</span>) | function finfo::file(<span style='font-weight:bold;text-decoration:underline;'>$file_name,$options,$context</span>) |
-??? tiny "[=100% "**ftp** 47 / 47"]"
-    | PHP | PeachPie |
-    | --- | ---      |
-    | function ftp_login(<span style='color:green;'>$ftp,$username,$password</span>) | function ftp_login(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream,$username,$password</span>) |
-    | function ftp_pwd(<span style='color:green;'>$ftp</span>) | function ftp_pwd(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream</span>) |
-    | function ftp_cdup(<span style='color:green;'>$ftp</span>) | function ftp_cdup(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream</span>) |
-    | function ftp_chdir(<span style='color:green;'>$ftp,$directory</span>) | function ftp_chdir(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream,$directory</span>) |
-    | function ftp_exec(<span style='color:green;'>$ftp,$command</span>) | function ftp_exec(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream,$command</span>) |
-    | function ftp_raw(<span style='color:green;'>$ftp,$command</span>) | function ftp_raw(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream,$command</span>) |
-    | function ftp_mkdir(<span style='color:green;'>$ftp,$directory</span>) | function ftp_mkdir(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream,$directory</span>) |
-    | function ftp_rmdir(<span style='color:green;'>$ftp,$directory</span>) | function ftp_rmdir(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream,$path</span>) |
-    | function ftp_chmod(<span style='color:green;'>$ftp,$mode,$filename</span>) | function ftp_chmod(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream,$mode,$filename</span>) |
-    | function ftp_alloc(<span style='color:green;'>$ftp,$size,$response</span>) | function ftp_alloc(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream,$filesize,$result</span>) |
-    | function ftp_nlist(<span style='color:green;'>$ftp,$directory</span>) | function ftp_nlist(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream,$directory</span>) |
-    | function ftp_rawlist(<span style='color:green;'>$ftp,$directory,$recursive</span>) | function ftp_rawlist(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream,$directory,$recursive</span>) |
-    | function ftp_mlsd(<span style='color:green;'>$ftp,$directory</span>) | function ftp_mlsd(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream,$directory</span>) |
-    | function ftp_systype(<span style='color:green;'>$ftp</span>) | function ftp_systype(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream</span>) |
-    | function ftp_pasv(<span style='color:green;'>$ftp,$pasv</span>) | function ftp_pasv(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream,$pasv</span>) |
-    | function ftp_get(<span style='color:green;'>$ftp,$local_file,$remote_file,$mode,$resume_pos</span>) | function ftp_get(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream,$local_file,$remote_file,$mode,$resumepos</span>) |
-    | function ftp_fget(<span style='color:green;'>$ftp,$fp,$remote_file,$mode,$resumepos</span>) | function ftp_fget(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream,$handle,$remotefile,$mode,$resumepos</span>) |
-    | function ftp_put(<span style='color:green;'>$ftp,$remote_file,$local_file,$mode,$startpos</span>) | function ftp_put(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream,$remote_file,$local_file,$mode,$startpos</span>) |
-    | function ftp_append(<span style='color:green;'>$ftp,$remote_file,$local_file,$mode</span>) | function ftp_append(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream,$remote_file,$local_file,$mode</span>) |
-    | function ftp_fput(<span style='color:green;'>$ftp,$remote_file,$fp,$mode,$startpos</span>) | function ftp_fput(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream,$remote_file,$handle,$mode,$startpos</span>) |
-    | function ftp_size(<span style='color:green;'>$ftp,$filename</span>) | function ftp_size(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream,$remote_file</span>) |
-    | function ftp_mdtm(<span style='color:green;'>$ftp,$filename</span>) | function ftp_mdtm(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream,$remote_file</span>) |
-    | function ftp_rename(<span style='color:green;'>$ftp,$src,$dest</span>) | function ftp_rename(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream,$oldname,$newname</span>) |
-    | function ftp_delete(<span style='color:green;'>$ftp,$file</span>) | function ftp_delete(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream,$path</span>) |
-    | function ftp_site(<span style='color:green;'>$ftp,$cmd</span>) | function ftp_site(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream,$command</span>) |
-    | function ftp_close(<span style='color:green;'>$ftp</span>) | function ftp_close(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream</span>) |
-    | function ftp_set_option(<span style='color:green;'>$ftp,$option,$value</span>) | function ftp_set_option(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream,$option,$value</span>) |
-    | function ftp_get_option(<span style='color:green;'>$ftp,$option</span>) | function ftp_get_option(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream,$option</span>) |
-    | function ftp_nb_fget(<span style='color:green;'>$ftp,$fp,$remote_file,$mode,$resumepos</span>) | function ftp_nb_fget(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream,$handle,$remote_file,$mode,$resumepos</span>) |
-    | function ftp_nb_get(<span style='color:green;'>$ftp,$local_file,$remote_file,$mode,$resume_pos</span>) | function ftp_nb_get(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream,$local_file,$remote_file,$mode,$resumepos</span>) |
-    | function ftp_nb_continue(<span style='color:green;'>$ftp</span>) | function ftp_nb_continue(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream</span>) |
-    | function ftp_nb_put(<span style='color:green;'>$ftp,$remote_file,$local_file,$mode,$startpos</span>) | function ftp_nb_put(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream,$remote_file,$local_file,$mode,$startpos</span>) |
-    | function ftp_nb_fput(<span style='color:green;'>$ftp,$remote_file,$fp,$mode,$startpos</span>) | function ftp_nb_fput(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream,$remote_file,$handle,$mode,$startpos</span>) |
-    | function ftp_quit(<span style='color:green;'>$ftp</span>) | function ftp_quit(<span style='font-weight:bold;text-decoration:underline;'>$ftp_stream</span>) |
-??? tiny "[=0% "**xmlrpc** 0 / 14"]"
-    | PHP | PeachPie |
-    | --- | ---      |
-    | function xmlrpc_encode($value) | - <span style='color:red;font-weight:bold;'>function xmlrpc_encode($value)</span> |
-    | function xmlrpc_decode($value,$encoding) | - <span style='color:red;font-weight:bold;'>function xmlrpc_decode($value,$encoding)</span> |
-    | function xmlrpc_decode_request($xml,$method,$encoding) | - <span style='color:red;font-weight:bold;'>function xmlrpc_decode_request($xml,$method,$encoding)</span> |
-    | function xmlrpc_encode_request($method,$params,$output_options) | - <span style='color:red;font-weight:bold;'>function xmlrpc_encode_request($method,$params,$output_options)</span> |
-    | function xmlrpc_get_type($value) | - <span style='color:red;font-weight:bold;'>function xmlrpc_get_type($value)</span> |
-    | function xmlrpc_set_type($value,$type) | - <span style='color:red;font-weight:bold;'>function xmlrpc_set_type($value,$type)</span> |
-    | function xmlrpc_is_fault($arg) | - <span style='color:red;font-weight:bold;'>function xmlrpc_is_fault($arg)</span> |
-    | function xmlrpc_server_create() | - <span style='color:red;font-weight:bold;'>function xmlrpc_server_create()</span> |
-    | function xmlrpc_server_destroy($server) | - <span style='color:red;font-weight:bold;'>function xmlrpc_server_destroy($server)</span> |
-    | function xmlrpc_server_register_method($server,$method_name,$function) | - <span style='color:red;font-weight:bold;'>function xmlrpc_server_register_method($server,$method_name,$function)</span> |
-    | function xmlrpc_server_call_method($server,$xml,$user_data,$output_options) | - <span style='color:red;font-weight:bold;'>function xmlrpc_server_call_method($server,$xml,$user_data,$output_options)</span> |
-    | function xmlrpc_parse_method_descriptions($xml) | - <span style='color:red;font-weight:bold;'>function xmlrpc_parse_method_descriptions($xml)</span> |
-    | function xmlrpc_server_add_introspection_data($server,$desc) | - <span style='color:red;font-weight:bold;'>function xmlrpc_server_add_introspection_data($server,$desc)</span> |
-    | function xmlrpc_server_register_introspection_callback($server,$function) | - <span style='color:red;font-weight:bold;'>function xmlrpc_server_register_introspection_callback($server,$function)</span> |
-??? tiny "[=48% "**xsl** 13 / 27"]"
-    | PHP | PeachPie |
-    | --- | ---      |
-    | function XSLTProcessor::importStylesheet(<span style='color:green;'>$doc</span>) | function XSLTProcessor::importStylesheet(<span style='font-weight:bold;text-decoration:underline;'>$stylesheet</span>) |
-    | function XSLTProcessor::transformToDoc(<span style='color:green;'>$doc</span>) | function XSLTProcessor::transformToDoc(<span style='font-weight:bold;text-decoration:underline;'>$node</span>) |
-    | function XSLTProcessor::setParameter(<span style='color:green;'>$namespace,$name,$value</span>) | function XSLTProcessor::setParameter(<span style='font-weight:bold;text-decoration:underline;'>$ns,$name,$value</span>) |
-    | function XSLTProcessor::getParameter(<span style='color:green;'>$namespace,$name</span>) | function XSLTProcessor::getParameter(<span style='font-weight:bold;text-decoration:underline;'>$ns,$name</span>) |
-    | function XSLTProcessor::removeParameter(<span style='color:green;'>$namespace,$name</span>) | function XSLTProcessor::removeParameter(<span style='font-weight:bold;text-decoration:underline;'>$ns,$name</span>) |
-    | function XSLTProcessor::setProfiling($filename) | - <span style='color:red;font-weight:bold;'>function XSLTProcessor::setProfiling($filename)</span> |
-    | function XSLTProcessor::setSecurityPrefs($securityPrefs) | - <span style='color:red;font-weight:bold;'>function XSLTProcessor::setSecurityPrefs($securityPrefs)</span> |
-    | function XSLTProcessor::getSecurityPrefs() | - <span style='color:red;font-weight:bold;'>function XSLTProcessor::getSecurityPrefs()</span> |
-    | const XSL_SECPREF_NONE | - <span style='color:red;font-weight:bold;'>const XSL_SECPREF_NONE</span> |
-    | const XSL_SECPREF_READ_FILE | - <span style='color:red;font-weight:bold;'>const XSL_SECPREF_READ_FILE</span> |
-    | const XSL_SECPREF_WRITE_FILE | - <span style='color:red;font-weight:bold;'>const XSL_SECPREF_WRITE_FILE</span> |
-    | const XSL_SECPREF_CREATE_DIRECTORY | - <span style='color:red;font-weight:bold;'>const XSL_SECPREF_CREATE_DIRECTORY</span> |
-    | const XSL_SECPREF_READ_NETWORK | - <span style='color:red;font-weight:bold;'>const XSL_SECPREF_READ_NETWORK</span> |
-    | const XSL_SECPREF_WRITE_NETWORK | - <span style='color:red;font-weight:bold;'>const XSL_SECPREF_WRITE_NETWORK</span> |
-    | const XSL_SECPREF_DEFAULT | - <span style='color:red;font-weight:bold;'>const XSL_SECPREF_DEFAULT</span> |
-    | const LIBXSLT_VERSION | - <span style='color:red;font-weight:bold;'>const LIBXSLT_VERSION</span> |
-    | const LIBXSLT_DOTTED_VERSION | - <span style='color:red;font-weight:bold;'>const LIBXSLT_DOTTED_VERSION</span> |
-    | const LIBEXSLT_VERSION | - <span style='color:red;font-weight:bold;'>const LIBEXSLT_VERSION</span> |
-    | const LIBEXSLT_DOTTED_VERSION | - <span style='color:red;font-weight:bold;'>const LIBEXSLT_DOTTED_VERSION</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function read_exif_data($filename,$sections_needed,$sub_arrays,$read_thumbnail)</span> |
 ??? tiny "[=21% "**Phar** 59 / 285"]"
     | PHP | PeachPie |
     | --- | ---      |
-    | function Phar::__construct(<span style='color:green;'>$filename,$flags,$alias</span>) | function Phar::__construct(<span style='font-weight:bold;text-decoration:underline;'>$fname,$flags,$alias</span>) |
     | function Phar::__destruct() | - <span style='color:red;font-weight:bold;'>function Phar::__destruct()</span> |
-    | function Phar::addEmptyDir($dirname) | - <span style='color:red;font-weight:bold;'>function Phar::addEmptyDir($dirname)</span> |
-    | function Phar::addFile($filename,$localname) | - <span style='color:red;font-weight:bold;'>function Phar::addFile($filename,$localname)</span> |
-    | function Phar::addFromString($localname,$contents) | - <span style='color:red;font-weight:bold;'>function Phar::addFromString($localname,$contents)</span> |
-    | function Phar::buildFromDirectory($base_dir,$regex) | - <span style='color:red;font-weight:bold;'>function Phar::buildFromDirectory($base_dir,$regex)</span> |
-    | function Phar::buildFromIterator($iterator,$base_directory) | - <span style='color:red;font-weight:bold;'>function Phar::buildFromIterator($iterator,$base_directory)</span> |
-    | function Phar::compressFiles($compression_type) | - <span style='color:red;font-weight:bold;'>function Phar::compressFiles($compression_type)</span> |
+    | function Phar::addEmptyDir($directory) | - <span style='color:red;font-weight:bold;'>function Phar::addEmptyDir($directory)</span> |
+    | function Phar::addFile($filename,$localName) | - <span style='color:red;font-weight:bold;'>function Phar::addFile($filename,$localName)</span> |
+    | function Phar::addFromString($localName,$contents) | - <span style='color:red;font-weight:bold;'>function Phar::addFromString($localName,$contents)</span> |
+    | function Phar::buildFromDirectory($directory,$pattern) | - <span style='color:red;font-weight:bold;'>function Phar::buildFromDirectory($directory,$pattern)</span> |
+    | function Phar::buildFromIterator($iterator,$baseDirectory) | - <span style='color:red;font-weight:bold;'>function Phar::buildFromIterator($iterator,$baseDirectory)</span> |
+    | function Phar::compressFiles($compression) | - <span style='color:red;font-weight:bold;'>function Phar::compressFiles($compression)</span> |
     | function Phar::decompressFiles() | - <span style='color:red;font-weight:bold;'>function Phar::decompressFiles()</span> |
-    | function Phar::compress($compression_type,$file_ext) | - <span style='color:red;font-weight:bold;'>function Phar::compress($compression_type,$file_ext)</span> |
-    | function Phar::decompress($file_ext) | - <span style='color:red;font-weight:bold;'>function Phar::decompress($file_ext)</span> |
-    | function Phar::convertToExecutable($format,$compression_type,$file_ext) | - <span style='color:red;font-weight:bold;'>function Phar::convertToExecutable($format,$compression_type,$file_ext)</span> |
-    | function Phar::convertToData($format,$compression_type,$file_ext) | - <span style='color:red;font-weight:bold;'>function Phar::convertToData($format,$compression_type,$file_ext)</span> |
-    | function Phar::copy($newfile,$oldfile) | - <span style='color:red;font-weight:bold;'>function Phar::copy($newfile,$oldfile)</span> |
-    | function Phar::delete($entry) | - <span style='color:red;font-weight:bold;'>function Phar::delete($entry)</span> |
+    | function Phar::compress($compression,$extension) | - <span style='color:red;font-weight:bold;'>function Phar::compress($compression,$extension)</span> |
+    | function Phar::decompress($extension) | - <span style='color:red;font-weight:bold;'>function Phar::decompress($extension)</span> |
+    | function Phar::convertToExecutable($format,$compression,$extension) | - <span style='color:red;font-weight:bold;'>function Phar::convertToExecutable($format,$compression,$extension)</span> |
+    | function Phar::convertToData($format,$compression,$extension) | - <span style='color:red;font-weight:bold;'>function Phar::convertToData($format,$compression,$extension)</span> |
+    | function Phar::copy($to,$from) | - <span style='color:red;font-weight:bold;'>function Phar::copy($to,$from)</span> |
+    | function Phar::delete($localName) | - <span style='color:red;font-weight:bold;'>function Phar::delete($localName)</span> |
     | function Phar::delMetadata() | - <span style='color:red;font-weight:bold;'>function Phar::delMetadata()</span> |
-    | function Phar::extractTo($pathto,$files,$overwrite) | - <span style='color:red;font-weight:bold;'>function Phar::extractTo($pathto,$files,$overwrite)</span> |
+    | function Phar::extractTo($directory,$files,$overwrite) | - <span style='color:red;font-weight:bold;'>function Phar::extractTo($directory,$files,$overwrite)</span> |
     | function Phar::getAlias() | - <span style='color:red;font-weight:bold;'>function Phar::getAlias()</span> |
     | function Phar::getPath() | - <span style='color:red;font-weight:bold;'>function Phar::getPath()</span> |
-    | function Phar::getMetadata() | - <span style='color:red;font-weight:bold;'>function Phar::getMetadata()</span> |
+    | function Phar::getMetadata($unserializeOptions) | - <span style='color:red;font-weight:bold;'>function Phar::getMetadata($unserializeOptions)</span> |
     | function Phar::getModified() | - <span style='color:red;font-weight:bold;'>function Phar::getModified()</span> |
     | function Phar::getSignature() | - <span style='color:red;font-weight:bold;'>function Phar::getSignature()</span> |
     | function Phar::getStub() | - <span style='color:red;font-weight:bold;'>function Phar::getStub()</span> |
@@ -1885,33 +1152,26 @@
     | function Phar::hasMetadata() | - <span style='color:red;font-weight:bold;'>function Phar::hasMetadata()</span> |
     | function Phar::isBuffering() | - <span style='color:red;font-weight:bold;'>function Phar::isBuffering()</span> |
     | function Phar::isCompressed() | - <span style='color:red;font-weight:bold;'>function Phar::isCompressed()</span> |
-    | function Phar::isFileFormat($fileformat) | - <span style='color:red;font-weight:bold;'>function Phar::isFileFormat($fileformat)</span> |
+    | function Phar::isFileFormat($format) | - <span style='color:red;font-weight:bold;'>function Phar::isFileFormat($format)</span> |
     | function Phar::isWritable() | - <span style='color:red;font-weight:bold;'>function Phar::isWritable()</span> |
-    | function Phar::offsetExists(<span style='color:green;'>$entry</span>) | function Phar::offsetExists(<span style='font-weight:bold;text-decoration:underline;'>$offset</span>) |
-    | function Phar::offsetGet(<span style='color:green;'>$entry</span>) | function Phar::offsetGet(<span style='font-weight:bold;text-decoration:underline;'>$offset</span>) |
-    | function Phar::offsetSet(<span style='color:green;'>$entry,$value</span>) | function Phar::offsetSet(<span style='font-weight:bold;text-decoration:underline;'>$offset,$value</span>) |
-    | function Phar::offsetUnset(<span style='color:green;'>$entry</span>) | function Phar::offsetUnset(<span style='font-weight:bold;text-decoration:underline;'>$offset</span>) |
     | function Phar::setAlias($alias) | - <span style='color:red;font-weight:bold;'>function Phar::setAlias($alias)</span> |
-    | function Phar::setDefaultStub($index,$webindex) | - <span style='color:red;font-weight:bold;'>function Phar::setDefaultStub($index,$webindex)</span> |
+    | function Phar::setDefaultStub($index,$webIndex) | - <span style='color:red;font-weight:bold;'>function Phar::setDefaultStub($index,$webIndex)</span> |
     | function Phar::setMetadata($metadata) | - <span style='color:red;font-weight:bold;'>function Phar::setMetadata($metadata)</span> |
-    | function Phar::setSignatureAlgorithm($algorithm,$privatekey) | - <span style='color:red;font-weight:bold;'>function Phar::setSignatureAlgorithm($algorithm,$privatekey)</span> |
-    | function Phar::setStub($newstub,$maxlen) | - <span style='color:red;font-weight:bold;'>function Phar::setStub($newstub,$maxlen)</span> |
+    | function Phar::setSignatureAlgorithm($algo,$privateKey) | - <span style='color:red;font-weight:bold;'>function Phar::setSignatureAlgorithm($algo,$privateKey)</span> |
+    | function Phar::setStub($stub,$length) | - <span style='color:red;font-weight:bold;'>function Phar::setStub($stub,$length)</span> |
     | function Phar::startBuffering() | - <span style='color:red;font-weight:bold;'>function Phar::startBuffering()</span> |
     | function Phar::stopBuffering() | - <span style='color:red;font-weight:bold;'>function Phar::stopBuffering()</span> |
-    | function Phar::canCompress($method) | - <span style='color:red;font-weight:bold;'>function Phar::canCompress($method)</span> |
-    | function Phar::createDefaultStub($index,$webindex) | - <span style='color:red;font-weight:bold;'>function Phar::createDefaultStub($index,$webindex)</span> |
+    | function Phar::canCompress($compression) | - <span style='color:red;font-weight:bold;'>function Phar::canCompress($compression)</span> |
+    | function Phar::createDefaultStub($index,$webIndex) | - <span style='color:red;font-weight:bold;'>function Phar::createDefaultStub($index,$webIndex)</span> |
     | function Phar::getSupportedCompression() | - <span style='color:red;font-weight:bold;'>function Phar::getSupportedCompression()</span> |
     | function Phar::getSupportedSignatures() | - <span style='color:red;font-weight:bold;'>function Phar::getSupportedSignatures()</span> |
     | function Phar::interceptFileFuncs() | - <span style='color:red;font-weight:bold;'>function Phar::interceptFileFuncs()</span> |
     | function Phar::isValidPharFilename($filename,$executable) | - <span style='color:red;font-weight:bold;'>function Phar::isValidPharFilename($filename,$executable)</span> |
-    | function Phar::mapPhar(<span style='color:green;'>$alias,$offset</span>) | function Phar::mapPhar(<span style='font-weight:bold;text-decoration:underline;'>$alias,$dataoffset</span>) |
-    | function Phar::mount(<span style='color:green;'>$inphar,$externalfile</span>) | function Phar::mount(<span style='font-weight:bold;text-decoration:underline;'>$pharpath,$externalpath</span>) |
-    | function Phar::hasChildren($allow_links) | - <span style='color:red;font-weight:bold;'>function Phar::hasChildren($allow_links)</span> |
+    | function Phar::hasChildren($allowLinks) | - <span style='color:red;font-weight:bold;'>function Phar::hasChildren($allowLinks)</span> |
     | function Phar::getChildren() | - <span style='color:red;font-weight:bold;'>function Phar::getChildren()</span> |
     | function Phar::getSubPath() | - <span style='color:red;font-weight:bold;'>function Phar::getSubPath()</span> |
     | function Phar::getSubPathname() | - <span style='color:red;font-weight:bold;'>function Phar::getSubPathname()</span> |
     | function Phar::rewind() | - <span style='color:red;font-weight:bold;'>function Phar::rewind()</span> |
-    | function Phar::next() | - <span style='color:red;font-weight:bold;'>function Phar::next()</span> |
     | function Phar::key() | - <span style='color:red;font-weight:bold;'>function Phar::key()</span> |
     | function Phar::current() | - <span style='color:red;font-weight:bold;'>function Phar::current()</span> |
     | function Phar::getFlags() | - <span style='color:red;font-weight:bold;'>function Phar::getFlags()</span> |
@@ -1921,7 +1181,8 @@
     | function Phar::getBasename($suffix) | - <span style='color:red;font-weight:bold;'>function Phar::getBasename($suffix)</span> |
     | function Phar::isDot() | - <span style='color:red;font-weight:bold;'>function Phar::isDot()</span> |
     | function Phar::valid() | - <span style='color:red;font-weight:bold;'>function Phar::valid()</span> |
-    | function Phar::seek($position) | - <span style='color:red;font-weight:bold;'>function Phar::seek($position)</span> |
+    | function Phar::next() | - <span style='color:red;font-weight:bold;'>function Phar::next()</span> |
+    | function Phar::seek($offset) | - <span style='color:red;font-weight:bold;'>function Phar::seek($offset)</span> |
     | function Phar::__toString() | - <span style='color:red;font-weight:bold;'>function Phar::__toString()</span> |
     | function Phar::getPathname() | - <span style='color:red;font-weight:bold;'>function Phar::getPathname()</span> |
     | function Phar::getPerms() | - <span style='color:red;font-weight:bold;'>function Phar::getPerms()</span> |
@@ -1940,11 +1201,11 @@
     | function Phar::isLink() | - <span style='color:red;font-weight:bold;'>function Phar::isLink()</span> |
     | function Phar::getLinkTarget() | - <span style='color:red;font-weight:bold;'>function Phar::getLinkTarget()</span> |
     | function Phar::getRealPath() | - <span style='color:red;font-weight:bold;'>function Phar::getRealPath()</span> |
-    | function Phar::getFileInfo($class_name) | - <span style='color:red;font-weight:bold;'>function Phar::getFileInfo($class_name)</span> |
-    | function Phar::getPathInfo($class_name) | - <span style='color:red;font-weight:bold;'>function Phar::getPathInfo($class_name)</span> |
-    | function Phar::openFile($open_mode,$use_include_path,$context) | - <span style='color:red;font-weight:bold;'>function Phar::openFile($open_mode,$use_include_path,$context)</span> |
-    | function Phar::setFileClass($class_name) | - <span style='color:red;font-weight:bold;'>function Phar::setFileClass($class_name)</span> |
-    | function Phar::setInfoClass($class_name) | - <span style='color:red;font-weight:bold;'>function Phar::setInfoClass($class_name)</span> |
+    | function Phar::getFileInfo($class) | - <span style='color:red;font-weight:bold;'>function Phar::getFileInfo($class)</span> |
+    | function Phar::getPathInfo($class) | - <span style='color:red;font-weight:bold;'>function Phar::getPathInfo($class)</span> |
+    | function Phar::openFile($mode,$useIncludePath,$context) | - <span style='color:red;font-weight:bold;'>function Phar::openFile($mode,$useIncludePath,$context)</span> |
+    | function Phar::setFileClass($class) | - <span style='color:red;font-weight:bold;'>function Phar::setFileClass($class)</span> |
+    | function Phar::setInfoClass($class) | - <span style='color:red;font-weight:bold;'>function Phar::setInfoClass($class)</span> |
     | const Phar::CURRENT_MODE_MASK | - <span style='color:red;font-weight:bold;'>const Phar::CURRENT_MODE_MASK</span> |
     | const Phar::CURRENT_AS_PATHNAME | - <span style='color:red;font-weight:bold;'>const Phar::CURRENT_AS_PATHNAME</span> |
     | const Phar::CURRENT_AS_FILEINFO | - <span style='color:red;font-weight:bold;'>const Phar::CURRENT_AS_FILEINFO</span> |
@@ -1971,27 +1232,26 @@
     | const Phar::SHA1 | - <span style='color:red;font-weight:bold;'>const Phar::SHA1</span> |
     | const Phar::SHA256 | - <span style='color:red;font-weight:bold;'>const Phar::SHA256</span> |
     | const Phar::SHA512 | - <span style='color:red;font-weight:bold;'>const Phar::SHA512</span> |
-    | function PharData::__construct(<span style='color:green;'>$filename,$flags,$alias,$fileformat</span>) | function PharData::__construct(<span style='font-weight:bold;text-decoration:underline;'>$fname,$flags,$alias,$format</span>) |
     | function PharData::__destruct() | - <span style='color:red;font-weight:bold;'>function PharData::__destruct()</span> |
-    | function PharData::addEmptyDir($dirname) | - <span style='color:red;font-weight:bold;'>function PharData::addEmptyDir($dirname)</span> |
-    | function PharData::addFile($filename,$localname) | - <span style='color:red;font-weight:bold;'>function PharData::addFile($filename,$localname)</span> |
-    | function PharData::addFromString($localname,$contents) | - <span style='color:red;font-weight:bold;'>function PharData::addFromString($localname,$contents)</span> |
-    | function PharData::buildFromDirectory($base_dir,$regex) | - <span style='color:red;font-weight:bold;'>function PharData::buildFromDirectory($base_dir,$regex)</span> |
-    | function PharData::buildFromIterator($iterator,$base_directory) | - <span style='color:red;font-weight:bold;'>function PharData::buildFromIterator($iterator,$base_directory)</span> |
-    | function PharData::compressFiles($compression_type) | - <span style='color:red;font-weight:bold;'>function PharData::compressFiles($compression_type)</span> |
+    | function PharData::addEmptyDir($directory) | - <span style='color:red;font-weight:bold;'>function PharData::addEmptyDir($directory)</span> |
+    | function PharData::addFile($filename,$localName) | - <span style='color:red;font-weight:bold;'>function PharData::addFile($filename,$localName)</span> |
+    | function PharData::addFromString($localName,$contents) | - <span style='color:red;font-weight:bold;'>function PharData::addFromString($localName,$contents)</span> |
+    | function PharData::buildFromDirectory($directory,$pattern) | - <span style='color:red;font-weight:bold;'>function PharData::buildFromDirectory($directory,$pattern)</span> |
+    | function PharData::buildFromIterator($iterator,$baseDirectory) | - <span style='color:red;font-weight:bold;'>function PharData::buildFromIterator($iterator,$baseDirectory)</span> |
+    | function PharData::compressFiles($compression) | - <span style='color:red;font-weight:bold;'>function PharData::compressFiles($compression)</span> |
     | function PharData::decompressFiles() | - <span style='color:red;font-weight:bold;'>function PharData::decompressFiles()</span> |
-    | function PharData::compress($compression_type,$file_ext) | - <span style='color:red;font-weight:bold;'>function PharData::compress($compression_type,$file_ext)</span> |
-    | function PharData::decompress($file_ext) | - <span style='color:red;font-weight:bold;'>function PharData::decompress($file_ext)</span> |
-    | function PharData::convertToExecutable($format,$compression_type,$file_ext) | - <span style='color:red;font-weight:bold;'>function PharData::convertToExecutable($format,$compression_type,$file_ext)</span> |
-    | function PharData::convertToData($format,$compression_type,$file_ext) | - <span style='color:red;font-weight:bold;'>function PharData::convertToData($format,$compression_type,$file_ext)</span> |
-    | function PharData::copy($newfile,$oldfile) | - <span style='color:red;font-weight:bold;'>function PharData::copy($newfile,$oldfile)</span> |
-    | function PharData::count() | - <span style='color:red;font-weight:bold;'>function PharData::count()</span> |
-    | function PharData::delete($entry) | - <span style='color:red;font-weight:bold;'>function PharData::delete($entry)</span> |
+    | function PharData::compress($compression,$extension) | - <span style='color:red;font-weight:bold;'>function PharData::compress($compression,$extension)</span> |
+    | function PharData::decompress($extension) | - <span style='color:red;font-weight:bold;'>function PharData::decompress($extension)</span> |
+    | function PharData::convertToExecutable($format,$compression,$extension) | - <span style='color:red;font-weight:bold;'>function PharData::convertToExecutable($format,$compression,$extension)</span> |
+    | function PharData::convertToData($format,$compression,$extension) | - <span style='color:red;font-weight:bold;'>function PharData::convertToData($format,$compression,$extension)</span> |
+    | function PharData::copy($to,$from) | - <span style='color:red;font-weight:bold;'>function PharData::copy($to,$from)</span> |
+    | function PharData::count($mode) | - <span style='color:red;font-weight:bold;'>function PharData::count($mode)</span> |
+    | function PharData::delete($localName) | - <span style='color:red;font-weight:bold;'>function PharData::delete($localName)</span> |
     | function PharData::delMetadata() | - <span style='color:red;font-weight:bold;'>function PharData::delMetadata()</span> |
-    | function PharData::extractTo($pathto,$files,$overwrite) | - <span style='color:red;font-weight:bold;'>function PharData::extractTo($pathto,$files,$overwrite)</span> |
+    | function PharData::extractTo($directory,$files,$overwrite) | - <span style='color:red;font-weight:bold;'>function PharData::extractTo($directory,$files,$overwrite)</span> |
     | function PharData::getAlias() | - <span style='color:red;font-weight:bold;'>function PharData::getAlias()</span> |
     | function PharData::getPath() | - <span style='color:red;font-weight:bold;'>function PharData::getPath()</span> |
-    | function PharData::getMetadata() | - <span style='color:red;font-weight:bold;'>function PharData::getMetadata()</span> |
+    | function PharData::getMetadata($unserialize_options) | - <span style='color:red;font-weight:bold;'>function PharData::getMetadata($unserialize_options)</span> |
     | function PharData::getModified() | - <span style='color:red;font-weight:bold;'>function PharData::getModified()</span> |
     | function PharData::getSignature() | - <span style='color:red;font-weight:bold;'>function PharData::getSignature()</span> |
     | function PharData::getStub() | - <span style='color:red;font-weight:bold;'>function PharData::getStub()</span> |
@@ -1999,40 +1259,39 @@
     | function PharData::hasMetadata() | - <span style='color:red;font-weight:bold;'>function PharData::hasMetadata()</span> |
     | function PharData::isBuffering() | - <span style='color:red;font-weight:bold;'>function PharData::isBuffering()</span> |
     | function PharData::isCompressed() | - <span style='color:red;font-weight:bold;'>function PharData::isCompressed()</span> |
-    | function PharData::isFileFormat($fileformat) | - <span style='color:red;font-weight:bold;'>function PharData::isFileFormat($fileformat)</span> |
+    | function PharData::isFileFormat($format) | - <span style='color:red;font-weight:bold;'>function PharData::isFileFormat($format)</span> |
     | function PharData::isWritable() | - <span style='color:red;font-weight:bold;'>function PharData::isWritable()</span> |
-    | function PharData::offsetExists($entry) | - <span style='color:red;font-weight:bold;'>function PharData::offsetExists($entry)</span> |
-    | function PharData::offsetGet($entry) | - <span style='color:red;font-weight:bold;'>function PharData::offsetGet($entry)</span> |
-    | function PharData::offsetSet($entry,$value) | - <span style='color:red;font-weight:bold;'>function PharData::offsetSet($entry,$value)</span> |
-    | function PharData::offsetUnset($entry) | - <span style='color:red;font-weight:bold;'>function PharData::offsetUnset($entry)</span> |
+    | function PharData::offsetExists($localName) | - <span style='color:red;font-weight:bold;'>function PharData::offsetExists($localName)</span> |
+    | function PharData::offsetGet($localName) | - <span style='color:red;font-weight:bold;'>function PharData::offsetGet($localName)</span> |
+    | function PharData::offsetSet($localName,$value) | - <span style='color:red;font-weight:bold;'>function PharData::offsetSet($localName,$value)</span> |
+    | function PharData::offsetUnset($localName) | - <span style='color:red;font-weight:bold;'>function PharData::offsetUnset($localName)</span> |
     | function PharData::setAlias($alias) | - <span style='color:red;font-weight:bold;'>function PharData::setAlias($alias)</span> |
-    | function PharData::setDefaultStub($index,$webindex) | - <span style='color:red;font-weight:bold;'>function PharData::setDefaultStub($index,$webindex)</span> |
+    | function PharData::setDefaultStub($index,$webIndex) | - <span style='color:red;font-weight:bold;'>function PharData::setDefaultStub($index,$webIndex)</span> |
     | function PharData::setMetadata($metadata) | - <span style='color:red;font-weight:bold;'>function PharData::setMetadata($metadata)</span> |
-    | function PharData::setSignatureAlgorithm($algorithm,$privatekey) | - <span style='color:red;font-weight:bold;'>function PharData::setSignatureAlgorithm($algorithm,$privatekey)</span> |
+    | function PharData::setSignatureAlgorithm($algo,$privateKey) | - <span style='color:red;font-weight:bold;'>function PharData::setSignatureAlgorithm($algo,$privateKey)</span> |
     | function PharData::setStub($newstub,$maxlen) | - <span style='color:red;font-weight:bold;'>function PharData::setStub($newstub,$maxlen)</span> |
     | function PharData::startBuffering() | - <span style='color:red;font-weight:bold;'>function PharData::startBuffering()</span> |
     | function PharData::stopBuffering() | - <span style='color:red;font-weight:bold;'>function PharData::stopBuffering()</span> |
     | function PharData::apiVersion() | - <span style='color:red;font-weight:bold;'>function PharData::apiVersion()</span> |
-    | function PharData::canCompress($method) | - <span style='color:red;font-weight:bold;'>function PharData::canCompress($method)</span> |
+    | function PharData::canCompress($compression) | - <span style='color:red;font-weight:bold;'>function PharData::canCompress($compression)</span> |
     | function PharData::canWrite() | - <span style='color:red;font-weight:bold;'>function PharData::canWrite()</span> |
-    | function PharData::createDefaultStub($index,$webindex) | - <span style='color:red;font-weight:bold;'>function PharData::createDefaultStub($index,$webindex)</span> |
+    | function PharData::createDefaultStub($index,$webIndex) | - <span style='color:red;font-weight:bold;'>function PharData::createDefaultStub($index,$webIndex)</span> |
     | function PharData::getSupportedCompression() | - <span style='color:red;font-weight:bold;'>function PharData::getSupportedCompression()</span> |
     | function PharData::getSupportedSignatures() | - <span style='color:red;font-weight:bold;'>function PharData::getSupportedSignatures()</span> |
     | function PharData::interceptFileFuncs() | - <span style='color:red;font-weight:bold;'>function PharData::interceptFileFuncs()</span> |
     | function PharData::isValidPharFilename($filename,$executable) | - <span style='color:red;font-weight:bold;'>function PharData::isValidPharFilename($filename,$executable)</span> |
     | function PharData::loadPhar($filename,$alias) | - <span style='color:red;font-weight:bold;'>function PharData::loadPhar($filename,$alias)</span> |
     | function PharData::mapPhar($alias,$offset) | - <span style='color:red;font-weight:bold;'>function PharData::mapPhar($alias,$offset)</span> |
-    | function PharData::running($retphar) | - <span style='color:red;font-weight:bold;'>function PharData::running($retphar)</span> |
-    | function PharData::mount($inphar,$externalfile) | - <span style='color:red;font-weight:bold;'>function PharData::mount($inphar,$externalfile)</span> |
-    | function PharData::mungServer($munglist) | - <span style='color:red;font-weight:bold;'>function PharData::mungServer($munglist)</span> |
-    | function PharData::unlinkArchive($archive) | - <span style='color:red;font-weight:bold;'>function PharData::unlinkArchive($archive)</span> |
-    | function PharData::webPhar($alias,$index,$f404,$mimetypes,$rewrites) | - <span style='color:red;font-weight:bold;'>function PharData::webPhar($alias,$index,$f404,$mimetypes,$rewrites)</span> |
-    | function PharData::hasChildren($allow_links) | - <span style='color:red;font-weight:bold;'>function PharData::hasChildren($allow_links)</span> |
+    | function PharData::running($returnPhar) | - <span style='color:red;font-weight:bold;'>function PharData::running($returnPhar)</span> |
+    | function PharData::mount($pharPath,$externalPath) | - <span style='color:red;font-weight:bold;'>function PharData::mount($pharPath,$externalPath)</span> |
+    | function PharData::mungServer($variables) | - <span style='color:red;font-weight:bold;'>function PharData::mungServer($variables)</span> |
+    | function PharData::unlinkArchive($filename) | - <span style='color:red;font-weight:bold;'>function PharData::unlinkArchive($filename)</span> |
+    | function PharData::webPhar($alias,$index,$fileNotFoundScript,$mimeTypes,$rewrite) | - <span style='color:red;font-weight:bold;'>function PharData::webPhar($alias,$index,$fileNotFoundScript,$mimeTypes,$rewrite)</span> |
+    | function PharData::hasChildren($allowLinks) | - <span style='color:red;font-weight:bold;'>function PharData::hasChildren($allowLinks)</span> |
     | function PharData::getChildren() | - <span style='color:red;font-weight:bold;'>function PharData::getChildren()</span> |
     | function PharData::getSubPath() | - <span style='color:red;font-weight:bold;'>function PharData::getSubPath()</span> |
     | function PharData::getSubPathname() | - <span style='color:red;font-weight:bold;'>function PharData::getSubPathname()</span> |
     | function PharData::rewind() | - <span style='color:red;font-weight:bold;'>function PharData::rewind()</span> |
-    | function PharData::next() | - <span style='color:red;font-weight:bold;'>function PharData::next()</span> |
     | function PharData::key() | - <span style='color:red;font-weight:bold;'>function PharData::key()</span> |
     | function PharData::current() | - <span style='color:red;font-weight:bold;'>function PharData::current()</span> |
     | function PharData::getFlags() | - <span style='color:red;font-weight:bold;'>function PharData::getFlags()</span> |
@@ -2042,7 +1301,8 @@
     | function PharData::getBasename($suffix) | - <span style='color:red;font-weight:bold;'>function PharData::getBasename($suffix)</span> |
     | function PharData::isDot() | - <span style='color:red;font-weight:bold;'>function PharData::isDot()</span> |
     | function PharData::valid() | - <span style='color:red;font-weight:bold;'>function PharData::valid()</span> |
-    | function PharData::seek($position) | - <span style='color:red;font-weight:bold;'>function PharData::seek($position)</span> |
+    | function PharData::next() | - <span style='color:red;font-weight:bold;'>function PharData::next()</span> |
+    | function PharData::seek($offset) | - <span style='color:red;font-weight:bold;'>function PharData::seek($offset)</span> |
     | function PharData::__toString() | - <span style='color:red;font-weight:bold;'>function PharData::__toString()</span> |
     | function PharData::getPathname() | - <span style='color:red;font-weight:bold;'>function PharData::getPathname()</span> |
     | function PharData::getPerms() | - <span style='color:red;font-weight:bold;'>function PharData::getPerms()</span> |
@@ -2061,11 +1321,11 @@
     | function PharData::isLink() | - <span style='color:red;font-weight:bold;'>function PharData::isLink()</span> |
     | function PharData::getLinkTarget() | - <span style='color:red;font-weight:bold;'>function PharData::getLinkTarget()</span> |
     | function PharData::getRealPath() | - <span style='color:red;font-weight:bold;'>function PharData::getRealPath()</span> |
-    | function PharData::getFileInfo($class_name) | - <span style='color:red;font-weight:bold;'>function PharData::getFileInfo($class_name)</span> |
-    | function PharData::getPathInfo($class_name) | - <span style='color:red;font-weight:bold;'>function PharData::getPathInfo($class_name)</span> |
-    | function PharData::openFile($open_mode,$use_include_path,$context) | - <span style='color:red;font-weight:bold;'>function PharData::openFile($open_mode,$use_include_path,$context)</span> |
-    | function PharData::setFileClass($class_name) | - <span style='color:red;font-weight:bold;'>function PharData::setFileClass($class_name)</span> |
-    | function PharData::setInfoClass($class_name) | - <span style='color:red;font-weight:bold;'>function PharData::setInfoClass($class_name)</span> |
+    | function PharData::getFileInfo($class) | - <span style='color:red;font-weight:bold;'>function PharData::getFileInfo($class)</span> |
+    | function PharData::getPathInfo($class) | - <span style='color:red;font-weight:bold;'>function PharData::getPathInfo($class)</span> |
+    | function PharData::openFile($mode,$useIncludePath,$context) | - <span style='color:red;font-weight:bold;'>function PharData::openFile($mode,$useIncludePath,$context)</span> |
+    | function PharData::setFileClass($class) | - <span style='color:red;font-weight:bold;'>function PharData::setFileClass($class)</span> |
+    | function PharData::setInfoClass($class) | - <span style='color:red;font-weight:bold;'>function PharData::setInfoClass($class)</span> |
     | const PharData::CURRENT_MODE_MASK | - <span style='color:red;font-weight:bold;'>const PharData::CURRENT_MODE_MASK</span> |
     | const PharData::CURRENT_AS_PATHNAME | - <span style='color:red;font-weight:bold;'>const PharData::CURRENT_AS_PATHNAME</span> |
     | const PharData::CURRENT_AS_FILEINFO | - <span style='color:red;font-weight:bold;'>const PharData::CURRENT_AS_FILEINFO</span> |
@@ -2078,25 +1338,24 @@
     | const PharData::OTHER_MODE_MASK | - <span style='color:red;font-weight:bold;'>const PharData::OTHER_MODE_MASK</span> |
     | const PharData::SKIP_DOTS | - <span style='color:red;font-weight:bold;'>const PharData::SKIP_DOTS</span> |
     | const PharData::UNIX_PATHS | - <span style='color:red;font-weight:bold;'>const PharData::UNIX_PATHS</span> |
-    | function PharFileInfo::__construct(<span style='color:green;'>$filename</span>) | function PharFileInfo::__construct(<span style='font-weight:bold;text-decoration:underline;'>$file_name</span>) |
     | function PharFileInfo::__destruct() | - <span style='color:red;font-weight:bold;'>function PharFileInfo::__destruct()</span> |
     | function PharFileInfo::chmod($perms) | - <span style='color:red;font-weight:bold;'>function PharFileInfo::chmod($perms)</span> |
-    | function PharFileInfo::compress($compression_type) | - <span style='color:red;font-weight:bold;'>function PharFileInfo::compress($compression_type)</span> |
+    | function PharFileInfo::compress($compression) | - <span style='color:red;font-weight:bold;'>function PharFileInfo::compress($compression)</span> |
     | function PharFileInfo::decompress() | - <span style='color:red;font-weight:bold;'>function PharFileInfo::decompress()</span> |
     | function PharFileInfo::delMetadata() | - <span style='color:red;font-weight:bold;'>function PharFileInfo::delMetadata()</span> |
     | function PharFileInfo::getCompressedSize() | - <span style='color:red;font-weight:bold;'>function PharFileInfo::getCompressedSize()</span> |
     | function PharFileInfo::getCRC32() | - <span style='color:red;font-weight:bold;'>function PharFileInfo::getCRC32()</span> |
     | function PharFileInfo::getContent() | - <span style='color:red;font-weight:bold;'>function PharFileInfo::getContent()</span> |
-    | function PharFileInfo::getMetadata() | - <span style='color:red;font-weight:bold;'>function PharFileInfo::getMetadata()</span> |
+    | function PharFileInfo::getMetadata($unserializeOptions) | - <span style='color:red;font-weight:bold;'>function PharFileInfo::getMetadata($unserializeOptions)</span> |
     | function PharFileInfo::getPharFlags() | - <span style='color:red;font-weight:bold;'>function PharFileInfo::getPharFlags()</span> |
     | function PharFileInfo::hasMetadata() | - <span style='color:red;font-weight:bold;'>function PharFileInfo::hasMetadata()</span> |
-    | function PharFileInfo::isCompressed($compression_type) | - <span style='color:red;font-weight:bold;'>function PharFileInfo::isCompressed($compression_type)</span> |
+    | function PharFileInfo::isCompressed($compression) | - <span style='color:red;font-weight:bold;'>function PharFileInfo::isCompressed($compression)</span> |
     | function PharFileInfo::isCRCChecked() | - <span style='color:red;font-weight:bold;'>function PharFileInfo::isCRCChecked()</span> |
     | function PharFileInfo::setMetadata($metadata) | - <span style='color:red;font-weight:bold;'>function PharFileInfo::setMetadata($metadata)</span> |
-??? tiny "[=0% "**soap** 0 / 120"]"
+??? tiny "[=0% "**soap** 0 / 125"]"
     | PHP | PeachPie |
     | --- | ---      |
-    | function use_soap_error_handler($handler) | - <span style='color:red;font-weight:bold;'>function use_soap_error_handler($handler)</span> |
+    | function use_soap_error_handler($enable) | - <span style='color:red;font-weight:bold;'>function use_soap_error_handler($enable)</span> |
     | function is_soap_fault($object) | - <span style='color:red;font-weight:bold;'>function is_soap_fault($object)</span> |
     | class SoapClient | - <span style='color:red;font-weight:bold;'>class SoapClient</span> |
     | class SoapVar | - <span style='color:red;font-weight:bold;'>class SoapVar</span> |
@@ -2185,84 +1444,83 @@
     | const SOAP_SSL_METHOD_SSLv2 | - <span style='color:red;font-weight:bold;'>const SOAP_SSL_METHOD_SSLv2</span> |
     | const SOAP_SSL_METHOD_SSLv3 | - <span style='color:red;font-weight:bold;'>const SOAP_SSL_METHOD_SSLv3</span> |
     | const SOAP_SSL_METHOD_SSLv23 | - <span style='color:red;font-weight:bold;'>const SOAP_SSL_METHOD_SSLv23</span> |
-??? tiny "[=1% "**imap** 2 / 143"]"
+??? tiny "[=0% "**imap** 0 / 142"]"
     | PHP | PeachPie |
     | --- | ---      |
-    | function imap_open($mailbox,$user,$password,$options,$n_retries,$params) | - <span style='color:red;font-weight:bold;'>function imap_open($mailbox,$user,$password,$options,$n_retries,$params)</span> |
-    | function imap_reopen($stream_id,$mailbox,$options,$n_retries) | - <span style='color:red;font-weight:bold;'>function imap_reopen($stream_id,$mailbox,$options,$n_retries)</span> |
-    | function imap_close($stream_id,$options) | - <span style='color:red;font-weight:bold;'>function imap_close($stream_id,$options)</span> |
-    | function imap_num_msg($stream_id) | - <span style='color:red;font-weight:bold;'>function imap_num_msg($stream_id)</span> |
-    | function imap_num_recent($stream_id) | - <span style='color:red;font-weight:bold;'>function imap_num_recent($stream_id)</span> |
-    | function imap_headers($stream_id) | - <span style='color:red;font-weight:bold;'>function imap_headers($stream_id)</span> |
-    | function imap_headerinfo($stream_id,$msg_no,$from_length,$subject_length,$default_host) | - <span style='color:red;font-weight:bold;'>function imap_headerinfo($stream_id,$msg_no,$from_length,$subject_length,$default_host)</span> |
-    | function imap_rfc822_parse_headers($headers,$default_host) | - <span style='color:red;font-weight:bold;'>function imap_rfc822_parse_headers($headers,$default_host)</span> |
-    | function imap_rfc822_write_address($mailbox,$host,$personal) | - <span style='color:red;font-weight:bold;'>function imap_rfc822_write_address($mailbox,$host,$personal)</span> |
-    | function imap_rfc822_parse_adrlist($address_string,$default_host) | - <span style='color:red;font-weight:bold;'>function imap_rfc822_parse_adrlist($address_string,$default_host)</span> |
-    | function imap_body($stream_id,$msg_no,$options) | - <span style='color:red;font-weight:bold;'>function imap_body($stream_id,$msg_no,$options)</span> |
-    | function imap_bodystruct($stream_id,$msg_no,$section) | - <span style='color:red;font-weight:bold;'>function imap_bodystruct($stream_id,$msg_no,$section)</span> |
-    | function imap_fetchbody($stream_id,$msg_no,$section,$options) | - <span style='color:red;font-weight:bold;'>function imap_fetchbody($stream_id,$msg_no,$section,$options)</span> |
-    | function imap_fetchmime($stream_id,$msg_no,$section,$options) | - <span style='color:red;font-weight:bold;'>function imap_fetchmime($stream_id,$msg_no,$section,$options)</span> |
-    | function imap_savebody($stream_id,$file,$msg_no,$section,$options) | - <span style='color:red;font-weight:bold;'>function imap_savebody($stream_id,$file,$msg_no,$section,$options)</span> |
-    | function imap_fetchheader($stream_id,$msg_no,$options) | - <span style='color:red;font-weight:bold;'>function imap_fetchheader($stream_id,$msg_no,$options)</span> |
-    | function imap_fetchstructure($stream_id,$msg_no,$options) | - <span style='color:red;font-weight:bold;'>function imap_fetchstructure($stream_id,$msg_no,$options)</span> |
-    | function imap_gc($stream_id,$flags) | - <span style='color:red;font-weight:bold;'>function imap_gc($stream_id,$flags)</span> |
-    | function imap_expunge($stream_id) | - <span style='color:red;font-weight:bold;'>function imap_expunge($stream_id)</span> |
-    | function imap_delete($stream_id,$msg_no,$options) | - <span style='color:red;font-weight:bold;'>function imap_delete($stream_id,$msg_no,$options)</span> |
-    | function imap_undelete($stream_id,$msg_no,$flags) | - <span style='color:red;font-weight:bold;'>function imap_undelete($stream_id,$msg_no,$flags)</span> |
-    | function imap_check($stream_id) | - <span style='color:red;font-weight:bold;'>function imap_check($stream_id)</span> |
-    | function imap_listscan($stream_id,$ref,$pattern,$content) | - <span style='color:red;font-weight:bold;'>function imap_listscan($stream_id,$ref,$pattern,$content)</span> |
-    | function imap_mail_copy($stream_id,$msglist,$mailbox,$options) | - <span style='color:red;font-weight:bold;'>function imap_mail_copy($stream_id,$msglist,$mailbox,$options)</span> |
-    | function imap_mail_move($stream_id,$sequence,$mailbox,$options) | - <span style='color:red;font-weight:bold;'>function imap_mail_move($stream_id,$sequence,$mailbox,$options)</span> |
-    | function imap_mail_compose($envelope,$body) | - <span style='color:red;font-weight:bold;'>function imap_mail_compose($envelope,$body)</span> |
-    | function imap_createmailbox($stream_id,$mailbox) | - <span style='color:red;font-weight:bold;'>function imap_createmailbox($stream_id,$mailbox)</span> |
-    | function imap_renamemailbox($stream_id,$old_name,$new_name) | - <span style='color:red;font-weight:bold;'>function imap_renamemailbox($stream_id,$old_name,$new_name)</span> |
-    | function imap_deletemailbox($stream_id,$mailbox) | - <span style='color:red;font-weight:bold;'>function imap_deletemailbox($stream_id,$mailbox)</span> |
-    | function imap_subscribe($stream_id,$mailbox) | - <span style='color:red;font-weight:bold;'>function imap_subscribe($stream_id,$mailbox)</span> |
-    | function imap_unsubscribe($stream_id,$mailbox) | - <span style='color:red;font-weight:bold;'>function imap_unsubscribe($stream_id,$mailbox)</span> |
-    | function imap_append($stream_id,$folder,$message,$options,$date) | - <span style='color:red;font-weight:bold;'>function imap_append($stream_id,$folder,$message,$options,$date)</span> |
-    | function imap_ping($stream_id) | - <span style='color:red;font-weight:bold;'>function imap_ping($stream_id)</span> |
-    | function imap_base64($text) | - <span style='color:red;font-weight:bold;'>function imap_base64($text)</span> |
-    | function imap_qprint($text) | - <span style='color:red;font-weight:bold;'>function imap_qprint($text)</span> |
-    | function imap_8bit($text) | - <span style='color:red;font-weight:bold;'>function imap_8bit($text)</span> |
-    | function imap_binary($text) | - <span style='color:red;font-weight:bold;'>function imap_binary($text)</span> |
+    | function imap_open($mailbox,$user,$password,$flags,$retries,$options) | - <span style='color:red;font-weight:bold;'>function imap_open($mailbox,$user,$password,$flags,$retries,$options)</span> |
+    | function imap_reopen($imap,$mailbox,$flags,$retries) | - <span style='color:red;font-weight:bold;'>function imap_reopen($imap,$mailbox,$flags,$retries)</span> |
+    | function imap_close($imap,$flags) | - <span style='color:red;font-weight:bold;'>function imap_close($imap,$flags)</span> |
+    | function imap_num_msg($imap) | - <span style='color:red;font-weight:bold;'>function imap_num_msg($imap)</span> |
+    | function imap_num_recent($imap) | - <span style='color:red;font-weight:bold;'>function imap_num_recent($imap)</span> |
+    | function imap_headers($imap) | - <span style='color:red;font-weight:bold;'>function imap_headers($imap)</span> |
+    | function imap_headerinfo($imap,$message_num,$from_length,$subject_length) | - <span style='color:red;font-weight:bold;'>function imap_headerinfo($imap,$message_num,$from_length,$subject_length)</span> |
+    | function imap_rfc822_parse_headers($headers,$default_hostname) | - <span style='color:red;font-weight:bold;'>function imap_rfc822_parse_headers($headers,$default_hostname)</span> |
+    | function imap_rfc822_write_address($mailbox,$hostname,$personal) | - <span style='color:red;font-weight:bold;'>function imap_rfc822_write_address($mailbox,$hostname,$personal)</span> |
+    | function imap_rfc822_parse_adrlist($string,$default_hostname) | - <span style='color:red;font-weight:bold;'>function imap_rfc822_parse_adrlist($string,$default_hostname)</span> |
+    | function imap_body($imap,$message_num,$flags) | - <span style='color:red;font-weight:bold;'>function imap_body($imap,$message_num,$flags)</span> |
+    | function imap_fetchtext($imap,$message_num,$flags) | - <span style='color:red;font-weight:bold;'>function imap_fetchtext($imap,$message_num,$flags)</span> |
+    | function imap_bodystruct($imap,$message_num,$section) | - <span style='color:red;font-weight:bold;'>function imap_bodystruct($imap,$message_num,$section)</span> |
+    | function imap_fetchbody($imap,$message_num,$section,$flags) | - <span style='color:red;font-weight:bold;'>function imap_fetchbody($imap,$message_num,$section,$flags)</span> |
+    | function imap_fetchmime($imap,$message_num,$section,$flags) | - <span style='color:red;font-weight:bold;'>function imap_fetchmime($imap,$message_num,$section,$flags)</span> |
+    | function imap_savebody($imap,$file,$message_num,$section,$flags) | - <span style='color:red;font-weight:bold;'>function imap_savebody($imap,$file,$message_num,$section,$flags)</span> |
+    | function imap_fetchheader($imap,$message_num,$flags) | - <span style='color:red;font-weight:bold;'>function imap_fetchheader($imap,$message_num,$flags)</span> |
+    | function imap_fetchstructure($imap,$message_num,$flags) | - <span style='color:red;font-weight:bold;'>function imap_fetchstructure($imap,$message_num,$flags)</span> |
+    | function imap_gc($imap,$flags) | - <span style='color:red;font-weight:bold;'>function imap_gc($imap,$flags)</span> |
+    | function imap_expunge($imap) | - <span style='color:red;font-weight:bold;'>function imap_expunge($imap)</span> |
+    | function imap_delete($imap,$message_num,$flags) | - <span style='color:red;font-weight:bold;'>function imap_delete($imap,$message_num,$flags)</span> |
+    | function imap_undelete($imap,$message_num,$flags) | - <span style='color:red;font-weight:bold;'>function imap_undelete($imap,$message_num,$flags)</span> |
+    | function imap_check($imap) | - <span style='color:red;font-weight:bold;'>function imap_check($imap)</span> |
+    | function imap_listscan($imap,$reference,$pattern,$content) | - <span style='color:red;font-weight:bold;'>function imap_listscan($imap,$reference,$pattern,$content)</span> |
+    | function imap_scan($imap,$reference,$pattern,$content) | - <span style='color:red;font-weight:bold;'>function imap_scan($imap,$reference,$pattern,$content)</span> |
+    | function imap_scanmailbox($imap,$reference,$pattern,$content) | - <span style='color:red;font-weight:bold;'>function imap_scanmailbox($imap,$reference,$pattern,$content)</span> |
+    | function imap_mail_copy($imap,$message_nums,$mailbox,$flags) | - <span style='color:red;font-weight:bold;'>function imap_mail_copy($imap,$message_nums,$mailbox,$flags)</span> |
+    | function imap_mail_move($imap,$message_nums,$mailbox,$flags) | - <span style='color:red;font-weight:bold;'>function imap_mail_move($imap,$message_nums,$mailbox,$flags)</span> |
+    | function imap_mail_compose($envelope,$bodies) | - <span style='color:red;font-weight:bold;'>function imap_mail_compose($envelope,$bodies)</span> |
+    | function imap_createmailbox($imap,$mailbox) | - <span style='color:red;font-weight:bold;'>function imap_createmailbox($imap,$mailbox)</span> |
+    | function imap_create($imap,$mailbox) | - <span style='color:red;font-weight:bold;'>function imap_create($imap,$mailbox)</span> |
+    | function imap_renamemailbox($imap,$from,$to) | - <span style='color:red;font-weight:bold;'>function imap_renamemailbox($imap,$from,$to)</span> |
+    | function imap_rename($imap,$from,$to) | - <span style='color:red;font-weight:bold;'>function imap_rename($imap,$from,$to)</span> |
+    | function imap_deletemailbox($imap,$mailbox) | - <span style='color:red;font-weight:bold;'>function imap_deletemailbox($imap,$mailbox)</span> |
+    | function imap_subscribe($imap,$mailbox) | - <span style='color:red;font-weight:bold;'>function imap_subscribe($imap,$mailbox)</span> |
+    | function imap_unsubscribe($imap,$mailbox) | - <span style='color:red;font-weight:bold;'>function imap_unsubscribe($imap,$mailbox)</span> |
+    | function imap_append($imap,$folder,$message,$options,$internal_date) | - <span style='color:red;font-weight:bold;'>function imap_append($imap,$folder,$message,$options,$internal_date)</span> |
+    | function imap_ping($imap) | - <span style='color:red;font-weight:bold;'>function imap_ping($imap)</span> |
+    | function imap_base64($string) | - <span style='color:red;font-weight:bold;'>function imap_base64($string)</span> |
+    | function imap_qprint($string) | - <span style='color:red;font-weight:bold;'>function imap_qprint($string)</span> |
+    | function imap_8bit($string) | - <span style='color:red;font-weight:bold;'>function imap_8bit($string)</span> |
+    | function imap_binary($string) | - <span style='color:red;font-weight:bold;'>function imap_binary($string)</span> |
     | function imap_utf8($mime_encoded_text) | - <span style='color:red;font-weight:bold;'>function imap_utf8($mime_encoded_text)</span> |
-    | function imap_status($stream_id,$mailbox,$options) | - <span style='color:red;font-weight:bold;'>function imap_status($stream_id,$mailbox,$options)</span> |
-    | function imap_mailboxmsginfo($stream_id) | - <span style='color:red;font-weight:bold;'>function imap_mailboxmsginfo($stream_id)</span> |
-    | function imap_setflag_full($stream_id,$sequence,$flag,$options) | - <span style='color:red;font-weight:bold;'>function imap_setflag_full($stream_id,$sequence,$flag,$options)</span> |
-    | function imap_clearflag_full($stream_id,$sequence,$flag,$options) | - <span style='color:red;font-weight:bold;'>function imap_clearflag_full($stream_id,$sequence,$flag,$options)</span> |
-    | function imap_sort($stream_id,$criteria,$reverse,$options,$search_criteria,$charset) | - <span style='color:red;font-weight:bold;'>function imap_sort($stream_id,$criteria,$reverse,$options,$search_criteria,$charset)</span> |
-    | function imap_uid($stream_id,$msg_no) | - <span style='color:red;font-weight:bold;'>function imap_uid($stream_id,$msg_no)</span> |
-    | function imap_msgno($stream_id,$unique_msg_id) | - <span style='color:red;font-weight:bold;'>function imap_msgno($stream_id,$unique_msg_id)</span> |
-    | function imap_list($stream_id,$ref,$pattern) | - <span style='color:red;font-weight:bold;'>function imap_list($stream_id,$ref,$pattern)</span> |
-    | function imap_lsub($stream_id,$ref,$pattern) | - <span style='color:red;font-weight:bold;'>function imap_lsub($stream_id,$ref,$pattern)</span> |
-    | function imap_fetch_overview($stream_id,$sequence,$options) | - <span style='color:red;font-weight:bold;'>function imap_fetch_overview($stream_id,$sequence,$options)</span> |
+    | function imap_status($imap,$mailbox,$flags) | - <span style='color:red;font-weight:bold;'>function imap_status($imap,$mailbox,$flags)</span> |
+    | function imap_mailboxmsginfo($imap) | - <span style='color:red;font-weight:bold;'>function imap_mailboxmsginfo($imap)</span> |
+    | function imap_setflag_full($imap,$sequence,$flag,$options) | - <span style='color:red;font-weight:bold;'>function imap_setflag_full($imap,$sequence,$flag,$options)</span> |
+    | function imap_clearflag_full($imap,$sequence,$flag,$options) | - <span style='color:red;font-weight:bold;'>function imap_clearflag_full($imap,$sequence,$flag,$options)</span> |
+    | function imap_sort($imap,$criteria,$reverse,$flags,$search_criteria,$charset) | - <span style='color:red;font-weight:bold;'>function imap_sort($imap,$criteria,$reverse,$flags,$search_criteria,$charset)</span> |
+    | function imap_uid($imap,$message_num) | - <span style='color:red;font-weight:bold;'>function imap_uid($imap,$message_num)</span> |
+    | function imap_msgno($imap,$message_uid) | - <span style='color:red;font-weight:bold;'>function imap_msgno($imap,$message_uid)</span> |
+    | function imap_list($imap,$reference,$pattern) | - <span style='color:red;font-weight:bold;'>function imap_list($imap,$reference,$pattern)</span> |
+    | function imap_listmailbox($imap,$reference,$pattern) | - <span style='color:red;font-weight:bold;'>function imap_listmailbox($imap,$reference,$pattern)</span> |
+    | function imap_lsub($imap,$reference,$pattern) | - <span style='color:red;font-weight:bold;'>function imap_lsub($imap,$reference,$pattern)</span> |
+    | function imap_listsubscribed($imap,$reference,$pattern) | - <span style='color:red;font-weight:bold;'>function imap_listsubscribed($imap,$reference,$pattern)</span> |
+    | function imap_getsubscribed($imap,$reference,$pattern) | - <span style='color:red;font-weight:bold;'>function imap_getsubscribed($imap,$reference,$pattern)</span> |
+    | function imap_getmailboxes($imap,$reference,$pattern) | - <span style='color:red;font-weight:bold;'>function imap_getmailboxes($imap,$reference,$pattern)</span> |
+    | function imap_fetch_overview($imap,$sequence,$flags) | - <span style='color:red;font-weight:bold;'>function imap_fetch_overview($imap,$sequence,$flags)</span> |
     | function imap_alerts() | - <span style='color:red;font-weight:bold;'>function imap_alerts()</span> |
     | function imap_errors() | - <span style='color:red;font-weight:bold;'>function imap_errors()</span> |
     | function imap_last_error() | - <span style='color:red;font-weight:bold;'>function imap_last_error()</span> |
-    | function imap_search($stream_id,$criteria,$options,$charset) | - <span style='color:red;font-weight:bold;'>function imap_search($stream_id,$criteria,$options,$charset)</span> |
-    | function imap_utf7_decode($buf) | - <span style='color:red;font-weight:bold;'>function imap_utf7_decode($buf)</span> |
-    | function imap_utf7_encode($buf) | - <span style='color:red;font-weight:bold;'>function imap_utf7_encode($buf)</span> |
-    | function imap_utf8_to_mutf7($in) | - <span style='color:red;font-weight:bold;'>function imap_utf8_to_mutf7($in)</span> |
-    | function imap_mutf7_to_utf8($in) | - <span style='color:red;font-weight:bold;'>function imap_mutf7_to_utf8($in)</span> |
-    | function imap_mime_header_decode($str) | - <span style='color:red;font-weight:bold;'>function imap_mime_header_decode($str)</span> |
-    | function imap_thread($stream_id,$options) | - <span style='color:red;font-weight:bold;'>function imap_thread($stream_id,$options)</span> |
+    | function imap_search($imap,$criteria,$flags,$charset) | - <span style='color:red;font-weight:bold;'>function imap_search($imap,$criteria,$flags,$charset)</span> |
+    | function imap_utf7_decode($string) | - <span style='color:red;font-weight:bold;'>function imap_utf7_decode($string)</span> |
+    | function imap_utf7_encode($string) | - <span style='color:red;font-weight:bold;'>function imap_utf7_encode($string)</span> |
+    | function imap_utf8_to_mutf7($string) | - <span style='color:red;font-weight:bold;'>function imap_utf8_to_mutf7($string)</span> |
+    | function imap_mutf7_to_utf8($string) | - <span style='color:red;font-weight:bold;'>function imap_mutf7_to_utf8($string)</span> |
+    | function imap_mime_header_decode($string) | - <span style='color:red;font-weight:bold;'>function imap_mime_header_decode($string)</span> |
+    | function imap_thread($imap,$flags) | - <span style='color:red;font-weight:bold;'>function imap_thread($imap,$flags)</span> |
     | function imap_timeout($timeout_type,$timeout) | - <span style='color:red;font-weight:bold;'>function imap_timeout($timeout_type,$timeout)</span> |
-    | function imap_get_quota($stream_id,$qroot) | - <span style='color:red;font-weight:bold;'>function imap_get_quota($stream_id,$qroot)</span> |
-    | function imap_get_quotaroot($stream_id,$mbox) | - <span style='color:red;font-weight:bold;'>function imap_get_quotaroot($stream_id,$mbox)</span> |
-    | function imap_set_quota($stream_id,$qroot,$mailbox_size) | - <span style='color:red;font-weight:bold;'>function imap_set_quota($stream_id,$qroot,$mailbox_size)</span> |
-    | function imap_setacl($stream_id,$mailbox,$id,$rights) | - <span style='color:red;font-weight:bold;'>function imap_setacl($stream_id,$mailbox,$id,$rights)</span> |
-    | function imap_getacl($stream_id,$mailbox) | - <span style='color:red;font-weight:bold;'>function imap_getacl($stream_id,$mailbox)</span> |
-    | function imap_mail($to,$subject,$message,$additional_headers,$cc,$bcc,$rpath) | - <span style='color:red;font-weight:bold;'>function imap_mail($to,$subject,$message,$additional_headers,$cc,$bcc,$rpath)</span> |
-    | function imap_header($stream_id,$msg_no,$from_length,$subject_length,$default_host) | - <span style='color:red;font-weight:bold;'>function imap_header($stream_id,$msg_no,$from_length,$subject_length,$default_host)</span> |
-    | function imap_listmailbox($stream_id,$ref,$pattern) | - <span style='color:red;font-weight:bold;'>function imap_listmailbox($stream_id,$ref,$pattern)</span> |
-    | function imap_getmailboxes($stream_id,$ref,$pattern) | - <span style='color:red;font-weight:bold;'>function imap_getmailboxes($stream_id,$ref,$pattern)</span> |
-    | function imap_scanmailbox($stream_id,$ref,$pattern,$content) | - <span style='color:red;font-weight:bold;'>function imap_scanmailbox($stream_id,$ref,$pattern,$content)</span> |
-    | function imap_listsubscribed($stream_id,$ref,$pattern) | - <span style='color:red;font-weight:bold;'>function imap_listsubscribed($stream_id,$ref,$pattern)</span> |
-    | function imap_getsubscribed($stream_id,$ref,$pattern) | - <span style='color:red;font-weight:bold;'>function imap_getsubscribed($stream_id,$ref,$pattern)</span> |
-    | function imap_fetchtext($stream_id,$msg_no,$options) | - <span style='color:red;font-weight:bold;'>function imap_fetchtext($stream_id,$msg_no,$options)</span> |
-    | function imap_scan($stream_id,$ref,$pattern,$content) | - <span style='color:red;font-weight:bold;'>function imap_scan($stream_id,$ref,$pattern,$content)</span> |
-    | function imap_create($stream_id,$mailbox) | - <span style='color:red;font-weight:bold;'>function imap_create($stream_id,$mailbox)</span> |
-    | function imap_rename($stream_id,$old_name,$new_name) | - <span style='color:red;font-weight:bold;'>function imap_rename($stream_id,$old_name,$new_name)</span> |
+    | function imap_get_quota($imap,$quota_root) | - <span style='color:red;font-weight:bold;'>function imap_get_quota($imap,$quota_root)</span> |
+    | function imap_get_quotaroot($imap,$mailbox) | - <span style='color:red;font-weight:bold;'>function imap_get_quotaroot($imap,$mailbox)</span> |
+    | function imap_set_quota($imap,$quota_root,$mailbox_size) | - <span style='color:red;font-weight:bold;'>function imap_set_quota($imap,$quota_root,$mailbox_size)</span> |
+    | function imap_setacl($imap,$mailbox,$user_id,$rights) | - <span style='color:red;font-weight:bold;'>function imap_setacl($imap,$mailbox,$user_id,$rights)</span> |
+    | function imap_getacl($imap,$mailbox) | - <span style='color:red;font-weight:bold;'>function imap_getacl($imap,$mailbox)</span> |
+    | function imap_mail($to,$subject,$message,$additional_headers,$cc,$bcc,$return_path) | - <span style='color:red;font-weight:bold;'>function imap_mail($to,$subject,$message,$additional_headers,$cc,$bcc,$return_path)</span> |
     | const NIL | - <span style='color:red;font-weight:bold;'>const NIL</span> |
     | const IMAP_OPENTIMEOUT | - <span style='color:red;font-weight:bold;'>const IMAP_OPENTIMEOUT</span> |
     | const IMAP_READTIMEOUT | - <span style='color:red;font-weight:bold;'>const IMAP_READTIMEOUT</span> |
@@ -2291,6 +1549,8 @@
     | const SE_UID | - <span style='color:red;font-weight:bold;'>const SE_UID</span> |
     | const SE_FREE | - <span style='color:red;font-weight:bold;'>const SE_FREE</span> |
     | const SE_NOPREFETCH | - <span style='color:red;font-weight:bold;'>const SE_NOPREFETCH</span> |
+    | const SO_FREE | - <span style='color:red;font-weight:bold;'>const SO_FREE</span> |
+    | const SO_NOSERVER | - <span style='color:red;font-weight:bold;'>const SO_NOSERVER</span> |
     | const SA_MESSAGES | - <span style='color:red;font-weight:bold;'>const SA_MESSAGES</span> |
     | const SA_RECENT | - <span style='color:red;font-weight:bold;'>const SA_RECENT</span> |
     | const SA_UNSEEN | - <span style='color:red;font-weight:bold;'>const SA_UNSEEN</span> |
@@ -2332,29 +1592,29 @@
 ??? tiny "[=0% "**tidy** 0 / 215"]"
     | PHP | PeachPie |
     | --- | ---      |
-    | function tidy_getopt($object,$option) | - <span style='color:red;font-weight:bold;'>function tidy_getopt($object,$option)</span> |
-    | function tidy_parse_string($input,$config_options,$encoding) | - <span style='color:red;font-weight:bold;'>function tidy_parse_string($input,$config_options,$encoding)</span> |
-    | function tidy_parse_file($file,$config_options,$encoding,$use_include_path) | - <span style='color:red;font-weight:bold;'>function tidy_parse_file($file,$config_options,$encoding,$use_include_path)</span> |
-    | function tidy_get_output($object) | - <span style='color:red;font-weight:bold;'>function tidy_get_output($object)</span> |
-    | function tidy_get_error_buffer($object) | - <span style='color:red;font-weight:bold;'>function tidy_get_error_buffer($object)</span> |
-    | function tidy_clean_repair($object) | - <span style='color:red;font-weight:bold;'>function tidy_clean_repair($object)</span> |
-    | function tidy_repair_string($data,$config_file,$encoding) | - <span style='color:red;font-weight:bold;'>function tidy_repair_string($data,$config_file,$encoding)</span> |
-    | function tidy_repair_file($filename,$config_file,$encoding,$use_include_path) | - <span style='color:red;font-weight:bold;'>function tidy_repair_file($filename,$config_file,$encoding,$use_include_path)</span> |
-    | function tidy_diagnose($object) | - <span style='color:red;font-weight:bold;'>function tidy_diagnose($object)</span> |
+    | function tidy_parse_string($string,$config,$encoding) | - <span style='color:red;font-weight:bold;'>function tidy_parse_string($string,$config,$encoding)</span> |
+    | function tidy_get_error_buffer($tidy) | - <span style='color:red;font-weight:bold;'>function tidy_get_error_buffer($tidy)</span> |
+    | function tidy_get_output($tidy) | - <span style='color:red;font-weight:bold;'>function tidy_get_output($tidy)</span> |
+    | function tidy_parse_file($filename,$config,$encoding,$useIncludePath) | - <span style='color:red;font-weight:bold;'>function tidy_parse_file($filename,$config,$encoding,$useIncludePath)</span> |
+    | function tidy_clean_repair($tidy) | - <span style='color:red;font-weight:bold;'>function tidy_clean_repair($tidy)</span> |
+    | function tidy_repair_string($string,$config,$encoding) | - <span style='color:red;font-weight:bold;'>function tidy_repair_string($string,$config,$encoding)</span> |
+    | function tidy_repair_file($filename,$config,$encoding,$useIncludePath) | - <span style='color:red;font-weight:bold;'>function tidy_repair_file($filename,$config,$encoding,$useIncludePath)</span> |
+    | function tidy_diagnose($tidy) | - <span style='color:red;font-weight:bold;'>function tidy_diagnose($tidy)</span> |
     | function tidy_get_release() | - <span style='color:red;font-weight:bold;'>function tidy_get_release()</span> |
-    | function tidy_get_config($object) | - <span style='color:red;font-weight:bold;'>function tidy_get_config($object)</span> |
-    | function tidy_get_status($object) | - <span style='color:red;font-weight:bold;'>function tidy_get_status($object)</span> |
-    | function tidy_get_html_ver($object) | - <span style='color:red;font-weight:bold;'>function tidy_get_html_ver($object)</span> |
-    | function tidy_is_xhtml($object) | - <span style='color:red;font-weight:bold;'>function tidy_is_xhtml($object)</span> |
-    | function tidy_is_xml($object) | - <span style='color:red;font-weight:bold;'>function tidy_is_xml($object)</span> |
-    | function tidy_error_count($object) | - <span style='color:red;font-weight:bold;'>function tidy_error_count($object)</span> |
-    | function tidy_warning_count($object) | - <span style='color:red;font-weight:bold;'>function tidy_warning_count($object)</span> |
-    | function tidy_access_count($object) | - <span style='color:red;font-weight:bold;'>function tidy_access_count($object)</span> |
-    | function tidy_config_count($object) | - <span style='color:red;font-weight:bold;'>function tidy_config_count($object)</span> |
-    | function tidy_get_opt_doc($resource,$optname) | - <span style='color:red;font-weight:bold;'>function tidy_get_opt_doc($resource,$optname)</span> |
-    | function tidy_get_root($object) | - <span style='color:red;font-weight:bold;'>function tidy_get_root($object)</span> |
-    | function tidy_get_head($object) | - <span style='color:red;font-weight:bold;'>function tidy_get_head($object)</span> |
-    | function tidy_get_html($object) | - <span style='color:red;font-weight:bold;'>function tidy_get_html($object)</span> |
+    | function tidy_get_opt_doc($tidy,$option) | - <span style='color:red;font-weight:bold;'>function tidy_get_opt_doc($tidy,$option)</span> |
+    | function tidy_get_config($tidy) | - <span style='color:red;font-weight:bold;'>function tidy_get_config($tidy)</span> |
+    | function tidy_get_status($tidy) | - <span style='color:red;font-weight:bold;'>function tidy_get_status($tidy)</span> |
+    | function tidy_get_html_ver($tidy) | - <span style='color:red;font-weight:bold;'>function tidy_get_html_ver($tidy)</span> |
+    | function tidy_is_xhtml($tidy) | - <span style='color:red;font-weight:bold;'>function tidy_is_xhtml($tidy)</span> |
+    | function tidy_is_xml($tidy) | - <span style='color:red;font-weight:bold;'>function tidy_is_xml($tidy)</span> |
+    | function tidy_error_count($tidy) | - <span style='color:red;font-weight:bold;'>function tidy_error_count($tidy)</span> |
+    | function tidy_warning_count($tidy) | - <span style='color:red;font-weight:bold;'>function tidy_warning_count($tidy)</span> |
+    | function tidy_access_count($tidy) | - <span style='color:red;font-weight:bold;'>function tidy_access_count($tidy)</span> |
+    | function tidy_config_count($tidy) | - <span style='color:red;font-weight:bold;'>function tidy_config_count($tidy)</span> |
+    | function tidy_getopt($tidy,$option) | - <span style='color:red;font-weight:bold;'>function tidy_getopt($tidy,$option)</span> |
+    | function tidy_get_root($tidy) | - <span style='color:red;font-weight:bold;'>function tidy_get_root($tidy)</span> |
+    | function tidy_get_html($tidy) | - <span style='color:red;font-weight:bold;'>function tidy_get_html($tidy)</span> |
+    | function tidy_get_head($tidy) | - <span style='color:red;font-weight:bold;'>function tidy_get_head($tidy)</span> |
     | function tidy_get_body($tidy) | - <span style='color:red;font-weight:bold;'>function tidy_get_body($tidy)</span> |
     | class tidy | - <span style='color:red;font-weight:bold;'>class tidy</span> |
     | class tidyNode | - <span style='color:red;font-weight:bold;'>class tidyNode</span> |
@@ -2519,29 +1779,396 @@
     | const TIDY_NODETYPE_JSTE | - <span style='color:red;font-weight:bold;'>const TIDY_NODETYPE_JSTE</span> |
     | const TIDY_NODETYPE_PHP | - <span style='color:red;font-weight:bold;'>const TIDY_NODETYPE_PHP</span> |
     | const TIDY_NODETYPE_XMLDECL | - <span style='color:red;font-weight:bold;'>const TIDY_NODETYPE_XMLDECL</span> |
-??? tiny "[=94% "**sockets** 145 / 155"]"
+??? tiny "[=100% "**ftp** 47 / 47"]"
+??? tiny "[=92% "**sockets** 145 / 157"]"
     | PHP | PeachPie |
     | --- | ---      |
-    | function socket_select(<span style='color:green;'>$read_fds,$write_fds,$except_fds,$tv_sec,$tv_usec</span>) | function socket_select(<span style='font-weight:bold;text-decoration:underline;'>$read,$write,$except,$tv_sec,$tv_usec</span>) |
-    | function socket_create_pair($domain,$type,$protocol,$fd) | - <span style='color:red;font-weight:bold;'>function socket_create_pair($domain,$type,$protocol,$fd)</span> |
-    | function socket_write(<span style='color:green;'>$socket,$buf,$length</span>) | function socket_write(<span style='font-weight:bold;text-decoration:underline;'>$socket,$buffer,$length</span>) |
-    | function socket_connect(<span style='color:green;'>$socket,$addr,$port</span>) | function socket_connect(<span style='font-weight:bold;text-decoration:underline;'>$socket,$address,$port</span>) |
-    | function socket_bind(<span style='color:green;'>$socket,$addr,$port</span>) | function socket_bind(<span style='font-weight:bold;text-decoration:underline;'>$socket,$address,$port</span>) |
-    | function socket_recv(<span style='color:green;'>$socket,$buf,$len,$flags</span>) | function socket_recv(<span style='font-weight:bold;text-decoration:underline;'>$socket,$buf,$length,$flags</span>) |
-    | function socket_send(<span style='color:green;'>$socket,$buf,$len,$flags</span>) | function socket_send(<span style='font-weight:bold;text-decoration:underline;'>$socket,$buffer,$length,$flags</span>) |
-    | function socket_recvfrom(<span style='color:green;'>$socket,$buf,$len,$flags,$name,$port</span>) | function socket_recvfrom(<span style='font-weight:bold;text-decoration:underline;'>$socket,$buf,$length,$flags,$name,$port</span>) |
-    | function socket_sendto(<span style='color:green;'>$socket,$buf,$len,$flags,$addr,$port</span>) | function socket_sendto(<span style='font-weight:bold;text-decoration:underline;'>$socket,$buffer,$length,$flags,$addr,$port</span>) |
-    | function socket_get_option(<span style='color:green;'>$socket,$level,$optname</span>) | function socket_get_option(<span style='font-weight:bold;text-decoration:underline;'>$socket,$level,$option</span>) |
-    | function socket_set_option(<span style='color:green;'>$socket,$level,$optname,$optval</span>) | function socket_set_option(<span style='font-weight:bold;text-decoration:underline;'>$socket,$level,$option,$option_value</span>) |
-    | function socket_sendmsg($socket,$msghdr,$flags) | - <span style='color:red;font-weight:bold;'>function socket_sendmsg($socket,$msghdr,$flags)</span> |
-    | function socket_recvmsg($socket,$msghdr,$flags) | - <span style='color:red;font-weight:bold;'>function socket_recvmsg($socket,$msghdr,$flags)</span> |
-    | function socket_cmsg_space($level,$type) | - <span style='color:red;font-weight:bold;'>function socket_cmsg_space($level,$type)</span> |
+    | function socket_create_pair($domain,$type,$protocol,$pair) | - <span style='color:red;font-weight:bold;'>function socket_create_pair($domain,$type,$protocol,$pair)</span> |
+    | function socket_sendmsg($socket,$message,$flags) | - <span style='color:red;font-weight:bold;'>function socket_sendmsg($socket,$message,$flags)</span> |
+    | function socket_recvmsg($socket,$message,$flags) | - <span style='color:red;font-weight:bold;'>function socket_recvmsg($socket,$message,$flags)</span> |
+    | function socket_cmsg_space($level,$type,$num) | - <span style='color:red;font-weight:bold;'>function socket_cmsg_space($level,$type,$num)</span> |
     | function socket_addrinfo_lookup($host,$service,$hints) | - <span style='color:red;font-weight:bold;'>function socket_addrinfo_lookup($host,$service,$hints)</span> |
-    | function socket_addrinfo_connect($addr) | - <span style='color:red;font-weight:bold;'>function socket_addrinfo_connect($addr)</span> |
-    | function socket_addrinfo_bind($addr) | - <span style='color:red;font-weight:bold;'>function socket_addrinfo_bind($addr)</span> |
-    | function socket_addrinfo_explain(<span style='color:green;'>$addr</span>) | function socket_addrinfo_explain(<span style='font-weight:bold;text-decoration:underline;'>$resource</span>) |
-    | function socket_getopt(<span style='color:green;'>$socket,$level,$optname</span>) | function socket_getopt(<span style='font-weight:bold;text-decoration:underline;'>$socket,$level,$option</span>) |
-    | function socket_setopt(<span style='color:green;'>$socket,$level,$optname,$optval</span>) | function socket_setopt(<span style='font-weight:bold;text-decoration:underline;'>$socket,$level,$option,$option_value</span>) |
-    | function socket_wsaprotocol_info_export($socket,$target_pid) | - <span style='color:red;font-weight:bold;'>function socket_wsaprotocol_info_export($socket,$target_pid)</span> |
+    | function socket_addrinfo_connect($address) | - <span style='color:red;font-weight:bold;'>function socket_addrinfo_connect($address)</span> |
+    | function socket_addrinfo_bind($address) | - <span style='color:red;font-weight:bold;'>function socket_addrinfo_bind($address)</span> |
+    | function socket_wsaprotocol_info_export($socket,$process_id) | - <span style='color:red;font-weight:bold;'>function socket_wsaprotocol_info_export($socket,$process_id)</span> |
     | function socket_wsaprotocol_info_import($info_id) | - <span style='color:red;font-weight:bold;'>function socket_wsaprotocol_info_import($info_id)</span> |
     | function socket_wsaprotocol_info_release($info_id) | - <span style='color:red;font-weight:bold;'>function socket_wsaprotocol_info_release($info_id)</span> |
+    | class Socket | - <span style='color:red;font-weight:bold;'>class Socket</span> |
+    | class AddressInfo | - <span style='color:red;font-weight:bold;'>class AddressInfo</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const SO_FREE</span> |
+    |  | + <span style='color:red;font-weight:bold;'>const SO_NOSERVER</span> |
+??? tiny "[=0% "**intl** 0 / 1759"]"
+    | PHP | PeachPie |
+    | --- | ---      |
+    | function intlcal_create_instance($timezone,$locale) | - <span style='color:red;font-weight:bold;'>function intlcal_create_instance($timezone,$locale)</span> |
+    | function intlcal_get_keyword_values_for_locale($keyword,$locale,$onlyCommon) | - <span style='color:red;font-weight:bold;'>function intlcal_get_keyword_values_for_locale($keyword,$locale,$onlyCommon)</span> |
+    | function intlcal_get_now() | - <span style='color:red;font-weight:bold;'>function intlcal_get_now()</span> |
+    | function intlcal_get_available_locales() | - <span style='color:red;font-weight:bold;'>function intlcal_get_available_locales()</span> |
+    | function intlcal_get($calendar,$field) | - <span style='color:red;font-weight:bold;'>function intlcal_get($calendar,$field)</span> |
+    | function intlcal_get_time($calendar) | - <span style='color:red;font-weight:bold;'>function intlcal_get_time($calendar)</span> |
+    | function intlcal_set_time($calendar,$timestamp) | - <span style='color:red;font-weight:bold;'>function intlcal_set_time($calendar,$timestamp)</span> |
+    | function intlcal_add($calendar,$field,$value) | - <span style='color:red;font-weight:bold;'>function intlcal_add($calendar,$field,$value)</span> |
+    | function intlcal_set_time_zone($calendar,$timezone) | - <span style='color:red;font-weight:bold;'>function intlcal_set_time_zone($calendar,$timezone)</span> |
+    | function intlcal_after($calendar,$other) | - <span style='color:red;font-weight:bold;'>function intlcal_after($calendar,$other)</span> |
+    | function intlcal_before($calendar,$other) | - <span style='color:red;font-weight:bold;'>function intlcal_before($calendar,$other)</span> |
+    | function intlcal_set($calendar,$year,$month,$dayOfMonth,$hour,$minute,$second) | - <span style='color:red;font-weight:bold;'>function intlcal_set($calendar,$year,$month,$dayOfMonth,$hour,$minute,$second)</span> |
+    | function intlcal_roll($calendar,$field,$value) | - <span style='color:red;font-weight:bold;'>function intlcal_roll($calendar,$field,$value)</span> |
+    | function intlcal_clear($calendar,$field) | - <span style='color:red;font-weight:bold;'>function intlcal_clear($calendar,$field)</span> |
+    | function intlcal_field_difference($calendar,$timestamp,$field) | - <span style='color:red;font-weight:bold;'>function intlcal_field_difference($calendar,$timestamp,$field)</span> |
+    | function intlcal_get_actual_maximum($calendar,$field) | - <span style='color:red;font-weight:bold;'>function intlcal_get_actual_maximum($calendar,$field)</span> |
+    | function intlcal_get_actual_minimum($calendar,$field) | - <span style='color:red;font-weight:bold;'>function intlcal_get_actual_minimum($calendar,$field)</span> |
+    | function intlcal_get_day_of_week_type($calendar,$dayOfWeek) | - <span style='color:red;font-weight:bold;'>function intlcal_get_day_of_week_type($calendar,$dayOfWeek)</span> |
+    | function intlcal_get_first_day_of_week($calendar) | - <span style='color:red;font-weight:bold;'>function intlcal_get_first_day_of_week($calendar)</span> |
+    | function intlcal_get_least_maximum($calendar,$field) | - <span style='color:red;font-weight:bold;'>function intlcal_get_least_maximum($calendar,$field)</span> |
+    | function intlcal_get_greatest_minimum($calendar,$field) | - <span style='color:red;font-weight:bold;'>function intlcal_get_greatest_minimum($calendar,$field)</span> |
+    | function intlcal_get_locale($calendar,$type) | - <span style='color:red;font-weight:bold;'>function intlcal_get_locale($calendar,$type)</span> |
+    | function intlcal_get_maximum($calendar,$field) | - <span style='color:red;font-weight:bold;'>function intlcal_get_maximum($calendar,$field)</span> |
+    | function intlcal_get_minimal_days_in_first_week($calendar) | - <span style='color:red;font-weight:bold;'>function intlcal_get_minimal_days_in_first_week($calendar)</span> |
+    | function intlcal_set_minimal_days_in_first_week($calendar,$days) | - <span style='color:red;font-weight:bold;'>function intlcal_set_minimal_days_in_first_week($calendar,$days)</span> |
+    | function intlcal_get_minimum($calendar,$field) | - <span style='color:red;font-weight:bold;'>function intlcal_get_minimum($calendar,$field)</span> |
+    | function intlcal_get_time_zone($calendar) | - <span style='color:red;font-weight:bold;'>function intlcal_get_time_zone($calendar)</span> |
+    | function intlcal_get_type($calendar) | - <span style='color:red;font-weight:bold;'>function intlcal_get_type($calendar)</span> |
+    | function intlcal_get_weekend_transition($calendar,$dayOfWeek) | - <span style='color:red;font-weight:bold;'>function intlcal_get_weekend_transition($calendar,$dayOfWeek)</span> |
+    | function intlcal_in_daylight_time($calendar) | - <span style='color:red;font-weight:bold;'>function intlcal_in_daylight_time($calendar)</span> |
+    | function intlcal_is_lenient($calendar) | - <span style='color:red;font-weight:bold;'>function intlcal_is_lenient($calendar)</span> |
+    | function intlcal_is_set($calendar,$field) | - <span style='color:red;font-weight:bold;'>function intlcal_is_set($calendar,$field)</span> |
+    | function intlcal_is_equivalent_to($calendar,$other) | - <span style='color:red;font-weight:bold;'>function intlcal_is_equivalent_to($calendar,$other)</span> |
+    | function intlcal_is_weekend($calendar,$timestamp) | - <span style='color:red;font-weight:bold;'>function intlcal_is_weekend($calendar,$timestamp)</span> |
+    | function intlcal_set_first_day_of_week($calendar,$dayOfWeek) | - <span style='color:red;font-weight:bold;'>function intlcal_set_first_day_of_week($calendar,$dayOfWeek)</span> |
+    | function intlcal_set_lenient($calendar,$lenient) | - <span style='color:red;font-weight:bold;'>function intlcal_set_lenient($calendar,$lenient)</span> |
+    | function intlcal_get_repeated_wall_time_option($calendar) | - <span style='color:red;font-weight:bold;'>function intlcal_get_repeated_wall_time_option($calendar)</span> |
+    | function intlcal_equals($calendar,$other) | - <span style='color:red;font-weight:bold;'>function intlcal_equals($calendar,$other)</span> |
+    | function intlcal_get_skipped_wall_time_option($calendar) | - <span style='color:red;font-weight:bold;'>function intlcal_get_skipped_wall_time_option($calendar)</span> |
+    | function intlcal_set_repeated_wall_time_option($calendar,$option) | - <span style='color:red;font-weight:bold;'>function intlcal_set_repeated_wall_time_option($calendar,$option)</span> |
+    | function intlcal_set_skipped_wall_time_option($calendar,$option) | - <span style='color:red;font-weight:bold;'>function intlcal_set_skipped_wall_time_option($calendar,$option)</span> |
+    | function intlcal_from_date_time($datetime,$locale) | - <span style='color:red;font-weight:bold;'>function intlcal_from_date_time($datetime,$locale)</span> |
+    | function intlcal_to_date_time($calendar) | - <span style='color:red;font-weight:bold;'>function intlcal_to_date_time($calendar)</span> |
+    | function intlcal_get_error_code($calendar) | - <span style='color:red;font-weight:bold;'>function intlcal_get_error_code($calendar)</span> |
+    | function intlcal_get_error_message($calendar) | - <span style='color:red;font-weight:bold;'>function intlcal_get_error_message($calendar)</span> |
+    | function intlgregcal_create_instance($timezoneOrYear,$localeOrMonth,$day,$hour,$minute,$second) | - <span style='color:red;font-weight:bold;'>function intlgregcal_create_instance($timezoneOrYear,$localeOrMonth,$day,$hour,$minute,$second)</span> |
+    | function intlgregcal_set_gregorian_change($calendar,$timestamp) | - <span style='color:red;font-weight:bold;'>function intlgregcal_set_gregorian_change($calendar,$timestamp)</span> |
+    | function intlgregcal_get_gregorian_change($calendar) | - <span style='color:red;font-weight:bold;'>function intlgregcal_get_gregorian_change($calendar)</span> |
+    | function intlgregcal_is_leap_year($calendar,$year) | - <span style='color:red;font-weight:bold;'>function intlgregcal_is_leap_year($calendar,$year)</span> |
+    | function collator_create($locale) | - <span style='color:red;font-weight:bold;'>function collator_create($locale)</span> |
+    | function collator_compare($object,$string1,$string2) | - <span style='color:red;font-weight:bold;'>function collator_compare($object,$string1,$string2)</span> |
+    | function collator_get_attribute($object,$attribute) | - <span style='color:red;font-weight:bold;'>function collator_get_attribute($object,$attribute)</span> |
+    | function collator_set_attribute($object,$attribute,$value) | - <span style='color:red;font-weight:bold;'>function collator_set_attribute($object,$attribute,$value)</span> |
+    | function collator_get_strength($object) | - <span style='color:red;font-weight:bold;'>function collator_get_strength($object)</span> |
+    | function collator_set_strength($object,$strength) | - <span style='color:red;font-weight:bold;'>function collator_set_strength($object,$strength)</span> |
+    | function collator_sort($object,$array,$flags) | - <span style='color:red;font-weight:bold;'>function collator_sort($object,$array,$flags)</span> |
+    | function collator_sort_with_sort_keys($object,$array) | - <span style='color:red;font-weight:bold;'>function collator_sort_with_sort_keys($object,$array)</span> |
+    | function collator_asort($object,$array,$flags) | - <span style='color:red;font-weight:bold;'>function collator_asort($object,$array,$flags)</span> |
+    | function collator_get_locale($object,$type) | - <span style='color:red;font-weight:bold;'>function collator_get_locale($object,$type)</span> |
+    | function collator_get_error_code($object) | - <span style='color:red;font-weight:bold;'>function collator_get_error_code($object)</span> |
+    | function collator_get_error_message($object) | - <span style='color:red;font-weight:bold;'>function collator_get_error_message($object)</span> |
+    | function collator_get_sort_key($object,$string) | - <span style='color:red;font-weight:bold;'>function collator_get_sort_key($object,$string)</span> |
+    | function intl_get_error_code() | - <span style='color:red;font-weight:bold;'>function intl_get_error_code()</span> |
+    | function intl_get_error_message() | - <span style='color:red;font-weight:bold;'>function intl_get_error_message()</span> |
+    | function intl_is_failure($errorCode) | - <span style='color:red;font-weight:bold;'>function intl_is_failure($errorCode)</span> |
+    | function intl_error_name($errorCode) | - <span style='color:red;font-weight:bold;'>function intl_error_name($errorCode)</span> |
+    | function datefmt_create($locale,$dateType,$timeType,$timezone,$calendar,$pattern) | - <span style='color:red;font-weight:bold;'>function datefmt_create($locale,$dateType,$timeType,$timezone,$calendar,$pattern)</span> |
+    | function datefmt_get_datetype($formatter) | - <span style='color:red;font-weight:bold;'>function datefmt_get_datetype($formatter)</span> |
+    | function datefmt_get_timetype($formatter) | - <span style='color:red;font-weight:bold;'>function datefmt_get_timetype($formatter)</span> |
+    | function datefmt_get_calendar($formatter) | - <span style='color:red;font-weight:bold;'>function datefmt_get_calendar($formatter)</span> |
+    | function datefmt_set_calendar($formatter,$calendar) | - <span style='color:red;font-weight:bold;'>function datefmt_set_calendar($formatter,$calendar)</span> |
+    | function datefmt_get_timezone_id($formatter) | - <span style='color:red;font-weight:bold;'>function datefmt_get_timezone_id($formatter)</span> |
+    | function datefmt_get_calendar_object($formatter) | - <span style='color:red;font-weight:bold;'>function datefmt_get_calendar_object($formatter)</span> |
+    | function datefmt_get_timezone($formatter) | - <span style='color:red;font-weight:bold;'>function datefmt_get_timezone($formatter)</span> |
+    | function datefmt_set_timezone($formatter,$timezone) | - <span style='color:red;font-weight:bold;'>function datefmt_set_timezone($formatter,$timezone)</span> |
+    | function datefmt_set_pattern($formatter,$pattern) | - <span style='color:red;font-weight:bold;'>function datefmt_set_pattern($formatter,$pattern)</span> |
+    | function datefmt_get_pattern($formatter) | - <span style='color:red;font-weight:bold;'>function datefmt_get_pattern($formatter)</span> |
+    | function datefmt_get_locale($formatter,$type) | - <span style='color:red;font-weight:bold;'>function datefmt_get_locale($formatter,$type)</span> |
+    | function datefmt_set_lenient($formatter,$lenient) | - <span style='color:red;font-weight:bold;'>function datefmt_set_lenient($formatter,$lenient)</span> |
+    | function datefmt_is_lenient($formatter) | - <span style='color:red;font-weight:bold;'>function datefmt_is_lenient($formatter)</span> |
+    | function datefmt_format($formatter,$datetime) | - <span style='color:red;font-weight:bold;'>function datefmt_format($formatter,$datetime)</span> |
+    | function datefmt_format_object($datetime,$format,$locale) | - <span style='color:red;font-weight:bold;'>function datefmt_format_object($datetime,$format,$locale)</span> |
+    | function datefmt_parse($formatter,$string,$offset) | - <span style='color:red;font-weight:bold;'>function datefmt_parse($formatter,$string,$offset)</span> |
+    | function datefmt_localtime($formatter,$string,$offset) | - <span style='color:red;font-weight:bold;'>function datefmt_localtime($formatter,$string,$offset)</span> |
+    | function datefmt_get_error_code($formatter) | - <span style='color:red;font-weight:bold;'>function datefmt_get_error_code($formatter)</span> |
+    | function datefmt_get_error_message($formatter) | - <span style='color:red;font-weight:bold;'>function datefmt_get_error_message($formatter)</span> |
+    | function numfmt_create($locale,$style,$pattern) | - <span style='color:red;font-weight:bold;'>function numfmt_create($locale,$style,$pattern)</span> |
+    | function numfmt_format($formatter,$num,$type) | - <span style='color:red;font-weight:bold;'>function numfmt_format($formatter,$num,$type)</span> |
+    | function numfmt_parse($formatter,$string,$type,$offset) | - <span style='color:red;font-weight:bold;'>function numfmt_parse($formatter,$string,$type,$offset)</span> |
+    | function numfmt_format_currency($formatter,$amount,$currency) | - <span style='color:red;font-weight:bold;'>function numfmt_format_currency($formatter,$amount,$currency)</span> |
+    | function numfmt_parse_currency($formatter,$string,$currency,$offset) | - <span style='color:red;font-weight:bold;'>function numfmt_parse_currency($formatter,$string,$currency,$offset)</span> |
+    | function numfmt_set_attribute($formatter,$attribute,$value) | - <span style='color:red;font-weight:bold;'>function numfmt_set_attribute($formatter,$attribute,$value)</span> |
+    | function numfmt_get_attribute($formatter,$attribute) | - <span style='color:red;font-weight:bold;'>function numfmt_get_attribute($formatter,$attribute)</span> |
+    | function numfmt_set_text_attribute($formatter,$attribute,$value) | - <span style='color:red;font-weight:bold;'>function numfmt_set_text_attribute($formatter,$attribute,$value)</span> |
+    | function numfmt_get_text_attribute($formatter,$attribute) | - <span style='color:red;font-weight:bold;'>function numfmt_get_text_attribute($formatter,$attribute)</span> |
+    | function numfmt_set_symbol($formatter,$symbol,$value) | - <span style='color:red;font-weight:bold;'>function numfmt_set_symbol($formatter,$symbol,$value)</span> |
+    | function numfmt_get_symbol($formatter,$symbol) | - <span style='color:red;font-weight:bold;'>function numfmt_get_symbol($formatter,$symbol)</span> |
+    | function numfmt_set_pattern($formatter,$pattern) | - <span style='color:red;font-weight:bold;'>function numfmt_set_pattern($formatter,$pattern)</span> |
+    | function numfmt_get_pattern($formatter) | - <span style='color:red;font-weight:bold;'>function numfmt_get_pattern($formatter)</span> |
+    | function numfmt_get_locale($formatter,$type) | - <span style='color:red;font-weight:bold;'>function numfmt_get_locale($formatter,$type)</span> |
+    | function numfmt_get_error_code($formatter) | - <span style='color:red;font-weight:bold;'>function numfmt_get_error_code($formatter)</span> |
+    | function numfmt_get_error_message($formatter) | - <span style='color:red;font-weight:bold;'>function numfmt_get_error_message($formatter)</span> |
+    | function grapheme_strlen($string) | - <span style='color:red;font-weight:bold;'>function grapheme_strlen($string)</span> |
+    | function grapheme_strpos($haystack,$needle,$offset) | - <span style='color:red;font-weight:bold;'>function grapheme_strpos($haystack,$needle,$offset)</span> |
+    | function grapheme_stripos($haystack,$needle,$offset) | - <span style='color:red;font-weight:bold;'>function grapheme_stripos($haystack,$needle,$offset)</span> |
+    | function grapheme_strrpos($haystack,$needle,$offset) | - <span style='color:red;font-weight:bold;'>function grapheme_strrpos($haystack,$needle,$offset)</span> |
+    | function grapheme_strripos($haystack,$needle,$offset) | - <span style='color:red;font-weight:bold;'>function grapheme_strripos($haystack,$needle,$offset)</span> |
+    | function grapheme_substr($string,$offset,$length) | - <span style='color:red;font-weight:bold;'>function grapheme_substr($string,$offset,$length)</span> |
+    | function grapheme_strstr($haystack,$needle,$beforeNeedle) | - <span style='color:red;font-weight:bold;'>function grapheme_strstr($haystack,$needle,$beforeNeedle)</span> |
+    | function grapheme_stristr($haystack,$needle,$beforeNeedle) | - <span style='color:red;font-weight:bold;'>function grapheme_stristr($haystack,$needle,$beforeNeedle)</span> |
+    | function grapheme_extract($haystack,$size,$type,$offset,$next) | - <span style='color:red;font-weight:bold;'>function grapheme_extract($haystack,$size,$type,$offset,$next)</span> |
+    | function idn_to_ascii($domain,$flags,$variant,$idna_info) | - <span style='color:red;font-weight:bold;'>function idn_to_ascii($domain,$flags,$variant,$idna_info)</span> |
+    | function idn_to_utf8($domain,$flags,$variant,$idna_info) | - <span style='color:red;font-weight:bold;'>function idn_to_utf8($domain,$flags,$variant,$idna_info)</span> |
+    | function locale_get_default() | - <span style='color:red;font-weight:bold;'>function locale_get_default()</span> |
+    | function locale_set_default($locale) | - <span style='color:red;font-weight:bold;'>function locale_set_default($locale)</span> |
+    | function locale_get_primary_language($locale) | - <span style='color:red;font-weight:bold;'>function locale_get_primary_language($locale)</span> |
+    | function locale_get_script($locale) | - <span style='color:red;font-weight:bold;'>function locale_get_script($locale)</span> |
+    | function locale_get_region($locale) | - <span style='color:red;font-weight:bold;'>function locale_get_region($locale)</span> |
+    | function locale_get_keywords($locale) | - <span style='color:red;font-weight:bold;'>function locale_get_keywords($locale)</span> |
+    | function locale_get_display_script($locale,$displayLocale) | - <span style='color:red;font-weight:bold;'>function locale_get_display_script($locale,$displayLocale)</span> |
+    | function locale_get_display_region($locale,$displayLocale) | - <span style='color:red;font-weight:bold;'>function locale_get_display_region($locale,$displayLocale)</span> |
+    | function locale_get_display_name($locale,$displayLocale) | - <span style='color:red;font-weight:bold;'>function locale_get_display_name($locale,$displayLocale)</span> |
+    | function locale_get_display_language($locale,$displayLocale) | - <span style='color:red;font-weight:bold;'>function locale_get_display_language($locale,$displayLocale)</span> |
+    | function locale_get_display_variant($locale,$displayLocale) | - <span style='color:red;font-weight:bold;'>function locale_get_display_variant($locale,$displayLocale)</span> |
+    | function locale_compose($subtags) | - <span style='color:red;font-weight:bold;'>function locale_compose($subtags)</span> |
+    | function locale_parse($locale) | - <span style='color:red;font-weight:bold;'>function locale_parse($locale)</span> |
+    | function locale_get_all_variants($locale) | - <span style='color:red;font-weight:bold;'>function locale_get_all_variants($locale)</span> |
+    | function locale_filter_matches($languageTag,$locale,$canonicalize) | - <span style='color:red;font-weight:bold;'>function locale_filter_matches($languageTag,$locale,$canonicalize)</span> |
+    | function locale_canonicalize($locale) | - <span style='color:red;font-weight:bold;'>function locale_canonicalize($locale)</span> |
+    | function locale_lookup($languageTag,$locale,$canonicalize,$defaultLocale) | - <span style='color:red;font-weight:bold;'>function locale_lookup($languageTag,$locale,$canonicalize,$defaultLocale)</span> |
+    | function locale_accept_from_http($header) | - <span style='color:red;font-weight:bold;'>function locale_accept_from_http($header)</span> |
+    | function msgfmt_create($locale,$pattern) | - <span style='color:red;font-weight:bold;'>function msgfmt_create($locale,$pattern)</span> |
+    | function msgfmt_format($formatter,$values) | - <span style='color:red;font-weight:bold;'>function msgfmt_format($formatter,$values)</span> |
+    | function msgfmt_format_message($locale,$pattern,$values) | - <span style='color:red;font-weight:bold;'>function msgfmt_format_message($locale,$pattern,$values)</span> |
+    | function msgfmt_parse($formatter,$string) | - <span style='color:red;font-weight:bold;'>function msgfmt_parse($formatter,$string)</span> |
+    | function msgfmt_parse_message($locale,$pattern,$message) | - <span style='color:red;font-weight:bold;'>function msgfmt_parse_message($locale,$pattern,$message)</span> |
+    | function msgfmt_set_pattern($formatter,$pattern) | - <span style='color:red;font-weight:bold;'>function msgfmt_set_pattern($formatter,$pattern)</span> |
+    | function msgfmt_get_pattern($formatter) | - <span style='color:red;font-weight:bold;'>function msgfmt_get_pattern($formatter)</span> |
+    | function msgfmt_get_locale($formatter) | - <span style='color:red;font-weight:bold;'>function msgfmt_get_locale($formatter)</span> |
+    | function msgfmt_get_error_code($formatter) | - <span style='color:red;font-weight:bold;'>function msgfmt_get_error_code($formatter)</span> |
+    | function msgfmt_get_error_message($formatter) | - <span style='color:red;font-weight:bold;'>function msgfmt_get_error_message($formatter)</span> |
+    | function normalizer_normalize($string,$form) | - <span style='color:red;font-weight:bold;'>function normalizer_normalize($string,$form)</span> |
+    | function normalizer_is_normalized($string,$form) | - <span style='color:red;font-weight:bold;'>function normalizer_is_normalized($string,$form)</span> |
+    | function normalizer_get_raw_decomposition($string,$form) | - <span style='color:red;font-weight:bold;'>function normalizer_get_raw_decomposition($string,$form)</span> |
+    | function resourcebundle_create($locale,$bundle,$fallback) | - <span style='color:red;font-weight:bold;'>function resourcebundle_create($locale,$bundle,$fallback)</span> |
+    | function resourcebundle_get($bundle,$index,$fallback) | - <span style='color:red;font-weight:bold;'>function resourcebundle_get($bundle,$index,$fallback)</span> |
+    | function resourcebundle_count($bundle) | - <span style='color:red;font-weight:bold;'>function resourcebundle_count($bundle)</span> |
+    | function resourcebundle_locales($bundle) | - <span style='color:red;font-weight:bold;'>function resourcebundle_locales($bundle)</span> |
+    | function resourcebundle_get_error_code($bundle) | - <span style='color:red;font-weight:bold;'>function resourcebundle_get_error_code($bundle)</span> |
+    | function resourcebundle_get_error_message($bundle) | - <span style='color:red;font-weight:bold;'>function resourcebundle_get_error_message($bundle)</span> |
+    | function intltz_count_equivalent_ids($timezoneId) | - <span style='color:red;font-weight:bold;'>function intltz_count_equivalent_ids($timezoneId)</span> |
+    | function intltz_create_default() | - <span style='color:red;font-weight:bold;'>function intltz_create_default()</span> |
+    | function intltz_create_enumeration($countryOrRawOffset) | - <span style='color:red;font-weight:bold;'>function intltz_create_enumeration($countryOrRawOffset)</span> |
+    | function intltz_create_time_zone($timezoneId) | - <span style='color:red;font-weight:bold;'>function intltz_create_time_zone($timezoneId)</span> |
+    | function intltz_create_time_zone_id_enumeration($type,$region,$rawOffset) | - <span style='color:red;font-weight:bold;'>function intltz_create_time_zone_id_enumeration($type,$region,$rawOffset)</span> |
+    | function intltz_from_date_time_zone($timezone) | - <span style='color:red;font-weight:bold;'>function intltz_from_date_time_zone($timezone)</span> |
+    | function intltz_get_canonical_id($timezoneId,$isSystemId) | - <span style='color:red;font-weight:bold;'>function intltz_get_canonical_id($timezoneId,$isSystemId)</span> |
+    | function intltz_get_display_name($timezone,$dst,$style,$locale) | - <span style='color:red;font-weight:bold;'>function intltz_get_display_name($timezone,$dst,$style,$locale)</span> |
+    | function intltz_get_dst_savings($timezone) | - <span style='color:red;font-weight:bold;'>function intltz_get_dst_savings($timezone)</span> |
+    | function intltz_get_equivalent_id($timezoneId,$offset) | - <span style='color:red;font-weight:bold;'>function intltz_get_equivalent_id($timezoneId,$offset)</span> |
+    | function intltz_get_error_code($timezone) | - <span style='color:red;font-weight:bold;'>function intltz_get_error_code($timezone)</span> |
+    | function intltz_get_error_message($timezone) | - <span style='color:red;font-weight:bold;'>function intltz_get_error_message($timezone)</span> |
+    | function intltz_get_gmt() | - <span style='color:red;font-weight:bold;'>function intltz_get_gmt()</span> |
+    | function intltz_get_id($timezone) | - <span style='color:red;font-weight:bold;'>function intltz_get_id($timezone)</span> |
+    | function intltz_get_offset($timezone,$timestamp,$local,$rawOffset,$dstOffset) | - <span style='color:red;font-weight:bold;'>function intltz_get_offset($timezone,$timestamp,$local,$rawOffset,$dstOffset)</span> |
+    | function intltz_get_raw_offset($timezone) | - <span style='color:red;font-weight:bold;'>function intltz_get_raw_offset($timezone)</span> |
+    | function intltz_get_region($timezoneId) | - <span style='color:red;font-weight:bold;'>function intltz_get_region($timezoneId)</span> |
+    | function intltz_get_tz_data_version() | - <span style='color:red;font-weight:bold;'>function intltz_get_tz_data_version()</span> |
+    | function intltz_get_unknown() | - <span style='color:red;font-weight:bold;'>function intltz_get_unknown()</span> |
+    | function intltz_get_windows_id($timezoneId) | - <span style='color:red;font-weight:bold;'>function intltz_get_windows_id($timezoneId)</span> |
+    | function intltz_get_id_for_windows_id($timezoneId,$region) | - <span style='color:red;font-weight:bold;'>function intltz_get_id_for_windows_id($timezoneId,$region)</span> |
+    | function intltz_has_same_rules($timezone,$other) | - <span style='color:red;font-weight:bold;'>function intltz_has_same_rules($timezone,$other)</span> |
+    | function intltz_to_date_time_zone($timezone) | - <span style='color:red;font-weight:bold;'>function intltz_to_date_time_zone($timezone)</span> |
+    | function intltz_use_daylight_time($timezone) | - <span style='color:red;font-weight:bold;'>function intltz_use_daylight_time($timezone)</span> |
+    | function transliterator_create($id,$direction) | - <span style='color:red;font-weight:bold;'>function transliterator_create($id,$direction)</span> |
+    | function transliterator_create_from_rules($rules,$direction) | - <span style='color:red;font-weight:bold;'>function transliterator_create_from_rules($rules,$direction)</span> |
+    | function transliterator_list_ids() | - <span style='color:red;font-weight:bold;'>function transliterator_list_ids()</span> |
+    | function transliterator_create_inverse($transliterator) | - <span style='color:red;font-weight:bold;'>function transliterator_create_inverse($transliterator)</span> |
+    | function transliterator_transliterate($transliterator,$string,$start,$end) | - <span style='color:red;font-weight:bold;'>function transliterator_transliterate($transliterator,$string,$start,$end)</span> |
+    | function transliterator_get_error_code($transliterator) | - <span style='color:red;font-weight:bold;'>function transliterator_get_error_code($transliterator)</span> |
+    | function transliterator_get_error_message($transliterator) | - <span style='color:red;font-weight:bold;'>function transliterator_get_error_message($transliterator)</span> |
+    | class Collator | - <span style='color:red;font-weight:bold;'>class Collator</span> |
+    | class NumberFormatter | - <span style='color:red;font-weight:bold;'>class NumberFormatter</span> |
+    | class Normalizer | - <span style='color:red;font-weight:bold;'>class Normalizer</span> |
+    | class Locale | - <span style='color:red;font-weight:bold;'>class Locale</span> |
+    | class MessageFormatter | - <span style='color:red;font-weight:bold;'>class MessageFormatter</span> |
+    | class IntlDateFormatter | - <span style='color:red;font-weight:bold;'>class IntlDateFormatter</span> |
+    | class ResourceBundle | - <span style='color:red;font-weight:bold;'>class ResourceBundle</span> |
+    | class Transliterator | - <span style='color:red;font-weight:bold;'>class Transliterator</span> |
+    | class IntlTimeZone | - <span style='color:red;font-weight:bold;'>class IntlTimeZone</span> |
+    | class IntlCalendar | - <span style='color:red;font-weight:bold;'>class IntlCalendar</span> |
+    | class IntlGregorianCalendar | - <span style='color:red;font-weight:bold;'>class IntlGregorianCalendar</span> |
+    | class Spoofchecker | - <span style='color:red;font-weight:bold;'>class Spoofchecker</span> |
+    | class IntlException | - <span style='color:red;font-weight:bold;'>class IntlException</span> |
+    | class IntlIterator | - <span style='color:red;font-weight:bold;'>class IntlIterator</span> |
+    | class IntlBreakIterator | - <span style='color:red;font-weight:bold;'>class IntlBreakIterator</span> |
+    | class IntlRuleBasedBreakIterator | - <span style='color:red;font-weight:bold;'>class IntlRuleBasedBreakIterator</span> |
+    | class IntlCodePointBreakIterator | - <span style='color:red;font-weight:bold;'>class IntlCodePointBreakIterator</span> |
+    | class IntlPartsIterator | - <span style='color:red;font-weight:bold;'>class IntlPartsIterator</span> |
+    | class UConverter | - <span style='color:red;font-weight:bold;'>class UConverter</span> |
+    | class IntlChar | - <span style='color:red;font-weight:bold;'>class IntlChar</span> |
+    | const INTL_MAX_LOCALE_LEN | - <span style='color:red;font-weight:bold;'>const INTL_MAX_LOCALE_LEN</span> |
+    | const INTL_ICU_VERSION | - <span style='color:red;font-weight:bold;'>const INTL_ICU_VERSION</span> |
+    | const INTL_ICU_DATA_VERSION | - <span style='color:red;font-weight:bold;'>const INTL_ICU_DATA_VERSION</span> |
+    | const ULOC_ACTUAL_LOCALE | - <span style='color:red;font-weight:bold;'>const ULOC_ACTUAL_LOCALE</span> |
+    | const ULOC_VALID_LOCALE | - <span style='color:red;font-weight:bold;'>const ULOC_VALID_LOCALE</span> |
+    | const GRAPHEME_EXTR_COUNT | - <span style='color:red;font-weight:bold;'>const GRAPHEME_EXTR_COUNT</span> |
+    | const GRAPHEME_EXTR_MAXBYTES | - <span style='color:red;font-weight:bold;'>const GRAPHEME_EXTR_MAXBYTES</span> |
+    | const GRAPHEME_EXTR_MAXCHARS | - <span style='color:red;font-weight:bold;'>const GRAPHEME_EXTR_MAXCHARS</span> |
+    | const U_USING_FALLBACK_WARNING | - <span style='color:red;font-weight:bold;'>const U_USING_FALLBACK_WARNING</span> |
+    | const U_ERROR_WARNING_START | - <span style='color:red;font-weight:bold;'>const U_ERROR_WARNING_START</span> |
+    | const U_USING_DEFAULT_WARNING | - <span style='color:red;font-weight:bold;'>const U_USING_DEFAULT_WARNING</span> |
+    | const U_SAFECLONE_ALLOCATED_WARNING | - <span style='color:red;font-weight:bold;'>const U_SAFECLONE_ALLOCATED_WARNING</span> |
+    | const U_STATE_OLD_WARNING | - <span style='color:red;font-weight:bold;'>const U_STATE_OLD_WARNING</span> |
+    | const U_STRING_NOT_TERMINATED_WARNING | - <span style='color:red;font-weight:bold;'>const U_STRING_NOT_TERMINATED_WARNING</span> |
+    | const U_SORT_KEY_TOO_SHORT_WARNING | - <span style='color:red;font-weight:bold;'>const U_SORT_KEY_TOO_SHORT_WARNING</span> |
+    | const U_AMBIGUOUS_ALIAS_WARNING | - <span style='color:red;font-weight:bold;'>const U_AMBIGUOUS_ALIAS_WARNING</span> |
+    | const U_DIFFERENT_UCA_VERSION | - <span style='color:red;font-weight:bold;'>const U_DIFFERENT_UCA_VERSION</span> |
+    | const U_ERROR_WARNING_LIMIT | - <span style='color:red;font-weight:bold;'>const U_ERROR_WARNING_LIMIT</span> |
+    | const U_ZERO_ERROR | - <span style='color:red;font-weight:bold;'>const U_ZERO_ERROR</span> |
+    | const U_ILLEGAL_ARGUMENT_ERROR | - <span style='color:red;font-weight:bold;'>const U_ILLEGAL_ARGUMENT_ERROR</span> |
+    | const U_MISSING_RESOURCE_ERROR | - <span style='color:red;font-weight:bold;'>const U_MISSING_RESOURCE_ERROR</span> |
+    | const U_INVALID_FORMAT_ERROR | - <span style='color:red;font-weight:bold;'>const U_INVALID_FORMAT_ERROR</span> |
+    | const U_FILE_ACCESS_ERROR | - <span style='color:red;font-weight:bold;'>const U_FILE_ACCESS_ERROR</span> |
+    | const U_INTERNAL_PROGRAM_ERROR | - <span style='color:red;font-weight:bold;'>const U_INTERNAL_PROGRAM_ERROR</span> |
+    | const U_MESSAGE_PARSE_ERROR | - <span style='color:red;font-weight:bold;'>const U_MESSAGE_PARSE_ERROR</span> |
+    | const U_MEMORY_ALLOCATION_ERROR | - <span style='color:red;font-weight:bold;'>const U_MEMORY_ALLOCATION_ERROR</span> |
+    | const U_INDEX_OUTOFBOUNDS_ERROR | - <span style='color:red;font-weight:bold;'>const U_INDEX_OUTOFBOUNDS_ERROR</span> |
+    | const U_PARSE_ERROR | - <span style='color:red;font-weight:bold;'>const U_PARSE_ERROR</span> |
+    | const U_INVALID_CHAR_FOUND | - <span style='color:red;font-weight:bold;'>const U_INVALID_CHAR_FOUND</span> |
+    | const U_TRUNCATED_CHAR_FOUND | - <span style='color:red;font-weight:bold;'>const U_TRUNCATED_CHAR_FOUND</span> |
+    | const U_ILLEGAL_CHAR_FOUND | - <span style='color:red;font-weight:bold;'>const U_ILLEGAL_CHAR_FOUND</span> |
+    | const U_INVALID_TABLE_FORMAT | - <span style='color:red;font-weight:bold;'>const U_INVALID_TABLE_FORMAT</span> |
+    | const U_INVALID_TABLE_FILE | - <span style='color:red;font-weight:bold;'>const U_INVALID_TABLE_FILE</span> |
+    | const U_BUFFER_OVERFLOW_ERROR | - <span style='color:red;font-weight:bold;'>const U_BUFFER_OVERFLOW_ERROR</span> |
+    | const U_UNSUPPORTED_ERROR | - <span style='color:red;font-weight:bold;'>const U_UNSUPPORTED_ERROR</span> |
+    | const U_RESOURCE_TYPE_MISMATCH | - <span style='color:red;font-weight:bold;'>const U_RESOURCE_TYPE_MISMATCH</span> |
+    | const U_ILLEGAL_ESCAPE_SEQUENCE | - <span style='color:red;font-weight:bold;'>const U_ILLEGAL_ESCAPE_SEQUENCE</span> |
+    | const U_UNSUPPORTED_ESCAPE_SEQUENCE | - <span style='color:red;font-weight:bold;'>const U_UNSUPPORTED_ESCAPE_SEQUENCE</span> |
+    | const U_NO_SPACE_AVAILABLE | - <span style='color:red;font-weight:bold;'>const U_NO_SPACE_AVAILABLE</span> |
+    | const U_CE_NOT_FOUND_ERROR | - <span style='color:red;font-weight:bold;'>const U_CE_NOT_FOUND_ERROR</span> |
+    | const U_PRIMARY_TOO_LONG_ERROR | - <span style='color:red;font-weight:bold;'>const U_PRIMARY_TOO_LONG_ERROR</span> |
+    | const U_STATE_TOO_OLD_ERROR | - <span style='color:red;font-weight:bold;'>const U_STATE_TOO_OLD_ERROR</span> |
+    | const U_TOO_MANY_ALIASES_ERROR | - <span style='color:red;font-weight:bold;'>const U_TOO_MANY_ALIASES_ERROR</span> |
+    | const U_ENUM_OUT_OF_SYNC_ERROR | - <span style='color:red;font-weight:bold;'>const U_ENUM_OUT_OF_SYNC_ERROR</span> |
+    | const U_INVARIANT_CONVERSION_ERROR | - <span style='color:red;font-weight:bold;'>const U_INVARIANT_CONVERSION_ERROR</span> |
+    | const U_INVALID_STATE_ERROR | - <span style='color:red;font-weight:bold;'>const U_INVALID_STATE_ERROR</span> |
+    | const U_COLLATOR_VERSION_MISMATCH | - <span style='color:red;font-weight:bold;'>const U_COLLATOR_VERSION_MISMATCH</span> |
+    | const U_USELESS_COLLATOR_ERROR | - <span style='color:red;font-weight:bold;'>const U_USELESS_COLLATOR_ERROR</span> |
+    | const U_NO_WRITE_PERMISSION | - <span style='color:red;font-weight:bold;'>const U_NO_WRITE_PERMISSION</span> |
+    | const U_STANDARD_ERROR_LIMIT | - <span style='color:red;font-weight:bold;'>const U_STANDARD_ERROR_LIMIT</span> |
+    | const U_BAD_VARIABLE_DEFINITION | - <span style='color:red;font-weight:bold;'>const U_BAD_VARIABLE_DEFINITION</span> |
+    | const U_PARSE_ERROR_START | - <span style='color:red;font-weight:bold;'>const U_PARSE_ERROR_START</span> |
+    | const U_MALFORMED_RULE | - <span style='color:red;font-weight:bold;'>const U_MALFORMED_RULE</span> |
+    | const U_MALFORMED_SET | - <span style='color:red;font-weight:bold;'>const U_MALFORMED_SET</span> |
+    | const U_MALFORMED_SYMBOL_REFERENCE | - <span style='color:red;font-weight:bold;'>const U_MALFORMED_SYMBOL_REFERENCE</span> |
+    | const U_MALFORMED_UNICODE_ESCAPE | - <span style='color:red;font-weight:bold;'>const U_MALFORMED_UNICODE_ESCAPE</span> |
+    | const U_MALFORMED_VARIABLE_DEFINITION | - <span style='color:red;font-weight:bold;'>const U_MALFORMED_VARIABLE_DEFINITION</span> |
+    | const U_MALFORMED_VARIABLE_REFERENCE | - <span style='color:red;font-weight:bold;'>const U_MALFORMED_VARIABLE_REFERENCE</span> |
+    | const U_MISMATCHED_SEGMENT_DELIMITERS | - <span style='color:red;font-weight:bold;'>const U_MISMATCHED_SEGMENT_DELIMITERS</span> |
+    | const U_MISPLACED_ANCHOR_START | - <span style='color:red;font-weight:bold;'>const U_MISPLACED_ANCHOR_START</span> |
+    | const U_MISPLACED_CURSOR_OFFSET | - <span style='color:red;font-weight:bold;'>const U_MISPLACED_CURSOR_OFFSET</span> |
+    | const U_MISPLACED_QUANTIFIER | - <span style='color:red;font-weight:bold;'>const U_MISPLACED_QUANTIFIER</span> |
+    | const U_MISSING_OPERATOR | - <span style='color:red;font-weight:bold;'>const U_MISSING_OPERATOR</span> |
+    | const U_MISSING_SEGMENT_CLOSE | - <span style='color:red;font-weight:bold;'>const U_MISSING_SEGMENT_CLOSE</span> |
+    | const U_MULTIPLE_ANTE_CONTEXTS | - <span style='color:red;font-weight:bold;'>const U_MULTIPLE_ANTE_CONTEXTS</span> |
+    | const U_MULTIPLE_CURSORS | - <span style='color:red;font-weight:bold;'>const U_MULTIPLE_CURSORS</span> |
+    | const U_MULTIPLE_POST_CONTEXTS | - <span style='color:red;font-weight:bold;'>const U_MULTIPLE_POST_CONTEXTS</span> |
+    | const U_TRAILING_BACKSLASH | - <span style='color:red;font-weight:bold;'>const U_TRAILING_BACKSLASH</span> |
+    | const U_UNDEFINED_SEGMENT_REFERENCE | - <span style='color:red;font-weight:bold;'>const U_UNDEFINED_SEGMENT_REFERENCE</span> |
+    | const U_UNDEFINED_VARIABLE | - <span style='color:red;font-weight:bold;'>const U_UNDEFINED_VARIABLE</span> |
+    | const U_UNQUOTED_SPECIAL | - <span style='color:red;font-weight:bold;'>const U_UNQUOTED_SPECIAL</span> |
+    | const U_UNTERMINATED_QUOTE | - <span style='color:red;font-weight:bold;'>const U_UNTERMINATED_QUOTE</span> |
+    | const U_RULE_MASK_ERROR | - <span style='color:red;font-weight:bold;'>const U_RULE_MASK_ERROR</span> |
+    | const U_MISPLACED_COMPOUND_FILTER | - <span style='color:red;font-weight:bold;'>const U_MISPLACED_COMPOUND_FILTER</span> |
+    | const U_MULTIPLE_COMPOUND_FILTERS | - <span style='color:red;font-weight:bold;'>const U_MULTIPLE_COMPOUND_FILTERS</span> |
+    | const U_INVALID_RBT_SYNTAX | - <span style='color:red;font-weight:bold;'>const U_INVALID_RBT_SYNTAX</span> |
+    | const U_INVALID_PROPERTY_PATTERN | - <span style='color:red;font-weight:bold;'>const U_INVALID_PROPERTY_PATTERN</span> |
+    | const U_MALFORMED_PRAGMA | - <span style='color:red;font-weight:bold;'>const U_MALFORMED_PRAGMA</span> |
+    | const U_UNCLOSED_SEGMENT | - <span style='color:red;font-weight:bold;'>const U_UNCLOSED_SEGMENT</span> |
+    | const U_ILLEGAL_CHAR_IN_SEGMENT | - <span style='color:red;font-weight:bold;'>const U_ILLEGAL_CHAR_IN_SEGMENT</span> |
+    | const U_VARIABLE_RANGE_EXHAUSTED | - <span style='color:red;font-weight:bold;'>const U_VARIABLE_RANGE_EXHAUSTED</span> |
+    | const U_VARIABLE_RANGE_OVERLAP | - <span style='color:red;font-weight:bold;'>const U_VARIABLE_RANGE_OVERLAP</span> |
+    | const U_ILLEGAL_CHARACTER | - <span style='color:red;font-weight:bold;'>const U_ILLEGAL_CHARACTER</span> |
+    | const U_INTERNAL_TRANSLITERATOR_ERROR | - <span style='color:red;font-weight:bold;'>const U_INTERNAL_TRANSLITERATOR_ERROR</span> |
+    | const U_INVALID_ID | - <span style='color:red;font-weight:bold;'>const U_INVALID_ID</span> |
+    | const U_INVALID_FUNCTION | - <span style='color:red;font-weight:bold;'>const U_INVALID_FUNCTION</span> |
+    | const U_PARSE_ERROR_LIMIT | - <span style='color:red;font-weight:bold;'>const U_PARSE_ERROR_LIMIT</span> |
+    | const U_UNEXPECTED_TOKEN | - <span style='color:red;font-weight:bold;'>const U_UNEXPECTED_TOKEN</span> |
+    | const U_FMT_PARSE_ERROR_START | - <span style='color:red;font-weight:bold;'>const U_FMT_PARSE_ERROR_START</span> |
+    | const U_MULTIPLE_DECIMAL_SEPARATORS | - <span style='color:red;font-weight:bold;'>const U_MULTIPLE_DECIMAL_SEPARATORS</span> |
+    | const U_MULTIPLE_DECIMAL_SEPERATORS | - <span style='color:red;font-weight:bold;'>const U_MULTIPLE_DECIMAL_SEPERATORS</span> |
+    | const U_MULTIPLE_EXPONENTIAL_SYMBOLS | - <span style='color:red;font-weight:bold;'>const U_MULTIPLE_EXPONENTIAL_SYMBOLS</span> |
+    | const U_MALFORMED_EXPONENTIAL_PATTERN | - <span style='color:red;font-weight:bold;'>const U_MALFORMED_EXPONENTIAL_PATTERN</span> |
+    | const U_MULTIPLE_PERCENT_SYMBOLS | - <span style='color:red;font-weight:bold;'>const U_MULTIPLE_PERCENT_SYMBOLS</span> |
+    | const U_MULTIPLE_PERMILL_SYMBOLS | - <span style='color:red;font-weight:bold;'>const U_MULTIPLE_PERMILL_SYMBOLS</span> |
+    | const U_MULTIPLE_PAD_SPECIFIERS | - <span style='color:red;font-weight:bold;'>const U_MULTIPLE_PAD_SPECIFIERS</span> |
+    | const U_PATTERN_SYNTAX_ERROR | - <span style='color:red;font-weight:bold;'>const U_PATTERN_SYNTAX_ERROR</span> |
+    | const U_ILLEGAL_PAD_POSITION | - <span style='color:red;font-weight:bold;'>const U_ILLEGAL_PAD_POSITION</span> |
+    | const U_UNMATCHED_BRACES | - <span style='color:red;font-weight:bold;'>const U_UNMATCHED_BRACES</span> |
+    | const U_UNSUPPORTED_PROPERTY | - <span style='color:red;font-weight:bold;'>const U_UNSUPPORTED_PROPERTY</span> |
+    | const U_UNSUPPORTED_ATTRIBUTE | - <span style='color:red;font-weight:bold;'>const U_UNSUPPORTED_ATTRIBUTE</span> |
+    | const U_FMT_PARSE_ERROR_LIMIT | - <span style='color:red;font-weight:bold;'>const U_FMT_PARSE_ERROR_LIMIT</span> |
+    | const U_BRK_INTERNAL_ERROR | - <span style='color:red;font-weight:bold;'>const U_BRK_INTERNAL_ERROR</span> |
+    | const U_BRK_ERROR_START | - <span style='color:red;font-weight:bold;'>const U_BRK_ERROR_START</span> |
+    | const U_BRK_HEX_DIGITS_EXPECTED | - <span style='color:red;font-weight:bold;'>const U_BRK_HEX_DIGITS_EXPECTED</span> |
+    | const U_BRK_SEMICOLON_EXPECTED | - <span style='color:red;font-weight:bold;'>const U_BRK_SEMICOLON_EXPECTED</span> |
+    | const U_BRK_RULE_SYNTAX | - <span style='color:red;font-weight:bold;'>const U_BRK_RULE_SYNTAX</span> |
+    | const U_BRK_UNCLOSED_SET | - <span style='color:red;font-weight:bold;'>const U_BRK_UNCLOSED_SET</span> |
+    | const U_BRK_ASSIGN_ERROR | - <span style='color:red;font-weight:bold;'>const U_BRK_ASSIGN_ERROR</span> |
+    | const U_BRK_VARIABLE_REDFINITION | - <span style='color:red;font-weight:bold;'>const U_BRK_VARIABLE_REDFINITION</span> |
+    | const U_BRK_MISMATCHED_PAREN | - <span style='color:red;font-weight:bold;'>const U_BRK_MISMATCHED_PAREN</span> |
+    | const U_BRK_NEW_LINE_IN_QUOTED_STRING | - <span style='color:red;font-weight:bold;'>const U_BRK_NEW_LINE_IN_QUOTED_STRING</span> |
+    | const U_BRK_UNDEFINED_VARIABLE | - <span style='color:red;font-weight:bold;'>const U_BRK_UNDEFINED_VARIABLE</span> |
+    | const U_BRK_INIT_ERROR | - <span style='color:red;font-weight:bold;'>const U_BRK_INIT_ERROR</span> |
+    | const U_BRK_RULE_EMPTY_SET | - <span style='color:red;font-weight:bold;'>const U_BRK_RULE_EMPTY_SET</span> |
+    | const U_BRK_UNRECOGNIZED_OPTION | - <span style='color:red;font-weight:bold;'>const U_BRK_UNRECOGNIZED_OPTION</span> |
+    | const U_BRK_MALFORMED_RULE_TAG | - <span style='color:red;font-weight:bold;'>const U_BRK_MALFORMED_RULE_TAG</span> |
+    | const U_BRK_ERROR_LIMIT | - <span style='color:red;font-weight:bold;'>const U_BRK_ERROR_LIMIT</span> |
+    | const U_REGEX_INTERNAL_ERROR | - <span style='color:red;font-weight:bold;'>const U_REGEX_INTERNAL_ERROR</span> |
+    | const U_REGEX_ERROR_START | - <span style='color:red;font-weight:bold;'>const U_REGEX_ERROR_START</span> |
+    | const U_REGEX_RULE_SYNTAX | - <span style='color:red;font-weight:bold;'>const U_REGEX_RULE_SYNTAX</span> |
+    | const U_REGEX_INVALID_STATE | - <span style='color:red;font-weight:bold;'>const U_REGEX_INVALID_STATE</span> |
+    | const U_REGEX_BAD_ESCAPE_SEQUENCE | - <span style='color:red;font-weight:bold;'>const U_REGEX_BAD_ESCAPE_SEQUENCE</span> |
+    | const U_REGEX_PROPERTY_SYNTAX | - <span style='color:red;font-weight:bold;'>const U_REGEX_PROPERTY_SYNTAX</span> |
+    | const U_REGEX_UNIMPLEMENTED | - <span style='color:red;font-weight:bold;'>const U_REGEX_UNIMPLEMENTED</span> |
+    | const U_REGEX_MISMATCHED_PAREN | - <span style='color:red;font-weight:bold;'>const U_REGEX_MISMATCHED_PAREN</span> |
+    | const U_REGEX_NUMBER_TOO_BIG | - <span style='color:red;font-weight:bold;'>const U_REGEX_NUMBER_TOO_BIG</span> |
+    | const U_REGEX_BAD_INTERVAL | - <span style='color:red;font-weight:bold;'>const U_REGEX_BAD_INTERVAL</span> |
+    | const U_REGEX_MAX_LT_MIN | - <span style='color:red;font-weight:bold;'>const U_REGEX_MAX_LT_MIN</span> |
+    | const U_REGEX_INVALID_BACK_REF | - <span style='color:red;font-weight:bold;'>const U_REGEX_INVALID_BACK_REF</span> |
+    | const U_REGEX_INVALID_FLAG | - <span style='color:red;font-weight:bold;'>const U_REGEX_INVALID_FLAG</span> |
+    | const U_REGEX_LOOK_BEHIND_LIMIT | - <span style='color:red;font-weight:bold;'>const U_REGEX_LOOK_BEHIND_LIMIT</span> |
+    | const U_REGEX_SET_CONTAINS_STRING | - <span style='color:red;font-weight:bold;'>const U_REGEX_SET_CONTAINS_STRING</span> |
+    | const U_REGEX_ERROR_LIMIT | - <span style='color:red;font-weight:bold;'>const U_REGEX_ERROR_LIMIT</span> |
+    | const U_IDNA_PROHIBITED_ERROR | - <span style='color:red;font-weight:bold;'>const U_IDNA_PROHIBITED_ERROR</span> |
+    | const U_IDNA_ERROR_START | - <span style='color:red;font-weight:bold;'>const U_IDNA_ERROR_START</span> |
+    | const U_IDNA_UNASSIGNED_ERROR | - <span style='color:red;font-weight:bold;'>const U_IDNA_UNASSIGNED_ERROR</span> |
+    | const U_IDNA_CHECK_BIDI_ERROR | - <span style='color:red;font-weight:bold;'>const U_IDNA_CHECK_BIDI_ERROR</span> |
+    | const U_IDNA_STD3_ASCII_RULES_ERROR | - <span style='color:red;font-weight:bold;'>const U_IDNA_STD3_ASCII_RULES_ERROR</span> |
+    | const U_IDNA_ACE_PREFIX_ERROR | - <span style='color:red;font-weight:bold;'>const U_IDNA_ACE_PREFIX_ERROR</span> |
+    | const U_IDNA_VERIFICATION_ERROR | - <span style='color:red;font-weight:bold;'>const U_IDNA_VERIFICATION_ERROR</span> |
+    | const U_IDNA_LABEL_TOO_LONG_ERROR | - <span style='color:red;font-weight:bold;'>const U_IDNA_LABEL_TOO_LONG_ERROR</span> |
+    | const U_IDNA_ZERO_LENGTH_LABEL_ERROR | - <span style='color:red;font-weight:bold;'>const U_IDNA_ZERO_LENGTH_LABEL_ERROR</span> |
+    | const U_IDNA_DOMAIN_NAME_TOO_LONG_ERROR | - <span style='color:red;font-weight:bold;'>const U_IDNA_DOMAIN_NAME_TOO_LONG_ERROR</span> |
+    | const U_IDNA_ERROR_LIMIT | - <span style='color:red;font-weight:bold;'>const U_IDNA_ERROR_LIMIT</span> |
+    | const U_STRINGPREP_PROHIBITED_ERROR | - <span style='color:red;font-weight:bold;'>const U_STRINGPREP_PROHIBITED_ERROR</span> |
+    | const U_STRINGPREP_UNASSIGNED_ERROR | - <span style='color:red;font-weight:bold;'>const U_STRINGPREP_UNASSIGNED_ERROR</span> |
+    | const U_STRINGPREP_CHECK_BIDI_ERROR | - <span style='color:red;font-weight:bold;'>const U_STRINGPREP_CHECK_BIDI_ERROR</span> |
+    | const U_ERROR_LIMIT | - <span style='color:red;font-weight:bold;'>const U_ERROR_LIMIT</span> |
+    | const IDNA_DEFAULT | - <span style='color:red;font-weight:bold;'>const IDNA_DEFAULT</span> |
+    | const IDNA_ALLOW_UNASSIGNED | - <span style='color:red;font-weight:bold;'>const IDNA_ALLOW_UNASSIGNED</span> |
+    | const IDNA_USE_STD3_RULES | - <span style='color:red;font-weight:bold;'>const IDNA_USE_STD3_RULES</span> |
+    | const IDNA_CHECK_BIDI | - <span style='color:red;font-weight:bold;'>const IDNA_CHECK_BIDI</span> |
+    | const IDNA_CHECK_CONTEXTJ | - <span style='color:red;font-weight:bold;'>const IDNA_CHECK_CONTEXTJ</span> |
+    | const IDNA_NONTRANSITIONAL_TO_ASCII | - <span style='color:red;font-weight:bold;'>const IDNA_NONTRANSITIONAL_TO_ASCII</span> |
+    | const IDNA_NONTRANSITIONAL_TO_UNICODE | - <span style='color:red;font-weight:bold;'>const IDNA_NONTRANSITIONAL_TO_UNICODE</span> |
+    | const INTL_IDNA_VARIANT_UTS46 | - <span style='color:red;font-weight:bold;'>const INTL_IDNA_VARIANT_UTS46</span> |
+    | const IDNA_ERROR_EMPTY_LABEL | - <span style='color:red;font-weight:bold;'>const IDNA_ERROR_EMPTY_LABEL</span> |
+    | const IDNA_ERROR_LABEL_TOO_LONG | - <span style='color:red;font-weight:bold;'>const IDNA_ERROR_LABEL_TOO_LONG</span> |
+    | const IDNA_ERROR_DOMAIN_NAME_TOO_LONG | - <span style='color:red;font-weight:bold;'>const IDNA_ERROR_DOMAIN_NAME_TOO_LONG</span> |
+    | const IDNA_ERROR_LEADING_HYPHEN | - <span style='color:red;font-weight:bold;'>const IDNA_ERROR_LEADING_HYPHEN</span> |
+    | const IDNA_ERROR_TRAILING_HYPHEN | - <span style='color:red;font-weight:bold;'>const IDNA_ERROR_TRAILING_HYPHEN</span> |
+    | const IDNA_ERROR_HYPHEN_3_4 | - <span style='color:red;font-weight:bold;'>const IDNA_ERROR_HYPHEN_3_4</span> |
+    | const IDNA_ERROR_LEADING_COMBINING_MARK | - <span style='color:red;font-weight:bold;'>const IDNA_ERROR_LEADING_COMBINING_MARK</span> |
+    | const IDNA_ERROR_DISALLOWED | - <span style='color:red;font-weight:bold;'>const IDNA_ERROR_DISALLOWED</span> |
+    | const IDNA_ERROR_PUNYCODE | - <span style='color:red;font-weight:bold;'>const IDNA_ERROR_PUNYCODE</span> |
+    | const IDNA_ERROR_LABEL_HAS_DOT | - <span style='color:red;font-weight:bold;'>const IDNA_ERROR_LABEL_HAS_DOT</span> |
+    | const IDNA_ERROR_INVALID_ACE_LABEL | - <span style='color:red;font-weight:bold;'>const IDNA_ERROR_INVALID_ACE_LABEL</span> |
+    | const IDNA_ERROR_BIDI | - <span style='color:red;font-weight:bold;'>const IDNA_ERROR_BIDI</span> |
+    | const IDNA_ERROR_CONTEXTJ | - <span style='color:red;font-weight:bold;'>const IDNA_ERROR_CONTEXTJ</span> |
+??? tiny "[=100% "**fileinfo** 21 / 21"]"
