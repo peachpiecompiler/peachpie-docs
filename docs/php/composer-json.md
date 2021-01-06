@@ -63,7 +63,7 @@ The setup above results in `PackageVersion` property set to `1.2.3-dev`.
 
 Composer autoloading provides a standard approach in defining what classes will be loaded automatically when needed. Also, it allows to specify what files will be included by the runtime at the very beginning of request or the program start. When the compiler processes the `"autoload"` section, it remembers the autoloading rules and stores the information in metadata. It does not use the information to compile any additional files - all the files meant to be compiled have to be listed within the `<Compile>` MSBuild item group explicitly.
 
-- Rules from `composer.json` will stored within the assembly's metadata; hence the original `composer.json` file is not required to be bundled with the compiled application.
+- Rules from `composer.json` will be stored within the assembly metadata; hence the original `composer.json` file is not required to be bundled with the compiled application.
 - Files listed in `"autoload"` are not automatically added to the compilation. Files needed to be compiled have to be listed within the `<Compile>` item group explicitly.
 - A syntax error in the json file will cause the compilation to stop with a corresponding error message. A wrong value in the `composer.json` causes a compile-time warning and the compilation will continue.
 
