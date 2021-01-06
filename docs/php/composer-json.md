@@ -59,11 +59,13 @@ The setup above results in `PackageVersion` property set to `1.2.3-dev`.
 
 ## Composer Autoload
 
-Composer autoloading provides standard approach in defining classes automatically. Compiler processes the "autoload" section and tries to avoid autoloading process in the first place. Classes, interfaces and traits fulfiling the specified rules are declared implicitly without need of invoking autoloaders during run time.
-
-In case a source file contains more than just the class itself, autoloading cannot be fully optimized. In such case, containing source file has to be looked up and invoked during run time causing an unnecesary overhead.
-
 > Available since `0.9.980`
+
+Composer autoloading provides a standard approach in defining what classes will be loaded automatically when needed. Also, it allows to specify what files will be included by the runtime at the very beginning of request or the program start. When the compiler processes the `"autoload"` section, it remembers the autoloading rules and stores the information in metadata. It does not use the information to compile any additional files - all the files meant to be compiled have to be listed within the `<Compile>` MSBuild item group explicitly.
+
+- Rules from `composer.json` will stored within the assembly's metadata; hence the original `composer.json` file is not required to be bundled with the compiled application.
+- Files listed in `"autoload"` are not automatically added to the compilation. Files needed to be compiled have to be listed within the `<Compile>` item group explicitly.
+- A syntax error in the json file will cause the compilation to stop with a corresponding error message. A wrong value in the `composer.json` causes a compile-time warning and the compilation will continue.
 
 *Sample "composer.json":*
 ```json
@@ -78,9 +80,12 @@ In case a source file contains more than just the class itself, autoloading cann
             "Vendor_Namespace_": "src/"
         },
         "classmap": ["src/", "lib/", "Something.php"],
-        "exclude-from-classmap": ["/src/Tests/", "/lib/tests/"]
+        "exclude-from-classmap": ["/src/Tests/", "/lib/tests/"],
+        "files": [],
     }
 }
 ```
+
+During the compilation, this information is used in order to avoid autoloading process in the first place. Classes, interfaces and traits fulfiling the specified rules are declared implicitly without need of invoking autoloaders during run time. (We can say, the autoloading will performed only once during compilation when it's safe to.) In case a source file contains more than just the class itself, autoloading cannot be fully optimized. In such case, containing source file has to be looked up and invoked during run time causing an unnecesary overhead.
 
 This behavior differs from standard PHP where the map above is used to generate autoloaders which are invoked every time when an unknown class, interface or trait is being used in every new web request.
