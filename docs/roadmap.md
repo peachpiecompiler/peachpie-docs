@@ -5,7 +5,7 @@
 - [x] **0.8**: related work, open GitHub issues
 - [x] **0.9**: all the PHP 5.4 - PHP 7.2 language features support, one serious big CMS working out of the box (WordPress), most of the commonly used PHP extensions implemented, compilation technical demo ([try.peachpie.io](https://try.peachpie.io))
 - [x] **0.9.9**: pre-alpha. Signing assemblies, Phar support, more PHP extensions and core functions, migrate to latest Roslyn CodeAnalysis, MsBuild 15.0 Sdk `Peachpie.NET.Sdk`, opening in Visual Studio 2017/2019
-- [ ] **1.0**: PHP 7.4, related IDE support, user-friendly error messages, documentation, processing `composer.json`
+- [x] **1.0**: PHP 7.4, related IDE support, user-friendly error messages, documentation, processing `composer.json`
 - [ ] **1.1**: `include` of generated scripts, compile-time optimizations, runtime optimizations, `dynamic` support in C#, more C# interoperability features, correctness fixes, standardized API
 - [ ] **?**: edit & continue
 
@@ -43,7 +43,7 @@
 - [x] Compile-time expression evaluation
 - [x] Lowering/simplifying expressions
 - [x] Resolving more inclusion in compile time
-- [ ] Avoiding unnecessary value copying
+- [x] Avoiding unnecessary value copying
 - [ ] Typed array optimizations
 - [ ] Asynchronous I/O (awaitable include, db and global code)
 - [x] Compile on multi-core CPU in parallel
@@ -63,7 +63,7 @@
 - [x] Console Application
 - [x] Web Application
 - [x] Class Library
-- [ ] Using value types (structs)
+- [x] Using value types (structs)
 
 ### Cross Platform Demos
 
