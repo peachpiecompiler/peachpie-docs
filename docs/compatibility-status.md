@@ -1,7 +1,7 @@
-﻿!!! tip "PeachPie 1.0.0-preview5 vs. PHP 8.0.0"
+﻿!!! tip "PeachPie 1.0.0+f0385564026b8b791ed633547b348f049f51f18a vs. PHP 8.0.0"
     The table lists PHP extensions that the project aims for
     and compares the public functions, classes, and constants.
-??? tiny "[=79% "**Core** 284 / 358"]"
+??? tiny "[=80% "**Core** 285 / 358"]"
     | PHP | PeachPie |
     | --- | ---      |
     | function get_resources($type) | - <span style='color:red;font-weight:bold;'>function get_resources($type)</span> |
@@ -10,7 +10,15 @@
     | class ClosedGeneratorException | - <span style='color:red;font-weight:bold;'>class ClosedGeneratorException</span> |
     | function WeakReference::__construct() | - <span style='color:red;font-weight:bold;'>function WeakReference::__construct()</span> |
     | class WeakMap | - <span style='color:red;font-weight:bold;'>class WeakMap</span> |
-    | class Attribute | - <span style='color:red;font-weight:bold;'>class Attribute</span> |
+    | function Attribute::__construct($flags) | - <span style='color:red;font-weight:bold;'>function Attribute::__construct($flags)</span> |
+    | const Attribute::TARGET_CLASS | - <span style='color:red;font-weight:bold;'>const Attribute::TARGET_CLASS</span> |
+    | const Attribute::TARGET_FUNCTION | - <span style='color:red;font-weight:bold;'>const Attribute::TARGET_FUNCTION</span> |
+    | const Attribute::TARGET_METHOD | - <span style='color:red;font-weight:bold;'>const Attribute::TARGET_METHOD</span> |
+    | const Attribute::TARGET_PROPERTY | - <span style='color:red;font-weight:bold;'>const Attribute::TARGET_PROPERTY</span> |
+    | const Attribute::TARGET_CLASS_CONSTANT | - <span style='color:red;font-weight:bold;'>const Attribute::TARGET_CLASS_CONSTANT</span> |
+    | const Attribute::TARGET_PARAMETER | - <span style='color:red;font-weight:bold;'>const Attribute::TARGET_PARAMETER</span> |
+    | const Attribute::TARGET_ALL | - <span style='color:red;font-weight:bold;'>const Attribute::TARGET_ALL</span> |
+    | const Attribute::IS_REPEATABLE | - <span style='color:red;font-weight:bold;'>const Attribute::IS_REPEATABLE</span> |
     | const PHP_WINDOWS_EVENT_CTRL_C | - <span style='color:red;font-weight:bold;'>const PHP_WINDOWS_EVENT_CTRL_C</span> |
     | const PHP_WINDOWS_EVENT_CTRL_BREAK | - <span style='color:red;font-weight:bold;'>const PHP_WINDOWS_EVENT_CTRL_BREAK</span> |
     | const PEAR_INSTALL_DIR | - <span style='color:red;font-weight:bold;'>const PEAR_INSTALL_DIR</span> |
@@ -51,6 +59,13 @@
     |  | + <span style='color:red;font-weight:bold;'>function each($arr)</span> |
     |  | + <span style='color:red;font-weight:bold;'>function create_function($args,$code)</span> |
     |  | + <span style='color:red;font-weight:bold;'>function Generator::__wakeup()</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function Attribute::GetCustomAttributes($element,$inherit,$inherit)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function Attribute::IsDefined($element,$attributeType,$inherit)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function Attribute::GetCustomAttribute($element,$attributeType,$inherit)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function Attribute::Equals($obj)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function Attribute::GetHashCode()</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function Attribute::Match($obj)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function Attribute::IsDefaultAttribute()</span> |
     |  | + <span style='color:red;font-weight:bold;'>const PEACHPIE_VERSION</span> |
 ??? tiny "[=100% "**bcmath** 10 / 10"]"
 ??? tiny "[=0% "**calendar** 0 / 39"]"
