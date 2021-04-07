@@ -29,6 +29,7 @@ Code | Description | Reason
 ---- | ----------- | ------
 PHP0125 | Mandatory parameter behind optional | A default value of the optional parameter will never be used, because a mandatory parameter follows.
 PHP0171 | Magic method must be public and non-static | Non-public or static modifiers are not allowed for the specified method.
+PHP0181 | Using `& new` has been deprecated. | This is a common code pattern in PHP 4 applications. The `&` operator before `new` can be safely removed since all the objects are passed by reference anyways since PHP 5.
 PHP5006 | Undefined function | There is no such function declaration in the project or in the referenced libraries.
 PHP5008 | Undefined type | There is no such class declaration in the project or in the referenced libraries.
 PHP5010 | Ambiguous declaration | The base of the type declaration is ambiguous; this results in the emission of multiple definitions, a significant run time overhead and an unnecessarily larger resulting assembly file.
