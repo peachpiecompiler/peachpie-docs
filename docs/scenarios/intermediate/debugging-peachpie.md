@@ -6,7 +6,7 @@ There are two approaches to debugging the platform internals, depending on wheth
 
 It is suggested to disable the *Just My Code* feature to debug through the runtime internals. See your debugger documentation on how to do that.
 
-## (A) Debug compilation & execution of a code snippet
+## Debug compilation & execution of a code snippet
 
 **Requirements**: Visual Studio<br/>
 **Project**: `/src/Tests/Peachpie.Test/Peachpie.Test.csproj`
@@ -19,7 +19,7 @@ Optionally, you can put breakpoints inside the `index.php` file. It will break d
 
 Start the project - by default it runs an in-memory compilation of the script allowing you to debug the compiler code. Then it runs the compiled code itself allowing you to debug the runtime and libraries as well.
 
-## (B) Debug an entire application
+## Debug an entire application
 
 Here, we assume you created a project (`.msbuildproj`) and you need to debug its compilation or runtime. This section is intended for developers debugging the PeachPie platform for a specific [project](/php/msbuild).
 
