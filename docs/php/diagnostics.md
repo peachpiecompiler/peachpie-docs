@@ -40,6 +40,7 @@ PHP5016 | Assert always fails | The condition of `assert()` is evaluated to alwa
 PHP5018 | The function has been deprecated | Calling a function that has been marked as deprecated; either it is annotated with `[ObsoleteAttribute]` metadata or it is a known deprecation by the compiler.
 PHP5019 | The expression is not being read | The expression does not have any effect if it is not assigned to a variable or passed as a parameter.
 PHP5020 | Assignment made to same variable | The expression does not have any effect, it is usually a typo in the source code.
+PHP5023 | Cloning of non-object | The operand might be a scalar type or a non-cloneable object. This might result in an exception.
 PHP5026 | Missing the call of parent::__construct() | Class constructor should call its base constructor.
 PHP5029 | Method __toString() must return a string value | Value returned from `__tostring()` method is not a string value. This is a fatal error at run time.
 PHP5031 | PCRE pattern parse error | Provided regular expression is invalid and will fail to parse.
