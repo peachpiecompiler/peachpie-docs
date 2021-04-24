@@ -1,4 +1,4 @@
-﻿!!! tip "PeachPie 1.0.0+f0385564026b8b791ed633547b348f049f51f18a vs. PHP 8.0.0"
+﻿!!! tip "PeachPie 1.0.5 vs. PHP 8.0.0"
     The table lists PHP extensions that the project aims for
     and compares the public functions, classes, and constants.
 ??? tiny "[=80% "**Core** 285 / 358"]"
@@ -219,7 +219,6 @@
     |  | + <span style='color:red;font-weight:bold;'>function RecursiveRegexIterator::__call($name,$arguments)</span> |
     |  | + <span style='color:red;font-weight:bold;'>function ArrayObject::__set($prop,$value)</span> |
     |  | + <span style='color:red;font-weight:bold;'>function ArrayObject::__get($prop)</span> |
-    |  | + <span style='color:red;font-weight:bold;'>const ArrayObject::DefaultIteratorClass</span> |
     |  | + <span style='color:red;font-weight:bold;'>function RecursiveIteratorIterator::__call($name,$arguments)</span> |
     |  | + <span style='color:red;font-weight:bold;'>function RecursiveTreeIterator::__call($name,$arguments)</span> |
     |  | + <span style='color:red;font-weight:bold;'>const RecursiveTreeIterator::PREFIX_MAX</span> |
@@ -974,6 +973,76 @@
     |  | + <span style='color:red;font-weight:bold;'>const MB_OVERLOAD_MAIL</span> |
     |  | + <span style='color:red;font-weight:bold;'>const MB_OVERLOAD_STRING</span> |
     |  | + <span style='color:red;font-weight:bold;'>const MB_OVERLOAD_REGEX</span> |
+??? tiny "[=66% "**gd** 128 / 194"]"
+    | PHP | PeachPie |
+    | --- | ---      |
+    | function imageloadfont($filename) | - <span style='color:red;font-weight:bold;'>function imageloadfont($filename)</span> |
+    | function imagesetstyle($image,$style) | - <span style='color:red;font-weight:bold;'>function imagesetstyle($image,$style)</span> |
+    | function imagepalettetotruecolor($image) | - <span style='color:red;font-weight:bold;'>function imagepalettetotruecolor($image)</span> |
+    | function imagesetthickness($image,$thickness) | - <span style='color:red;font-weight:bold;'>function imagesetthickness($image,$thickness)</span> |
+    | function imagelayereffect($image,$effect) | - <span style='color:red;font-weight:bold;'>function imagelayereffect($image,$effect)</span> |
+    | function imagecolorclosestalpha($image,$red,$green,$blue,$alpha) | - <span style='color:red;font-weight:bold;'>function imagecolorclosestalpha($image,$red,$green,$blue,$alpha)</span> |
+    | function imagegrabwindow($handle,$client_area) | - <span style='color:red;font-weight:bold;'>function imagegrabwindow($handle,$client_area)</span> |
+    | function imagegrabscreen() | - <span style='color:red;font-weight:bold;'>function imagegrabscreen()</span> |
+    | function imagesetbrush($image,$brush) | - <span style='color:red;font-weight:bold;'>function imagesetbrush($image,$brush)</span> |
+    | function imagecreatefromwebp($filename) | - <span style='color:red;font-weight:bold;'>function imagecreatefromwebp($filename)</span> |
+    | function imagecreatefrombmp($filename) | - <span style='color:red;font-weight:bold;'>function imagecreatefrombmp($filename)</span> |
+    | function imagecreatefromtga($filename) | - <span style='color:red;font-weight:bold;'>function imagecreatefromtga($filename)</span> |
+    | function imagexbm($image,$filename,$foreground_color) | - <span style='color:red;font-weight:bold;'>function imagexbm($image,$filename,$foreground_color)</span> |
+    | function imagewebp($image,$file,$quality) | - <span style='color:red;font-weight:bold;'>function imagewebp($image,$file,$quality)</span> |
+    | function imagewbmp($image,$file,$foreground_color) | - <span style='color:red;font-weight:bold;'>function imagewbmp($image,$file,$foreground_color)</span> |
+    | function imagebmp($image,$file,$compressed) | - <span style='color:red;font-weight:bold;'>function imagebmp($image,$file,$compressed)</span> |
+    | function imagepalettecopy($dst,$src) | - <span style='color:red;font-weight:bold;'>function imagepalettecopy($dst,$src)</span> |
+    | function imagecolorclosest($image,$red,$green,$blue) | - <span style='color:red;font-weight:bold;'>function imagecolorclosest($image,$red,$green,$blue)</span> |
+    | function imagecolorclosesthwb($image,$red,$green,$blue) | - <span style='color:red;font-weight:bold;'>function imagecolorclosesthwb($image,$red,$green,$blue)</span> |
+    | function imagecolordeallocate($image,$color) | - <span style='color:red;font-weight:bold;'>function imagecolordeallocate($image,$color)</span> |
+    | function imagegammacorrect($image,$input_gamma,$output_gamma) | - <span style='color:red;font-weight:bold;'>function imagegammacorrect($image,$input_gamma,$output_gamma)</span> |
+    | function imagedashedline($image,$x1,$y1,$x2,$y2,$color) | - <span style='color:red;font-weight:bold;'>function imagedashedline($image,$x1,$y1,$x2,$y2,$color)</span> |
+    | function imagecopymergegray($dst_image,$src_image,$dst_x,$dst_y,$src_x,$src_y,$src_width,$src_height,$pct) | - <span style='color:red;font-weight:bold;'>function imagecopymergegray($dst_image,$src_image,$dst_x,$dst_y,$src_x,$src_y,$src_width,$src_height,$pct)</span> |
+    | function imagesetclip($image,$x1,$x2,$y1,$y2) | - <span style='color:red;font-weight:bold;'>function imagesetclip($image,$x1,$x2,$y1,$y2)</span> |
+    | function imagegetclip($image) | - <span style='color:red;font-weight:bold;'>function imagegetclip($image)</span> |
+    | function imagefttext($image,$size,$angle,$x,$y,$color,$font_filename,$text,$options) | - <span style='color:red;font-weight:bold;'>function imagefttext($image,$size,$angle,$x,$y,$color,$font_filename,$text,$options)</span> |
+    | function imagecropauto($image,$mode,$threshold,$color) | - <span style='color:red;font-weight:bold;'>function imagecropauto($image,$mode,$threshold,$color)</span> |
+    | function imagegetinterpolation($image) | - <span style='color:red;font-weight:bold;'>function imagegetinterpolation($image)</span> |
+    | function imagesetinterpolation($image,$method) | - <span style='color:red;font-weight:bold;'>function imagesetinterpolation($image,$method)</span> |
+    | class GdImage | - <span style='color:red;font-weight:bold;'>class GdImage</span> |
+    | const IMG_EFFECT_REPLACE | - <span style='color:red;font-weight:bold;'>const IMG_EFFECT_REPLACE</span> |
+    | const IMG_EFFECT_ALPHABLEND | - <span style='color:red;font-weight:bold;'>const IMG_EFFECT_ALPHABLEND</span> |
+    | const IMG_EFFECT_NORMAL | - <span style='color:red;font-weight:bold;'>const IMG_EFFECT_NORMAL</span> |
+    | const IMG_EFFECT_OVERLAY | - <span style='color:red;font-weight:bold;'>const IMG_EFFECT_OVERLAY</span> |
+    | const IMG_EFFECT_MULTIPLY | - <span style='color:red;font-weight:bold;'>const IMG_EFFECT_MULTIPLY</span> |
+    | const IMG_CROP_DEFAULT | - <span style='color:red;font-weight:bold;'>const IMG_CROP_DEFAULT</span> |
+    | const IMG_CROP_TRANSPARENT | - <span style='color:red;font-weight:bold;'>const IMG_CROP_TRANSPARENT</span> |
+    | const IMG_CROP_BLACK | - <span style='color:red;font-weight:bold;'>const IMG_CROP_BLACK</span> |
+    | const IMG_CROP_WHITE | - <span style='color:red;font-weight:bold;'>const IMG_CROP_WHITE</span> |
+    | const IMG_CROP_SIDES | - <span style='color:red;font-weight:bold;'>const IMG_CROP_SIDES</span> |
+    | const IMG_CROP_THRESHOLD | - <span style='color:red;font-weight:bold;'>const IMG_CROP_THRESHOLD</span> |
+    | const IMG_BELL | - <span style='color:red;font-weight:bold;'>const IMG_BELL</span> |
+    | const IMG_BESSEL | - <span style='color:red;font-weight:bold;'>const IMG_BESSEL</span> |
+    | const IMG_BLACKMAN | - <span style='color:red;font-weight:bold;'>const IMG_BLACKMAN</span> |
+    | const IMG_BOX | - <span style='color:red;font-weight:bold;'>const IMG_BOX</span> |
+    | const IMG_BSPLINE | - <span style='color:red;font-weight:bold;'>const IMG_BSPLINE</span> |
+    | const IMG_CATMULLROM | - <span style='color:red;font-weight:bold;'>const IMG_CATMULLROM</span> |
+    | const IMG_GAUSSIAN | - <span style='color:red;font-weight:bold;'>const IMG_GAUSSIAN</span> |
+    | const IMG_GENERALIZED_CUBIC | - <span style='color:red;font-weight:bold;'>const IMG_GENERALIZED_CUBIC</span> |
+    | const IMG_HERMITE | - <span style='color:red;font-weight:bold;'>const IMG_HERMITE</span> |
+    | const IMG_HAMMING | - <span style='color:red;font-weight:bold;'>const IMG_HAMMING</span> |
+    | const IMG_HANNING | - <span style='color:red;font-weight:bold;'>const IMG_HANNING</span> |
+    | const IMG_MITCHELL | - <span style='color:red;font-weight:bold;'>const IMG_MITCHELL</span> |
+    | const IMG_POWER | - <span style='color:red;font-weight:bold;'>const IMG_POWER</span> |
+    | const IMG_QUADRATIC | - <span style='color:red;font-weight:bold;'>const IMG_QUADRATIC</span> |
+    | const IMG_SINC | - <span style='color:red;font-weight:bold;'>const IMG_SINC</span> |
+    | const IMG_WEIGHTED4 | - <span style='color:red;font-weight:bold;'>const IMG_WEIGHTED4</span> |
+    | const IMG_TRIANGLE | - <span style='color:red;font-weight:bold;'>const IMG_TRIANGLE</span> |
+    | const IMG_FILTER_SCATTER | - <span style='color:red;font-weight:bold;'>const IMG_FILTER_SCATTER</span> |
+    | const PNG_NO_FILTER | - <span style='color:red;font-weight:bold;'>const PNG_NO_FILTER</span> |
+    | const PNG_FILTER_NONE | - <span style='color:red;font-weight:bold;'>const PNG_FILTER_NONE</span> |
+    | const PNG_FILTER_SUB | - <span style='color:red;font-weight:bold;'>const PNG_FILTER_SUB</span> |
+    | const PNG_FILTER_UP | - <span style='color:red;font-weight:bold;'>const PNG_FILTER_UP</span> |
+    | const PNG_FILTER_AVG | - <span style='color:red;font-weight:bold;'>const PNG_FILTER_AVG</span> |
+    | const PNG_FILTER_PAETH | - <span style='color:red;font-weight:bold;'>const PNG_FILTER_PAETH</span> |
+    | const PNG_ALL_FILTERS | - <span style='color:red;font-weight:bold;'>const PNG_ALL_FILTERS</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function image2wbmp($im,$to,$threshold)</span> |
 ??? tiny "[=100% "**gettext** 10 / 10"]"
 ??? tiny "[=84% "**curl** 509 / 605"]"
     | PHP | PeachPie |
@@ -1769,3 +1838,4 @@
     | const LIBXSLT_DOTTED_VERSION | - <span style='color:red;font-weight:bold;'>const LIBXSLT_DOTTED_VERSION</span> |
     | const LIBEXSLT_VERSION | - <span style='color:red;font-weight:bold;'>const LIBEXSLT_VERSION</span> |
     | const LIBEXSLT_DOTTED_VERSION | - <span style='color:red;font-weight:bold;'>const LIBEXSLT_DOTTED_VERSION</span> |
+??? tiny "[=100% "**fileinfo** 21 / 21"]"
