@@ -10,7 +10,7 @@ String values are not zero-terminated, hence they can contain `\0` characters wi
 
 ## Source Files
 
-String literals contained in the source code are parsed with respect to the [CodePage](/php/msbuild#codepage) property and transformed into UTF-16 textual values. The encoding used to decode source files is `UTF-8` by default.
+String literals contained in the source code are parsed with respect to the [CodePage](/php/msbuild#codepage) property and transformed into UTF-16 textual values. Byte sequences specified as ordinals within the string literals (e.g. `"\x88"`) are stored as array of 8-bit values (bytes). The encoding used to decode source files is `UTF-8` by default.
 
 ```php
 <?php
@@ -31,8 +31,8 @@ In case the string literal contains a byte sequence (denoted with `\x[0-9A-Fa-f]
 
 ```php
 <?php
-// assigns a string represented as a sequence of bytes
-// [48 65 6c 6c 6f 20 0F]
+// assigns a string represented as a sequence of characters and a byte.
+// "Hello " + byte[] { 0x0F }
 $binaryvalue = "Hello \017";
 ```
 
