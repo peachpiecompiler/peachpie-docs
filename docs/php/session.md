@@ -10,6 +10,11 @@ The default implementation of the session handler in PeachPie is taking advantag
 
 In the result, session state in PeachPie web application running on ASP .NET Core is persisted in-memory using distributed memory cache. The entries of the session array itself are stored into the [`ISession`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.isession) object, using the PHP serializer.
 
+### Limitations
+
+- The session ID (SID) cannot be changed.
+- The session cookie configuration must be done within `AddSession()` method (see below), and cannot be changed from the PHP code.
+
 ### Example of the setup (ASP .NET Core)
 
 > `Startup.cs`
