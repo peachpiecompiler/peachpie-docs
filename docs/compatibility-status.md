@@ -1,4 +1,4 @@
-﻿!!! tip "PeachPie 1.0.5 vs. PHP 8.0.0"
+﻿!!! tip "PeachPie 1.0.6 vs. PHP 8.0.0"
     The table lists PHP extensions that the project aims for
     and compares the public functions, classes, and constants.
 ??? tiny "[=80% "**Core** 285 / 358"]"
@@ -401,6 +401,7 @@
     |  | + <span style='color:red;font-weight:bold;'>function getallheaders()</span> |
     |  | + <span style='color:red;font-weight:bold;'>function idn_to_ascii($domain,$options,$variant,$idna_info)</span> |
     |  | + <span style='color:red;font-weight:bold;'>function idn_to_utf8($domain,$options,$variant,$idna_info)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function array_is_list($array)</span> |
     |  | + <span style='color:red;font-weight:bold;'>function posix_getpid()</span> |
     |  | + <span style='color:red;font-weight:bold;'>function fastcgi_finish_request()</span> |
     |  | + <span style='color:red;font-weight:bold;'>function zend_thread_id()</span> |
@@ -944,6 +945,8 @@
     | const MYSQLI_TRANS_COR_RELEASE | - <span style='color:red;font-weight:bold;'>const MYSQLI_TRANS_COR_RELEASE</span> |
     | const MYSQLI_TRANS_COR_NO_RELEASE | - <span style='color:red;font-weight:bold;'>const MYSQLI_TRANS_COR_NO_RELEASE</span> |
     |  | + <span style='color:red;font-weight:bold;'>function mysqli_client_encoding($link)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function mysqli_fetch_column($result,$column)</span> |
+    |  | + <span style='color:red;font-weight:bold;'>function mysqli_result::fetch_column($column)</span> |
 ??? tiny "[=66% "**mbstring** 45 / 68"]"
     | PHP | PeachPie |
     | --- | ---      |
