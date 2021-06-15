@@ -2,7 +2,7 @@ It is possible to annotate class or interface declaration or a function declarat
 
 ## PHP attributes
 
-The compiler supports PHP 8 attribute syntax, since the version `1.0.0-preview4`. Attributes can be applied to classes, interfaces, traits, functions, properties, and class constants.
+Attributes can be applied to classes, interfaces, traits, functions, properties, and class constants.
 
 ## Attribute syntax
 
