@@ -14,7 +14,7 @@ File with the extension `.phar` can be included into the compilation within [the
 
 ### Remarks
 
-In compile time, `.phar` files are opened and containing scripts compiled separatelly.
+In compile time, `.phar` files are opened and containing scripts compiled separately.
 
 Non-script entries, content files, are stored within the resulting assembly as an embedded resource. In result, the original phar file is not needed for the purpose of running the compiled application.
 
@@ -28,7 +28,7 @@ Any Phar entry that is not recognized as a source file is compiled as a resource
 
 - entry has an extension `.php`
 - entry has no extension and starts with `#!php# <?php` openinig tag.
-- entry has a well known extension (`.inc`, `.php5`, `.module`) and contains the openinig tag `#!php# <?php`.
+- entry has a well known extension (`.inc`, `.php5`, `.module`) and contains the opening tag `#!php# <?php`.
 
 Note, this behaviour may change.
 
