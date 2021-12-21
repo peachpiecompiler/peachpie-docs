@@ -79,7 +79,9 @@ function progress {
 
 # run collect features from php & peachpie:
 $output_php = & invoke-Expression "php -f ""$PSScriptRoot/program.php""" | Out-String
-$output_peachpie = & invoke-Expression "dotnet run --no-logo -p ""$PSScriptRoot""" | Out-String
+#$output_php | Out-File -FilePath php.json
+$output_peachpie = & invoke-Expression "dotnet run --no-logo --project ""$PSScriptRoot""" | Out-String
+#$output_peachpie | Out-File -FilePath peachpie.json
 
 $php = $output_php | ConvertFrom-Json
 $peachpie = $output_peachpie | ConvertFrom-Json
