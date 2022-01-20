@@ -4,7 +4,7 @@
 
 PHP is a loosely typed language. It specifies the value of a variable not to be restricted to a single type. This is referred to as type ambiguity, type dynamicity, or is also known as `mixed`.
 
-PeachPie defines struct `PhpValue` as the abstraction of PHP's `mixed`. This .NET type is used in case a type of value cannot be resolved in compile time. It applies to global variables in general, function parameters without a type hint, function return types without a type hint, class properties and local variables.
+PeachPie defines struct `PhpValue` as the abstraction of PHP's `mixed`. This .NET type is used in case a type of value cannot be resolved in compile time. It applies to global variables in general, function parameters without a type hint, function return types without a type hint, class properties, and local variables.
 
 ## Conversions
 
@@ -46,7 +46,7 @@ T | Cast<T>() | `#c# value.Cast<MyClass>()` | performs appropriate conversion of
 
 ## Operators
 
-The type defines arithmetic and comparison operators according to PHP semantic.
+The type defines arithmetic and comparison operators according to PHP semantics.
 
 Operator | Sample | Remarks
 ---      | ---    | ---
@@ -67,7 +67,7 @@ Operator | Sample | Remarks
 
 ## Visitor pattern
 
-`PhpValue` type implements a visitor pattern so you can traverse through the underlaying value structure. This is useful in case of arrays or objects, in case of implementing a value serializer, but also in order to quickly call a method depending on the value's type.
+`PhpValue` type implements a visitor pattern so you can traverse through the underlying value structure. It is useful in the case of arrays or objects. It is also used for implementing serializers.
 
 Method: `#!c# PhpValue.Accept( PhpVariableVisitor visitor)`
 
@@ -81,4 +81,4 @@ class MyVisitor : PhpVariableVisitor {
 value.Accept( new MyVisitor() ); // traverses through the value, arrays and objects
 ```
 
-> Note, the visitor implementation does not check for cycles in the underlaying structure. Infinite recursion may occur when the underlaying object or array contauns a referenced value to itself.
+> Note, the visitor implementation does not check for cycles in the underlying structure. Infinite recursion may occur when the underlying object or array contains a referenced value to itself.
