@@ -38,7 +38,7 @@ Add a package reference to request handler:
 
 ```xml
 <ItemGroup>
-  <PackageReference Include="Peachpie.RequestHandler" Version="1.0.9" />
+  <PackageReference Include="Peachpie.RequestHandler" Version="1.0.17" />
 </ItemGroup>
 ```
 

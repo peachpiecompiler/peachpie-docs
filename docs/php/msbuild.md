@@ -5,7 +5,7 @@ MSBuild is the build system for .NET and Visual Studio. The MSBuild project file
 ## Sample Project File
 
 ```xml
-<Project Sdk="Peachpie.NET.Sdk/1.0.9">
+<Project Sdk="Peachpie.NET.Sdk/1.0.17">
   <PropertyGroup>
     <OutputType>library</OutputType>
     <TargetFramework>netstandard2.1</TargetFramework>
