@@ -2,7 +2,7 @@
 
 *(not .NET Core)*
 
-Projects built with PeachPie depend on the PeachPie runtime, which targets **.NET Standard 2.0**. This makes it compatible with the vast array of other .NET frameworks and runtimes, as long as they are compatible with .NET Standard 2.0. This includes .NET Core 2.0, Mono 5.4, Xamarin.Android 8.0, or .NET Framework 4.6.1 or higher.
+Projects built with PeachPie depend on the PeachPie runtime, which targets **.NET 5.0**. The latest versions supporting **.NET Standard 2.0** are `1.0.*`. This makes it compatible with the vast array of other .NET frameworks and runtimes, as long as they are compatible with .NET Standard 2.0. This includes .NET Core 2.0, Mono 5.4, Xamarin.Android 8.0, or .NET Framework 4.6.1 or higher.
 
 ## Building the project
 
