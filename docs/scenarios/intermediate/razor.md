@@ -27,7 +27,7 @@ class User
 Add a reference to your php-library project file, which implements the helper function above:
 
 ```xml
-<PackageReference Include="Peachpie.AspNetCore.Mvc" Version="1.1.0" />
+<PackageReference Include="Peachpie.AspNetCore.Mvc" Version="1.1.1" />
 ```
 
 ## Rendering a PHP script in Razor
@@ -40,7 +40,7 @@ Start by compiling your PHP project into a `DLL` file.
 Next, add a reference to the MVC project:
 
 ```xml
-<PackageReference Include="Peachpie.AspNetCore.Mvc" Version="1.1.0" />
+<PackageReference Include="Peachpie.AspNetCore.Mvc" Version="1.1.1" />
 <ProjectReference Include="../myPhpApp/myPhpApp.msbuildproj" />
 ```
 

@@ -11,7 +11,7 @@ echo "Hello world!";
 and a corresponding project file indicating that the output should be exe:
 
 ```xml
-<Project Sdk="Peachpie.NET.Sdk/1.1.0">
+<Project Sdk="Peachpie.NET.Sdk/1.1.1">
   <PropertyGroup>
     <OutputType>exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
