@@ -1,6 +1,6 @@
 # PeachPie Nightly Builds
 
-The latest build of PeachPie is always available on NuGet.org or on our AppVeyor feed (https://ci.appveyor.com/nuget/peachpie). The build is annotated as a PreRelease version - the packages have pre-release version specified.
+The latest build of PeachPie is always available for our [Patreon](https://www.patreon.com/pchpcompiler) members at [feed.peachpie.io](https://feed.peachpie.io/).
 
 ### Use the Nightly Build
 

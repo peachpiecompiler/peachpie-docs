@@ -2,6 +2,9 @@
 
 MSBuild is the build system for .NET and Visual Studio. The MSBuild project file is an XML file describing the build process and other features and properties.
 
+!!!note
+    Get access to the PeachPie Sdk first. See [download page](/download) for details.
+
 ## Sample Project File
 
 ```xml
@@ -21,7 +24,8 @@ MSBuild is the build system for .NET and Visual Studio. The MSBuild project file
 The sample project file above is supposed to be saved as **`your-project-name.msbuildproj`**. This particular example includes all the `.php` files into the compilation, uses the PeachPie compiler and targets class library projects. See the section [OutputType](#outputtype) below on how to target different project types. The project can be opened in Visual Studio 2017, Visual Studio Code, other IDEs or used from your favorite shell to build or run the project.
 
 !!!note
-    `Peachpie.NET.Sdk` is downloaded from a NuGet feed. Visual Studio resolves the Sdk automatically since 15.6.
+    `Peachpie.NET.Sdk` is downloaded from a NuGet feed. See [download page](/download) for details.
+    Visual Studio 15.6 or newer is recommended.
 
 Build the project using an IDE or the command below:
 ```bash

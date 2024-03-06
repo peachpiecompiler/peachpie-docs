@@ -4,6 +4,9 @@ This article provides information on hosting PHP scripts within an ASP.NET Core 
 
 It is important to note, that the resulting application is a standard ASP.NET Core Web Application; therefore further tasks like publish, deployment, continuous integration, and hosting on various providers and technologies are a subject to .NET and ASP.NET Core documentation.
 
+!!!note
+    Get access to the PeachPie Sdk first. See [download page](/download) for details.
+
 ## Create PHP library project
 
 Directory with PHP project - its source files and static files - needs to be compiled as a library project. Create a project file in the root of the PHP project:

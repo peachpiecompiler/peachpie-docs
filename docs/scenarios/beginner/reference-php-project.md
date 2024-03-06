@@ -6,8 +6,9 @@ This allows to provide a library written in PHP code to C# projects, to decouple
 
 ### Prerequisites:
 
-- .NET Core SDK 3.0 or newer ([dotnet.microsoft.com](https://dotnet.microsoft.com/download))
-- Optionally, Visual Studio 2017 or newer
+- .NET SDK 5.0 or newer ([dotnet.microsoft.com](https://dotnet.microsoft.com/download))
+- Optionally, Visual Studio 2019 or newer
+- Access to the PeachPie Sdk. See [download page](/download) for details.
 
 **Content:**
 

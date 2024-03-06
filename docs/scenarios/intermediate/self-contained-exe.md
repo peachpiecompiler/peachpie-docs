@@ -1,5 +1,8 @@
 # Self-contained executable
 
+!!!note
+    Get access to the PeachPie Sdk first. See [download page](/download) for details.
+
 To create a self-contained PHP executable, start with a console application, e.g.:
 
 ```php
