@@ -1,10 +1,10 @@
 # Get started
 
-The purpose of this page is to get you started with [PeachPie](https://www.peachpie.io) quickly. The following steps let you to create a minimalistic project containing PHP files and then compile and run them on top of .NET Core. 
+The purpose of this page is to get you started with [PeachPie](https://www.peachpie.io) quickly. The following steps let you to create a minimalistic project containing PHP files and then compile and run them on top of .NET.
 
 ## Prerequisites
 
-- .NET Core SDK 3.0 or newer: [microsoft.com/net/download](https://www.microsoft.com/net/download)
+- .NET SDK 5.0 or newer: [microsoft.com/net/download](https://www.microsoft.com/net/download)
 
 ## Install dotnet templates
 
@@ -70,9 +70,10 @@ Projects can be created and opened by .NET development environments, such as `Vi
 
 ### Visual Studio Code
 
-- Install [PeachPie for VS Code](https://marketplace.visualstudio.com/items?itemName=iolevel.peachpie-vscode) extension.
-- Open the folder with your PHP project.
-- Start the project by pressing ++f5++ and let VSCode create the initial `tasks.json` and `launch.json` files for .NET Core.
+- Open an empty folder.
+- Open Terminal and run the following command:
+  ```shell
+  dotnet new console -lang PHP
+  ```
+- Start the project by pressing ++f5++ and let VS Code create the initial `tasks.json` and `launch.json` files for .NET.
 - Edit `launch.json` to point to the actual build result.
-
-The steps above add support for PeachPie diagnostics and breakpoints in PHP code within a PHP project in VS Code. The building and debugging of the application is handled by the .NET runtime and debugger.
