@@ -48,7 +48,7 @@ public class X {
 
 The PHP class constructor is separated into several `.ctor` overloads as follows:
 
-* ![](/img/icon_method.png) `#!c# [PhpFieldsOnlyCtor] protected internal .ctor(Context, QueryValue``1)`<br/>is an internally used constructor that initializes the instance without invoking the `__construct()` method. This is used when inheriting another PHP class, for object unserialization and when cloning. Note, the special `QueryValue``1` parameter is here just to distinguish this internal `.ctor` and the regular `.ctor`.
+* ![](/img/icon_method.png) `#!c# [PhpFieldsOnlyCtor] protected internal .ctor(Context, DummyFieldsOnlyCtor)`<br/>is an internally used constructor that initializes the instance without invoking the `__construct()` method. This is used when inheriting another PHP class, for object unserialization and when cloning. Note, the special `QueryValue``1` parameter is here just to distinguish this internal `.ctor` and the regular `.ctor`.
 * ![](/img/icon_method.png) `#!c# .ctor(Context[, ... ctorparams])`<br/>is used for the purposes of constructing a new instance of the object. `.ctor()` internally constructs the object, initializes fields and calls the proper PHP constructor if available.
 * ![](/img/icon_method.png) `#!c# .ctor([, ... ctorparams])`<br/>is used by C# programs to create a new instance of the object. It is a wrapper of the `.ctor` above that does not require the instance of `Context`.
 * ![](/img/icon_method.png) `#!c# __construct([ctorparams])`<br/>is an optional PHP constructor that might be called explicitly or as a part of `.ctor`.
