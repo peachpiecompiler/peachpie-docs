@@ -127,12 +127,14 @@ $hook = $obj->MyEvent->add(
 $hook->close();
 ```
 
-In PHP, the `event` class member is represented by an instance of a special class `Pchp\Core\ClrEvent` with the following method:
-- `add( callable $callback ): Pchp\Core\ClrEvent\Hook`
+In PHP, the `event` class member is represented by an instance of a special class `#!php Pchp\Core\ClrEvent` with the following method:
+
+- `#!php ClrEvent::add( callable $callback ): Pchp\Core\ClrEvent\Hook`
 
 The `Pchp\Core\ClrEvent\Hook` class methods:
-- `close()`
-- `dispose() // alias to close`
+
+- `#!php Hook::close()`
+- `#!php Hook::dispose() // alias to close`
 
 ## C# Indexers
 

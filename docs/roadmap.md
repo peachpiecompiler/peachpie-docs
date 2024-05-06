@@ -64,6 +64,7 @@
 - [x] Web Application
 - [x] Class Library
 - [x] Using value types (structs)
+- [x] [.NET events](net/type-system#c-event)
 
 ### Cross Platform Demos
 
