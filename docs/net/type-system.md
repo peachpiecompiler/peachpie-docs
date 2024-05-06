@@ -100,6 +100,40 @@ echo $list[10];
 
 PeachPie provides the feature for `System.Collections.IList`, which allows consuming .NET arrays, `List`s and other classes in PHP.
 
+## C# Event
+
+> Implemented in `1.2.0` ([#1141](https://github.com/peachpiecompiler/peachpie/issues/1141))
+
+PeachPie runtime allows working with .NET/CLR `event` class members in order to register and unregister callables. The following code depicts a sample C# class and a sample PHP program adding and removing an anonymous function (or any PHP callable) to it.
+
+```c#
+class SampleContainer
+{
+    public event EventHandler MyEvent;    
+}
+```
+
+```php
+<?php
+$obj = new SampleContainer;
+// add callable to the event handler:
+$hook = $obj->MyEvent->add(
+    function ($sender, $arg) {
+        echo "hello!";
+    }
+);
+
+// remove callable from the event handler
+$hook->close();
+```
+
+In PHP, the `event` class member is represented by an instance of a special class `Pchp\Core\ClrEvent` with the following method:
+- `add( callable $callback ): Pchp\Core\ClrEvent\Hook`
+
+The `Pchp\Core\ClrEvent\Hook` class methods:
+- `close()`
+- `dispose() // alias to close`
+
 ## C# Indexers
 
 PHP array operator `[]` can be used on objects implementing [C# indexers](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/indexers/). 
