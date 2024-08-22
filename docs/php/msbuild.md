@@ -219,6 +219,18 @@ In order to generate the embedded files manifest and to embed content files as a
 
 > Available since `0.9.46`
 
+### AssemblyAtribute
+
+Define [assembly attributes in MSBuild files](https://learn.microsoft.com/en-us/dotnet/standard/assembly/set-attributes-project-file#set-arbitrary-attributes) for PHP project.
+
+> Available since `1.1.10`
+
+```xml
+<AssemblyAttribute Include="System.Reflection.AssemblyVersionAttribute">
+    <_Parameter1>something</_Parameter1>
+</AssemblyAttribute>
+```
+
 ## Related links
 
 - [MSBuild reference](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-reference) *(docs.microsoft.com)*
