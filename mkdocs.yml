@@ -10,7 +10,7 @@ repo_url: 'https://github.com/peachpiecompiler/peachpie'
 edit_uri: 'https://github.com/peachpiecompiler/peachpie-docs/edit/master/docs/'
 
 # Copyright
-copyright: 'Copyright &copy; 2016 - 2023 iolevel s.r.o.'
+copyright: 'Copyright &copy; 2016 - 2024 iolevel s.r.o.'
 
 # Configuration
 theme:
