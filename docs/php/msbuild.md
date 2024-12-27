@@ -120,38 +120,6 @@ Enabling this property also sets following properties if not specified else:
 
 The property is set by Sdk to the current version of Peachpie. It can be used in project files to refer to the Peachpie version being used. The value of the property can be changed in order to use a different Peachpie runtime and compiler for the project.
 
-### PhpDocTypes
-
-This property allows strongly typing PHP properties, functions or function parameters using regular PHPDoc comments. This is useful for keeping a backward compatibility with PHP 5 and to strongly type PHP properties.
-
-```xml
-<PhpDocTypes>FieldTypes</PhpDocTypes>
-```
-
-Possible values are `None`, `FieldTypes`, `ParameterTypes`, `ReturnTypes` or `All` or their combination using a vertical bar `|`. The default is `None`. In case there is a PHP type hint, then the PHPDoc type is ignored. 
-
-!!! example
-    The result of setting **`PhpDocTypes`** to **`FieldTypes`** and compilation of the following  PHP source code
-    ```php
-    <?php
-    class A {
-      /** @var array */
-      var $a_property;
-      /** @var int */
-      var $integer_property;
-    }
-    ```
-    is a .NET assembly containing an equivalent to the following C# code:
-    ```C#
-    public class A {
-      public PhpArray a_property;
-      public long integer_property;
-    }
-    ```
-
-!!!warning
-    Be careful when enabling this option. Typed values won't persist a PHP reference.
-
 ### StartupObject
 
 Specifies the function, method or file representing the application's main routine.
