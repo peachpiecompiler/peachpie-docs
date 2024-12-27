@@ -39,7 +39,7 @@ dotnet build
 The `OutputType` property specifies whether to output an executable (`.exe`) or a library (`.dll`). The possible values are:
 
 - library
-- exe - in combination with `#!xml <TargetFramework>netcoreapp3.1</TargetFramework>` or higher.
+- exe - in combination with `#!xml <TargetFramework>net5.0</TargetFramework>` or higher.
 - winexe
 - module
 
