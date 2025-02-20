@@ -14,10 +14,10 @@ echo "Hello world!";
 and a corresponding project file indicating that the output should be exe:
 
 ```xml
-<Project Sdk="Peachpie.NET.Sdk/1.1.10">
+<Project Sdk="Peachpie.NET.Sdk/1.1.11">
   <PropertyGroup>
     <OutputType>exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <StartupObject>main.php</StartupObject>
   </PropertyGroup>
   <ItemGroup>
@@ -29,7 +29,7 @@ and a corresponding project file indicating that the output should be exe:
 Now compile your project into binaries using the following command:
 > `dotnet publish -c release`
 
-This will publish the resulting binaries into the `/bin/release/netcoreapp3.1/publish` folder. 
+This will publish the resulting binaries into the `/bin/release/net6.0/publish` folder. 
 
 As the final step, select an operating system to target, e.g. 
 
