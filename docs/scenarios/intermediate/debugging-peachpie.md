@@ -42,15 +42,15 @@ cd build
 .\update-dependencies.ps1
 ```
 
-After these steps, there are PeachPie packages with a versioned `1.0.0-dev` installed on your system.
+After these steps, there are PeachPie packages with a versioned `1.2.0-dev` installed on your system.
 
 #### In your PHP project folder:
 
-Wherever it occurs in your project, change the version of the `PeachPie.***` references to **`1.0.0-dev`**. Alter your project file targeting the development build of PeachPie:
+Wherever it occurs in your project, change the version of the `PeachPie.***` references to **`1.2.0-dev`**. Alter your project file targeting the development build of PeachPie:
 
 > *Example project file targeting development build of PeachPie:*
 ```xml
-<Project Sdk="Peachpie.NET.Sdk/1.0.0-dev">
+<Project Sdk="Peachpie.NET.Sdk/1.2.0-dev">
   <PropertyGroup>
     <OutputType>library</OutputType>
     <TargetFramework>netstandard2.0</TargetFramework>
