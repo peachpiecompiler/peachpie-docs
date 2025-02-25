@@ -40,7 +40,7 @@ The second option is to create an ASP.NET Core application that runs a website w
 !!! example "create and run web project"
     ```bash
     dotnet new web -lang PHP
-    dotnet run -p Server
+    dotnet run --project Server
     ```
 
 The `dotnet new` command creates a new project and downloads all the necessary dependencies. The application then compiles and runs a built-in web server on http://localhost:5004. You can access the page in the browser and see the result of `index.php`.
