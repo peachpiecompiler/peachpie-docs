@@ -16,7 +16,7 @@ Directory with PHP project - its source files and static files - needs to be com
 <Project Sdk="Peachpie.NET.Sdk/1.1.13">
   <PropertyGroup>
     <OutputType>library</OutputType>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -44,7 +44,7 @@ dotnet build
 
 ## Create ASP.NET Core application
 
-Once the PHP library project is ready, open or create an ASP.NET Core web application project **(C#)**.
+Once the PHP library project is ready, open or create an ASP.NET Core web application project **(C#)** that targets `net6.0`. `Peachpie.AspNetCore.Web` 1.1.13 targets `net6.0`. `net8.0` can reference that package when the .NET 6 runtime is installed, because the PHP project is still compiled by the 1.1.13 compiler.
 
 ## Hosting PHP library on ASP.NET Core application
 

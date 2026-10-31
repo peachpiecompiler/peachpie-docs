@@ -1,4 +1,7 @@
-﻿!!! tip "PeachPie 1.0.6 vs. PHP 8.0.0"
+﻿!!! warning "Snapshot, not the 1.1.13 function list"
+    This table was generated for **PeachPie 1.0.6** compared with **PHP 8.0.0**. It has not been regenerated for PeachPie 1.1.13. Language levels accepted by the 1.1.13 compiler are listed on the [compatibility](/php/compatibility) page.
+
+!!! tip "PeachPie 1.0.6 vs. PHP 8.0.0"
     The table lists PHP extensions that the project aims for
     and compares the public functions, classes, and constants.
 ??? tiny "[=80% "**Core** 285 / 358"]"

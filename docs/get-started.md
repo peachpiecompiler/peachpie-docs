@@ -4,7 +4,11 @@ The purpose of this page is to get you started with [PeachPie](https://www.peach
 
 ## Prerequisites
 
-- .NET SDK 5.0 or newer: [microsoft.com/net/download](https://www.microsoft.com/net/download)
+- [.NET SDK](https://dotnet.microsoft.com/download) and the **.NET 6 runtime**.
+
+PeachPie `1.1.13` is published as [`Peachpie.NET.Sdk` 1.1.13](https://www.nuget.org/packages/Peachpie.NET.Sdk/1.1.13). The compiler in that package runs on `Microsoft.NETCore.App` 6.0.0 (`Peachpie.CodeAnalysis.runtimeconfig.json` targets `net6.0`). The .NET 8 SDK does not include that runtime, so install the .NET 6 runtime next to it. A newer SDK prints `NETSDK1138` because `net6.0` is out of support.
+
+The templates below target `net6.0`. A project can set `<TargetFramework>net8.0</TargetFramework>` when the .NET 6 runtime is installed; the compiler process still starts on .NET 6. `Peachpie.AspNetCore.Web` and `Peachpie.AspNetCore.Mvc` 1.1.13 also target `net6.0`.
 
 ## Install dotnet templates
 
@@ -12,10 +16,10 @@ Open a command prompt and run the following command:
 
 !!! example "install dotnet templates"
     ```bash
-    dotnet new -i "Peachpie.Templates::*"
+    dotnet new install Peachpie.Templates::1.0.33
     ```
 
-The `dotnet` command downloads the latest project template to be used to create new PeachPie projects for you.
+`Peachpie.Templates` 1.0.33 is the template package published with PeachPie 1.1.13. It generates `Sdk="Peachpie.NET.Sdk/1.1.13"` and `<TargetFramework>net6.0</TargetFramework>`.
 
 ## Create your app
 
@@ -45,7 +49,7 @@ The second option is to create an ASP.NET Core application that runs a website w
 
 The `dotnet new` command creates a new project and downloads all the necessary dependencies. The application then compiles and runs a built-in web server on http://localhost:5004. You can access the page in the browser and see the result of `index.php`.
 
-The newly created web application actually consists of two projects - `Server` and `Website`. The first one is a C# .NET Core app that initializes the web server and passes requests to scripts in the second project. You can integrate this solution with a regular .NET Core MVC application with your additional configuration.
+The newly created web application actually consists of two projects - `Server` and `Website`. The first one is a C# ASP.NET Core app that initializes the web server and passes requests to scripts in the second project. `Server` references `Peachpie.AspNetCore.Web` 1.1.13. You can integrate this solution with a regular ASP.NET Core MVC application with your additional configuration.
 
 ### Class Library
 
@@ -64,8 +68,8 @@ This kind of project can be used purely as a dependency to other projects. The c
 Projects can be created and opened by .NET development environments, such as `Visual Studio` or `Visual Studio Code`.
 
 ### Visual Studio
-- Install our [PeachPie Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=iolevel.peachpie-vs).
-- Go to `File | New | Project`, locate the `PHP (PeachPie)` template group and create a new project.
+- The project file is an SDK-style MSBuild project, so Visual Studio can open it without an extension.
+- The [PeachPie Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=iolevel.peachpie-vs) (`iolevel.peachpie-vs` 1.0.11, last updated 27 December 2021) adds project templates. Those templates are older than `Peachpie.Templates` 1.0.33. Create the project with `dotnet new` above when you need SDK 1.1.13.
 - Hit ++f5++.
 
 ### Visual Studio Code

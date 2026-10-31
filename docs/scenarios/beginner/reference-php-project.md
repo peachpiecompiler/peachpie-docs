@@ -6,8 +6,8 @@ This allows to provide a library written in PHP code to C# projects, to decouple
 
 ### Prerequisites:
 
-- .NET SDK 5.0 or newer ([dotnet.microsoft.com](https://dotnet.microsoft.com/download))
-- Optionally, Visual Studio 2019 or newer
+- .NET SDK and the .NET 6 runtime ([dotnet.microsoft.com](https://dotnet.microsoft.com/download)). PeachPie 1.1.13 compiles on the .NET 6 runtime. See [get started](/get-started).
+- Optionally, Visual Studio 2022
 - Access to the PeachPie Sdk. See [download page](/download) for details.
 
 **Content:**
@@ -28,7 +28,7 @@ First create a project file. It is an XML file with extension `.msbuildproj`, de
 <Project Sdk="Peachpie.NET.Sdk/1.1.13">
   <PropertyGroup>
     <OutputType>library</OutputType>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
@@ -40,7 +40,7 @@ First create a project file. It is an XML file with extension `.msbuildproj`, de
 </Project>
 ```
 
-The project file above is used by .NET Core SDK to build the project. It treats all the `*.php` files as source files, generates a documentation file from containing PHPDoc comments, creates a NuGet package and a resulting `library.dll` file.
+The project file above is used by the .NET SDK to build the project. It treats all the `*.php` files as source files, generates a documentation file from containing PHPDoc comments, creates a NuGet package and a resulting `library.dll` file.
 
 ### Add some code
 
@@ -79,20 +79,15 @@ dotnet build
 > *Expected command result:*
 
 ```shell
-Microsoft (R) Build Engine version 16.4.0 for .NET Core
-Copyright (C) Microsoft Corporation. All rights reserved.        
-
   Restore completed in 26,77 ms for library.msbuildproj.
   PeachPie PHP Compiler
-  library -> \bin\Debug\netstandard2.0\library.dll
+  library -> \bin\Debug\net6.0\library.dll
   Successfully created package '\bin\Debug\library.1.0.0.nupkg'.
 
 Build succeeded.
 
     0 Warning(s)
     0 Error(s)
-
-Time Elapsed 00:00:02.45
 ```
 
 In case of an error in the source code, it will be reported during the build. In case the error is fatal, i.e. a code that would always cause runtime error, the build process fails.
@@ -149,7 +144,7 @@ static void Main(string[] args)
 
 There are certain conversion conventions between PHP values and C# types. Please see [type system](/net/type-system) and [PhpValue](/api/ref/phpvalue) for more details on how the values are implicitly converted.
 
-PHP objects and functions are liable to the instance of [Context](/net/ref/context) class. If ommited (like in this example) a default instance is provided implicitly. In case of a multithreaded evironment and web applications, make sure you provide an instance of `Context` corresponding to your current thread.
+PHP objects and functions are liable to the instance of [Context](/api/ref/context) class. If ommited (like in this example) a default instance is provided implicitly. In case of a multithreaded evironment and web applications, make sure you provide an instance of `Context` corresponding to your current thread.
 
 ## PHP app using the PHP library
 
@@ -180,7 +175,7 @@ Also custom library should be placed within a unique subfolder to avoid conflict
 </PropertyGroup>
 ```
 
-More at [project file's PhpRelativePath](../php/msbuild/#phprelativepath).
+More at [project file's PhpRelativePath](/php/msbuild/#phprelativepath).
 
 After that, the script file `class1.php` can be included at
 
@@ -194,4 +189,4 @@ require_once './vendor/example/library/class1.php';
 - [Creating a NuGet from a PHP project](create-nuget)
 - [What is NuGet](https://docs.microsoft.com/en-us/nuget/what-is-nuget) *(docs.microsoft.com)*
 - [Signing NuGet Packages](https://docs.microsoft.com/en-us/nuget/create-packages/sign-a-package) *(docs.microsoft.com)*
-- [Project File Reference](../php/msbuild)
+- [Project File Reference](/php/msbuild)

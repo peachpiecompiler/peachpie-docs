@@ -35,11 +35,11 @@ Build `Peachpie.sln`:
 dotnet build
 ```
 
-Copy the build output to your local NuGet cache:
+Copy the build output to your local NuGet cache. The compiler repository's `docs/Building-Peachpie.md` asks for the .NET 9 SDK to build those sources. `Directory.Build.props` on `master` still sets `<TargetFrameworks>net6.0</TargetFrameworks>` and versions the packages as `1.2.0-dev`.
 
 ```shell
 cd build
-.\update-dependencies.ps1
+.\update-cache.ps1
 ```
 
 After these steps, there are PeachPie packages with a versioned `1.2.0-dev` installed on your system.
@@ -53,7 +53,7 @@ Wherever it occurs in your project, change the version of the `PeachPie.***` ref
 <Project Sdk="Peachpie.NET.Sdk/1.2.0-dev">
   <PropertyGroup>
     <OutputType>library</OutputType>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 </Project>
 ```
@@ -88,7 +88,7 @@ In *VS Code*, alter your launch configuration to search for debug symbols in you
 ```json
 "justMyCode": false,
 "symbolOptions": {
-  "searchPaths":["C:\\peachpie\\src\\Peachpie.App\\bin\\Debug\netstandard2.0"]
+  "searchPaths":["C:\\peachpie\\src\\Peachpie.App\\bin\\Debug\\net6.0"]
 }
 ```
 

@@ -43,7 +43,7 @@ This creates a self-contained executable PHP application targeting the operating
 
 A few tips on how to minimize the size of the resulting application:
 
-* On Linux, you can get rid of culture-specific functionalities and keep just the "Invariant" culture features (cuts about 26MB of data). More detail [at globalization-invariant-mode.md](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
+* On Linux, you can get rid of culture-specific functionalities and keep just the "Invariant" culture features (cuts about 26MB of data). More detail is in the [.NET globalization invariant mode](https://github.com/dotnet/runtime/blob/main/docs/design/features/globalization-invariant-mode.md) note.
 * Use `dotnet-warp` to merge DLL files and remove unnecessary IL and methods. More info can be found [at hanselman.com](https://hanselman.com/blog/BrainstormingCreatingASmallSingleSelfcontainedExecutableOutOfANETCoreApplication.aspx).
 
 !!! note
@@ -51,10 +51,9 @@ A few tips on how to minimize the size of the resulting application:
   
 ## Resources
 
-* [Blog post on self-contained executable PHP apps](https://www.peachpie.io/2019/06/self-contained-php-app.html)
-* [Runtime Identifier (RID) catalog](https://docs.microsoft.com/en-us/dotnet/core/rid-catalog)
+* [Runtime Identifier (RID) catalog](https://learn.microsoft.com/dotnet/core/rid-catalog)
 * [dotnet-warp](https://hanselman.com/blog/BrainstormingCreatingASmallSingleSelfcontainedExecutableOutOfANETCoreApplication.aspx)
-* [PeachPie getting started](https://www.peachpie.io/getstarted)
-* [dotnet publish](https://docs.microsoft.com/dotnet/core/tools/dotnet-publish)
+* [PeachPie getting started](/get-started)
+* [dotnet publish](https://learn.microsoft.com/dotnet/core/tools/dotnet-publish)
 * [PeachPie samples](https://github.com/iolevel/peachpie-samples)
 * [ASP.NET Core Web Server](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/)

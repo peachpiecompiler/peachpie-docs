@@ -102,7 +102,7 @@ PeachPie provides the feature for `System.Collections.IList`, which allows consu
 
 ## C# Event
 
-> Implemented in `1.2.0` ([#1141](https://github.com/peachpiecompiler/peachpie/issues/1141))
+> Present in PeachPie 1.1.13 (`src/Peachpie.Runtime/ClrEvent.cs` on tag `v1.1.13`, [#1141](https://github.com/peachpiecompiler/peachpie/issues/1141)).
 
 PeachPie runtime allows working with .NET/CLR `event` class members in order to register and unregister callables. The following code depicts a sample C# class and a sample PHP program adding and removing an anonymous function (or any PHP callable) to it.
 

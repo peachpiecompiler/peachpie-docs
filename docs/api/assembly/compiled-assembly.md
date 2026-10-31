@@ -1,6 +1,6 @@
 ## Structure of generated assembly
 
-The compiler outputs portable class libraries or executables compatible with .NET 4.5, Mono and .NET Core.
+PeachPie 1.1.13 outputs libraries and executables for `net6.0` (the published `Peachpie.Runtime` 1.1.13 package has a `net6.0` asset). The `1.0` line, latest `1.0.30`, is the one that still targets `netstandard2.0`. See [Target .NET Framework](/scenarios/beginner/full-net-framework).
 
 * ![](/img/icon_ns.png) *namespace* -
     * ![](/img/icon_class.png) *class* &lt;Script&gt;

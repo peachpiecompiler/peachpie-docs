@@ -1,5 +1,11 @@
 # Roadmap
 
+The current public release is **PeachPie 1.1.13** ([`Peachpie.NET.Sdk` 1.1.13](https://www.nuget.org/packages/Peachpie.NET.Sdk/1.1.13)). That compiler accepts PHP language levels 5.4 through 8.5, defaults to 8.4, and runs on the .NET 6 runtime. The 1.1.13 packages target `net6.0`.
+
+WordPress on .NET is the separate package [`PeachPied.WordPress.AspNetCore` 6.7.1](https://www.nuget.org/packages/PeachPied.WordPress.AspNetCore/6.7.1), built on PeachPie 1.1.11. See [WordPress](/scenarios/wordpress/overview) and [wpdotnet.com](https://www.wpdotnet.com/).
+
+The checklist below is the original milestone list. It is not a live status board for 1.1.13.
+
 ## Milestones
 
 - [x] **0.8**: related work, open GitHub issues
