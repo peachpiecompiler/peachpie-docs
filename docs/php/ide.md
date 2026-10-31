@@ -4,7 +4,7 @@ The PeachPie project primarily focuses on the compiler, runtime and libraries. D
 
 ## CLI
 
-The standard `dotnet` command and .NET tools are available. You can `build`, `run`, `publish`, profile, `pack`, etc. Please see [dotnet command](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet) for details or our [get started](https://www.peachpie.io/getstarted) page.
+The standard `dotnet` command and .NET tools are available. You can `build`, `run`, `publish`, profile, `pack`, etc. Please see [dotnet command](https://learn.microsoft.com/dotnet/core/tools/dotnet) for details or our [get started](/get-started) page.
 
 ## Visual Studio Code
 
@@ -16,10 +16,10 @@ Additional support in VS Code is provided through the [PeachPie for Visual Studi
 
 **Features**: Code editor, Diagnostics, Profiling, Debugging, Build
 
-Visual Studio 2017 and newer (15.6 and later) supports opening the [project files](msbuild) and editing PHP files, so you don't actually need any extension to be able to work with PeachPie.
+Visual Studio opens the [project files](msbuild) and can edit the PHP files, so you don't actually need an extension to build PeachPie projects.
 
-For additional features, project templates and more, install [PeachPie Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=iolevel.peachpie-vs).
+For additional templates, install [PeachPie Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=iolevel.peachpie-vs). That item is `1.0.11`, last updated 27 December 2021. The templates that match SDK 1.1.13 come from `dotnet new install Peachpie.Templates::1.0.33`, described in [get started](/get-started).
 
 ## JetBrains Rider
 
-Rider supports editing PHP files and opening project files. You'll be able to build the [project](msbuild); however, breakpoints and stepping through the code are not supported for custom languages yet as of December 2019.
+Rider supports editing PHP files and opening project files. You'll be able to build the [project](msbuild). Breakpoints and stepping through the code were not supported for custom languages as of December 2019; that was not rechecked for 1.1.13.

@@ -6,7 +6,7 @@ PeachPie application provides support for the PHP's `$_SESSION` super-global var
 
 ## Default Session Handler
 
-The default implementation of the session handler in PeachPie is taking advantage of the underlying ASP .NET (Core) application. In order to enable the session state management, see https://docs.microsoft.com/en-us/aspnet/core/fundamentals/app-state?view=aspnetcore-5.0#configure-session-state.
+The default implementation of the session handler in PeachPie is taking advantage of the underlying ASP.NET Core application. In order to enable the session state management, see https://learn.microsoft.com/aspnet/core/fundamentals/app-state#configure-session-state.
 
 In the result, session state in PeachPie web application running on ASP .NET Core is persisted in-memory using distributed memory cache. The entries of the session array itself are stored into the [`ISession`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.isession) object, using the PHP serializer.
 
@@ -65,4 +65,4 @@ public void ConfigureServices(IServiceCollection services)
 
 ## Related Links
 
-- https://docs.microsoft.com/en-us/aspnet/core/fundamentals/app-state?view=aspnetcore-5.0
+- https://learn.microsoft.com/aspnet/core/fundamentals/app-state#configure-session-state

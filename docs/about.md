@@ -20,7 +20,7 @@ We firmly believe that there is an immense **value in the world of PHP**. PeachP
 ## Project goals
 - **Increased performance**: PeachPie's extensive type analysis and the influence of Microsoft Roslyn should provide an improved performance of PHP applications and components. 
 
-- **Security**: since programs run within the standardized and manageable .NET or .NET Core environment, the code is fully verifiable without any unsafe constructs. 
+- **Security**: since programs run within the standardized and manageable .NET environment, the code is fully verifiable without any unsafe constructs. 
 
 - **Cross-platform development**: the project compiles legacy PHP code into portable class libraries, enabling developers to build cross-platform apps and libraries for Microsoft platforms.  
 

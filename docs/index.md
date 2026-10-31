@@ -2,7 +2,7 @@
 
 Welcome to **docs.peachpie.io**, the home of the PeachPie documentation for developers. Check out the [get started](get-started) section to jump straight to using PeachPie, or dive into the more advanced topics, such as the [.NET reference](net) and [API reference](api).
 
-!!! tip "Migrate PHP code to .NET Core"
+!!! tip "Migrate PHP code to .NET"
     The very first step is to get your PHP code running on .NET.
     Follow the **[get started](get-started)** and the **[PHP guide overview](php)** topics to create a project and build it as a .NET library. This should give you an overview of using the **[MSBuild project file](php/msbuild)**, migration tips, the compatibility status and introduce you to working with the project in Visual Studio or Visual Studio Code.
 

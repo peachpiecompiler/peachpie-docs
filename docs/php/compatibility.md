@@ -10,6 +10,7 @@ The following section lists the known compatibility status of the compiler, runt
 
 - [x] PHP 5.4 .. 5.6 Syntax
 - [x] PHP 7.0 .. 7.4 Syntax
+- [x] PHP 8.0 .. 8.5 Syntax (language level in PeachPie 1.1.13; default `8.4`, `latest` is `8.5`)
 - [x] Referencing .NET assemblies
 - [x] Referencing PHP script libraries
 - [x] Code generation

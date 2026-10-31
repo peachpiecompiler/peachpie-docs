@@ -1,0 +1,6 @@
+title: WordPress
+arrange:
+  - overview.md
+  - aspnetcore-wordpress.md
+  - configuration.md
+  - add-plugin-theme.md

@@ -10,4 +10,4 @@ C# code using PHP
 - objects
 
 !!! Info "Related links"
-    You can also refer to [all our articles in our blog](https://www.peachpie.io/tag/interoperability) on the topic of interoperability for more information.
+    See the [.NET reference](/net) for passing values, calling methods, and sharing types between C# and PHP.

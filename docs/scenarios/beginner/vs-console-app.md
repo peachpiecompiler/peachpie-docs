@@ -27,7 +27,9 @@ In the next step, choose a project name and its location. Continue by pressing t
 
 The application can be built in order to create a binary file, run and debugged.
 
-The binary file is an executable running under [.NET Core Runtime](https://dotnet.microsoft.com/download). It allows to be executed on Linux, MacOS, Windows and other supported systems.
+The binary file is an executable running under the [.NET runtime](https://dotnet.microsoft.com/download). The `Peachpie.Templates` 1.0.33 console template targets `net6.0` and needs the .NET 6 runtime. It can be executed on Linux, macOS, Windows and other supported systems.
+
+The Visual Studio extension that supplies the *PeachPie Console App* template is `iolevel.peachpie-vs` 1.0.11 (27 December 2021). For a project file that matches SDK 1.1.13, prefer `dotnet new install Peachpie.Templates::1.0.33` and `dotnet new console -lang PHP` from [get started](/get-started).
 
 ### Build the app
 

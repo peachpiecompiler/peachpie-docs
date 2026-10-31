@@ -11,7 +11,7 @@ MSBuild is the build system for .NET and Visual Studio. The MSBuild project file
 <Project Sdk="Peachpie.NET.Sdk/1.1.13">
   <PropertyGroup>
     <OutputType>library</OutputType>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,11 +21,11 @@ MSBuild is the build system for .NET and Visual Studio. The MSBuild project file
 </Project>
 ```
 
-The sample project file above is supposed to be saved as **`your-project-name.msbuildproj`**. This particular example includes all the `.php` files into the compilation, uses the PeachPie compiler and targets class library projects. See the section [OutputType](#outputtype) below on how to target different project types. The project can be opened in Visual Studio 2017, Visual Studio Code, other IDEs or used from your favorite shell to build or run the project.
+The sample project file above is supposed to be saved as **`your-project-name.msbuildproj`**. This particular example includes all the `.php` files into the compilation, uses the PeachPie compiler and targets class library projects. See the section [OutputType](#outputtype) below on how to target different project types. The project can be opened in Visual Studio, Visual Studio Code, other IDEs or used from your favorite shell to build or run the project.
 
 !!!note
-    `Peachpie.NET.Sdk` is downloaded from a NuGet feed. See [download page](/download) for details.
-    Visual Studio 15.6 or newer is recommended.
+    `Peachpie.NET.Sdk` 1.1.13 is downloaded from nuget.org. See [download page](/download) for details.
+    The compiler runs on the .NET 6 runtime. `net6.0` matches the published packages and the `Peachpie.Templates` 1.0.33 project files. `net8.0` works for the project output when that runtime is installed.
 
 Build the project using an IDE or the command below:
 ```bash
@@ -39,7 +39,7 @@ dotnet build
 The `OutputType` property specifies whether to output an executable (`.exe`) or a library (`.dll`). The possible values are:
 
 - library
-- exe - in combination with `#!xml <TargetFramework>net5.0</TargetFramework>` or higher.
+- exe - in combination with `#!xml <TargetFramework>net6.0</TargetFramework>` or `net8.0` (the .NET 6 runtime still has to be installed)
 - winexe
 - module
 
@@ -48,10 +48,10 @@ The `OutputType` property specifies whether to output an executable (`.exe`) or 
 The `LangVersion` property specifies the version of the PHP semantic. This allows you to treat built-in types with respect to the PHP version or to enable language constructs (like `&new`) that have been removed from the latest versions of PHP.
 
 ```xml
-<LangVersion>5.4</LangVersion>
+<LangVersion>8.4</LangVersion>
 ```
 
-The options are `5.4`, `5.5`, `5.6`, `7.0`, `7.1`, `7.2` etc., `default` and `latest`.
+PeachPie 1.1.13 accepts `5.4`, `5.5`, `5.6`, `7.0`, `7.1`, `7.2`, `7.3`, `7.4`, `8.0`, `8.1`, `8.2`, `8.3`, `8.4`, and `8.5`. `default` is `8.4`. `latest` is `8.5`.
 
 This option affects the source code syntax and the types used in type hints. The following code has a different semantic according to the `LangVersion` value:
 ```php
@@ -201,6 +201,5 @@ Define [assembly attributes in MSBuild files](https://learn.microsoft.com/en-us/
 
 ## Related links
 
-- [MSBuild reference](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-reference) *(docs.microsoft.com)*
-- [Sign an Assembly with a Strong Name](https://docs.microsoft.com/en-us/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name) *(docs.microsoft.com)*
-- [Goodbye project.json, Hello MSBuild](http://www.peachpie.io/2017/04/msbuild-netcoreapp1-1.html) *(www.peachpie.io)*
+- [MSBuild reference](https://learn.microsoft.com/visualstudio/msbuild/msbuild-reference) *(learn.microsoft.com)*
+- [Sign an Assembly with a Strong Name](https://learn.microsoft.com/dotnet/standard/assembly/sign-strong-name) *(learn.microsoft.com)*

@@ -35,7 +35,7 @@ Add a reference to your php-library project file, which implements the helper fu
 Start by compiling your PHP project into a `DLL` file.
 
 !!! note
-    ` OutputType`  must be library and ` TargetFramework`  is netstandard2.0, because we are building a library that will be referenced by your C# MVC app.
+    `OutputType` must be library and `TargetFramework` is `net6.0`. `Peachpie.AspNetCore.Mvc` 1.1.13 targets `net6.0`, so the C# MVC app has to be able to reference a `net6.0` assembly.
 
 Next, add a reference to the MVC project:
 
@@ -71,6 +71,4 @@ This code will create a PHP global variable `$mydata`. `GetOrCreateContext()` is
 ## Additional resources
 
 * [Sample code](https://github.com/iolevel/peachpie-samples/tree/master/mvc/render-php-within-razor)
-* [Razor pages docs](https://docs.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-2.2&tabs=visual-studio)
-* [Article on rendering PHP in Razor](https://www.peachpie.io/2018/07/render-php-file-in-razor-view.html)
-* [Article on rendering Razor in PHP](https://www.peachpie.io/2018/08/razor-partial-view-on-php-page.html)
+* [Razor pages docs](https://learn.microsoft.com/aspnet/core/razor-pages/)
